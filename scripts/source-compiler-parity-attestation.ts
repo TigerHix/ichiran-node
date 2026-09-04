@@ -24,7 +24,7 @@ function argumentsFor(argv: readonly string[]): Options {
   let report: string | undefined;
   let release: string | undefined;
   let attestation = 'data/source-compiler-parity-attestation.json';
-  let sourceLock = 'data/source-compiler-sources.lock.json';
+  let sourceLock = 'data/source-compiler-historical-v1-sources.lock.json';
   let oracleLock = 'browser-alpha/sources.lock.json';
   for (let index = 0; index < argv.length; index++) {
     const argument = argv[index]!;

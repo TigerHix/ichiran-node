@@ -7,13 +7,67 @@ export interface TokenDetails {
   readonly conjugations: readonly TokenConjugation[];
   /** Ranked candidates other than the selected primary candidate. */
   readonly alternatives: readonly TokenDetails[];
-  readonly suffix: string | null;
+  /** Stable semantic identifier. Presentation belongs to the UI locale catalog. */
+  readonly suffixId: TokenSuffixId | null;
   readonly counter: TokenCounter | null;
-  readonly entity: boolean;
+  /** Analyzer classification, independent of dictionary and presentation locale. */
+  readonly entityKind: TokenEntityKind | null;
 }
+
+export type TokenEntityKind = 'proper-noun';
+
+export type TokenSuffixId =
+  | 'chau'
+  | 'ha'
+  | 'tai'
+  | 'iru'
+  | 'oru'
+  | 'aru'
+  | 'kuru'
+  | 'oku'
+  | 'kureru'
+  | 'morau'
+  | 'itadaku'
+  | 'iku'
+  | 'suru'
+  | 'itasu'
+  | 'sareru'
+  | 'saseru'
+  | 'rou'
+  | 'ii'
+  | 'mo'
+  | 'sugiru'
+  | 'nikui'
+  | 'gatai'
+  | 'sa'
+  | 'tsutsu'
+  | 'tsutsuaru'
+  | 'uru'
+  | 'sou'
+  | 'nai'
+  | 'ra'
+  | 'kudasai'
+  | 'yagaru'
+  | 'naru'
+  | 'desu'
+  | 'desho'
+  | 'tosuru'
+  | 'garu'
+  | 'me'
+  | 'gai'
+  | 'tasou'
+  | 'polite-prefix'
+  | 'particle-ni'
+  | 'particle-ka'
+  | 'particle-e'
+  | 'particle-o'
+  | 'particle-no'
+  | 'particle-to'
+  | 'particle-kara';
 
 export interface TokenMeaning {
   readonly gloss: string;
+  /** Unique POS codes in stable canonical order; source order has no semantic meaning. */
   readonly pos: readonly string[];
   readonly fields: readonly string[];
   readonly info: string | null;

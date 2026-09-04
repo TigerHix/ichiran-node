@@ -155,7 +155,7 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
     const manifest = await page.request
       .get('/analyzer/manifest.json')
       .then(response => response.json() as Promise<AnalyzerPackManifest>);
-    for (const asset of [manifest.hot, manifest.details] as const) {
+    for (const asset of [manifest.hot, manifest.lexicon, ...Object.values(manifest.locales)]) {
       const response = await page.request.head(`/analyzer/${asset.file}`);
       expect(response.ok()).toBe(true);
       expect(response.headers()['content-type']).toBe('application/gzip');

@@ -6,6 +6,7 @@ export {
   type AnalyzeOptions,
   type AnalyzerErrorCode,
   type AnalyzerSource,
+  type DictionaryEntryOptions,
   type RandomAccessSource,
   type RomanizeOptions,
   type TokenDetailsOptions
@@ -23,13 +24,13 @@ export type {
 } from './analyzer-result-contract.js';
 export type { AnalyzerEntityHint as EntityHint } from './analyzer-types.js';
 export type {
-  DetailEntry as DictionaryEntry,
-  DetailForm as DictionaryForm,
-  DetailGloss as DictionaryGloss,
-  DetailProperty as DictionaryProperty,
-  DetailPropertyTag as DictionaryPropertyTag,
-  DetailSense as DictionarySense
-} from './details-contract.js';
+  DictionaryEntry,
+  DictionaryForm,
+  DictionaryGloss,
+  DictionaryProperty,
+  DictionaryPropertyTag,
+  DictionarySense
+} from './dictionary-contract.js';
 export type { RomanizationName as RomanizationScheme } from './romanization-contract.js';
 export type {
   TokenConjugation,
@@ -37,5 +38,7 @@ export type {
   TokenCounter,
   TokenDetailForm,
   TokenDetails,
-  TokenMeaning
+  TokenEntityKind,
+  TokenMeaning,
+  TokenSuffixId
 } from './token-details-contract.js';

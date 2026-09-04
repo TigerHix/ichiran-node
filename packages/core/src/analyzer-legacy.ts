@@ -1,5 +1,5 @@
 import { asHiragana, testWord } from './characters.js';
-import type { DetailEntry, DetailSense, DetailStoreReader } from './details.js';
+import type { DictionaryEntry, DictionaryReader, DictionarySense } from './dictionary.js';
 import { romanizeWord, type RomanizationName } from './romanization.js';
 import {
   PORTABLE_LEGACY_INFO,
@@ -371,7 +371,7 @@ export function serializePortableLegacyCompact(
   });
 }
 
-function properties(sense: DetailSense, tag: string): string[] {
+function properties(sense: DictionarySense, tag: string): string[] {
   return sense.properties
     .filter(property => property.tag === tag)
     .sort((a, b) => a.ord - b.ord)
@@ -385,7 +385,7 @@ const PRESENTED_PROPERTY_TAGS = new Set(['field', 'pos', 's_inf', 'stagk', 'stag
  * preceding bags retain database order. Preserve that observable quirk here;
  * it affects the displayed order when the last property group has >1 value.
  */
-function finalPropertyGroup(entry: DetailEntry): {
+function finalPropertyGroup(entry: DictionaryEntry): {
   readonly senseOrd: number;
   readonly tag: string;
 } | null {
@@ -428,7 +428,7 @@ function entryRestrictions(
 }
 
 function readingMatchesWritten(
-  reading: DetailEntry['forms'][number],
+  reading: DictionaryEntry['forms'][number],
   written: string,
   restrictions: readonly ReadingRestriction[]
 ): boolean {
@@ -441,8 +441,8 @@ function readingMatchesWritten(
 
 /** Exact root-payload port of core matchSenseRestrictions/matchKanaKanji. */
 function senseAllowed(
-  sense: DetailSense,
-  entry: DetailEntry,
+  sense: DictionarySense,
+  entry: DictionaryEntry,
   route: 'kana' | 'kanji',
   form: string,
   reading: string,
@@ -474,7 +474,7 @@ function senseAllowed(
 }
 
 function senses(
-  entry: DetailEntry,
+  entry: DictionaryEntry,
   entryIndex: number,
   context: PortableLegacyPresentationContext,
   route: 'kana' | 'kanji',
@@ -571,19 +571,19 @@ function conjProperty(inflection: PortableAnalysisInflection): {
 
 class DetailHydrator {
   readonly context: PortableLegacyPresentationContext;
-  readonly #details: DetailStoreReader;
-  readonly #entries = new Map<number, Promise<DetailEntry>>();
+  readonly #dictionary: DictionaryReader;
+  readonly #entries = new Map<number, Promise<DictionaryEntry>>();
 
-  constructor(details: DetailStoreReader, context: PortableLegacyPresentationContext) {
-    this.#details = details;
+  constructor(dictionary: DictionaryReader, context: PortableLegacyPresentationContext) {
+    this.#dictionary = dictionary;
     this.context = context;
   }
 
-  entry(index: number | null): Promise<DetailEntry> | null {
+  entry(index: number | null): Promise<DictionaryEntry> | null {
     if (index === null) return null;
     let value = this.#entries.get(index);
     if (!value) {
-      value = this.#details.entry(index);
+      value = this.#dictionary.entry(index);
       this.#entries.set(index, value);
     }
     return value;
@@ -1027,18 +1027,18 @@ async function detailedToken(
 }
 
 /**
- * Cold transformed view backed by DetailStoreReader. Hot presentation context
+ * Cold transformed view backed by a locale-aware DictionaryReader.
  * supplies exact sense restrictions and suffix identity without making the
  * cold detail file resident.
  */
 export async function serializePortableLegacyDetailed(
   result: PortableAnalysisResult,
-  details: DetailStoreReader,
+  dictionary: DictionaryReader,
   context: PortableLegacyPresentationContext,
   options: PortableLegacySerializeOptions = {}
 ): Promise<PortableLegacyTransformedResult> {
   const property = options.wordProperty ?? (() => []);
-  const hydrate = new DetailHydrator(details, context);
+  const hydrate = new DetailHydrator(dictionary, context);
   const output: Array<string | PortableLegacyTransformedPath[]> = [];
   for (const chunk of result.chunks) {
     if (chunk.type === 'misc') {

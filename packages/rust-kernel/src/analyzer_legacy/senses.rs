@@ -3,7 +3,7 @@ use std::collections::HashSet;
 use super::LegacySense;
 use super::detailed::LegacyContext;
 use crate::characters::as_hiragana;
-use crate::details::{DetailEntry, DetailForm, DetailSense};
+use crate::dictionary::{DictionaryEntry, DictionaryForm, DictionarySense};
 use crate::error::{ErrorCode, KernelError, Result};
 use crate::morphology::Route;
 
@@ -15,7 +15,7 @@ struct ReadingRestriction {
 }
 
 pub(super) fn senses(
-    entry: &DetailEntry,
+    entry: &DictionaryEntry,
     entry_index: usize,
     context: &LegacyContext<'_>,
     route: Route,
@@ -65,7 +65,7 @@ pub(super) fn senses(
     Ok(result)
 }
 
-fn properties(sense: &DetailSense, tag: &str) -> Vec<String> {
+fn properties(sense: &DictionarySense, tag: &str) -> Vec<String> {
     let mut values = sense
         .properties
         .iter()
@@ -78,7 +78,7 @@ fn properties(sense: &DetailSense, tag: &str) -> Vec<String> {
         .collect()
 }
 
-fn final_property_group(entry: &DetailEntry) -> Option<(u32, &str)> {
+fn final_property_group(entry: &DictionaryEntry) -> Option<(u32, &str)> {
     let mut senses = entry.senses.iter().collect::<Vec<_>>();
     senses.sort_by_key(|sense| sense.ord);
     let mut result = None;
@@ -134,8 +134,8 @@ fn resolve_reference(context: &LegacyContext<'_>, reference: u32) -> Result<Stri
 }
 
 fn sense_allowed(
-    sense: &DetailSense,
-    entry: &DetailEntry,
+    sense: &DictionarySense,
+    entry: &DictionaryEntry,
     route: Route,
     form: &str,
     reading: &str,
@@ -180,7 +180,7 @@ fn sense_allowed(
 }
 
 fn reading_matches_written(
-    reading: &DetailForm,
+    reading: &DictionaryForm,
     written: &str,
     restrictions: &[ReadingRestriction],
 ) -> bool {

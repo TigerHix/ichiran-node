@@ -46,7 +46,7 @@ analyzer.dispose();
 | `RUST_KERNEL_WASM_URL` | `ANALYZER_WASM_URL` |
 | `describe(entryIndex)` | `entry(entryIndex)` |
 | consumer-side sense/restriction/conjugation reconstruction | `details(text, { pathIndex, tokenIndex, ...options })` |
-| `AnalyzerInputError`, `DetailStoreError`, Rust format errors | `AnalyzerError` |
+| `AnalyzerInputError`, `DictionaryStoreError`, Rust format errors | `AnalyzerError` |
 | root manifest exports | import from `@ichiran/core/release` |
 | `legacy()` | no product equivalent |
 | `entryIndexForSequence()` | no equivalent; retain the `entryIndex` returned by `analyze()` |
@@ -90,9 +90,9 @@ need this gate set `ICHIRAN_SOURCE_COMMIT`.
 `romanizeWithInfo` and the legacy word-info formatter have no equivalent. A product
 that needs dictionary presentation should call `analyze`, retain the selected path
 and token indexes, then call `details` with the same input and analysis options.
-The kernel owns sense restrictions, counters, suffix descriptions, compound
-components, conjugation lineage, entities, and alternative selection. UI code owns
-only labels and layout. `entry()` remains available for raw dictionary tooling; it
+The kernel owns sense restrictions, counters, suffix identity, compound components,
+conjugation lineage, entities, and alternative selection. UI code maps semantic IDs
+and flags through an independent locale catalog and owns layout. `entry()` remains available for raw dictionary tooling; it
 must not be used to reconstruct analyzer presentation semantics.
 
 The clean product contract also removes internal presentation artifacts:
@@ -118,7 +118,7 @@ host-specific cleanup.
 | `ichiran-cli --eval ...` | no equivalent |
 
 `analyze` prints `AnalysisResult` JSON, not legacy nested JSON. `details` accepts text
-plus `--path` and `--token` indexes and prints the canonical presentation tree.
+plus `--path` and `--token` indexes and prints the canonical semantic tree.
 `entry` accepts an `entryIndex` and prints the raw dictionary row. `romanize` prints a
 string and supports `--method` and `--normalize-punctuation`. There is no implicit
 default command. Unlike the old CLI, punctuation is not normalized unless requested.

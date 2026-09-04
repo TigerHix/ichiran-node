@@ -4,6 +4,13 @@
     "rootDir": "./src",
     "outDir": "./dist"
   },
-  "include": ["src/index.ts", "src/source-compiler/cli.ts"],
+  "include": [
+    "src/index.ts",
+    "src/source-compiler/cli.ts",
+    "src/source-compiler/zh-hans-sense-info-catalog-normalize.ts",
+    "src/source-compiler/zh-hans-sense-info-review-adapter.ts",
+    "src/source-compiler/zh-hans-sense-info-review-combine.ts",
+    "src/source-compiler/zh-hans-sense-info-review.ts"
+  ],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

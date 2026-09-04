@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run build:benchmark-corpus && bun run --cwd ../core build && vite build && bun scripts/audit-build.ts",
+    "build": "bun run build:benchmark-corpus && bun run --cwd ../core build && bun run --cwd ../presentation build && vite build && bun scripts/audit-build.ts",
     "build:qualification-browser": "vite build --mode qualification && bun scripts/audit-build.ts --qualification",
     "build:qualification-typescript-oracle": "bun run build:benchmark-corpus && bun run --cwd ../core build && vite build --mode typescript-oracle && bun scripts/audit-build.ts --typescript-oracle",
     "build:benchmark-corpus": "bun scripts/build-benchmark-corpus.ts",
@@ -21,6 +21,7 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.3.0",
     "@ichiran/core": "workspace:*",
+    "@ichiran/presentation": "workspace:*",
     "@phosphor-icons/react": "^2.1.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

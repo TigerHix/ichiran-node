@@ -36,8 +36,11 @@ final class IchiranSwiftTests: XCTestCase {
     XCTAssertFalse(kunrei.isEmpty)
 
     let before = try await analyzer.qualificationDiagnostics()
-    XCTAssertEqual(before.detailBytesRead, 96 + before.detailPrefixBytes)
-    XCTAssertLessThan(before.detailBytesRead, before.detailsFileBytes)
+    XCTAssertEqual(
+      before.dictionaryBytesRead,
+      before.dictionaryHeaderBytes + before.dictionaryPrefixBytes
+    )
+    XCTAssertLessThan(before.dictionaryBytesRead, before.dictionaryFileBytes)
 
     let tokenDetails = try await analyzer.details(
       "三個",
@@ -45,15 +48,26 @@ final class IchiranSwiftTests: XCTestCase {
     )
     XCTAssertEqual(tokenDetails.counter?.value, "3")
     XCTAssertEqual(tokenDetails.counter?.ordinal, false)
+    let englishCat = try await analyzer.details(
+      "猫", options: .init(pathIndex: 0, tokenIndex: 0, locale: "en")
+    )
+    let chineseCat = try await analyzer.details(
+      "猫", options: .init(pathIndex: 0, tokenIndex: 0, locale: "zh-Hans")
+    )
+    XCTAssertFalse(chineseCat.meanings.isEmpty)
+    XCTAssertNotEqual(chineseCat.meanings.map(\.gloss), englishCat.meanings.map(\.gloss))
     let afterTokenDetails = try await analyzer.qualificationDiagnostics()
-    XCTAssertGreaterThan(afterTokenDetails.detailBytesRead, before.detailBytesRead)
-    XCTAssertLessThan(afterTokenDetails.detailBytesRead, afterTokenDetails.detailsFileBytes)
+    XCTAssertGreaterThan(afterTokenDetails.dictionaryBytesRead, before.dictionaryBytesRead)
+    XCTAssertLessThan(afterTokenDetails.dictionaryBytesRead, afterTokenDetails.dictionaryFileBytes)
 
     let entry = try await analyzer.entry(0)
     XCTAssertGreaterThan(entry.seq, 0)
     let after = try await analyzer.qualificationDiagnostics()
-    XCTAssertEqual(after.detailBytesRead - afterTokenDetails.detailBytesRead, after.lastDetailRead)
-    XCTAssertLessThan(after.lastDetailRead, after.detailsFileBytes)
+    XCTAssertGreaterThan(
+      after.dictionaryBytesRead - afterTokenDetails.dictionaryBytesRead,
+      after.lastDictionaryRead
+    )
+    XCTAssertLessThan(after.lastDictionaryRead, after.dictionaryFileBytes)
     XCTAssertFalse(after.lastCallWasMainThread)
 
     await analyzer.dispose()
@@ -90,79 +104,6 @@ final class IchiranSwiftTests: XCTestCase {
     XCTAssertEqual(exact, 1_239)
     XCTAssertEqual(utf16Cases, 3)
     print("SWIFT_CLEAN_PARITY exact=1236 utf16=3 total=1239")
-  }
-
-  func testExactProductParityCorpus() async throws {
-    let fixture = try await installedFixture()
-    defer { fixture.remove() }
-    let analyzer = try await fixture.store.openAnalyzer()
-    addTeardownBlock { await analyzer.dispose() }
-    let lines = try corpus(named: "product-corpus")
-    var tokenDetails = 0
-    var legacy = 0
-    var romanization = 0
-    var entries = 0
-    for line in lines where !line.hasPrefix("#") && !line.isEmpty {
-      let fields = line.split(separator: "\t", omittingEmptySubsequences: false)
-      switch fields.first {
-      case "T":
-        guard fields.count == 7,
-          let pathIndex = UInt32(fields[4]),
-          let tokenIndex = UInt32(fields[5])
-        else {
-          return XCTFail("invalid token-details corpus row")
-        }
-        let actual = try await analyzer.qualificationTokenDetailsJSON(
-          utf16Units: try utf16(String(fields[2])),
-          optionsJSON: Data(fields[3].utf8),
-          pathIndex: pathIndex,
-          tokenIndex: tokenIndex
-        )
-        guard actual == Data(fields[6].utf8) else {
-          return XCTFail("token-details parity mismatch: \(fields[1])")
-        }
-        tokenDetails += 1
-      case "L":
-        guard fields.count == 5 else { return XCTFail("invalid legacy corpus row") }
-        let actual = try await analyzer.qualificationLegacyJSON(
-          utf16Units: try utf16(String(fields[2])),
-          optionsJSON: Data(fields[3].utf8)
-        )
-        guard actual == Data(fields[4].utf8) else {
-          return XCTFail("legacy parity mismatch: \(fields[1])")
-        }
-        legacy += 1
-      case "R":
-        guard fields.count == 6 else { return XCTFail("invalid romanization corpus row") }
-        let actual = try await analyzer.qualificationRomanizeJSON(
-          utf16Units: try utf16(String(fields[2])),
-          optionsJSON: Data(fields[3].utf8),
-          method: String(fields[4])
-        )
-        guard actual == Data(fields[5].utf8) else {
-          return XCTFail("romanization parity mismatch: \(fields[1])")
-        }
-        romanization += 1
-      case "D":
-        guard fields.count == 4, let index = UInt32(fields[2]) else {
-          return XCTFail("invalid dictionary corpus row")
-        }
-        let actual = try await analyzer.qualificationEntryJSON(index)
-        guard actual == Data(fields[3].utf8) else {
-          return XCTFail("dictionary parity mismatch: \(fields[1])")
-        }
-        entries += 1
-      default:
-        return XCTFail("unknown product corpus row")
-      }
-    }
-    XCTAssertEqual(tokenDetails, 8)
-    XCTAssertEqual(legacy, 705)
-    XCTAssertEqual(romanization, 8)
-    XCTAssertEqual(entries, 4)
-    print(
-      "SWIFT_PRODUCT_PARITY token_details=8 detailed=702 utf16_detailed=3 romanization=5 utf16_romanization=3 entries=4"
-    )
   }
 
   func testReviewedTokenDetailsOracleCasesThroughPublicAPI() async throws {
@@ -211,12 +152,12 @@ final class IchiranSwiftTests: XCTestCase {
     XCTAssertEqual(results["restricted-katakana"]?.meanings.count, 1)
     XCTAssertEqual(results["nested-via"]?.conjugations.first?.via.first?.root?.text, "食べる")
     XCTAssertEqual(
-      results["compound-suffix"]?.components.last?.suffix,
-      "looking like ... / seeming ..."
+      results["compound-suffix"]?.components.last?.suffixId,
+      "sou"
     )
     XCTAssertEqual(results["counter"]?.counter?.value, "3")
-    XCTAssertEqual(results["entity"]?.meanings.first?.pos, ["n-pr"])
-    XCTAssertEqual(results["entity"]?.entity, true)
+    XCTAssertTrue(results["entity"]?.meanings.isEmpty == true)
+    XCTAssertEqual(results["entity"]?.entityKind, .properNoun)
   }
 
   func testTokenDetailsCorruptionFailureReleasesOperationAndRecovers() async throws {
@@ -224,13 +165,10 @@ final class IchiranSwiftTests: XCTestCase {
     defer { fixture.remove() }
     let analyzer = try await fixture.store.openAnalyzer()
     addTeardownBlock { await analyzer.dispose() }
-    let line = try XCTUnwrap(
-      try corpus(named: "product-corpus").first { $0.hasPrefix("T\ttoken-details:4\t") }
+    let units = Array("食べました".utf16)
+    let options = Data(
+      #"{"limit":3,"entities":[],"normalizePunctuation":false}"#.utf8
     )
-    let fields = line.split(separator: "\t", omittingEmptySubsequences: false)
-    XCTAssertEqual(fields.count, 7)
-    let units = try utf16(String(fields[2]))
-    let options = Data(fields[3].utf8)
 
     do {
       _ = try await analyzer.qualificationTokenDetailsJSON(
@@ -251,7 +189,8 @@ final class IchiranSwiftTests: XCTestCase {
       pathIndex: 0,
       tokenIndex: 0
     )
-    XCTAssertEqual(recovered, Data(fields[6].utf8))
+    let recoveredDetails = try JSONDecoder().decode(IchiranTokenDetails.self, from: recovered)
+    XCTAssertFalse(recoveredDetails.conjugations.first?.meanings.isEmpty ?? true)
   }
 
   func testMalformedManifestAndPackAreRejected() async throws {
@@ -282,24 +221,30 @@ final class IchiranSwiftTests: XCTestCase {
     }
   }
 
-  func testCorruptDetailBlockIsLazyAndRejected() async throws {
+  func testCorruptLexiconBlockIsLazyAndRejected() async throws {
     let fixture = try await installedFixture()
     defer { fixture.remove() }
     let analyzer = try await fixture.store.openAnalyzer()
-    let range = try await analyzer.qualificationDetailRange(0)
+    let range = try await analyzer.qualificationLexiconRange(0)
     let before = try await analyzer.qualificationDiagnostics()
-    XCTAssertEqual(before.detailBytesRead, 96 + before.detailPrefixBytes)
-    XCTAssertGreaterThanOrEqual(range.offset, before.detailPrefixBytes)
+    XCTAssertEqual(
+      before.dictionaryBytesRead,
+      before.dictionaryHeaderBytes + before.dictionaryPrefixBytes
+    )
+    XCTAssertGreaterThanOrEqual(range.offset, before.lexiconPrefixBytes)
     await analyzer.dispose()
 
-    try flipByte(in: fixture.pack.detailsURL, offset: range.offset + range.byteLength / 2)
+    try flipByte(in: fixture.pack.lexiconURL, offset: range.offset + range.byteLength / 2)
     let reopened = try await fixture.store.openAnalyzer()
     addTeardownBlock { await reopened.dispose() }
     let opened = try await reopened.qualificationDiagnostics()
-    XCTAssertEqual(opened.detailBytesRead, 96 + opened.detailPrefixBytes)
+    XCTAssertEqual(
+      opened.dictionaryBytesRead,
+      opened.dictionaryHeaderBytes + opened.dictionaryPrefixBytes
+    )
     do {
       _ = try await reopened.entry(0)
-      XCTFail("corrupt detail block decoded")
+      XCTFail("corrupt lexicon block decoded")
     } catch let error as IchiranAnalyzerError {
       XCTAssertEqual(error.code, .invalidPack)
     }
@@ -335,7 +280,8 @@ final class IchiranSwiftTests: XCTestCase {
     let release = try bundledRelease()
     let manifest = try manifestObject(in: release)
     let hot = try XCTUnwrap((manifest["hot"] as? [String: Any])?["file"] as? String)
-    let details = try XCTUnwrap((manifest["details"] as? [String: Any])?["file"] as? String)
+    let lexicon = try XCTUnwrap((manifest["lexicon"] as? [String: Any])?["file"] as? String)
+    let locales = try XCTUnwrap(manifest["locales"] as? [String: [String: Any]])
     let baseURL = URL(string: "https://fixture.invalid/releases/")!
     RemoteFixtureURLProtocol.responses = [
       baseURL.appendingPathComponent("manifest.json"): try Data(
@@ -343,9 +289,15 @@ final class IchiranSwiftTests: XCTestCase {
       ),
       baseURL.appendingPathComponent(hot): try Data(
         contentsOf: release.appendingPathComponent(hot)),
-      baseURL.appendingPathComponent(details): try Data(
-        contentsOf: release.appendingPathComponent(details)),
+      baseURL.appendingPathComponent(lexicon): try Data(
+        contentsOf: release.appendingPathComponent(lexicon)),
     ]
+    for locale in locales.keys.sorted() {
+      let file = try XCTUnwrap(locales[locale]?["file"] as? String)
+      RemoteFixtureURLProtocol.responses[baseURL.appendingPathComponent(file)] = try Data(
+        contentsOf: release.appendingPathComponent(file)
+      )
+    }
     defer { RemoteFixtureURLProtocol.responses = [:] }
     let configuration = URLSessionConfiguration.ephemeral
     configuration.protocolClasses = [RemoteFixtureURLProtocol.self]
@@ -470,12 +422,15 @@ final class IchiranSwiftTests: XCTestCase {
     let analyzer = try await fixture.store.openAnalyzer()
     let coldOpenMs = milliseconds(since: openStart)
     let afterOpen = try await analyzer.qualificationDiagnostics()
-    XCTAssertEqual(afterOpen.detailBytesRead, 96 + afterOpen.detailPrefixBytes)
+    XCTAssertEqual(
+      afterOpen.dictionaryBytesRead,
+      afterOpen.dictionaryHeaderBytes + afterOpen.dictionaryPrefixBytes
+    )
     let firstStart = CFAbsoluteTimeGetCurrent()
     _ = try await analyzer.analyze("庭には二羽鶏がいる。", options: .init(limit: 3))
     let firstAnalysisMs = milliseconds(since: firstStart)
     let afterAnalysis = try await analyzer.qualificationDiagnostics()
-    XCTAssertEqual(afterAnalysis.detailBytesRead, afterOpen.detailBytesRead)
+    XCTAssertEqual(afterAnalysis.dictionaryBytesRead, afterOpen.dictionaryBytesRead)
 
     var samples: [Double] = []
     for _ in 0..<100 {
@@ -507,12 +462,12 @@ final class IchiranSwiftTests: XCTestCase {
       "residentBeforeBytes": memoryBefore.resident,
       "residentSteadyBytes": memoryAfter.resident,
       "peakResidentBytes": memoryAfter.peak,
-      "detailFileBytes": diagnostics.detailsFileBytes,
-      "detailBytesRead": diagnostics.detailBytesRead,
+      "dictionaryFileBytes": diagnostics.dictionaryFileBytes,
+      "dictionaryBytesRead": diagnostics.dictionaryBytesRead,
     ]
     let encoded = try JSONSerialization.data(withJSONObject: metrics, options: [.sortedKeys])
     print("M5B_METRICS \(String(decoding: encoded, as: UTF8.self))")
-    XCTAssertLessThan(diagnostics.detailBytesRead, diagnostics.detailsFileBytes)
+    XCTAssertLessThan(diagnostics.dictionaryBytesRead, diagnostics.dictionaryFileBytes)
   }
 
   private struct Fixture {

@@ -6,15 +6,31 @@ import { gunzipSync } from 'node:zlib';
 
 import * as node from '../src/index.js';
 import { openAnalyzer } from '../src/index.js';
-import { openVerifiedDetailSource } from '../src/file-details.js';
+import { openVerifiedAssetSource } from '../src/file-source.js';
 import {
   ANALYZER_WASM_URL,
   Analyzer,
   AnalyzerError
 } from '@ichiran/core';
 import type { AnalyzerReleaseManifest } from '@ichiran/core/release';
+import type { RandomAccessSource } from '@ichiran/core';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
+
+function trackedSource(
+  label: string,
+  source: RandomAccessSource,
+  reads: Array<readonly [string, number, number]>
+): RandomAccessSource {
+  return {
+    byteLength: source.byteLength,
+    async read(offset, byteLength) {
+      reads.push([label, offset, byteLength]);
+      return source.read(offset, byteLength);
+    },
+    dispose: () => source.dispose?.()
+  };
+}
 
 test('exports one Node loader', () => {
   expect(Object.keys(node)).toEqual(['openAnalyzer']);
@@ -59,7 +75,7 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
       expect(entryIndex).toBeNumber();
       expect((await analyzer.entry(entryIndex!)).seq).toBeGreaterThan(0);
       await expect(analyzer.entry(Number.MAX_SAFE_INTEGER)).rejects.toMatchObject({
-        code: 'not-found'
+        code: 'invalid-input'
       });
     } finally {
       analyzer.dispose();
@@ -72,6 +88,12 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
       const cat = await analyzer.details('猫', { limit: 3, pathIndex: 0, tokenIndex: 0 });
       expect(cat.meanings.length).toBeGreaterThan(0);
       expect(cat.alternatives).toEqual([]);
+      const chineseCat = await analyzer.details('猫', {
+        limit: 3, pathIndex: 0, tokenIndex: 0, locale: 'zh-Hans'
+      });
+      expect(chineseCat.meanings.length).toBeGreaterThan(0);
+      expect(chineseCat.meanings.map(meaning => meaning.gloss))
+        .not.toEqual(cat.meanings.map(meaning => meaning.gloss));
 
       const inflected = await analyzer.details('食べました', {
         limit: 3,
@@ -113,8 +135,8 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
         entities: [{ start: 0, end: 5, boost: 10_000 }]
       });
       expect(entity).toMatchObject({
-        entity: true,
-        meanings: [{ gloss: 'proper noun (named entity)', pos: ['n-pr'] }]
+        entityKind: 'proper-noun',
+        meanings: []
       });
 
       try {
@@ -151,13 +173,15 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
     }
   });
 
-  test('keeps analysis detail-cold and disposes the verified file source', async () => {
+  test('keeps analysis definition-cold and disposes every verified file source', async () => {
     const manifest = JSON.parse(
       await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8')
     ) as AnalyzerReleaseManifest;
-    const source = await openVerifiedDetailSource(releaseDirectory!, manifest.details);
-    const path = source.path;
-    const reads: Array<readonly [number, number]> = [];
+    const lexicon = await openVerifiedAssetSource(releaseDirectory!, manifest.lexicon);
+    const en = await openVerifiedAssetSource(releaseDirectory!, manifest.locales.en!);
+    const zhHans = await openVerifiedAssetSource(releaseDirectory!, manifest.locales['zh-Hans']!);
+    const paths = [lexicon.path, en.path, zhHans.path];
+    const reads: Array<readonly [string, number, number]> = [];
     const downloadedHot = new Uint8Array(
       await readFile(join(releaseDirectory!, manifest.hot.file))
     );
@@ -169,30 +193,33 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
       analyzer = await Analyzer.open({
         hot,
         wasm: new Uint8Array(await readFile(ANALYZER_WASM_URL)),
-        details: {
-          byteLength: source.byteLength,
-          async read(offset, byteLength) {
-            reads.push([offset, byteLength]);
-            return source.read(offset, byteLength);
-          },
-          dispose: () => source.dispose()
+        lexicon: {
+          sha256: manifest.lexicon.installedSha256,
+          source: trackedSource('lexicon', lexicon, reads)
+        },
+        locales: {
+          en: trackedSource('en', en, reads),
+          'zh-Hans': trackedSource('zh-Hans', zhHans, reads)
         }
       });
-      expect(reads).toHaveLength(2);
       const openedReads = [...reads];
       const analysis = await analyzer.analyze('今日', { limit: 1 });
       expect(reads).toEqual(openedReads);
       await analyzer.details('今日', { limit: 1, pathIndex: 0, tokenIndex: 0 });
       expect(reads.length).toBeGreaterThan(openedReads.length);
-      const detailedReads = reads.length;
+      const englishReads = reads.length;
+      await analyzer.details('今日', {
+        limit: 1, pathIndex: 0, tokenIndex: 0, locale: 'zh-Hans'
+      });
+      expect(reads.length).toBeGreaterThan(englishReads);
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
-      await analyzer.entry(entryIndex!);
-      expect(reads).toHaveLength(detailedReads + 1);
+      expect((await analyzer.entry(entryIndex!, { locale: 'zh-Hans' })).senses.length)
+        .toBeGreaterThan(0);
     } finally {
       if (analyzer) analyzer.dispose();
-      else source.dispose();
+      else for (const source of [lexicon, en, zhHans]) source.dispose();
     }
-    await expect(access(path)).rejects.toThrow();
+    for (const path of paths) await expect(access(path)).rejects.toThrow();
   });
 });
 

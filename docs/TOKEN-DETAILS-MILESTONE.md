@@ -15,13 +15,14 @@ Ichiran's presentation rules from a raw dictionary entry. Grammar is unchanged.
    not duplicated at the top level.
 3. Compounds expose component details and never combine one component's root with
    another component's inflection. Non-primary suffix components retain their
-   suffix descriptions.
+   stable suffix IDs.
 4. Counters expose value and ordinal status and include only counter senses.
 5. Sense restrictions use the analyzer's exact spelling/reading restriction
    relation, including kana normalization and `nokanji` handling.
-6. Synthetic entities retain their proper-noun meaning. Field and usage metadata
-   survive in the clean model; scores and pack internals remain outside the learner
-   presentation contract.
+6. Synthetic entities retain a `proper-noun` entity classification without an
+   injected English dictionary meaning. Field and usage metadata survive in the
+   clean model; scores and pack internals remain outside the learner presentation
+   contract.
 7. Detail hydration remains random-access and cold: opening or analyzing does not
    eagerly read `details.bin`; requesting one token reads only the blocks required
    by that token tree.
@@ -58,9 +59,10 @@ avoids opaque result handles and mutable last-result state, and is acceptable on
 if the measured selection latency remains within the existing interaction budget.
 
 The result is a recursive clean tree containing surface, reading, context-filtered
-meanings, components, conjugations, secondary alternatives, suffix information,
-counter information, and entity status. Consumers own layout, localization, and
-learner-facing labels; the analyzer owns semantic selection and tree construction.
+meanings, components, conjugations, secondary alternatives, `suffixId`, counter
+information, and `entityKind`. Consumers own layout, UI locale, and learner-facing
+labels; the analyzer owns semantic selection and tree construction. Dictionary gloss
+locale remains an independent analyzer option.
 
 ## Work order
 

@@ -18,11 +18,17 @@ targets=(
 )
 symbols=(
   _ichiran_buffer_free
-  _ichiran_detail_prefix_length
-  _ichiran_detail_store_decode
-  _ichiran_detail_store_free
-  _ichiran_detail_store_open
-  _ichiran_detail_store_range
+  _ichiran_lexicon_prefix_length
+  _ichiran_lexicon_store_decode
+  _ichiran_lexicon_store_entry_count
+  _ichiran_lexicon_store_free
+  _ichiran_lexicon_store_open
+  _ichiran_lexicon_store_range
+  _ichiran_locale_prefix_length
+  _ichiran_locale_store_decode
+  _ichiran_locale_store_free
+  _ichiran_locale_store_open
+  _ichiran_locale_store_range
   _ichiran_kernel_abi_version
   _ichiran_kernel_analyze_utf16
   _ichiran_kernel_free
@@ -135,8 +141,8 @@ xcrun clang -std=c11 -Wall -Wextra -Werror \
   "$host_archive" \
   -lpthread -lm \
   -o "$work/abi-probe"
-"$work/abi-probe" | grep -Fx "Ichiran kernel ABI v5" >/dev/null \
-  || fail "ABI runtime probe did not report version 5"
+"$work/abi-probe" | grep -Fx "Ichiran kernel ABI v7" >/dev/null \
+  || fail "ABI runtime probe did not report version 7"
 
 xcodebuild -create-xcframework \
   -library "$device" -headers "$work/headers/device" \
@@ -187,7 +193,7 @@ tree_hash="$({
   echo "toolchain: $(rustup run "$toolchain" rustc --version)"
   echo "xcode: $(xcodebuild -version | tr '\n' ' ')"
   echo "sdk: $(xcrun --sdk iphoneos --show-sdk-version)"
-  echo "abi: 5"
+  echo "abi: 7"
   echo "symbols: ${#symbols[@]}"
   echo "xcframework: $output"
   echo "xcframework_tree_bytes: $(find "$output" -type f -exec stat -f %z {} + | awk '{sum += $1} END {print sum}')"

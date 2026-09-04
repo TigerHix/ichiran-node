@@ -68,14 +68,21 @@ async function main(): Promise<void> {
     .option('-l, --limit <number>', 'maximum analysis paths', integer, 3)
     .option('-p, --path <number>', 'analysis path index', integer, 0)
     .option('-t, --token <number>', 'token index within the path', integer, 0)
+    .option('--locale <locale>', 'installed definition locale', 'en')
     .action(async (
       parts: string[],
-      options: { readonly limit: number; readonly path: number; readonly token: number }
+      options: {
+        readonly limit: number;
+        readonly path: number;
+        readonly token: number;
+        readonly locale: string;
+      }
     ) => {
       const value = await (await getAnalyzer()).details(text(parts), {
         limit: options.limit,
         pathIndex: options.path,
-        tokenIndex: options.token
+        tokenIndex: options.token,
+        locale: options.locale
       });
       process.stdout.write(`${JSON.stringify(value)}\n`);
     });
@@ -84,8 +91,9 @@ async function main(): Promise<void> {
     .command('entry')
     .description('read one dictionary entry')
     .argument('<entry-index>', 'entry index returned by analyze', integer)
-    .action(async (entryIndex: number) => {
-      const entry = await (await getAnalyzer()).entry(entryIndex);
+    .option('--locale <locale>', 'installed definition locale', 'en')
+    .action(async (entryIndex: number, options: { readonly locale: string }) => {
+      const entry = await (await getAnalyzer()).entry(entryIndex, { locale: options.locale });
       process.stdout.write(`${JSON.stringify(entry)}\n`);
     });
 

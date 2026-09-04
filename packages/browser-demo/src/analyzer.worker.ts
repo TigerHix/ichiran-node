@@ -6,6 +6,7 @@ import {
   type AnalysisResult,
   type Analyzer,
   type DictionaryEntry,
+  type DictionaryEntryOptions,
   type RomanizeOptions,
   type TokenDetails,
   type TokenDetailsOptions
@@ -42,7 +43,7 @@ const typescriptRuntimeModule = __ICHIRAN_TYPESCRIPT_ORACLE__
 
 interface WorkerRuntime {
   analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult>;
-  entry(entryIndex: number): Promise<DictionaryEntry>;
+  entry(entryIndex: number, options?: DictionaryEntryOptions): Promise<DictionaryEntry>;
   romanize(text: string, options?: RomanizeOptions): Promise<string>;
   details(text: string, options: TokenDetailsOptions): Promise<TokenDetails>;
   dispose?(): void;
@@ -294,7 +295,7 @@ async function handle(request: IncomingRequest): Promise<unknown> {
       });
     }
     case 'entry': {
-      return withRuntime(value => value.entry(request.entryIndex));
+      return withRuntime(value => value.entry(request.entryIndex, request.options));
     }
     case 'analyze': {
       return withRuntime(value => value.analyze(request.text, request.options));

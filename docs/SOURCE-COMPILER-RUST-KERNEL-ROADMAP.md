@@ -1,5 +1,8 @@
 # Source compiler and Rust kernel roadmap
 
+> Historical pack-v1 roadmap. Its two-store layout and 26 MiB transfer target were
+> superseded by `docs/MULTILINGUAL-DICTIONARY-ARCHITECTURE.md`.
+
 Status: integrated implementation and qualification recipe complete; exact-head
 Linux/WSL qualification pending. Last updated 2026-09-02.
 

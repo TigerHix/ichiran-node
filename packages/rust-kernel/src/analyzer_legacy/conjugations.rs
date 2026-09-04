@@ -8,7 +8,7 @@ use super::{
     LegacyConjugation, LegacyConjugationFlags, LegacyConjugationInfo, LegacyConjugationProperty,
 };
 use crate::characters::{CharClass, test_word};
-use crate::details::DetailStore;
+use crate::dictionary::DictionaryStores;
 use crate::dto::{AnalysisRoot, LegacyConjugationSelection, LegacySemanticMember};
 use crate::morphology::{MorphologyProperty, Route};
 
@@ -43,7 +43,7 @@ enum PropertyIdentity {
 pub(super) fn conjugation_forest(
     members: &[LegacySemanticMember],
     session: &mut LegacyDetailedSession,
-    details: &DetailStore,
+    stores: &DictionaryStores<'_>,
     context: &mut LegacyContext<'_>,
     selection: LegacyConjugationSelection,
     source_route: Route,
@@ -77,13 +77,13 @@ pub(super) fn conjugation_forest(
     if initial.is_empty() {
         return Ok(Vec::new());
     }
-    render(&initial, session, details, context, source_route)
+    render(&initial, session, stores, context, source_route)
 }
 
 fn render(
     items: &[StageItem<'_>],
     session: &mut LegacyDetailedSession,
-    details: &DetailStore,
+    stores: &DictionaryStores<'_>,
     context: &mut LegacyContext<'_>,
     source_route: Route,
 ) -> Attempt<Vec<LegacyConjugation>> {
@@ -108,7 +108,7 @@ fn render(
                     order: item.order,
                 })
                 .collect::<Vec<_>>();
-            let via = render(&nested, session, details, context, source_route)?;
+            let via = render(&nested, session, stores, context, source_route)?;
             if !via.is_empty() {
                 let readok = via.first().and_then(|node| node.readok);
                 nodes.push(LegacyConjugation {
@@ -131,7 +131,7 @@ fn render(
             continue;
         };
         let presentation = legacy_source_root(root, source_route);
-        let entry = session.entry(member.entry_index, details)?.cloned();
+        let entry = session.entry(member.entry_index, stores)?.cloned();
         let label_route = if test_word(
             &presentation.form.encode_utf16().collect::<Vec<_>>(),
             CharClass::Kana,

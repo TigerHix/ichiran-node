@@ -50,9 +50,14 @@ export function getDataPath(source: DataSource, customPath?: string): string {
 
 function sourceLockPaths(explicit: readonly string[] | undefined): string[] {
   const data = path.join(REPOSITORY, 'data');
+  // The immutable v1 lock is parity evidence, not an active compiler lock. Its
+  // pinned paths are a strict subset of the active baseline lock.
   const discovered = fs.existsSync(data)
     ? fs.readdirSync(data)
-      .filter(name => /^source-compiler.*\.lock\.json$/.test(name))
+      .filter(name => (
+        /^source-compiler.*\.lock\.json$/.test(name)
+        && name !== 'source-compiler-historical-v1-sources.lock.json'
+      ))
       .map(name => path.join(data, name))
     : [];
   for (const value of explicit ?? []) discovered.push(path.resolve(REPOSITORY, value));

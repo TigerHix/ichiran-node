@@ -38,5 +38,8 @@ cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_product_harness.c \
   -o target/c_product_harness
 bun tests/c_parity_corpus.ts "${generator_args[@]}" \
   | target/c_harness "$release_dir/hot.bin"
-bun tests/c_product_corpus.ts "${generator_args[@]}" \
-  | target/c_product_harness "$release_dir/hot.bin" "$release_dir/details.bin"
+target/c_product_harness \
+  "$release_dir/hot.bin" \
+  "$release_dir/lexicon.bin" \
+  "$release_dir/gloss.en.bin" \
+  "$release_dir/gloss.zh-Hans.bin"

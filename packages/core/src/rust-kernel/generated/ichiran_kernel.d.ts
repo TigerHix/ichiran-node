@@ -1,15 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export class WasmDetailStore {
-    free(): void;
-    [Symbol.dispose](): void;
-    entry_json(entry_index: number, compressed: Uint8Array): Uint8Array;
-    constructor(prefix: Uint8Array, total_bytes: number);
-    range_json(entry_index: number): Uint8Array;
-    resident_bytes(): number;
-}
-
 export class WasmKernel {
     free(): void;
     [Symbol.dispose](): void;
@@ -31,10 +22,29 @@ export class WasmLegacyOperation {
     free(): void;
     [Symbol.dispose](): void;
     /**
-     * Returns a JSON envelope. `missing-detail` names the exact compressed
-     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
+     * Returns a JSON envelope. `missing-dictionary` names the store and exact
+     * compressed range the host must decode before retrying.
      */
-    legacy_step(kernel: WasmKernel, details: WasmDetailStore): Uint8Array;
+    legacy_step(kernel: WasmKernel, lexicon: WasmLexiconStore, locale: WasmLocaleStore, fallback: WasmLocaleStore): Uint8Array;
+}
+
+export class WasmLexiconStore {
+    free(): void;
+    [Symbol.dispose](): void;
+    entry_count(): number;
+    entry_json(entry_index: number, compressed: Uint8Array): Uint8Array;
+    constructor(prefix: Uint8Array, total_bytes: number);
+    range_json(entry_index: number): Uint8Array;
+    resident_bytes(): number;
+}
+
+export class WasmLocaleStore {
+    free(): void;
+    [Symbol.dispose](): void;
+    entry_json(entry_index: number, compressed: Uint8Array): Uint8Array;
+    constructor(prefix: Uint8Array, total_bytes: number, expected_lexicon_sha256: Uint8Array, expected_locale: string, expected_entry_count: number);
+    range_json(entry_index: number): Uint8Array;
+    resident_bytes(): number;
 }
 
 export class WasmTokenDetailsOperation {
@@ -44,23 +54,23 @@ export class WasmTokenDetailsOperation {
     /**
      * Resolves one presentation tree, requesting only the dictionary blocks it uses.
      */
-    token_details_step(kernel: WasmKernel, details: WasmDetailStore): Uint8Array;
+    token_details_step(kernel: WasmKernel, lexicon: WasmLexiconStore, locale: WasmLocaleStore, fallback: WasmLocaleStore): Uint8Array;
 }
 
-export function detail_prefix_length(header: Uint8Array, total_bytes: number): number;
+export function lexicon_prefix_length(header: Uint8Array, total_bytes: number): number;
+
+export function locale_prefix_length(header: Uint8Array, total_bytes: number): number;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
-    readonly __wbg_wasmdetailstore_free: (a: number, b: number) => void;
     readonly __wbg_wasmkernel_free: (a: number, b: number) => void;
     readonly __wbg_wasmlegacyoperation_free: (a: number, b: number) => void;
-    readonly detail_prefix_length: (a: number, b: number, c: number, d: number) => void;
-    readonly wasmdetailstore_entry_json: (a: number, b: number, c: number, d: number, e: number) => void;
-    readonly wasmdetailstore_open: (a: number, b: number, c: number, d: number) => void;
-    readonly wasmdetailstore_range_json: (a: number, b: number, c: number) => void;
-    readonly wasmdetailstore_resident_bytes: (a: number) => number;
+    readonly __wbg_wasmlexiconstore_free: (a: number, b: number) => void;
+    readonly __wbg_wasmlocalestore_free: (a: number, b: number) => void;
+    readonly lexicon_prefix_length: (a: number, b: number, c: number, d: number) => void;
+    readonly locale_prefix_length: (a: number, b: number, c: number, d: number) => void;
     readonly wasmkernel_analyze_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
     readonly wasmkernel_entry_index_for_sequence: (a: number, b: number, c: number) => void;
     readonly wasmkernel_legacy_begin_utf16: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
@@ -68,9 +78,18 @@ export interface InitOutput {
     readonly wasmkernel_resident_payload_bytes: (a: number) => number;
     readonly wasmkernel_romanize_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
     readonly wasmkernel_token_details_begin_utf16: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
-    readonly wasmlegacyoperation_legacy_step: (a: number, b: number, c: number, d: number) => void;
-    readonly wasmtokendetailsoperation_token_details_step: (a: number, b: number, c: number, d: number) => void;
+    readonly wasmlegacyoperation_legacy_step: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
+    readonly wasmlexiconstore_entry_count: (a: number) => number;
+    readonly wasmlexiconstore_entry_json: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly wasmlexiconstore_open: (a: number, b: number, c: number, d: number) => void;
+    readonly wasmlexiconstore_range_json: (a: number, b: number, c: number) => void;
+    readonly wasmlexiconstore_resident_bytes: (a: number) => number;
+    readonly wasmlocalestore_entry_json: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly wasmlocalestore_open: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => void;
+    readonly wasmlocalestore_range_json: (a: number, b: number, c: number) => void;
+    readonly wasmtokendetailsoperation_token_details_step: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
     readonly __wbg_wasmtokendetailsoperation_free: (a: number, b: number) => void;
+    readonly wasmlocalestore_resident_bytes: (a: number) => number;
     readonly __wbindgen_export: (a: number) => void;
     readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
     readonly __wbindgen_export2: (a: number, b: number) => number;

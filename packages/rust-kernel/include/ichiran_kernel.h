@@ -8,11 +8,12 @@
 extern "C" {
 #endif
 
-#define ICHIRAN_KERNEL_ABI_VERSION 5u
-#define ICHIRAN_NO_DETAIL UINT32_MAX
+#define ICHIRAN_KERNEL_ABI_VERSION 7u
+#define ICHIRAN_NO_DICTIONARY UINT32_MAX
 
 typedef struct IchiranKernel IchiranKernel;
-typedef struct IchiranDetailStore IchiranDetailStore;
+typedef struct IchiranLexiconStore IchiranLexiconStore;
+typedef struct IchiranLocaleStore IchiranLocaleStore;
 typedef struct IchiranLegacyOperation IchiranLegacyOperation;
 typedef struct IchiranTokenDetailsOperation IchiranTokenDetailsOperation;
 
@@ -34,8 +35,15 @@ typedef enum IchiranStatus {
 typedef enum IchiranStepState {
   ICHIRAN_STEP_ERROR = 0,
   ICHIRAN_STEP_READY = 1,
-  ICHIRAN_STEP_MISSING_DETAIL = 2
+  ICHIRAN_STEP_MISSING_DICTIONARY = 2
 } IchiranStepState;
+
+typedef enum IchiranDictionaryStoreKind {
+  ICHIRAN_DICTIONARY_NONE = 0,
+  ICHIRAN_DICTIONARY_LEXICON = 1,
+  ICHIRAN_DICTIONARY_LOCALE = 2,
+  ICHIRAN_DICTIONARY_FALLBACK = 3
+} IchiranDictionaryStoreKind;
 
 /* Rust owns this allocation. Return the complete value exactly once. */
 typedef struct IchiranBuffer {
@@ -50,23 +58,24 @@ typedef struct IchiranResult {
   IchiranBuffer buffer;
 } IchiranResult;
 
-typedef struct IchiranDetailRange {
+typedef struct IchiranDictionaryRange {
   uint32_t block;
   uint32_t offset;
   uint32_t byte_length;
   uint32_t uncompressed_bytes;
   uint32_t checksum;
-} IchiranDetailRange;
+} IchiranDictionaryRange;
 
 /*
- * READY carries exact detailed legacy JSON. MISSING_DETAIL carries entry_index
- * and range with an empty buffer. ERROR carries an owned JSON error buffer.
+ * READY carries exact detailed legacy JSON. MISSING_DICTIONARY carries a store,
+ * entry_index, and range with an empty buffer. ERROR carries owned JSON.
  */
 typedef struct IchiranStepResult {
   uint32_t status;
   uint32_t state;
+  uint32_t store;
   uint32_t entry_index;
-  IchiranDetailRange range;
+  IchiranDictionaryRange range;
   IchiranBuffer buffer;
 } IchiranStepResult;
 
@@ -107,31 +116,62 @@ IchiranResult ichiran_kernel_romanize_utf16(
   size_t method_bytes
 );
 
-/* Reads the resident prefix length from the complete 96-byte detail header. */
-IchiranResult ichiran_detail_prefix_length(
+/* Reads resident prefix lengths from complete fixed headers. */
+IchiranResult ichiran_lexicon_prefix_length(
   const uint8_t *header,
   size_t header_bytes,
   size_t total_bytes,
   size_t *output
 );
 
-/* Copies and validates the resident prefix; details.bin remains host-owned. */
-IchiranResult ichiran_detail_store_open(
+IchiranResult ichiran_locale_prefix_length(
+  const uint8_t *header,
+  size_t header_bytes,
+  size_t total_bytes,
+  size_t *output
+);
+
+IchiranResult ichiran_lexicon_store_open(
   const uint8_t *prefix,
   size_t prefix_bytes,
   size_t total_bytes,
-  IchiranDetailStore **output
+  IchiranLexiconStore **output
 );
 
-IchiranResult ichiran_detail_store_range(
-  const IchiranDetailStore *details,
+size_t ichiran_lexicon_store_entry_count(const IchiranLexiconStore *lexicon);
+
+IchiranResult ichiran_lexicon_store_range(
+  const IchiranLexiconStore *lexicon,
   uint32_t entry_index,
-  IchiranDetailRange *output
+  IchiranDictionaryRange *output
 );
 
-/* Validates one exact compressed range and returns decoded DetailEntry JSON. */
-IchiranResult ichiran_detail_store_decode(
-  const IchiranDetailStore *details,
+IchiranResult ichiran_lexicon_store_decode(
+  const IchiranLexiconStore *lexicon,
+  uint32_t entry_index,
+  const uint8_t *compressed,
+  size_t compressed_bytes
+);
+
+IchiranResult ichiran_locale_store_open(
+  const uint8_t *prefix,
+  size_t prefix_bytes,
+  size_t total_bytes,
+  const uint8_t lexicon_sha256[32],
+  const uint8_t *locale_utf8,
+  size_t locale_bytes,
+  size_t lexicon_entry_count,
+  IchiranLocaleStore **output
+);
+
+IchiranResult ichiran_locale_store_range(
+  const IchiranLocaleStore *locale,
+  uint32_t entry_index,
+  IchiranDictionaryRange *output
+);
+
+IchiranResult ichiran_locale_store_decode(
+  const IchiranLocaleStore *locale,
   uint32_t entry_index,
   const uint8_t *compressed,
   size_t compressed_bytes
@@ -150,14 +190,18 @@ IchiranResult ichiran_kernel_legacy_begin_utf16(
 );
 
 /*
- * First call: ICHIRAN_NO_DETAIL, NULL, zero. On MISSING_DETAIL, read exactly
- * result.range and pass its bytes with result.entry_index on the next call.
+ * First call: ICHIRAN_DICTIONARY_NONE, ICHIRAN_NO_DICTIONARY, NULL, zero. On
+ * MISSING_DICTIONARY, read from result.store and pass the exact result.range
+ * bytes with result.store and result.entry_index on the next call.
  * Rust atomically decodes and retries. READY is terminal.
  */
 IchiranStepResult ichiran_kernel_legacy_step(
   const IchiranKernel *kernel,
   const IchiranLegacyOperation *operation,
-  const IchiranDetailStore *details,
+  const IchiranLexiconStore *lexicon,
+  const IchiranLocaleStore *locale,
+  const IchiranLocaleStore *fallback,
+  uint32_t supplied_store,
   uint32_t supplied_entry_index,
   const uint8_t *compressed,
   size_t compressed_bytes
@@ -177,26 +221,30 @@ IchiranResult ichiran_kernel_token_details_begin_utf16(
 
 /*
  * Same lazy range handshake as ichiran_kernel_legacy_step. READY carries canonical
- * TokenDetails JSON with the same clean reading, alternative, entity, and counter
- * semantics as analysis JSON.
+ * TokenDetails JSON with clean reading, alternatives, semantic suffixId/entityKind,
+ * and structured counter semantics. Presentation strings belong to the host.
  */
 IchiranStepResult ichiran_kernel_token_details_step(
   const IchiranKernel *kernel,
   const IchiranTokenDetailsOperation *operation,
-  const IchiranDetailStore *details,
+  const IchiranLexiconStore *lexicon,
+  const IchiranLocaleStore *locale,
+  const IchiranLocaleStore *fallback,
+  uint32_t supplied_store,
   uint32_t supplied_entry_index,
   const uint8_t *compressed,
   size_t compressed_bytes
 );
 
 /*
- * A kernel and detail store may be shared by native threads. Independent
+ * A kernel and dictionary stores may be shared by native threads. Independent
  * operation handles retain independent sessions. Do not free a handle while a
  * call uses it. All input pointers are borrowed only for the call. All fallible
  * entries contain Rust panics and report ICHIRAN_INTERNAL.
  */
 void ichiran_kernel_free(IchiranKernel *kernel);
-void ichiran_detail_store_free(IchiranDetailStore *details);
+void ichiran_lexicon_store_free(IchiranLexiconStore *lexicon);
+void ichiran_locale_store_free(IchiranLocaleStore *locale);
 void ichiran_legacy_operation_free(IchiranLegacyOperation *operation);
 void ichiran_token_details_operation_free(IchiranTokenDetailsOperation *operation);
 

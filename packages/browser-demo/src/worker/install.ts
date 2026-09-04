@@ -12,9 +12,9 @@ const DIRECTORY_NAME = 'ichiran-browser-alpha';
 const MARKER_A_FILE = 'install-a.json';
 const MARKER_B_FILE = 'install-b.json';
 const HOT_A_FILE = 'hot-a.bin';
-const DETAILS_A_FILE = 'details-a.bin';
+const LEXICON_A_FILE = 'lexicon-a.bin';
 const HOT_B_FILE = 'hot-b.bin';
-const DETAILS_B_FILE = 'details-b.bin';
+const LEXICON_B_FILE = 'lexicon-b.bin';
 const DOWNLOAD_FILE = 'asset.download';
 const CONTROL_DATABASE = 'ichiran-browser-alpha-control';
 const CONTROL_STORE = 'state';
@@ -34,28 +34,22 @@ type InstallSlot = 'a' | 'b';
 
 interface SlotFiles {
   readonly hot: string;
-  readonly details: string;
+  readonly lexicon: string;
+  readonly locales: Readonly<Record<string, string>>;
 }
 
-const SLOT_FILES: Record<InstallSlot, SlotFiles> = {
-  a: { hot: HOT_A_FILE, details: DETAILS_A_FILE },
-  b: { hot: HOT_B_FILE, details: DETAILS_B_FILE }
-};
-const ALL_DATA_FILES = [
-  HOT_A_FILE,
-  DETAILS_A_FILE,
-  HOT_B_FILE,
-  DETAILS_B_FILE
-] as const;
 const ALL_MARKER_FILES = [MARKER_A_FILE, MARKER_B_FILE] as const;
 // Cleanup-only names from the pre-A/B experiment. They are never parsed or opened.
-const STALE_INSTALL_FILES = ['install.json', 'hot.bin', 'details.bin'] as const;
+const STALE_INSTALL_FILES = [
+  'install.json', 'hot.bin', 'details.bin', 'details-a.bin', 'details-b.bin'
+] as const;
 
 export interface InstalledFiles {
   readonly manifest: AnalyzerPackManifest;
   readonly installId: string;
   readonly hot: FileSystemFileHandle;
-  readonly details: FileSystemFileHandle;
+  readonly lexicon: FileSystemFileHandle;
+  readonly locales: Readonly<Record<string, FileSystemFileHandle>>;
 }
 
 export type InspectedInstall =
@@ -100,7 +94,17 @@ function assertInstallId(value: unknown): asserts value is string {
 }
 
 function markerFiles(marker: InstalledMarker): SlotFiles {
-  return SLOT_FILES[marker.slot];
+  return slotFiles(marker.slot, Object.keys(marker.manifest.locales));
+}
+
+function slotFiles(slot: InstallSlot, locales: readonly string[]): SlotFiles {
+  return {
+    hot: slot === 'a' ? HOT_A_FILE : HOT_B_FILE,
+    lexicon: slot === 'a' ? LEXICON_A_FILE : LEXICON_B_FILE,
+    locales: Object.fromEntries(
+      locales.map(locale => [locale, `gloss-${locale}-${slot}.bin`])
+    )
+  };
 }
 
 function markerName(slot: InstallSlot): string {
@@ -112,12 +116,17 @@ async function cleanupInactiveGeneration(
   marker: InstalledMarker
 ): Promise<void> {
   const activeFiles = markerFiles(marker);
-  const activeNames = new Set([activeFiles.hot, activeFiles.details]);
+  const activeNames = new Set([
+    activeFiles.hot,
+    activeFiles.lexicon,
+    ...Object.values(activeFiles.locales)
+  ]);
   const activeMarker = markerName(marker.slot);
+  const installedDataFiles = await installedDataFileNames(directory);
   // An inability to remove an orphan must not quarantine the independently
-  // valid committed pack. Every later cold inspection retries this bounded set.
+  // valid committed pack. Every later cold inspection retries discovered files.
   await Promise.allSettled([
-    ...ALL_DATA_FILES
+    ...installedDataFiles
       .filter(name => !activeNames.has(name))
       .map(name => removeIfPresent(directory, name)),
     ...ALL_MARKER_FILES
@@ -182,6 +191,25 @@ async function fileIfPresent(
   }
 }
 
+interface IterableDirectoryHandle extends FileSystemDirectoryHandle {
+  entries(): AsyncIterableIterator<[string, FileSystemHandle]>;
+}
+
+async function installedDataFileNames(
+  directory: FileSystemDirectoryHandle
+): Promise<string[]> {
+  const names: string[] = [];
+  for await (const [name, handle] of (directory as IterableDirectoryHandle).entries()) {
+    if (
+      handle.kind === 'file'
+      && /^(?:hot|lexicon)-(?:a|b)\.bin$|^gloss-[A-Za-z0-9-]+-(?:a|b)\.bin$/.test(name)
+    ) {
+      names.push(name);
+    }
+  }
+  return names;
+}
+
 async function cleanupStaleInstallFiles(
   directory: FileSystemDirectoryHandle
 ): Promise<void> {
@@ -189,9 +217,10 @@ async function cleanupStaleInstallFiles(
 }
 
 async function removeAllInstallFiles(directory: FileSystemDirectoryHandle): Promise<void> {
+  const dataFiles = await installedDataFileNames(directory);
   await Promise.all([
     ...ALL_MARKER_FILES.map(name => removeIfPresent(directory, name)),
-    ...ALL_DATA_FILES.map(name => removeIfPresent(directory, name)),
+    ...dataFiles.map(name => removeIfPresent(directory, name)),
     ...STALE_INSTALL_FILES.map(name => removeIfPresent(directory, name)),
     removeIfPresent(directory, DOWNLOAD_FILE)
   ]);
@@ -270,14 +299,25 @@ async function hasCompleteGenerationFiles(
   marker: InstalledMarker
 ): Promise<boolean> {
   const files = markerFiles(marker);
-  const [hot, details] = await Promise.all([
+  const localeHandles = await Promise.all(Object.entries(files.locales).map(
+    async ([locale, name]) => [locale, await fileIfPresent(directory, name)] as const
+  ));
+  const [hot, lexicon] = await Promise.all([
     fileIfPresent(directory, files.hot),
-    fileIfPresent(directory, files.details)
+    fileIfPresent(directory, files.lexicon)
   ]);
-  if (!hot || !details) return false;
-  const [hotFile, detailsFile] = await Promise.all([hot.getFile(), details.getFile()]);
+  if (!hot || !lexicon || localeHandles.some(([, handle]) => !handle)) return false;
+  const [hotFile, lexiconFile, ...localeFiles] = await Promise.all([
+    hot.getFile(),
+    lexicon.getFile(),
+    ...localeHandles.map(([, handle]) => handle!.getFile())
+  ]);
   return hotFile.size === marker.manifest.hot.installedBytes
-    && detailsFile.size === marker.manifest.details.installedBytes;
+    && lexiconFile.size === marker.manifest.lexicon.installedBytes
+    && localeFiles.every((file, index) => {
+      const locale = localeHandles[index]![0];
+      return file.size === marker.manifest.locales[locale]!.installedBytes;
+    });
 }
 
 function controlDatabase(): Promise<IDBDatabase> {
@@ -506,10 +546,10 @@ export async function inspectInstalled(workerOpen = false): Promise<InspectedIns
   }
   if (!installId) {
     const [presentDataFiles, presentMarkerFiles] = await Promise.all([
-      Promise.all(ALL_DATA_FILES.map(name => fileIfPresent(directory, name))),
+      installedDataFileNames(directory),
       Promise.all(ALL_MARKER_FILES.map(name => fileIfPresent(directory, name)))
     ]);
-    return presentDataFiles.some(Boolean) || presentMarkerFiles.some(Boolean)
+    return presentDataFiles.length > 0 || presentMarkerFiles.some(Boolean)
       ? { state: 'incomplete', message: 'Analyzer data installation is incomplete.' }
       : { state: 'not-installed' };
   }
@@ -524,10 +564,10 @@ export async function inspectInstalled(workerOpen = false): Promise<InspectedIns
   }
   if (!marker) {
     const [presentDataFiles, presentMarkerFiles] = await Promise.all([
-      Promise.all(ALL_DATA_FILES.map(name => fileIfPresent(directory, name))),
+      installedDataFileNames(directory),
       Promise.all(ALL_MARKER_FILES.map(name => fileIfPresent(directory, name)))
     ]);
-    if (!presentDataFiles.some(Boolean) && !presentMarkerFiles.some(Boolean)) {
+    if (presentDataFiles.length === 0 && !presentMarkerFiles.some(Boolean)) {
       try {
         await writeInstallId(null);
         return { state: 'not-installed' };
@@ -544,21 +584,33 @@ export async function inspectInstalled(workerOpen = false): Promise<InspectedIns
     return { state: 'corrupt', message: 'Analyzer install IDs do not match.' };
   }
   const files = markerFiles(marker);
-  const [hot, details] = await Promise.all([
+  const localeHandles = Object.fromEntries(await Promise.all(
+    Object.entries(files.locales).map(async ([locale, name]) => (
+      [locale, await fileIfPresent(directory, name)] as const
+    ))
+  ));
+  const [hot, lexicon] = await Promise.all([
     fileIfPresent(directory, files.hot),
-    fileIfPresent(directory, files.details)
+    fileIfPresent(directory, files.lexicon)
   ]);
-  if (!hot || !details) {
+  if (!hot || !lexicon || Object.values(localeHandles).some(handle => !handle)) {
     return { state: 'incomplete', message: 'Analyzer data files are missing.' };
   }
-  const [hotFile, detailsFile, persistent] = await Promise.all([
+  const locales = localeHandles as Record<string, FileSystemFileHandle>;
+  const localeFiles = Object.fromEntries(await Promise.all(
+    Object.entries(locales).map(async ([locale, handle]) => [locale, await handle.getFile()] as const)
+  ));
+  const [hotFile, lexiconFile, persistent] = await Promise.all([
     hot.getFile(),
-    details.getFile(),
+    lexicon.getFile(),
     navigator.storage.persisted()
   ]);
   if (
     hotFile.size !== marker.manifest.hot.installedBytes
-    || detailsFile.size !== marker.manifest.details.installedBytes
+    || lexiconFile.size !== marker.manifest.lexicon.installedBytes
+    || Object.entries(localeFiles).some(
+      ([locale, file]) => file.size !== marker.manifest.locales[locale]!.installedBytes
+    )
   ) {
     return { state: 'corrupt', message: 'Analyzer data file sizes do not match the manifest.' };
   }
@@ -567,11 +619,25 @@ export async function inspectInstalled(workerOpen = false): Promise<InspectedIns
     state: 'ready',
     packVersion: marker.manifest.packVersion,
     manifestSha256: marker.manifest.manifestSha256,
-    downloadBytes: marker.manifest.hot.downloadBytes + marker.manifest.details.downloadBytes,
-    installedBytes: hotFile.size + detailsFile.size,
+    downloadBytes: marker.manifest.hot.downloadBytes
+      + marker.manifest.lexicon.downloadBytes
+      + Object.values(marker.manifest.locales).reduce(
+        (total, asset) => total + asset.downloadBytes,
+        0
+      ),
+    installedBytes: hotFile.size + lexiconFile.size + Object.values(localeFiles).reduce(
+      (total, file) => total + file.size,
+      0
+    ),
     persistent,
     workerOpen,
-    files: { manifest: marker.manifest, installId: marker.installId, hot, details }
+    files: {
+      manifest: marker.manifest,
+      installId: marker.installId,
+      hot,
+      lexicon,
+      locales
+    }
   };
 }
 
@@ -602,9 +668,13 @@ export async function installAnalyzer(
       'The deployed analyzer release changed. Close every analyzer tab, reopen, and retry.'
     );
   }
-  const totalBytes = manifest.hot.downloadBytes + manifest.details.downloadBytes;
-  const installedBytes = manifest.hot.installedBytes + manifest.details.installedBytes;
-  const temporaryBytes = temporaryInstallBytes([manifest.hot, manifest.details]);
+  const localeAssets = Object.entries(manifest.locales).sort(([left], [right]) => (
+    left.localeCompare(right)
+  ));
+  const assets = [manifest.hot, manifest.lexicon, ...localeAssets.map(([, asset]) => asset)];
+  const totalBytes = assets.reduce((total, asset) => total + asset.downloadBytes, 0);
+  const installedBytes = assets.reduce((total, asset) => total + asset.installedBytes, 0);
+  const temporaryBytes = temporaryInstallBytes(assets);
   const directory = await analyzerDirectory();
   await cleanupStaleInstallFiles(directory);
   let previousInstallId: string | null = null;
@@ -632,18 +702,22 @@ export async function installAnalyzer(
     await removeAllInstallFiles(directory);
   }
   const nextSlot: InstallSlot = previousReady?.slot === 'a' ? 'b' : 'a';
-  const nextFiles = SLOT_FILES[nextSlot];
+  const nextFiles = slotFiles(nextSlot, localeAssets.map(([locale]) => locale));
   const estimate = await navigator.storage.estimate();
   if (estimate.quota !== undefined && estimate.usage !== undefined) {
     // Only count files that are safe to remove before installing. The active
     // verified pack stays intact until the replacement is fully committed.
-    const [existingHot, existingDetails, existingDownload] = await Promise.all([
+    const [existingHot, existingLexicon, existingLocales, existingDownload] = await Promise.all([
       fileIfPresent(directory, nextFiles.hot),
-      fileIfPresent(directory, nextFiles.details),
+      fileIfPresent(directory, nextFiles.lexicon),
+      Promise.all(Object.values(nextFiles.locales).map(name => fileIfPresent(directory, name))),
       fileIfPresent(directory, DOWNLOAD_FILE)
     ]);
     const reclaimableBytes = (existingHot ? (await existingHot.getFile()).size : 0)
-      + (existingDetails ? (await existingDetails.getFile()).size : 0)
+      + (existingLexicon ? (await existingLexicon.getFile()).size : 0)
+      + (await Promise.all(existingLocales.map(async handle => (
+        handle ? (await handle.getFile()).size : 0
+      )))).reduce((total, size) => total + size, 0)
       + (existingDownload ? (await existingDownload.getFile()).size : 0);
     const availableBytes = Math.max(0, estimate.quota - estimate.usage + reclaimableBytes);
     const requiredBytes = installedBytes + temporaryBytes;
@@ -658,7 +732,8 @@ export async function installAnalyzer(
   await Promise.all([
     removeIfPresent(directory, DOWNLOAD_FILE),
     removeIfPresent(directory, nextFiles.hot),
-    removeIfPresent(directory, nextFiles.details),
+    removeIfPresent(directory, nextFiles.lexicon),
+    ...Object.values(nextFiles.locales).map(name => removeIfPresent(directory, name)),
     removeIfPresent(directory, markerName(nextSlot))
   ]);
   const installId = crypto.randomUUID();
@@ -682,18 +757,32 @@ export async function installAnalyzer(
     await installAsset(
       manifestUrl,
       directory,
-      nextFiles.details,
-      manifest.details,
+      nextFiles.lexicon,
+      manifest.lexicon,
       manifest.hot.downloadBytes,
       totalBytes,
       onProgress
     );
+    let completedBytes = manifest.hot.downloadBytes + manifest.lexicon.downloadBytes;
+    for (const [locale, asset] of localeAssets) {
+      await installAsset(
+        manifestUrl,
+        directory,
+        nextFiles.locales[locale]!,
+        asset,
+        completedBytes,
+        totalBytes,
+        onProgress
+      );
+      completedBytes += asset.downloadBytes;
+    }
     onProgress('opening', totalBytes, totalBytes);
     await writeMarker(directory, markerName(nextSlot), installedMarker);
   } catch (error) {
     await Promise.all([
       removeIfPresent(directory, nextFiles.hot),
-      removeIfPresent(directory, nextFiles.details),
+      removeIfPresent(directory, nextFiles.lexicon),
+      ...Object.values(nextFiles.locales).map(name => removeIfPresent(directory, name)),
       removeIfPresent(directory, markerName(nextSlot)),
       removeIfPresent(directory, DOWNLOAD_FILE)
     ]);
@@ -707,7 +796,8 @@ export async function installAnalyzer(
     // commits, the previous ID continues selecting its immutable marker.
     await Promise.all([
       removeIfPresent(directory, nextFiles.hot),
-      removeIfPresent(directory, nextFiles.details),
+      removeIfPresent(directory, nextFiles.lexicon),
+      ...Object.values(nextFiles.locales).map(name => removeIfPresent(directory, name)),
       removeIfPresent(directory, markerName(nextSlot)),
       removeIfPresent(directory, DOWNLOAD_FILE)
     ]);

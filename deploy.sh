@@ -2,9 +2,8 @@
 set -eu
 
 release=dist/browser-alpha
-shell=packages/browser-demo/dist
 if [ ! -L "$release" ]; then
-  echo "$release must be the generation symlink produced by alpha:release:build." >&2
+  echo "$release must be the generation symlink produced by source:release." >&2
   exit 1
 fi
 
@@ -27,9 +26,8 @@ if [ "$link_target" != "browser-alpha.generations/$generation" ]; then
   exit 1
 fi
 
-bun run alpha:release:verify -- \
-  --out "$release" \
-  --shell-dir "$shell"
+bun run --cwd packages/browser-demo audit:build -- \
+  --require-rust --require-analyzer --release "$release"
 
 fly deploy "$@" \
   --build-arg "ICHIRAN_SOURCE_COMMIT=$commit" \

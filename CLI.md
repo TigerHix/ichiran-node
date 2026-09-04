@@ -11,9 +11,12 @@ ichiran analyze --limit 3 "みんな土足でおいで"
 ichiran romanize "今日はいい天気です"
 ichiran romanize --method kunrei-siki --normalize-punctuation "こんにちは。"
 ichiran entry 54321
+ichiran details --locale zh-Hans "猫"
+ichiran entry --locale zh-Hans 54321
 ```
 
-`analyze` and `entry` print their product JSON directly. `romanize` prints only the
+`analyze`, `details`, and `entry` print their product JSON directly. Definition
+commands default to English and accept `--locale en` or `--locale zh-Hans`. `romanize` prints only the
 romanized string. Text may be supplied as multiple arguments and is joined with
 spaces. Analyzer failures are written as `ERROR [code]: message` and exit with status
 2.

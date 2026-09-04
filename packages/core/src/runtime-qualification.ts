@@ -1,5 +1,5 @@
 import { validatePortableAnalyzeRequest, type PortableAnalyzeOptions } from './analyzer-options.js';
-import { DetailStoreError } from './details-contract.js';
+import { DictionaryStoreError } from './dictionary-contract.js';
 import { PORTABLE_LEGACY_INFO } from './legacy-contract.js';
 import type { RomanizationName } from './romanization-contract.js';
 import {
@@ -10,14 +10,19 @@ import {
   type AnalyzerDiagnostics
 } from './runtime.js';
 
-interface DetailRange {
+interface DictionaryRange {
   readonly offset: number;
   readonly byteLength: number;
 }
 
 type LegacyStep =
   | { readonly state: 'ready'; readonly value: unknown; readonly metadata: LegacyMetadata }
-  | { readonly state: 'missing-detail'; readonly entryIndex: number; readonly range: DetailRange };
+  | {
+      readonly state: 'missing-dictionary';
+      readonly store: 'lexicon' | 'locale' | 'fallback';
+      readonly entryIndex: number;
+      readonly range: DictionaryRange;
+    };
 
 interface LegacyMetadata {
   readonly words: readonly (Record<string, unknown> | null)[];
@@ -93,11 +98,19 @@ function revive(value: unknown, metadata: LegacyMetadata): unknown {
 export async function legacyAnalysis(
   analyzer: Analyzer,
   text: string,
-  options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
+  options: PortableAnalyzeOptions & {
+    readonly method?: RomanizationName;
+    readonly locale?: string;
+  } = {}
 ): Promise<unknown> {
   const state = analyzerQualificationState(analyzer);
+  const english = state.locales.get('en');
+  if (!english) throw new Error('English dictionary locale is not installed');
+  const selected = state.locales.get(options.locale ?? 'en');
+  if (!selected) throw new Error(`Dictionary locale is not installed: ${options.locale}`);
   try {
-    const validated = validatePortableAnalyzeRequest(text, options);
+    const { locale: _locale, method: _method, ...analyzeOptions } = options;
+    const validated = validatePortableAnalyzeRequest(text, analyzeOptions);
     const operation = state.kernel.legacy_begin_utf16(
       utf16(validated.input),
       encoder.encode(JSON.stringify(validated.options)),
@@ -106,19 +119,29 @@ export async function legacyAnalysis(
     try {
       const loaded = new Set<string>();
       for (;;) {
-        const step = json<LegacyStep>(operation.legacy_step(state.kernel, state.details));
+        const step = json<LegacyStep>(operation.legacy_step(
+          state.kernel,
+          state.lexicon,
+          selected.store,
+          english.store
+        ));
         if (step.state === 'ready') return revive(step.value, step.metadata);
-        const key = `${step.entryIndex}:${step.range.offset}:${step.range.byteLength}`;
+        const key = `${step.store}:${step.entryIndex}:${step.range.offset}:${step.range.byteLength}`;
         if (loaded.has(key)) throw new Error(`Detail range ${key} remained unavailable after preload`);
         loaded.add(key);
-        const compressed = await state.detailSource.read(step.range.offset, step.range.byteLength);
+        const requested = step.store === 'lexicon'
+          ? { source: state.lexiconSource, store: state.lexicon }
+          : step.store === 'locale'
+            ? selected
+            : english;
+        const compressed = await requested.source.read(step.range.offset, step.range.byteLength);
         if (compressed.byteLength !== step.range.byteLength) {
-          throw new DetailStoreError(
+          throw new DictionaryStoreError(
             'corrupt-block',
-            `Detail source returned ${compressed.byteLength} bytes; expected ${step.range.byteLength}`
+            `Dictionary source returned ${compressed.byteLength} bytes; expected ${step.range.byteLength}`
           );
         }
-        state.details.entry_json(step.entryIndex, compressed);
+        requested.store.entry_json(step.entryIndex, compressed);
       }
     } finally {
       operation.free();

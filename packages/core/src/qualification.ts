@@ -2,6 +2,7 @@
 export * from './compiler.js';
 export {
   TypeScriptOracleRuntime,
+  type TypeScriptDictionaryOptions,
   type TypeScriptRuntimeSource
 } from './runtime-typescript.js';
 export * from './analyzer.js';

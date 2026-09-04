@@ -46,8 +46,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     const coordinator = await context.newPage();
     await coordinator.goto('/');
 
-    // Force detail block 91 into the one-block cache, then select a token in
-    // block 357 only after the backing file is truncated. A same-release install
+    // Force one English-gloss block into the cache, then select a token in a
+    // different block after the backing file is truncated. A same-release install
     // is already queued ahead of the stale corruption report, exercising the
     // per-install-ID ABA guard rather than only a manifest identity check.
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
@@ -64,13 +64,13 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     expect(oldInstallId).toMatch(INSTALL_ID_PATTERN);
     const abaFiles = await activeOpfsFiles(coordinator);
     await prepareStandaloneInstall(coordinator);
-    await coordinator.evaluate(async ({ directoryName, detailsName }) => {
+    await coordinator.evaluate(async ({ directoryName, localeName }) => {
       const root = await navigator.storage.getDirectory();
       const directory = await root.getDirectoryHandle(directoryName);
-      const details = await directory.getFileHandle(detailsName);
-      const writable = await details.createWritable();
+      const locale = await directory.getFileHandle(localeName);
+      const writable = await locale.createWritable();
       await writable.close();
-    }, { directoryName: DIRECTORY_NAME, detailsName: abaFiles.details });
+    }, { directoryName: DIRECTORY_NAME, localeName: abaFiles.locales.en! });
 
     const releaseAbaLock = await holdInstallLifecycleLock(coordinator);
     await anglerfish.click();
@@ -92,7 +92,7 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
 
     // Exercise the opposite lock order: the stale runtime quarantines its old
     // generation first, a repair already queued behind it commits next, and the
-    // Worker reopens that generation before retrying the interrupted detail read.
+    // Worker reopens that generation before retrying the interrupted dictionary read.
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
@@ -107,13 +107,13 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     expect(quarantineFirstInstallId).toBe(newInstallId);
     const quarantineFiles = await activeOpfsFiles(coordinator);
     await prepareStandaloneInstall(coordinator);
-    await coordinator.evaluate(async ({ directoryName, detailsName }) => {
+    await coordinator.evaluate(async ({ directoryName, localeName }) => {
       const root = await navigator.storage.getDirectory();
       const directory = await root.getDirectoryHandle(directoryName);
-      const details = await directory.getFileHandle(detailsName);
-      const writable = await details.createWritable();
+      const locale = await directory.getFileHandle(localeName);
+      const writable = await locale.createWritable();
       await writable.close();
-    }, { directoryName: DIRECTORY_NAME, detailsName: quarantineFiles.details });
+    }, { directoryName: DIRECTORY_NAME, localeName: quarantineFiles.locales.en! });
 
     const releaseOuterLock = await holdInstallLifecycleLock(coordinator);
     await repairedAnglerfish.click();

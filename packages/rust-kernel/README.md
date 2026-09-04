@@ -15,7 +15,7 @@ Live differential against the frozen TypeScript kernel in this checkout:
 
 ```sh
 ICHIRAN_M1_PACK_DIR=/path/to/portable-core-260118-baseline \
-  bun tests/m1-differential.ts
+  bun ../core/tools/rust-kernel-wasm-differential.ts --same-pack "$ICHIRAN_M1_PACK_DIR"
 ```
 
 Linux C boundary check:
@@ -24,19 +24,15 @@ Linux C boundary check:
 bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
 ```
 
-ABI v5 runs two native callers. The clean caller locks all 1,236 six-suite analyses,
+ABI v7 runs two native callers. The clean caller locks all 1,236 six-suite analyses,
 three explicit astral/lone-surrogate witnesses, one owned error, and 128 concurrent
-calls. The product caller additionally locks 702
-detailed legacy results, five romanizations, four lazy describes, eight canonical
-token-detail trees, two corrupt-block recovery paths, three more owned errors, and 32
-concurrent detailed operations. The 702 expected byte streams come from the frozen
-portable TypeScript oracle only after each is independently canonical-exact against
-its 401 current-Lisp or 301 provenance-bound fallback authority. The eight product
-detail trees instead come from a committed, source-lock-bound semantic oracle.
+calls. The multilingual product caller opens the language-neutral lexicon and the
+English and Simplified Chinese locale stores, then exercises lazy decoding, localized
+legacy output, canonical token details, English fallback, and corrupt-block recovery.
 
-The host keeps `details.bin` and installation ownership. Rust holds only the verified
-detail prefix, a one-block cache, and independent opaque legacy-operation sessions.
-See `include/ichiran_kernel.h` and `MAC-HANDOFF.md` for ABI v5, UTF-16, threading,
+The host keeps `lexicon.bin`, the manifest-declared `gloss.<locale>.bin` files, and
+installation ownership. Rust holds verified store prefixes, small block caches, and
+independent opaque operation sessions. See `include/ichiran_kernel.h` for ABI v7, UTF-16, threading,
 panic containment, and allocation ownership.
 
 Browser artifact:

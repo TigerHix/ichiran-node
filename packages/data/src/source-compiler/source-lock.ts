@@ -1,5 +1,8 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { createReadStream } from 'node:fs';
+import { constants as fsConstants } from 'node:fs';
+import { Database } from 'bun:sqlite';
 import { basename, join, relative, resolve, sep } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 
@@ -87,6 +90,28 @@ interface ConjugationRulesLockedSource extends LockedSourceBase<'conjugation-rul
   readonly license: string;
 }
 
+export interface TomoshiLockedSource extends LockedSourceBase<'tomoshi-dict'> {
+  readonly file: LockedFile;
+  readonly authoritativeUrl: string;
+  readonly releaseTag: string;
+  readonly archiveBytes: number;
+  readonly archiveSha256: string;
+  readonly exportVersion: string;
+  readonly sourceSchemaVersion: string;
+  readonly exportedAt: string;
+  readonly license: string;
+  readonly licenseUrl: string;
+  readonly attribution: string;
+}
+
+interface LocalizationCatalogLockedSource extends LockedSourceBase<'localization-catalog'> {
+  readonly file: LockedFile;
+  readonly locale: string;
+  readonly sourceLocale: string;
+  readonly authority: string;
+  readonly license: string;
+}
+
 export type SourceCompilerLockedSource =
   | JmdictLockedSource
   | KanjidicLockedSource
@@ -94,7 +119,9 @@ export type SourceCompilerLockedSource =
   | IntendedBehaviorLockedSource
   | SemanticLedgerLockedSource
   | CompatibilityLedgerLockedSource
-  | ConjugationRulesLockedSource;
+  | ConjugationRulesLockedSource
+  | TomoshiLockedSource
+  | LocalizationCatalogLockedSource;
 
 export const SOURCE_COMPILER_INPUT_ROLES = [
   'jmdict',
@@ -105,7 +132,9 @@ export const SOURCE_COMPILER_INPUT_ROLES = [
   'chronologicalErrata',
   'compatibility',
   'kwpos',
-  'conjo'
+  'conjo',
+  'tomoshiZhHans',
+  'zhHansSenseInfo'
 ] as const;
 
 export type SourceCompilerInputRole = typeof SOURCE_COMPILER_INPUT_ROLES[number];
@@ -158,9 +187,18 @@ const CONJUGATION_RULES_KEYS = new Set([
   'id', 'kind', 'roles', 'authoritativeUrl', 'pinnedPaths', 'pinnedBytes',
   'pinnedSha256', 'license'
 ]);
+const TOMOSHI_KEYS = new Set([
+  'id', 'kind', 'role', 'authoritativeUrl', 'releaseTag', 'archiveBytes',
+  'archiveSha256', 'exportVersion', 'sourceSchemaVersion', 'exportedAt',
+  'pinnedPath', 'pinnedBytes', 'pinnedSha256', 'license', 'licenseUrl', 'attribution'
+]);
+const LOCALIZATION_CATALOG_KEYS = new Set([
+  'id', 'kind', 'role', 'locale', 'sourceLocale', 'pinnedPath', 'pinnedBytes',
+  'pinnedSha256', 'authority', 'license'
+]);
 
 export interface SourceCompilerLock {
-  readonly formatVersion: 1;
+  readonly formatVersion: 2;
   readonly baseline: {
     readonly repository: string;
     readonly startingCommit: string;
@@ -286,6 +324,14 @@ function isoDate(value: unknown, label: string): string {
   const parsed = new Date(`${result}T00:00:00.000Z`);
   if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== result) {
     throw new Error(`${label} must be an ISO YYYY-MM-DD date`);
+  }
+  return result;
+}
+
+function isoDateTime(value: unknown, label: string): string {
+  const result = text(value, label);
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{4}$/.test(result)) {
+    throw new Error(`${label} must be an ISO datetime with a numeric timezone`);
   }
   return result;
 }
@@ -548,6 +594,44 @@ function source(value: unknown, index: number): SourceCompilerLockedSource {
         authoritativeUrl: webUrl(row.authoritativeUrl, `Source ${id} authoritativeUrl`),
         license: text(row.license, `Source ${id} license`)
       };
+    case 'tomoshi-dict':
+      assertExactKeys(row, TOMOSHI_KEYS, `Source ${id}`);
+      return {
+        id,
+        kind,
+        file: singleFile(row, id, 'tomoshiZhHans'),
+        authoritativeUrl: webUrl(row.authoritativeUrl, `Source ${id} authoritativeUrl`),
+        releaseTag: text(row.releaseTag, `Source ${id} releaseTag`),
+        archiveBytes: positiveInteger(row.archiveBytes, `Source ${id} archiveBytes`),
+        archiveSha256: digest(row.archiveSha256, `Source ${id} archiveSha256`),
+        exportVersion: text(row.exportVersion, `Source ${id} exportVersion`),
+        sourceSchemaVersion: text(
+          row.sourceSchemaVersion,
+          `Source ${id} sourceSchemaVersion`
+        ),
+        exportedAt: isoDateTime(row.exportedAt, `Source ${id} exportedAt`),
+        license: text(row.license, `Source ${id} license`),
+        licenseUrl: webUrl(row.licenseUrl, `Source ${id} licenseUrl`),
+        attribution: text(row.attribution, `Source ${id} attribution`)
+      };
+    case 'localization-catalog':
+      assertExactKeys(row, LOCALIZATION_CATALOG_KEYS, `Source ${id}`);
+      {
+        const locale = text(row.locale, `Source ${id} locale`);
+        const sourceLocale = text(row.sourceLocale, `Source ${id} sourceLocale`);
+        if (locale !== 'zh-Hans' || sourceLocale !== 'en') {
+          throw new Error(`Source ${id} must translate en to zh-Hans`);
+        }
+        return {
+          id,
+          kind,
+          file: singleFile(row, id, 'zhHansSenseInfo'),
+          locale,
+          sourceLocale,
+          authority: text(row.authority, `Source ${id} authority`),
+          license: text(row.license, `Source ${id} license`)
+        };
+      }
     default:
       throw new Error(`Source ${id} kind is unsupported: ${kind}`);
   }
@@ -559,6 +643,8 @@ function sourceFiles(source: SourceCompilerLockedSource): readonly LockedFile[] 
     case 'kanjidic2':
     case 'semantic-ledger':
     case 'compatibility-ledger':
+    case 'tomoshi-dict':
+    case 'localization-catalog':
       return [source.file];
     case 'custom-entries':
     case 'conjugation-rules':
@@ -600,7 +686,7 @@ export function parseSourceCompilerLock(value: unknown): SourceCompilerLock {
   }
   const row = value as Record<string, unknown>;
   assertKnownKeys(row, LOCK_KEYS, 'Source compiler lock');
-  if (row.formatVersion !== 1) throw new Error('Unsupported source compiler lock format');
+  if (row.formatVersion !== 2) throw new Error('Unsupported source compiler lock format');
   const baseline = requiredRecord(row.baseline, 'Source compiler lock baseline');
   assertExactKeys(baseline, BASELINE_KEYS, 'Source compiler lock baseline');
   const archiveInput = row.archive === undefined
@@ -662,7 +748,7 @@ export function parseSourceCompilerLock(value: unknown): SourceCompilerLock {
     throw new Error(`Source compiler lock assigns one file to multiple roles: ${duplicatePaths.join(', ')}`);
   }
   return {
-    formatVersion: 1,
+    formatVersion: 2,
     baseline: {
       repository: webUrl(baseline.repository, 'Baseline repository'),
       startingCommit: commit(baseline.startingCommit, 'Baseline starting commit'),
@@ -747,6 +833,45 @@ async function verifyLedgerRows(
   }
 }
 
+async function sha256File(path: string): Promise<string> {
+  const hash = createHash('sha256');
+  for await (const chunk of createReadStream(path)) hash.update(chunk as Buffer);
+  return hash.digest('hex');
+}
+
+function verifyTomoshiProvenance(source: TomoshiLockedSource, path: string): void {
+  const database = new Database(path, { readonly: true, strict: true });
+  try {
+    const values = database.query('SELECT key, value FROM meta').all() as Array<{
+      readonly key: string;
+      readonly value: string;
+    }>;
+    const meta = new Map(values.map(value => [value.key, value.value]));
+    for (const [key, expected] of [
+      ['export_version', source.exportVersion],
+      ['source_schema_version', source.sourceSchemaVersion],
+      ['exported_at', source.exportedAt]
+    ] as const) {
+      if (meta.get(key) !== expected) {
+        throw new Error(
+          `Locked source ${source.file.path} metadata ${key} is `
+          + `${JSON.stringify(meta.get(key))}; expected ${JSON.stringify(expected)}`
+        );
+      }
+    }
+    const locales = database.query(
+      'SELECT DISTINCT locale FROM zh_defs ORDER BY locale'
+    ).values() as string[][];
+    if (JSON.stringify(locales) !== JSON.stringify([['zh-CN']])) {
+      throw new Error(
+        `Locked source ${source.file.path} zh_defs locales are ${JSON.stringify(locales)}`
+      );
+    }
+  } finally {
+    database.close();
+  }
+}
+
 export async function verifySourceCompilerLock(
   repository: string,
   lockPath = 'data/source-compiler-sources.lock.json',
@@ -760,30 +885,40 @@ export async function verifySourceCompilerLock(
   for (const item of lock.sources) {
     for (const expected of sourceFiles(item)) {
       const path = lockedPath(repository, expected.path);
-      if (!(await stat(path)).isFile()) throw new Error(`Locked source is not a file: ${expected.path}`);
-      const actual = new Uint8Array(await readFile(path));
-      const actualSha256 = sha256(actual);
-      if (actual.byteLength !== expected.bytes || actualSha256 !== expected.sha256) {
+      const info = await stat(path);
+      if (!info.isFile()) throw new Error(`Locked source is not a file: ${expected.path}`);
+      const actualSha256 = item.kind === 'tomoshi-dict'
+        ? await sha256File(path)
+        : sha256(new Uint8Array(await readFile(path)));
+      if (info.size !== expected.bytes || actualSha256 !== expected.sha256) {
         throw new Error(
-          `Locked source ${expected.path} is ${actual.byteLength} bytes ${actualSha256}; `
+          `Locked source ${expected.path} is ${info.size} bytes ${actualSha256}; `
           + `expected ${expected.bytes} bytes ${expected.sha256}`
         );
       }
       const verifiedPath = snapshotDirectory
         ? join(snapshotDirectory, `${expected.role}-${basename(expected.path)}`)
         : path;
-      if (snapshotDirectory) await writeFile(verifiedPath, actual, { flag: 'wx' });
+      if (snapshotDirectory) {
+        if (item.kind === 'tomoshi-dict') {
+          await copyFile(path, verifiedPath, fsConstants.COPYFILE_EXCL);
+        } else {
+          await writeFile(verifiedPath, await readFile(path), { flag: 'wx' });
+        }
+      }
       if (item.kind === 'jmdict' || item.kind === 'kanjidic2') {
-        verifyDictionaryProvenance(item, actual);
+        verifyDictionaryProvenance(item, new Uint8Array(await readFile(verifiedPath)));
       } else if (item.kind === 'semantic-ledger' || item.kind === 'compatibility-ledger') {
         await verifyLedgerRows(item, verifiedPath);
+      } else if (item.kind === 'tomoshi-dict') {
+        verifyTomoshiProvenance(item, verifiedPath);
       }
       const file = {
         id: item.id,
         role: expected.role,
         path: expected.path,
         absolutePath: verifiedPath,
-        bytes: actual.byteLength,
+        bytes: info.size,
         sha256: actualSha256
       };
       inputs[expected.role] = file;

@@ -14,7 +14,7 @@ mod analyzer_suffixes;
 mod annotations;
 mod binary;
 pub mod characters;
-mod details;
+mod dictionary;
 mod dto;
 mod error;
 mod morphology;
@@ -38,7 +38,11 @@ pub use analysis::{
 pub use analyzer_model::EntityHint;
 pub use analyzer_options::AnalyzeOptions;
 pub use annotations::{GeneratedFacts, GeneratedMember};
-pub use details::{DetailEntry, DetailRange, DetailStore};
+pub use dictionary::{
+    DictionaryEntry, DictionaryGloss, DictionaryRange, DictionaryStoreKind, DictionaryStores,
+    LexiconEntry, LexiconSense, LexiconStore, LocaleEntry, LocaleGroup, LocaleStore,
+    localize_entry,
+};
 pub use dto::{AnalysisResult, Utf16Text};
 pub use error::{ErrorCode, KernelError, Result};
 pub use morphology::{MorphologyCandidate, MorphologyProperty, Route};

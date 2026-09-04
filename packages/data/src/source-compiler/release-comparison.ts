@@ -22,7 +22,6 @@ export interface QualifiedArtifactBytes {
   readonly morphology: Uint8Array;
   readonly analyzerSupport: Uint8Array;
   readonly analyzerAnnotations: Uint8Array;
-  readonly details: Uint8Array;
 }
 
 export interface RootPayloadOrderReview {
@@ -88,8 +87,7 @@ export function artifactIdentities(bytes: QualifiedArtifactBytes): ArtifactIdent
     analyzerAnnotations: {
       bytes: bytes.analyzerAnnotations.byteLength,
       sha256: sha256(bytes.analyzerAnnotations)
-    },
-    details: { bytes: bytes.details.byteLength, sha256: sha256(bytes.details) }
+    }
   };
 }
 
@@ -191,13 +189,23 @@ export function sourceReleaseArtifactCounts(
       largestGeneratedBlock: sections.annotations.stats.largestGeneratedBlock,
       largestGeneratedCompressedBlock: sections.annotations.stats.largestGeneratedCompressedBlock
     },
-    details: {
-      entries: sections.details.stats.entryCount,
-      forms: sections.details.stats.formCount,
-      senses: sections.details.stats.senseCount,
-      glosses: sections.details.stats.glossCount,
-      properties: sections.details.stats.propertyCount
-    }
+    lexicon: {
+      entries: sections.lexicon.stats.entryCount,
+      forms: sections.lexicon.stats.formCount,
+      senses: sections.lexicon.stats.senseCount,
+      properties: sections.lexicon.stats.propertyCount
+    },
+    locales: Object.fromEntries(Object.entries(sections.locales).map(([locale, build]) => [
+      locale,
+      {
+        entries: build.stats.entryCount,
+        translatedEntries: build.stats.translatedEntryCount,
+        groups: build.stats.groupCount,
+        targets: build.stats.targetCount,
+        glosses: build.stats.glossCount,
+        info: build.stats.infoCount
+      }
+    ]))
   };
 }
 
@@ -234,7 +242,25 @@ export function compareArtifactCounts(
   compareCountGroup(source.morphology, qualified.morphology, 'morphology', output);
   compareCountGroup(source.analyzerSupport, qualified.analyzerSupport, 'analyzerSupport', output);
   compareCountGroup(source.annotations, qualified.annotations, 'annotations', output);
-  compareCountGroup(source.details, qualified.details, 'details', output);
+  if (source.lexicon && qualified.lexicon) {
+    compareCountGroup(source.lexicon, qualified.lexicon, 'lexicon', output);
+  }
+  if (source.locales && qualified.locales) {
+    const locales = new Set([...Object.keys(source.locales), ...Object.keys(qualified.locales)]);
+    for (const locale of [...locales].sort()) {
+      const sourceLocale = source.locales[locale];
+      const qualifiedLocale = qualified.locales[locale];
+      if (!sourceLocale || !qualifiedLocale) {
+        output.push({
+          path: `locales.${locale}`,
+          source: sourceLocale ? sourceLocale.entries : null,
+          qualified: qualifiedLocale ? qualifiedLocale.entries : null
+        });
+      } else {
+        compareCountGroup(sourceLocale, qualifiedLocale, `locales.${locale}`, output);
+      }
+    }
+  }
   return output;
 }
 
@@ -261,7 +287,6 @@ export function compareQualifiedArtifactCounts(
   compareCountGroup(source.surfaceIndex, qualified.surfaceIndex, 'surfaceIndex', unreviewed);
   compareCountGroup(source.rootPayload, qualified.rootPayload, 'rootPayload', unreviewed);
   compareCountGroup(source.morphology, qualified.morphology, 'morphology', unreviewed);
-  compareCountGroup(source.details, qualified.details, 'details', unreviewed);
   if (unreviewed.length !== 0) {
     throw new Error(`Unreviewed qualified artifact count differences: ${JSON.stringify(unreviewed)}`);
   }
@@ -420,7 +445,6 @@ export function compareQualifiedArtifactBytes(
       source.analyzerAnnotations,
       qualified.analyzerAnnotations,
       generatedReview
-    ),
-    exactArtifact('details', source.details, qualified.details)
+    )
   ];
 }

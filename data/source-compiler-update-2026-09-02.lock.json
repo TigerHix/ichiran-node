@@ -1,5 +1,5 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 2,
   "baseline": {
     "repository": "https://github.com/TigerHix/ichiran-node.git",
     "startingCommit": "effd10f1cd4cfd6780760c8130030d287df35ca9",
@@ -99,6 +99,36 @@
       "pinnedSha256": "387982639a9a03ea7fb11feeef754b5aea59c673cec2757153f200ea071ee9bb",
       "rows": 25,
       "authority": "Each row carries its own upstream/source and qualified-oracle provenance plus preserved behavior."
+    },
+    {
+      "id": "tomoshi-open-data-2026-08-12",
+      "kind": "tomoshi-dict",
+      "role": "tomoshiZhHans",
+      "authoritativeUrl": "https://github.com/tomoshi-app/tomoshi-dict-data/releases/download/v2026-08-12/tomoshi-dict-open.db.zst",
+      "releaseTag": "v2026-08-12",
+      "archiveBytes": 77463170,
+      "archiveSha256": "cd4e6b710fa4fca0672471b64bf251256dde7eba807b9bee2ab88b3fc71554c1",
+      "exportVersion": "1",
+      "sourceSchemaVersion": "16",
+      "exportedAt": "2026-08-14T16:50:40+0900",
+      "pinnedPath": "work/multilingual-sources/tomoshi-dict-open-2026-08-12.db",
+      "pinnedBytes": 570077184,
+      "pinnedSha256": "c935ffd8e030f496c251b38819bf63005729d2dbc98ba0af8c55de507a455290",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://github.com/tomoshi-app/tomoshi-dict-data/blob/v2026-08-12/LICENSE.md",
+      "attribution": "Tomoshi (Y1Z), derived from JMdict by the Electronic Dictionary Research and Development Group"
+    },
+    {
+      "id": "komi-zh-hans-sense-info-v1",
+      "kind": "localization-catalog",
+      "role": "zhHansSenseInfo",
+      "locale": "zh-Hans",
+      "sourceLocale": "en",
+      "pinnedPath": "data/locales/zh-Hans/sense-info.json",
+      "pinnedBytes": 425251,
+      "pinnedSha256": "9f0f8f7ba298ae59c2c6d69b92561f2d0fc0a48e1ac1829a9febdd706d202aad",
+      "authority": "Komi-maintained exact-source translations of JMdict sense information",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "id": "ichiran-conjugation-rules-260118",

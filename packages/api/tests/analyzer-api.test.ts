@@ -72,6 +72,16 @@ describe.skipIf(!releaseDirectory)('packed analyzer HTTP API', () => {
       meanings: expect.any(Array),
       alternatives: expect.any(Array)
     });
+
+    const chineseDetails = await post('/v1/details', {
+      text: '猫',
+      options: { limit: 1, pathIndex: 0, tokenIndex: 0, locale: 'zh-Hans' }
+    });
+    expect(chineseDetails.response.status).toBe(200);
+    expect(JSON.stringify(chineseDetails.body.meanings)).toMatch(/[\u3400-\u9fff]/u);
+
+    const chineseEntry = await fetch(`${base}/v1/entries/${entryIndex}?locale=zh-Hans`);
+    expect(chineseEntry.status).toBe(200);
   });
 
   test('preserves UTF-16 input and entity offsets', async () => {

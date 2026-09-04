@@ -3,8 +3,13 @@ import { writeFile } from 'node:fs/promises';
 import { userInfo } from 'node:os';
 import { resolve } from 'node:path';
 import postgres from 'postgres';
-import { buildDetailStore } from '../packages/data/src/browser-pack/details.js';
-import { loadDetailEntries } from '../packages/data/src/browser-pack/details-oracle.js';
+import {
+  buildLexiconStore
+} from '../packages/data/src/browser-pack/lexicon.js';
+import {
+  buildLocaleGlossStore
+} from '../packages/data/src/browser-pack/locale-gloss.js';
+import { loadDictionaryEntries } from '../packages/data/src/browser-pack/dictionary-oracle.js';
 import {
   buildRootPayload,
   type RootPayloadFormSource
@@ -12,7 +17,8 @@ import {
 import { loadRootPayloadSource } from '../packages/data/src/browser-pack/root-payload-oracle.js';
 import { compileCanonicalRoots } from '../packages/data/src/source-compiler/canonical-roots.js';
 import {
-  canonicalDetailEntries,
+  canonicalEnglishLocaleEntries,
+  canonicalLexiconEntries,
   canonicalRootPayloadSource
 } from '../packages/data/src/source-compiler/pack-input.js';
 import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
@@ -60,7 +66,8 @@ const compilation = await compileCanonicalRoots({
   errata: sourceLock.inputs.chronologicalErrata.absolutePath,
   compatibility: sourceLock.inputs.compatibility.absolutePath
 });
-const sourceDetails = canonicalDetailEntries(compilation.entries);
+const sourceLexicon = canonicalLexiconEntries(compilation.entries);
+const sourceEnglish = canonicalEnglishLocaleEntries(compilation.entries);
 const sourceRoot = canonicalRootPayloadSource(compilation.entries);
 
 const sql = postgres({
@@ -68,17 +75,21 @@ const sql = postgres({
   host: process.env.PGHOST ?? '/var/run/postgresql',
   user: process.env.PGUSER ?? userInfo().username
 });
-const [oracleDetails, oracleRoot] = await Promise.all([
-  loadDetailEntries(sql),
+const [oracleDictionary, oracleRoot] = await Promise.all([
+  loadDictionaryEntries(sql),
   loadRootPayloadSource(sql)
 ]);
 await sql.end();
 
 let exactDetails = 0;
 const detailDeltas: number[] = [];
-for (let index = 0; index < Math.max(sourceDetails.length, oracleDetails.length); index++) {
-  if (JSON.stringify(sourceDetails[index]) === JSON.stringify(oracleDetails[index])) exactDetails++;
-  else detailDeltas.push(sourceDetails[index]?.seq ?? oracleDetails[index]!.seq);
+const oracleLexicon = oracleDictionary.lexicon;
+const oracleEnglish = oracleDictionary.english;
+for (let index = 0; index < Math.max(sourceLexicon.length, oracleLexicon.length); index++) {
+  const structureMatches = JSON.stringify(sourceLexicon[index]) === JSON.stringify(oracleLexicon[index]);
+  const englishMatches = JSON.stringify(sourceEnglish[index]) === JSON.stringify(oracleEnglish[index]);
+  if (structureMatches && englishMatches) exactDetails++;
+  else detailDeltas.push(sourceLexicon[index]?.seq ?? oracleLexicon[index]!.seq);
 }
 
 const sourceGroups = groups(sourceRoot.forms);
@@ -104,8 +115,16 @@ for (const [key, sourceForms] of sourceGroups) {
 
 const sourceRootBuild = buildRootPayload(sourceRoot);
 const oracleRootBuild = buildRootPayload(oracleRoot);
-const sourceDetailBuild = buildDetailStore(sourceDetails);
-const oracleDetailBuild = buildDetailStore(oracleDetails);
+const sourceLexiconBuild = buildLexiconStore(sourceLexicon);
+const oracleLexiconBuild = buildLexiconStore(oracleLexicon);
+const sourceLexiconSha256 = sha256(sourceLexiconBuild.bytes);
+const oracleLexiconSha256 = sha256(oracleLexiconBuild.bytes);
+const sourceEnglishBuild = buildLocaleGlossStore({
+  locale: 'en', lexiconSha256: sourceLexiconSha256, entries: sourceEnglish
+});
+const oracleEnglishBuild = buildLocaleGlossStore({
+  locale: 'en', lexiconSha256: oracleLexiconSha256, entries: oracleEnglish
+});
 const orderEvidence = `${orderDeltas.map(row => JSON.stringify(row)).join('\n')}\n`;
 if (process.argv[3]) await writeFile(process.argv[3], orderEvidence);
 
@@ -117,14 +136,21 @@ console.log(JSON.stringify({
     customEdits: compilation.custom.edits.length,
     errata: compilation.errata.counts
   },
-  details: {
-    sourceEntries: sourceDetails.length,
-    qualifiedEntries: oracleDetails.length,
+  dictionary: {
+    sourceEntries: sourceLexicon.length,
+    qualifiedEntries: oracleLexicon.length,
     exactEntries: exactDetails,
     deltaEntries: detailDeltas,
-    byteEqual: Buffer.compare(sourceDetailBuild.bytes, oracleDetailBuild.bytes) === 0,
-    bytes: sourceDetailBuild.bytes.length,
-    sha256: sha256(sourceDetailBuild.bytes)
+    lexicon: {
+      byteEqual: Buffer.compare(sourceLexiconBuild.bytes, oracleLexiconBuild.bytes) === 0,
+      bytes: sourceLexiconBuild.bytes.length,
+      sha256: sourceLexiconSha256
+    },
+    english: {
+      byteEqual: Buffer.compare(sourceEnglishBuild.bytes, oracleEnglishBuild.bytes) === 0,
+      bytes: sourceEnglishBuild.bytes.length,
+      sha256: sha256(sourceEnglishBuild.bytes)
+    }
   },
   roots: {
     entriesExact: JSON.stringify(sourceRoot.entries) === JSON.stringify(oracleRoot.entries),

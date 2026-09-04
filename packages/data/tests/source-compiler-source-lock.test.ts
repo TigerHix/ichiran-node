@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { Database } from 'bun:sqlite';
 import { loadExtraRootDrafts } from '../src/source-compiler/custom-sources.js';
 import {
   parseSourceCompilerLock,
@@ -35,7 +36,7 @@ function fixtureLock(
   sources: readonly Record<string, unknown>[],
   extra: Record<string, unknown> = {}
 ): Record<string, unknown> {
-  return { formatVersion: 1, baseline, archive, sources, ...extra };
+  return { formatVersion: 2, baseline, archive, sources, ...extra };
 }
 
 function pin(role: SourceCompilerInputRole, path: string, contents: Uint8Array | string) {
@@ -116,6 +117,27 @@ function sourceRecords(
       rows: 1
     },
     {
+      id: 'source-tomoshi', kind: 'tomoshi-dict', ...pinned('tomoshiZhHans'),
+      authoritativeUrl: 'https://example.test/tomoshi.db.zst',
+      releaseTag: 'v2026-01-01',
+      archiveBytes: 1,
+      archiveSha256: sha256('archive'),
+      exportVersion: '1',
+      sourceSchemaVersion: '16',
+      exportedAt: '2026-01-01T12:00:00+0900',
+      license: 'CC-BY-SA-4.0',
+      licenseUrl: 'https://example.test/tomoshi-license',
+      attribution: 'Fixture Chinese dictionary authority'
+    },
+    {
+      id: 'source-zh-hans-sense-info', kind: 'localization-catalog',
+      ...pinned('zhHansSenseInfo'),
+      locale: 'zh-Hans',
+      sourceLocale: 'en',
+      authority: 'Fixture localization maintainers',
+      license: 'CC-BY-SA-4.0'
+    },
+    {
       id: 'source-conjugation', kind: 'conjugation-rules',
       ...multiple(['kwpos', 'conjo']),
       authoritativeUrl: 'https://example.test/conjugation-rules',
@@ -125,6 +147,19 @@ function sourceRecords(
 }
 
 describe('source compiler lock', () => {
+  test('keeps the retained format-1 lock out of active compiler selection', async () => {
+    const path = join(
+      import.meta.dir,
+      '../../../data/source-compiler-historical-v1-sources.lock.json'
+    );
+    const bytes = await readFile(path);
+    expect(sha256(bytes)).toBe(
+      '16f11739978e91922cf43337c6b801765214dbb0945509dec94b85321952b9cd'
+    );
+    expect(() => parseSourceCompilerLock(JSON.parse(bytes.toString('utf8'))))
+      .toThrow('Unsupported source compiler lock format');
+  });
+
   test('pins the first post-baseline JMdict identity and all semantic roles', async () => {
     const path = join(import.meta.dir, '../../../data/source-compiler-update-2026-01-02.lock.json');
     const lock = parseSourceCompilerLock(JSON.parse(await readFile(path, 'utf8')));
@@ -208,6 +243,24 @@ describe('source compiler lock', () => {
         import.meta.dir,
         '../../../data/source-compiler-compatibility.json'
       )));
+      const tomoshiPath = join(repository, 'tomoshi-fixture.db');
+      const tomoshiDatabase = new Database(tomoshiPath, { create: true });
+      tomoshiDatabase.exec(`
+        CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+        INSERT INTO meta VALUES
+          ('export_version', '1'),
+          ('source_schema_version', '16'),
+          ('exported_at', '2026-01-01T12:00:00+0900');
+        CREATE TABLE zh_defs (
+          entry_id TEXT NOT NULL,
+          locale TEXT NOT NULL,
+          data TEXT NOT NULL,
+          PRIMARY KEY (entry_id, locale)
+        );
+        INSERT INTO zh_defs VALUES ('1', 'zh-CN', '{}');
+      `);
+      tomoshiDatabase.close();
+      const tomoshi = new Uint8Array(await readFile(tomoshiPath));
       const contents = new Map<SourceCompilerInputRole, Uint8Array | string>([
         ['jmdict', new Uint8Array(gzipSync(jmdictXml))],
         ['kanjidic', new Uint8Array(gzipSync(kanjidicXml))],
@@ -217,7 +270,14 @@ describe('source compiler lock', () => {
         ['chronologicalErrata', errata],
         ['compatibility', compatibility],
         ['kwpos', 'kwpos'],
-        ['conjo', 'conjo']
+        ['conjo', 'conjo'],
+        ['tomoshiZhHans', tomoshi],
+        ['zhHansSenseInfo', JSON.stringify({
+          formatVersion: 1,
+          locale: 'zh-Hans',
+          sourceLocale: 'en',
+          translations: []
+        })]
       ]);
       const inputPath = (role: SourceCompilerInputRole): string => role === 'extra'
         ? 'alternate/extra.xml'

@@ -1,4 +1,4 @@
-import type { DetailStoreReader } from './details.js';
+import type { DictionaryReader } from './dictionary.js';
 import {
   serializePortableLegacyCompact,
   serializePortableLegacyDetailed,
@@ -114,10 +114,10 @@ export class AnalyzerResultProjector {
 
   serializeLegacyDetailed(
     result: PortableAnalysisResult,
-    details: DetailStoreReader,
+    dictionary: DictionaryReader,
     options: PortableLegacySerializeOptions = {}
   ): Promise<PortableLegacyTransformedResult> {
-    return serializePortableLegacyDetailed(result, details, {
+    return serializePortableLegacyDetailed(result, dictionary, {
       roots: this.#source.roots,
       support: this.#source.support,
       directSurface: this.#source.directSurface,

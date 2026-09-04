@@ -12,7 +12,7 @@ use crate::analyzer_projection::{ProjectionScoredCandidate, gap, project_paths, 
 use crate::analyzer_romanize::romanize_analysis;
 use crate::annotations::{AnalyzerAnnotations, GeneratedFacts};
 use crate::characters::{BasicSplitType, basic_split, normalize};
-use crate::details::{DetailRange, DetailStore};
+use crate::dictionary::{DictionaryRange, DictionaryStoreKind, DictionaryStores};
 use crate::dto::{
     AnalysisAlternative, AnalysisChunk, AnalysisComponent, AnalysisPath, AnalysisResult,
     AnalysisRoot, AnalysisToken, Utf16Text,
@@ -54,8 +54,9 @@ pub struct TokenDetailsSession {
 pub enum LegacyDetailStep {
     Ready(Vec<u8>),
     Missing {
+        store: DictionaryStoreKind,
         entry_index: u32,
-        range: DetailRange,
+        range: DictionaryRange,
     },
 }
 
@@ -63,8 +64,9 @@ pub enum LegacyDetailStep {
 pub enum TokenDetailsStep {
     Ready(Vec<u8>),
     Missing {
+        store: DictionaryStoreKind,
         entry_index: u32,
-        range: DetailRange,
+        range: DictionaryRange,
     },
 }
 
@@ -75,8 +77,9 @@ pub(crate) enum LegacyWireDetailStep {
         metadata: Vec<u8>,
     },
     Missing {
+        store: DictionaryStoreKind,
         entry_index: u32,
-        range: DetailRange,
+        range: DictionaryRange,
     },
 }
 
@@ -417,14 +420,15 @@ impl Kernel {
         &mut self,
         session: &mut LegacyDetailSession,
         result: &AnalysisResult,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         method: Option<RomanizationName>,
     ) -> Result<LegacyDetailStep> {
-        match self.serialize_legacy_detailed(session, result, details, method)? {
+        match self.serialize_legacy_detailed(session, result, stores, method)? {
             LegacyDetailedResult::Ready(value) => serde_json::to_vec(&value)
                 .map(LegacyDetailStep::Ready)
                 .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
             LegacyDetailedResult::MissingDetail(request) => Ok(LegacyDetailStep::Missing {
+                store: request.store,
                 entry_index: request.entry_index,
                 range: request.range,
             }),
@@ -437,7 +441,7 @@ impl Kernel {
         result: &AnalysisResult,
         path_index: usize,
         token_index: usize,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
     ) -> Result<TokenDetailsStep> {
         let mut context = LegacyContext {
             roots: &self.roots,
@@ -447,12 +451,13 @@ impl Kernel {
         };
         match session
             .inner
-            .token_details(result, path_index, token_index, details, &mut context)?
+            .token_details(result, path_index, token_index, stores, &mut context)?
         {
             TokenDetailsResult::Ready(value) => serde_json::to_vec(&value)
                 .map(TokenDetailsStep::Ready)
                 .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
             TokenDetailsResult::MissingDetail(request) => Ok(TokenDetailsStep::Missing {
+                store: request.store,
                 entry_index: request.entry_index,
                 range: request.range,
             }),
@@ -464,10 +469,10 @@ impl Kernel {
         &mut self,
         session: &mut LegacyDetailSession,
         result: &AnalysisResult,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         method: Option<RomanizationName>,
     ) -> Result<LegacyWireDetailStep> {
-        match self.serialize_legacy_detailed(session, result, details, method)? {
+        match self.serialize_legacy_detailed(session, result, stores, method)? {
             LegacyDetailedResult::Ready(value) => {
                 let metadata = serde_json::to_vec(&legacy_wire_metadata(&value))
                     .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))?;
@@ -476,6 +481,7 @@ impl Kernel {
                 Ok(LegacyWireDetailStep::Ready { value, metadata })
             }
             LegacyDetailedResult::MissingDetail(request) => Ok(LegacyWireDetailStep::Missing {
+                store: request.store,
                 entry_index: request.entry_index,
                 range: request.range,
             }),
@@ -486,7 +492,7 @@ impl Kernel {
         &mut self,
         session: &mut LegacyDetailSession,
         result: &AnalysisResult,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         method: Option<RomanizationName>,
     ) -> Result<LegacyDetailedResult> {
         let mut context = LegacyContext {
@@ -501,7 +507,7 @@ impl Kernel {
         };
         session
             .inner
-            .serialize(result, details, &mut context, &options)
+            .serialize(result, stores, &mut context, &options)
     }
 }
 

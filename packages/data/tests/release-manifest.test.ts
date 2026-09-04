@@ -21,7 +21,7 @@ describe('browser analyzer release manifest', () => {
   test('keeps the current phone budgets explicit', () => {
     expect(ANALYZER_HOT_MAX_BYTES).toBe(25 * 1024 * 1024);
     expect(ANALYZER_PERSISTED_MAX_BYTES).toBe(64 * 1024 * 1024);
-    expect(ANALYZER_WIRE_MAX_BYTES).toBe(26 * 1024 * 1024);
+    expect(ANALYZER_WIRE_MAX_BYTES).toBe(36 * 1024 * 1024);
   });
 
   test('is deterministic and records both transport and installed bytes', () => {
@@ -30,14 +30,21 @@ describe('browser analyzer release manifest', () => {
       sourceCommit: COMMIT,
       sourcesLockSha256: LOCK,
       hot: new TextEncoder().encode('hot hot hot hot'),
-      details: new TextEncoder().encode('details details details')
+      lexicon: new TextEncoder().encode('lexicon lexicon'),
+      locales: {
+        en: new TextEncoder().encode('English glosses'),
+        'zh-Hans': new TextEncoder().encode('简体中文释义')
+      }
     } as const;
     const first = buildAnalyzerRelease(options);
     const second = buildAnalyzerRelease(options);
 
     expect(first).toEqual(second);
     expect(new Uint8Array(gunzipSync(first.hotDownload))).toEqual(options.hot);
-    expect(new Uint8Array(gunzipSync(first.detailsDownload))).toEqual(options.details);
+    expect(new Uint8Array(gunzipSync(first.lexiconDownload))).toEqual(options.lexicon);
+    expect(new Uint8Array(gunzipSync(first.localeDownloads.en!))).toEqual(options.locales.en);
+    expect(new Uint8Array(gunzipSync(first.localeDownloads['zh-Hans']!)))
+      .toEqual(options.locales['zh-Hans']);
     const { manifestSha256: _digest, ...unsigned } = first.manifest;
     expect(first.manifest.manifestSha256).toBe(digest(analyzerManifestDigestInput(unsigned)));
     expect(first.manifest.hot.installedBytes).toBe(options.hot.byteLength);
@@ -55,7 +62,9 @@ describe('browser analyzer release manifest', () => {
     expect(sizes.installedIdentityPayloadBytes).toBe(36);
     expect(sizes.persistedBytes).toBe(
       options.hot.byteLength
-      + options.details.byteLength
+      + options.lexicon.byteLength
+      + options.locales.en.byteLength
+      + options.locales['zh-Hans'].byteLength
       + markerBytes
       + 36
     );
@@ -67,7 +76,8 @@ describe('browser analyzer release manifest', () => {
       sourceCommit: COMMIT,
       sourcesLockSha256: LOCK,
       hot: new Uint8Array(ANALYZER_HOT_MAX_BYTES + 1),
-      details: new Uint8Array([1])
+      lexicon: new Uint8Array([1]),
+      locales: { en: new Uint8Array([2]), 'zh-Hans': new Uint8Array([3]) }
     });
     expect(() => assertAnalyzerReleaseSize(release)).toThrow('hot.bin');
   });
@@ -78,7 +88,8 @@ describe('browser analyzer release manifest', () => {
       sourceCommit: COMMIT,
       sourcesLockSha256: LOCK,
       hot: new Uint8Array([1]),
-      details: new Uint8Array([2])
+      lexicon: new Uint8Array([2]),
+      locales: { en: new Uint8Array([3]), 'zh-Hans': new Uint8Array([4]) }
     })).toThrow('128 UTF-8 bytes');
   });
 });

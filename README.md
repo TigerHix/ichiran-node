@@ -16,9 +16,8 @@ persist them or use them as cross-response identities. Same-pack Rust qualificat
 still compares them exactly, while the PostgreSQL/Lisp clean projection explicitly
 omits them because those oracles have no corresponding field.
 
-Native Apple packaging is the next host integration of the same Rust source. Physical
-Safari/iPhone qualification and the Mac-owned XCFramework, Swift, simulator, and
-device gates remain pending. Release data is owned by the PostgreSQL-free TypeScript
+Native Apple packaging uses the same Rust source through the versioned C ABI and
+Swift package. Release data is owned by the PostgreSQL-free TypeScript
 source compiler; the frozen PostgreSQL and TypeScript analyzers remain temporary
 qualification oracles only. See
 [the source-compiler and Rust-kernel roadmap](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
@@ -31,19 +30,22 @@ bun run build
 ```
 
 The CLI and API need an installed analyzer release containing `manifest.json`,
-`hot.bin.gz`, and `details.bin.gz`:
+`hot.bin.gz`, `lexicon.bin.gz`, `gloss.en.bin.gz`, and `gloss.zh-Hans.bin.gz`:
 
 ```bash
 export ICHIRAN_PACK_DIR=/absolute/path/to/analyzer-release
 
 bun run cli -- romanize "今日はいい天気です"
 bun run cli -- analyze --limit 3 "みんな土足でおいで"
+bun run cli -- details --locale zh-Hans "猫"
 
 bun run dev
 ```
 
 See [CLI.md](./CLI.md), [API.md](./API.md), and the breaking
-[migration guide](./MIGRATION.md) for the product surfaces.
+[migration guide](./MIGRATION.md) for the product surfaces. The pack split and locale
+fallback rules are documented in the
+[multilingual dictionary architecture](./docs/MULTILINGUAL-DICTIONARY-ARCHITECTURE.md).
 
 To run the browser analyzer demo with a built release:
 
@@ -86,9 +88,10 @@ pinned semantic sources ---> @ichiran/data source compiler ---> immutable releas
 - `@ichiran/reference-postgres` is the frozen former implementation. It is private
   and retained temporarily for explicitly invoked migration-oracle work, not as a
   product runtime or normal compiler dependency.
-- `@ichiran/data` owns the TypeScript source compiler and pack-v1 encoders. Its
-  verified source lock selects JMdict, Kanjidic2, custom XML/CSV, conjugation CSVs,
-  chronological errata, and the narrow compatibility ledger.
+- `@ichiran/data` owns the TypeScript source compiler and release-format-v2 encoders. Its
+  verified source lock selects JMdict, Tomoshi Simplified Chinese definitions,
+  Kanjidic2, custom XML/CSV, conjugation CSVs, chronological errata, and the narrow
+  compatibility ledger.
 
 The data files are generated release artifacts rather than Git contents. PostgreSQL
 is not a release input. The frozen database and `@ichiran/reference-postgres` remain
@@ -159,3 +162,8 @@ browser-host boundary and UX gates.
 ## License
 
 [FSL-1.1-MIT](./LICENSE)
+
+Dictionary releases contain JMdict-derived English data from EDRDG and Simplified
+Chinese definitions derived from [Tomoshi Dictionary Data](https://github.com/tomoshi-app/tomoshi-dict-data)
+by Y1Z. Both dictionary datasets are used under CC BY-SA 4.0; distributed packs are
+modified into Ichiran's indexed locale format.

@@ -2,23 +2,22 @@
 
 > Historical PostgreSQL-era release procedure. Its production-shell measurement and
 > Service Worker requirements are superseded. Current releases budget and verify the
-> analyzer manifest and pack only; consumer application shells are independent.
+> analyzer manifest, hot pack, lexicon, and locale stores only; consumer application
+> shells are independent.
 
-The release compiler is the single production path from the frozen PostgreSQL
-snapshot and pinned raw inputs to the two browser data assets. PostgreSQL is a
-build-time input only. The emitted release has no database client, SQL, or server
-dependency.
+This document records the retired compiler from the frozen PostgreSQL snapshot to
+the pack-v1 browser assets. That compiler has been deleted; the source compiler is
+the sole production release path for pack-v2.
 
 ## Build
 
-The analyzer release is built and verified independently of any consuming
-application bundle:
+Current analyzer releases are built independently of any consuming application
+bundle:
 
 ```bash
-bun run alpha:release:build -- \
-  --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql' \
+bun run source:release -- baseline \
   --out dist/browser-alpha \
-  --pack-version ichiran-260118
+  --pack-version <version>
 ```
 
 The release command's own `--database` value is visible in its process argv. For
@@ -30,10 +29,8 @@ The compiler normally requires a completely clean checkout, including no
 untracked files. `--allow-dirty` exists only for development builds and does not
 alter the recorded `sourceCommit`.
 
-Use the package commands above rather than invoking the TypeScript file directly.
-Both supported build and verify commands first compile `packages/reference-postgres`; the
-support freezer deliberately imports that fresh `dist` tree and temporarily
-routes legacy cache reads through the supplied read-only snapshot transaction.
+The paragraphs below preserve historical implementation evidence only; none of the
+PostgreSQL-era build switches or validation steps are current commands.
 
 The database connection is placed in a repeatable-read, read-only transaction.
 The compiler checks database name, PostgreSQL version, encoding, collation, and the
@@ -116,21 +113,21 @@ them. The output must be below the repository root.
 
 ## Verify
 
-Verification checks the analyzer release independently:
+Pack-v2 verification is part of source-host qualification:
 
 ```bash
-bun run alpha:release:verify -- \
-  --out dist/browser-alpha
+bun run qualify:source-hosts -- /absolute/path/to/release
 ```
 
 It rechecks the checkout, source lock, toolchain, release manifest digest, download
 and installed hashes and lengths, fixed section set, every section checksum and
-reader header, the details header, stats identity, and all three analyzer gates:
+reader headers, lexicon-to-locale bindings, stats identity, and all three analyzer gates:
 
 - always-resident uncompressed `hot.bin` at most 25 MiB;
-- persisted hot + details + compact active `install-{a,b}.json` + the 36-byte
+- persisted hot + lexicon + every declared locale + compact active
+  `install-{a,b}.json` + the 36-byte
   logical IndexedDB install ID at most 64 MiB;
-- manifest + compressed hot + compressed details at most 26 MiB.
+- manifest + compressed hot + compressed lexicon + compressed locales at most 36 MiB.
 
 Application-shell bytes and cache identity are deliberately absent from `stats.json`.
 They are deployment concerns of the consuming application.
@@ -149,15 +146,11 @@ reuse measurements from an earlier generated-overlay format.
 
 ## Updating a pinned pack
 
-Refresh the lock from the qualified read-only database instead of editing expected
-values by hand:
+The pack-v1 database lock refresh command was retired with the compiler. Pack-v2
+source identities are updated through the source-compiler acquisition and release
+workflow documented in `docs/source-compiler/M6-RELEASE-WORKFLOW.md`.
 
-```bash
-bun run alpha:release:refresh-lock -- \
-  --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql'
-```
-
-This command does not consume artifact identities from the old lock. It compiles
+The retired command did not consume artifact identities from the old lock. It compiled
 and verifies the target database, then atomically writes a deterministic v2 lock
 with the upstream Lisp revision, frozen PostgreSQL reference revision, release-dump
 identity, database/toolchain identity, raw inputs, artifact counts and exact artifact

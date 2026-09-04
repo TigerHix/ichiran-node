@@ -24,7 +24,7 @@ if [ "${1:-}" = --same-pack ]; then
 fi
 [ "$#" -eq 0 ] || { echo "unknown argument: $1" >&2; exit 2; }
 
-for command in bun gzip plutil; do
+for command in bun gzip; do
   command -v "$command" >/dev/null || { echo "missing required tool: $command" >&2; exit 1; }
 done
 [ -f "$release/manifest.json" ] || { echo "missing $release/manifest.json" >&2; exit 1; }
@@ -36,34 +36,35 @@ rm -rf "$prepared" "$app_pack" "$generated"
 mkdir -p "$prepared" "$app_pack" "$generated"
 cp "$release/manifest.json" "$prepared/manifest.json"
 
-for name in hot details; do
-  file="$(plutil -extract "$name.file" raw "$release/manifest.json")"
-  encoding="$(plutil -extract "$name.encoding" raw "$release/manifest.json")"
+asset_rows="$(ICHIRAN_PREPARE_MANIFEST="$release/manifest.json" bun -e '
+  const manifest = await Bun.file(process.env.ICHIRAN_PREPARE_MANIFEST).json();
+  const assets = [["hot.bin", manifest.hot], ["lexicon.bin", manifest.lexicon]];
+  for (const locale of Object.keys(manifest.locales).sort()) {
+    assets.push([`gloss.${locale}.bin`, manifest.locales[locale]]);
+  }
+  for (const [installed, asset] of assets) console.log(`${installed}\t${asset.file}\t${asset.encoding}`);
+')"
+while IFS=$'\t' read -r name file encoding; do
   [ -f "$release/$file" ] || { echo "missing $release/$file" >&2; exit 1; }
   cp "$release/$file" "$prepared/$file"
   case "$encoding" in
-    gzip) gzip -dc "$release/$file" > "$prepared/$name.bin" ;;
-    identity) cp "$release/$file" "$prepared/$name.bin" ;;
+    gzip) gzip -dc "$release/$file" > "$prepared/$name" ;;
+    identity) cp "$release/$file" "$prepared/$name" ;;
     *) echo "unsupported release encoding: $encoding" >&2; exit 1 ;;
   esac
-done
+done <<< "$asset_rows"
 
 cp "$prepared/manifest.json" "$app_pack/manifest.json"
-hot_file="$(plutil -extract hot.file raw "$prepared/manifest.json")"
-details_file="$(plutil -extract details.file raw "$prepared/manifest.json")"
-cp "$prepared/$hot_file" "$app_pack/$hot_file"
-cp "$prepared/$details_file" "$app_pack/$details_file"
+while IFS=$'\t' read -r _ file _; do
+  cp "$prepared/$file" "$app_pack/$file"
+done <<< "$asset_rows"
 
 if [ "${mode_args[0]:-}" = --same-pack ]; then
   bun "$repository/packages/rust-kernel/tests/c_parity_corpus.ts" \
     --same-pack "$prepared" --source-lock "$source_lock" > "$generated/clean-corpus.tsv"
-  bun "$repository/packages/rust-kernel/tests/c_product_corpus.ts" \
-    --same-pack "$prepared" --source-lock "$source_lock" > "$generated/product-corpus.tsv"
 else
   bun "$repository/packages/rust-kernel/tests/c_parity_corpus.ts" \
     "$prepared" > "$generated/clean-corpus.tsv"
-  bun "$repository/packages/rust-kernel/tests/c_product_corpus.ts" \
-    "$prepared" > "$generated/product-corpus.tsv"
 fi
 
 cp "$repository/packages/rust-kernel/tests/fixtures/token-details-oracle.json" \

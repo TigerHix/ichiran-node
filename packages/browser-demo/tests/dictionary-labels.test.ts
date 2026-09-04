@@ -17,8 +17,8 @@ describe('dictionary presentation labels', () => {
     expect(partOfSpeechLabel('v5r-i')).toBe('Godan Verb (-ru Irregular)');
   });
 
-  test('keeps unknown future tags readable and categorizes known tags', () => {
-    expect(partOfSpeechLabel('future-jmdict-code')).toBe('Future Jmdict Code');
+  test('preserves unknown future tags and categorizes known tags', () => {
+    expect(partOfSpeechLabel('future-jmdict-code')).toBe('future-jmdict-code');
     expect(partOfSpeechCategory('v2k-k')).toBe('verb');
     expect(partOfSpeechCategory('adj-na')).toBe('adjective');
   });

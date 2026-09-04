@@ -28,17 +28,22 @@ async function fixture(
   readonly directory: string;
   readonly manifest: ReleaseManifest;
   readonly hot: Uint8Array;
-  readonly details: Uint8Array;
+  readonly lexicon: Uint8Array;
+  readonly locales: Readonly<Record<string, Uint8Array>>;
 }> {
   const directory = await mkdtemp(join(tmpdir(), 'ichiran-browser-release-audit-'));
   temporaryDirectories.push(directory);
   const identity = await currentSourceIdentity(repositoryRoot, sourceLock);
   const installedHot = Uint8Array.of(1, 2, 3, 4);
-  const installedDetails = Uint8Array.of(5, 6, 7);
+  const installedLexicon = Uint8Array.of(5, 6, 7);
+  const installedEn = Uint8Array.of(8, 9);
+  const installedZhHans = Uint8Array.of(10, 11);
   const hot = new Uint8Array(gzipSync(installedHot));
-  const details = new Uint8Array(gzipSync(installedDetails));
+  const lexicon = new Uint8Array(gzipSync(installedLexicon));
+  const en = new Uint8Array(gzipSync(installedEn));
+  const zhHans = new Uint8Array(gzipSync(installedZhHans));
   const unsigned = {
-    formatVersion: 1 as const,
+    formatVersion: 2 as const,
     packVersion: 'test.release',
     sourceCommit: sourceCommit ?? identity.sourceCommit,
     sourcesLockSha256: identity.sourcesLockSha256,
@@ -50,13 +55,25 @@ async function fixture(
       installedBytes: installedHot.byteLength,
       installedSha256: sha256(installedHot)
     },
-    details: {
-      file: 'details.bin.gz',
+    lexicon: {
+      file: 'lexicon.bin.gz',
       encoding: 'gzip' as const,
-      downloadBytes: details.byteLength,
-      downloadSha256: sha256(details),
-      installedBytes: installedDetails.byteLength,
-      installedSha256: sha256(installedDetails)
+      downloadBytes: lexicon.byteLength,
+      downloadSha256: sha256(lexicon),
+      installedBytes: installedLexicon.byteLength,
+      installedSha256: sha256(installedLexicon)
+    },
+    locales: {
+      en: {
+        file: 'gloss.en.bin.gz', encoding: 'gzip' as const,
+        downloadBytes: en.byteLength, downloadSha256: sha256(en),
+        installedBytes: installedEn.byteLength, installedSha256: sha256(installedEn)
+      },
+      'zh-Hans': {
+        file: 'gloss.zh-Hans.bin.gz', encoding: 'gzip' as const,
+        downloadBytes: zhHans.byteLength, downloadSha256: sha256(zhHans),
+        installedBytes: installedZhHans.byteLength, installedSha256: sha256(installedZhHans)
+      }
     }
   };
   const manifest: ReleaseManifest = {
@@ -65,10 +82,14 @@ async function fixture(
   };
   await Promise.all([
     writeFile(join(directory, manifest.hot.file), hot),
-    writeFile(join(directory, manifest.details.file), details),
+    writeFile(join(directory, manifest.lexicon.file), lexicon),
+    ...Object.entries(manifest.locales).map(([locale, asset]) => writeFile(
+      join(directory, asset.file),
+      locale === 'en' ? en : zhHans
+    )),
     writeFile(join(directory, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`)
   ]);
-  return { directory, manifest, hot, details };
+  return { directory, manifest, hot, lexicon, locales: { en, 'zh-Hans': zhHans } };
 }
 
 afterEach(async () => {
@@ -83,9 +104,9 @@ describe('browser analyzer release file gate', () => {
     const limit = 64 * 1024 * 1024;
     let atLimit = {
       ...value.manifest,
-      details: {
-        ...value.manifest.details,
-        installedBytes: value.manifest.details.installedBytes + limit - base
+      lexicon: {
+        ...value.manifest.lexicon,
+        installedBytes: value.manifest.lexicon.installedBytes + limit - base
       }
     };
     for (;;) {
@@ -93,13 +114,13 @@ describe('browser analyzer release file gate', () => {
       if (difference === 0) break;
       atLimit = {
         ...atLimit,
-        details: { ...atLimit.details, installedBytes: atLimit.details.installedBytes - difference }
+        lexicon: { ...atLimit.lexicon, installedBytes: atLimit.lexicon.installedBytes - difference }
       };
     }
     expect(assertAnalyzerReadyStateSize(atLimit).persistedBytes).toBe(limit);
     expect(() => assertAnalyzerReadyStateSize({
       ...atLimit,
-      details: { ...atLimit.details, installedBytes: atLimit.details.installedBytes + 1 }
+      lexicon: { ...atLimit.lexicon, installedBytes: atLimit.lexicon.installedBytes + 1 }
     })).toThrow(`limit is ${limit}`);
   });
 
@@ -108,7 +129,8 @@ describe('browser analyzer release file gate', () => {
     const verified = await verifyAnalyzerRelease(value.directory, repositoryRoot);
     expect(verified.manifest).toEqual(value.manifest);
     expect(verified.hotBytes).toEqual(value.hot);
-    expect(verified.detailsBytes).toEqual(value.details);
+    expect(verified.lexiconBytes).toEqual(value.lexicon);
+    expect(verified.localeBytes).toEqual(value.locales);
   });
 
   test('rejects stale source identity before staging', async () => {
@@ -150,6 +172,6 @@ describe('browser analyzer release file gate', () => {
       verifyAnalyzerRelease(value.directory, repositoryRoot, {
         qualifiedArtifact: QUALIFIED_BASELINE_ARTIFACT
       })
-    ).rejects.toThrow(`does not match qualified artifact ${QUALIFIED_BASELINE_ARTIFACT}`);
+    ).rejects.toThrow(`predates analyzer manifest format 2`);
   });
 });

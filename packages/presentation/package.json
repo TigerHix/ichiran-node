@@ -1,0 +1,33 @@
+{
+  "name": "@ichiran/presentation",
+  "version": "0.1.0",
+  "description": "Locale catalogs and semantic presentation helpers for Ichiran analyzer output",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun run check:catalogs && tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check:catalogs": "bun scripts/check-catalogs.ts",
+    "test": "bun test tests/"
+  },
+  "dependencies": {
+    "@ichiran/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  },
+  "sideEffects": false,
+  "license": "MIT"
+}

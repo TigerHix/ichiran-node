@@ -76,6 +76,60 @@ pub(super) fn suffix(class: &str) -> Option<&'static str> {
     })
 }
 
+/// Maps analyzer-internal suffix classes to stable, locale-independent product IDs.
+pub(super) fn suffix_id(class: &str) -> Option<&'static str> {
+    Some(match class {
+        ":chau" => "chau",
+        ":ha" => "ha",
+        ":tai" => "tai",
+        ":iru" => "iru",
+        ":oru" => "oru",
+        ":aru" => "aru",
+        ":kuru" => "kuru",
+        ":oku" => "oku",
+        ":kureru" => "kureru",
+        ":morau" => "morau",
+        ":itadaku" => "itadaku",
+        ":iku" => "iku",
+        ":suru" => "suru",
+        ":itasu" => "itasu",
+        ":sareru" => "sareru",
+        ":saseru" => "saseru",
+        ":rou" => "rou",
+        ":ii" => "ii",
+        ":mo" => "mo",
+        ":sugiru" => "sugiru",
+        ":nikui" => "nikui",
+        ":gatai" => "gatai",
+        ":sa" => "sa",
+        ":tsutsu" => "tsutsu",
+        ":tsutsuaru" => "tsutsuaru",
+        ":uru" => "uru",
+        ":sou" => "sou",
+        ":nai" => "nai",
+        ":ra" => "ra",
+        ":kudasai" => "kudasai",
+        ":yagaru" => "yagaru",
+        ":naru" => "naru",
+        ":desu" => "desu",
+        ":desho" => "desho",
+        ":tosuru" => "tosuru",
+        ":garu" => "garu",
+        ":me" => "me",
+        ":gai" => "gai",
+        ":tasou" => "tasou",
+        "2826528" => "polite-prefix",
+        "2028980" => "particle-ni",
+        "2028970" => "particle-ka",
+        "2028990" => "particle-e",
+        "2029010" => "particle-o",
+        "1469800" => "particle-no",
+        "2086960" => "particle-to",
+        "1002980" => "particle-kara",
+        _ => return None,
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -87,5 +141,8 @@ mod tests {
         assert_eq!(suffix(":tai"), Some("want to... / would like to..."));
         assert_eq!(suffix("2029010"), Some("indicates direct object of action"));
         assert_eq!(suffix(":missing"), None);
+        assert_eq!(suffix_id(":tai"), Some("tai"));
+        assert_eq!(suffix_id("2029010"), Some("particle-o"));
+        assert_eq!(suffix_id(":missing"), None);
     }
 }

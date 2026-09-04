@@ -54,7 +54,8 @@ public actor IchiranAnalyzer {
       units: units,
       options: wire,
       pathIndex: pathIndex,
-      tokenIndex: tokenIndex
+      tokenIndex: tokenIndex,
+      locale: options.locale
     )
     return try Self.decode(IchiranTokenDetails.self, from: data)
   }
@@ -78,18 +79,21 @@ public actor IchiranAnalyzer {
     return try Self.decode(String.self, from: data)
   }
 
-  public func entry(_ entryIndex: Int) throws -> IchiranDictionaryEntry {
+  public func entry(
+    _ entryIndex: Int,
+    options: IchiranDictionaryEntryOptions = .init()
+  ) throws -> IchiranDictionaryEntry {
     guard let index = UInt32(exactly: entryIndex) else {
       throw IchiranAnalyzerError(
         code: .invalidInput,
         message: "entryIndex must be a non-negative 32-bit integer"
       )
     }
-    let data = try requiredOwner().entry(index: index)
+    let data = try requiredOwner().entry(index: index, locale: options.locale)
     return try Self.decode(IchiranDictionaryEntry.self, from: data)
   }
 
-  /// Idempotently releases the Rust handles and the file-backed details store.
+  /// Idempotently releases the Rust handles and file-backed dictionary stores.
   /// Actor isolation makes disposal wait for any in-flight operation.
   public func dispose() {
     owner?.close()
@@ -182,7 +186,7 @@ public actor IchiranAnalyzer {
   }
 
   func qualificationLegacyJSON(utf16Units: [UInt16], optionsJSON: Data) throws -> Data {
-    try requiredOwner().legacy(units: utf16Units, options: optionsJSON)
+    try requiredOwner().legacy(units: utf16Units, options: optionsJSON, locale: "en")
   }
 
   func qualificationTokenDetailsJSON(
@@ -197,16 +201,17 @@ public actor IchiranAnalyzer {
       options: optionsJSON,
       pathIndex: pathIndex,
       tokenIndex: tokenIndex,
+      locale: "en",
       corruptFirstBlock: corruptFirstBlock
     )
   }
 
   func qualificationEntryJSON(_ entryIndex: UInt32) throws -> Data {
-    try requiredOwner().entry(index: entryIndex)
+    try requiredOwner().entry(index: entryIndex, locale: "en")
   }
 
-  func qualificationDetailRange(_ entryIndex: UInt32) throws -> (offset: Int, byteLength: Int) {
-    try requiredOwner().detailRange(index: entryIndex)
+  func qualificationLexiconRange(_ entryIndex: UInt32) throws -> (offset: Int, byteLength: Int) {
+    try requiredOwner().lexiconRange(index: entryIndex)
   }
 
   func qualificationDiagnostics() throws -> NativeDiagnostics {
@@ -215,52 +220,79 @@ public actor IchiranAnalyzer {
 }
 
 struct NativeDiagnostics: Sendable, Equatable {
-  let detailsFileBytes: Int
-  let detailPrefixBytes: Int
-  let detailBytesRead: Int
-  let largestDetailRead: Int
-  let lastDetailRead: Int
+  let dictionaryFileBytes: Int
+  let dictionaryHeaderBytes: Int
+  let dictionaryPrefixBytes: Int
+  let lexiconPrefixBytes: Int
+  let dictionaryBytesRead: Int
+  let largestDictionaryRead: Int
+  let lastDictionaryRead: Int
   let lastCallWasMainThread: Bool
+}
+
+private final class NativeLocaleResource {
+  var store: OpaquePointer?
+  var file: FileHandle?
+  let fileBytes: Int
+  let prefixBytes: Int
+
+  init(store: OpaquePointer, file: FileHandle, fileBytes: Int, prefixBytes: Int) {
+    self.store = store
+    self.file = file
+    self.fileBytes = fileBytes
+    self.prefixBytes = prefixBytes
+  }
 }
 
 private final class NativeOwner: @unchecked Sendable {
   private var kernel: OpaquePointer?
-  private var details: OpaquePointer?
-  private var detailsFile: FileHandle?
-  private let detailsFileBytes: Int
-  private let detailPrefixBytes: Int
-  private var detailBytesRead: Int
-  private var largestDetailRead: Int
-  private var lastDetailRead = 0
+  private var lexicon: OpaquePointer?
+  private var lexiconFile: FileHandle?
+  private var locales: [String: NativeLocaleResource]
+  private let dictionaryFileBytes: Int
+  private let dictionaryHeaderBytes: Int
+  private let dictionaryPrefixBytes: Int
+  private let lexiconPrefixBytes: Int
+  private var dictionaryBytesRead: Int
+  private var largestDictionaryRead: Int
+  private var lastDictionaryRead = 0
   private var lastCallWasMainThread = false
 
   var diagnostics: NativeDiagnostics {
     NativeDiagnostics(
-      detailsFileBytes: detailsFileBytes,
-      detailPrefixBytes: detailPrefixBytes,
-      detailBytesRead: detailBytesRead,
-      largestDetailRead: largestDetailRead,
-      lastDetailRead: lastDetailRead,
+      dictionaryFileBytes: dictionaryFileBytes,
+      dictionaryHeaderBytes: dictionaryHeaderBytes,
+      dictionaryPrefixBytes: dictionaryPrefixBytes,
+      lexiconPrefixBytes: lexiconPrefixBytes,
+      dictionaryBytesRead: dictionaryBytesRead,
+      largestDictionaryRead: largestDictionaryRead,
+      lastDictionaryRead: lastDictionaryRead,
       lastCallWasMainThread: lastCallWasMainThread
     )
   }
 
   private init(
     kernel: OpaquePointer,
-    details: OpaquePointer,
-    detailsFile: FileHandle,
-    detailsFileBytes: Int,
-    detailPrefixBytes: Int,
-    detailBytesRead: Int,
-    largestDetailRead: Int
+    lexicon: OpaquePointer,
+    lexiconFile: FileHandle,
+    locales: [String: NativeLocaleResource],
+    dictionaryFileBytes: Int,
+    dictionaryHeaderBytes: Int,
+    dictionaryPrefixBytes: Int,
+    lexiconPrefixBytes: Int,
+    dictionaryBytesRead: Int,
+    largestDictionaryRead: Int
   ) {
     self.kernel = kernel
-    self.details = details
-    self.detailsFile = detailsFile
-    self.detailsFileBytes = detailsFileBytes
-    self.detailPrefixBytes = detailPrefixBytes
-    self.detailBytesRead = detailBytesRead
-    self.largestDetailRead = largestDetailRead
+    self.lexicon = lexicon
+    self.lexiconFile = lexiconFile
+    self.locales = locales
+    self.dictionaryFileBytes = dictionaryFileBytes
+    self.dictionaryHeaderBytes = dictionaryHeaderBytes
+    self.dictionaryPrefixBytes = dictionaryPrefixBytes
+    self.lexiconPrefixBytes = lexiconPrefixBytes
+    self.dictionaryBytesRead = dictionaryBytesRead
+    self.largestDictionaryRead = largestDictionaryRead
   }
 
   deinit {
@@ -291,35 +323,10 @@ private final class NativeOwner: @unchecked Sendable {
         code: .invalidPack, message: "Installed hot.bin identity does not match manifest")
     }
 
-    let fileSize: Int
-    do {
-      let attributes = try FileManager.default.attributesOfItem(atPath: pack.detailsURL.path)
-      guard let value = attributes[.size] as? NSNumber else {
-        throw CocoaError(.fileReadCorruptFile)
-      }
-      fileSize = value.intValue
-    } catch {
-      throw IchiranAnalyzerError(
-        code: .invalidPack,
-        message: "Could not inspect installed details.bin: \(error.localizedDescription)"
-      )
-    }
-    guard fileSize == pack.manifest.details.installedBytes else {
-      throw IchiranAnalyzerError(
-        code: .invalidPack, message: "Installed details.bin size does not match manifest")
-    }
-
-    let file: FileHandle
-    do {
-      file = try FileHandle(forReadingFrom: pack.detailsURL)
-    } catch {
-      throw IchiranAnalyzerError(
-        code: .invalidPack,
-        message: "Could not open installed details.bin: \(error.localizedDescription)"
-      )
-    }
     var kernel: OpaquePointer?
-    var details: OpaquePointer?
+    var lexicon: OpaquePointer?
+    var lexiconFile: FileHandle?
+    var localeResources: [String: NativeLocaleResource] = [:]
     do {
       let openResult = hot.withUnsafeBytes { bytes in
         ichiran_kernel_open(
@@ -333,63 +340,168 @@ private final class NativeOwner: @unchecked Sendable {
         throw IchiranAnalyzerError(code: .internal, message: "Rust returned no kernel handle")
       }
 
-      let header = try readExact(file: file, offset: 0, count: 96)
-      var prefixBytes = 0
-      let lengthResult = header.withUnsafeBytes { bytes in
-        ichiran_detail_prefix_length(
+      let lexiconSize = try fileSize(
+        at: pack.lexiconURL,
+        expected: pack.manifest.lexicon.installedBytes,
+        label: "lexicon.bin"
+      )
+      let openedLexiconFile = try openFile(at: pack.lexiconURL, label: "lexicon.bin")
+      lexiconFile = openedLexiconFile
+      let lexiconHeader = try readExact(file: openedLexiconFile, offset: 0, count: 96)
+      var lexiconPrefixBytes = 0
+      let lengthResult = lexiconHeader.withUnsafeBytes { bytes in
+        ichiran_lexicon_prefix_length(
           bytes.bindMemory(to: UInt8.self).baseAddress,
           bytes.count,
-          fileSize,
-          &prefixBytes
+          lexiconSize,
+          &lexiconPrefixBytes
         )
       }
       _ = try NativeResult.consume(lengthResult, fallback: .invalidPack)
-      guard prefixBytes >= 96, prefixBytes < fileSize else {
+      guard lexiconPrefixBytes >= 96, lexiconPrefixBytes < lexiconSize else {
         throw IchiranAnalyzerError(
-          code: .invalidPack, message: "Rust returned an invalid detail prefix length")
+          code: .invalidPack, message: "Rust returned an invalid lexicon prefix length")
       }
-      let prefix = try readExact(file: file, offset: 0, count: prefixBytes)
-      let detailsResult = prefix.withUnsafeBytes { bytes in
-        ichiran_detail_store_open(
+      let lexiconPrefix = try readExact(
+        file: openedLexiconFile,
+        offset: 0,
+        count: lexiconPrefixBytes
+      )
+      let lexiconResult = lexiconPrefix.withUnsafeBytes { bytes in
+        ichiran_lexicon_store_open(
           bytes.bindMemory(to: UInt8.self).baseAddress,
           bytes.count,
-          fileSize,
-          &details
+          lexiconSize,
+          &lexicon
         )
       }
-      _ = try NativeResult.consume(detailsResult, fallback: .invalidPack)
-      guard let details else {
-        throw IchiranAnalyzerError(code: .internal, message: "Rust returned no detail-store handle")
+      _ = try NativeResult.consume(lexiconResult, fallback: .invalidPack)
+      guard let lexicon else {
+        throw IchiranAnalyzerError(code: .internal, message: "Rust returned no lexicon handle")
+      }
+
+      let digest = try digestBytes(pack.manifest.lexicon.installedSHA256)
+      let entryCount = ichiran_lexicon_store_entry_count(lexicon)
+      var dictionaryFileBytes = lexiconSize
+      var dictionaryHeaderBytes = 96
+      var dictionaryPrefixBytes = lexiconPrefixBytes
+      var dictionaryBytesRead = 96 + lexiconPrefixBytes
+      var largestDictionaryRead = lexiconPrefixBytes
+      for locale in pack.manifest.locales.keys.sorted() {
+        let asset = pack.manifest.locales[locale]!
+        let url = pack.localeURL(locale)
+        let localeSize = try fileSize(
+          at: url,
+          expected: asset.installedBytes,
+          label: "gloss.\(locale).bin"
+        )
+        let file = try openFile(at: url, label: "gloss.\(locale).bin")
+        var localeStore: OpaquePointer?
+        do {
+          let header = try readExact(file: file, offset: 0, count: 128)
+          var prefixBytes = 0
+          let prefixLength = header.withUnsafeBytes { bytes in
+            ichiran_locale_prefix_length(
+              bytes.bindMemory(to: UInt8.self).baseAddress,
+              bytes.count,
+              localeSize,
+              &prefixBytes
+            )
+          }
+          _ = try NativeResult.consume(prefixLength, fallback: .invalidPack)
+          guard prefixBytes >= 128, prefixBytes < localeSize else {
+            throw IchiranAnalyzerError(
+              code: .invalidPack,
+              message: "Rust returned an invalid \(locale) locale prefix length"
+            )
+          }
+          let prefix = try readExact(file: file, offset: 0, count: prefixBytes)
+          let localeBytes = Data(locale.utf8)
+          let opened = prefix.withUnsafeBytes { prefixBuffer in
+            digest.withUnsafeBufferPointer { digestBuffer in
+              localeBytes.withUnsafeBytes { localeBuffer in
+                ichiran_locale_store_open(
+                  prefixBuffer.bindMemory(to: UInt8.self).baseAddress,
+                  prefixBuffer.count,
+                  localeSize,
+                  digestBuffer.baseAddress,
+                  localeBuffer.bindMemory(to: UInt8.self).baseAddress,
+                  localeBuffer.count,
+                  entryCount,
+                  &localeStore
+                )
+              }
+            }
+          }
+          _ = try NativeResult.consume(opened, fallback: .invalidPack)
+          guard let localeStore else {
+            throw IchiranAnalyzerError(
+              code: .internal, message: "Rust returned no \(locale) locale handle")
+          }
+          localeResources[locale] = NativeLocaleResource(
+            store: localeStore,
+            file: file,
+            fileBytes: localeSize,
+            prefixBytes: prefixBytes
+          )
+          dictionaryFileBytes += localeSize
+          dictionaryHeaderBytes += 128
+          dictionaryPrefixBytes += prefixBytes
+          dictionaryBytesRead += 128 + prefixBytes
+          largestDictionaryRead = max(largestDictionaryRead, prefixBytes)
+        } catch {
+          if let localeStore { ichiran_locale_store_free(localeStore) }
+          try? file.close()
+          throw error
+        }
       }
       return NativeOwner(
         kernel: kernel,
-        details: details,
-        detailsFile: file,
-        detailsFileBytes: fileSize,
-        detailPrefixBytes: prefixBytes,
-        detailBytesRead: 96 + prefixBytes,
-        largestDetailRead: prefixBytes
+        lexicon: lexicon,
+        lexiconFile: openedLexiconFile,
+        locales: localeResources,
+        dictionaryFileBytes: dictionaryFileBytes,
+        dictionaryHeaderBytes: dictionaryHeaderBytes,
+        dictionaryPrefixBytes: dictionaryPrefixBytes,
+        lexiconPrefixBytes: lexiconPrefixBytes,
+        dictionaryBytesRead: dictionaryBytesRead,
+        largestDictionaryRead: largestDictionaryRead
       )
     } catch {
-      if let details { ichiran_detail_store_free(details) }
+      for resource in localeResources.values {
+        if let store = resource.store { ichiran_locale_store_free(store) }
+        try? resource.file?.close()
+      }
+      if let lexicon { ichiran_lexicon_store_free(lexicon) }
       if let kernel { ichiran_kernel_free(kernel) }
-      try? file.close()
+      try? lexiconFile?.close()
       throw error
     }
   }
 
   func close() {
-    if let details {
-      ichiran_detail_store_free(details)
-      self.details = nil
+    for resource in locales.values {
+      if let store = resource.store {
+        ichiran_locale_store_free(store)
+        resource.store = nil
+      }
+      if let file = resource.file {
+        try? file.close()
+        resource.file = nil
+      }
+    }
+    locales.removeAll()
+    if let lexicon {
+      ichiran_lexicon_store_free(lexicon)
+      self.lexicon = nil
     }
     if let kernel {
       ichiran_kernel_free(kernel)
       self.kernel = nil
     }
-    if let detailsFile {
-      try? detailsFile.close()
-      self.detailsFile = nil
+    if let lexiconFile {
+      try? lexiconFile.close()
+      self.lexiconFile = nil
     }
   }
 
@@ -432,24 +544,23 @@ private final class NativeOwner: @unchecked Sendable {
     return try NativeResult.consume(result, fallback: .internal)
   }
 
-  func entry(index: UInt32) throws -> Data {
-    let details = try requiredDetails()
-    let range = try range(index: index, details: details)
-    let compressed = try readDetails(offset: Int(range.offset), count: Int(range.byte_length))
-    let decoded = compressed.withUnsafeBytes { bytes in
-      ichiran_detail_store_decode(
-        details,
-        index,
-        bytes.bindMemory(to: UInt8.self).baseAddress,
-        bytes.count
-      )
+  func entry(index: UInt32, locale: String) throws -> Data {
+    let selected = try requiredLocale(locale)
+    let fallback = try requiredLocale("en")
+    let lexicon = try decodeLexicon(index: index)
+    let english = try decodeLocale(index: index, resource: fallback)
+    let localized = locale == "en" ? english : try decodeLocale(index: index, resource: selected)
+    let entry = try Self.localize(lexicon: lexicon, locale: localized, fallback: english)
+    do {
+      return try JSONEncoder().encode(entry)
+    } catch {
+      throw IchiranAnalyzerError(
+        code: .internal, message: "Could not encode localized dictionary entry")
     }
-    return try NativeResult.consume(decoded, fallback: .invalidPack)
   }
 
-  func detailRange(index: UInt32) throws -> (offset: Int, byteLength: Int) {
-    let details = try requiredDetails()
-    let value = try range(index: index, details: details)
+  func lexiconRange(index: UInt32) throws -> (offset: Int, byteLength: Int) {
+    let value = try nativeLexiconRange(index: index)
     return (Int(value.offset), Int(value.byte_length))
   }
 
@@ -458,10 +569,15 @@ private final class NativeOwner: @unchecked Sendable {
     options: Data,
     pathIndex: UInt32,
     tokenIndex: UInt32,
+    locale: String,
     corruptFirstBlock: Bool = false
   ) throws -> Data {
     let kernel = try requiredKernel()
-    let details = try requiredDetails()
+    let lexicon = try requiredLexicon()
+    let selected = try requiredLocale(locale)
+    let fallbackLocale = try requiredLocale("en")
+    let selectedStore = try requiredStore(selected)
+    let fallbackStore = try requiredStore(fallbackLocale)
     var operation: OpaquePointer?
     lastCallWasMainThread = Thread.isMainThread
     let begun = units.withUnsafeBufferPointer { input in
@@ -489,11 +605,16 @@ private final class NativeOwner: @unchecked Sendable {
       release: { ichiran_token_details_operation_free($0) },
       fallback: .internal,
       corruptFirstBlock: corruptFirstBlock,
-      advance: { suppliedEntry, bytes in
+      selected: selected,
+      fallbackLocale: fallbackLocale,
+      advance: { suppliedStore, suppliedEntry, bytes in
         ichiran_kernel_token_details_step(
           kernel,
           operation,
-          details,
+          lexicon,
+          selectedStore,
+          fallbackStore,
+          suppliedStore,
           suppliedEntry,
           bytes.count == 0 ? nil : bytes.bindMemory(to: UInt8.self).baseAddress,
           bytes.count
@@ -502,9 +623,13 @@ private final class NativeOwner: @unchecked Sendable {
     )
   }
 
-  func legacy(units: [UInt16], options: Data) throws -> Data {
+  func legacy(units: [UInt16], options: Data, locale: String) throws -> Data {
     let kernel = try requiredKernel()
-    let details = try requiredDetails()
+    let lexicon = try requiredLexicon()
+    let selected = try requiredLocale(locale)
+    let fallbackLocale = try requiredLocale("en")
+    let selectedStore = try requiredStore(selected)
+    let fallbackStore = try requiredStore(fallbackLocale)
     var operation: OpaquePointer?
     lastCallWasMainThread = Thread.isMainThread
     let begun = units.withUnsafeBufferPointer { input in
@@ -531,11 +656,16 @@ private final class NativeOwner: @unchecked Sendable {
       release: { ichiran_legacy_operation_free($0) },
       fallback: .internal,
       corruptFirstBlock: false,
-      advance: { suppliedEntry, bytes in
+      selected: selected,
+      fallbackLocale: fallbackLocale,
+      advance: { suppliedStore, suppliedEntry, bytes in
         ichiran_kernel_legacy_step(
           kernel,
           operation,
-          details,
+          lexicon,
+          selectedStore,
+          fallbackStore,
+          suppliedStore,
           suppliedEntry,
           bytes.count == 0 ? nil : bytes.bindMemory(to: UInt8.self).baseAddress,
           bytes.count
@@ -549,15 +679,18 @@ private final class NativeOwner: @unchecked Sendable {
     release: (OpaquePointer?) -> Void,
     fallback: IchiranAnalyzerError.Code,
     corruptFirstBlock: Bool,
-    advance: (UInt32, UnsafeRawBufferPointer) -> IchiranStepResult
+    selected: NativeLocaleResource,
+    fallbackLocale: NativeLocaleResource,
+    advance: (UInt32, UInt32, UnsafeRawBufferPointer) -> IchiranStepResult
   ) throws -> Data {
     defer { release(operation) }
+    var suppliedStore = UInt32(ICHIRAN_DICTIONARY_NONE.rawValue)
     var suppliedEntry = UInt32.max
     var supplied = Data()
     var shouldCorrupt = corruptFirstBlock
     for _ in 0..<4_096 {
       lastCallWasMainThread = Thread.isMainThread
-      let step = supplied.withUnsafeBytes { advance(suppliedEntry, $0) }
+      let step = supplied.withUnsafeBytes { advance(suppliedStore, suppliedEntry, $0) }
       let data = try NativeResult.consume(step: step, fallback: fallback)
       switch step.state {
       case 1:
@@ -565,14 +698,22 @@ private final class NativeOwner: @unchecked Sendable {
       case 2:
         guard data.isEmpty, step.range.byte_length > 0 else {
           throw IchiranAnalyzerError(
-            code: .internal, message: "Rust returned an invalid missing-detail step"
+            code: .internal, message: "Rust returned an invalid missing-dictionary step"
           )
         }
+        suppliedStore = step.store
         suppliedEntry = step.entry_index
-        supplied = try readDetails(
-          offset: Int(step.range.offset),
-          count: Int(step.range.byte_length)
-        )
+        switch step.store {
+        case UInt32(ICHIRAN_DICTIONARY_LEXICON.rawValue):
+          supplied = try readLexicon(offset: Int(step.range.offset), count: Int(step.range.byte_length))
+        case UInt32(ICHIRAN_DICTIONARY_LOCALE.rawValue):
+          supplied = try readLocale(selected, offset: Int(step.range.offset), count: Int(step.range.byte_length))
+        case UInt32(ICHIRAN_DICTIONARY_FALLBACK.rawValue):
+          supplied = try readLocale(fallbackLocale, offset: Int(step.range.offset), count: Int(step.range.byte_length))
+        default:
+          throw IchiranAnalyzerError(
+            code: .internal, message: "Rust requested an unknown dictionary store")
+        }
         if shouldCorrupt {
           supplied[0] ^= 0xff
           shouldCorrupt = false
@@ -584,7 +725,7 @@ private final class NativeOwner: @unchecked Sendable {
       }
     }
     throw IchiranAnalyzerError(
-      code: .internal, message: "Lazy operation exceeded 4096 detail reads"
+      code: .internal, message: "Lazy operation exceeded 4096 dictionary reads"
     )
   }
 
@@ -595,38 +736,239 @@ private final class NativeOwner: @unchecked Sendable {
     return kernel
   }
 
-  private func range(index: UInt32, details: OpaquePointer) throws -> IchiranDetailRange {
-    var range = IchiranDetailRange()
+  private func nativeLexiconRange(index: UInt32) throws -> IchiranDictionaryRange {
+    let lexicon = try requiredLexicon()
+    var range = IchiranDictionaryRange()
     lastCallWasMainThread = Thread.isMainThread
-    let result = ichiran_detail_store_range(details, index, &range)
+    let result = ichiran_lexicon_store_range(lexicon, index, &range)
     _ = try NativeResult.consume(result, fallback: .notFound)
     return range
   }
 
-  private func requiredDetails() throws -> OpaquePointer {
-    guard let details else {
-      throw IchiranAnalyzerError(code: .internal, message: "Analyzer has been disposed")
-    }
-    return details
+  private func localeRange(index: UInt32, resource: NativeLocaleResource) throws -> IchiranDictionaryRange {
+    let store = try requiredStore(resource)
+    var range = IchiranDictionaryRange()
+    lastCallWasMainThread = Thread.isMainThread
+    let result = ichiran_locale_store_range(store, index, &range)
+    _ = try NativeResult.consume(result, fallback: .notFound)
+    return range
   }
 
-  private func readDetails(offset: Int, count: Int) throws -> Data {
-    guard let detailsFile else {
+  private func requiredLexicon() throws -> OpaquePointer {
+    guard let lexicon else {
       throw IchiranAnalyzerError(code: .internal, message: "Analyzer has been disposed")
     }
+    return lexicon
+  }
+
+  private func requiredLocale(_ locale: String) throws -> NativeLocaleResource {
+    guard locale.range(
+      of: #"^[A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,8})*$"#,
+      options: .regularExpression
+    ) != nil else {
+      throw IchiranAnalyzerError(code: .invalidInput, message: "locale must be a valid BCP 47 language tag")
+    }
+    guard let resource = locales[locale] else {
+      throw IchiranAnalyzerError(code: .notFound, message: "Dictionary locale is not installed: \(locale)")
+    }
+    return resource
+  }
+
+  private func requiredStore(_ resource: NativeLocaleResource) throws -> OpaquePointer {
+    guard let store = resource.store else {
+      throw IchiranAnalyzerError(code: .internal, message: "Analyzer has been disposed")
+    }
+    return store
+  }
+
+  private func readLexicon(offset: Int, count: Int) throws -> Data {
+    guard let lexiconFile else {
+      throw IchiranAnalyzerError(code: .internal, message: "Analyzer has been disposed")
+    }
+    return try readDictionary(file: lexiconFile, label: "lexicon.bin", offset: offset, count: count)
+  }
+
+  private func readLocale(
+    _ resource: NativeLocaleResource,
+    offset: Int,
+    count: Int
+  ) throws -> Data {
+    guard let file = resource.file else {
+      throw IchiranAnalyzerError(code: .internal, message: "Analyzer has been disposed")
+    }
+    return try readDictionary(file: file, label: "locale pack", offset: offset, count: count)
+  }
+
+  private func readDictionary(
+    file: FileHandle,
+    label: String,
+    offset: Int,
+    count: Int
+  ) throws -> Data {
     let data: Data
     do {
-      data = try Self.readExact(file: detailsFile, offset: offset, count: count)
+      data = try Self.readExact(file: file, offset: offset, count: count)
     } catch {
       throw IchiranAnalyzerError(
         code: .invalidPack,
-        message: "Could not read the requested details.bin block: \(error.localizedDescription)"
+        message: "Could not read the requested \(label) block: \(error.localizedDescription)"
       )
     }
-    detailBytesRead += data.count
-    largestDetailRead = max(largestDetailRead, data.count)
-    lastDetailRead = data.count
+    dictionaryBytesRead += data.count
+    largestDictionaryRead = max(largestDictionaryRead, data.count)
+    lastDictionaryRead = data.count
     return data
+  }
+
+  private func decodeLexicon(index: UInt32) throws -> LexiconEntryWire {
+    let lexicon = try requiredLexicon()
+    let range = try nativeLexiconRange(index: index)
+    let compressed = try readLexicon(offset: Int(range.offset), count: Int(range.byte_length))
+    let result = compressed.withUnsafeBytes { bytes in
+      ichiran_lexicon_store_decode(
+        lexicon,
+        index,
+        bytes.bindMemory(to: UInt8.self).baseAddress,
+        bytes.count
+      )
+    }
+    return try decodeWire(LexiconEntryWire.self, result: result)
+  }
+
+  private func decodeLocale(index: UInt32, resource: NativeLocaleResource) throws -> LocaleEntryWire {
+    let store = try requiredStore(resource)
+    let range = try localeRange(index: index, resource: resource)
+    let compressed = try readLocale(resource, offset: Int(range.offset), count: Int(range.byte_length))
+    let result = compressed.withUnsafeBytes { bytes in
+      ichiran_locale_store_decode(
+        store,
+        index,
+        bytes.bindMemory(to: UInt8.self).baseAddress,
+        bytes.count
+      )
+    }
+    return try decodeWire(LocaleEntryWire.self, result: result)
+  }
+
+  private func decodeWire<T: Decodable>(_ type: T.Type, result: IchiranResult) throws -> T {
+    let data = try NativeResult.consume(result, fallback: .invalidPack)
+    do {
+      return try JSONDecoder().decode(type, from: data)
+    } catch {
+      throw IchiranAnalyzerError(code: .invalidPack, message: "Rust returned invalid dictionary JSON")
+    }
+  }
+
+  private struct LexiconEntryWire: Decodable {
+    struct Sense: Decodable {
+      let ord: Int
+      let properties: [IchiranDictionaryProperty]
+    }
+    let seq: Int
+    let forms: [IchiranDictionaryForm]
+    let senses: [Sense]
+  }
+
+  private struct LocaleEntryWire: Decodable {
+    struct Group: Decodable {
+      let targets: [Int]
+      let glosses: [IchiranDictionaryGloss]
+      let info: [IchiranDictionaryGloss]
+    }
+    let seq: Int
+    let groups: [Group]
+  }
+
+  private static func localize(
+    lexicon: LexiconEntryWire,
+    locale: LocaleEntryWire,
+    fallback: LocaleEntryWire
+  ) throws -> IchiranDictionaryEntry {
+    guard lexicon.seq == locale.seq, lexicon.seq == fallback.seq else {
+      throw IchiranAnalyzerError(
+        code: .invalidPack, message: "Dictionary entry sequence does not match across stores")
+    }
+    var senses = lexicon.senses.map { sense in
+      let selected = locale.groups.filter { $0.targets.contains(sense.ord) }
+      let english = fallback.groups.filter { $0.targets.contains(sense.ord) }
+      let glossGroups = selected.contains { !$0.glosses.isEmpty } ? selected : english
+      let infoGroups = selected.contains { !$0.info.isEmpty } ? selected : english
+      return IchiranDictionarySense(
+        ord: sense.ord,
+        glosses: glossGroups.flatMap(\.glosses),
+        properties: sense.properties + infoGroups.flatMap { group in
+          group.info.map {
+            IchiranDictionaryProperty(tag: .senseInfo, ord: $0.ord, text: $0.text)
+          }
+        }
+      )
+    }
+    let selectedEntryGroups = locale.groups.filter(\.targets.isEmpty)
+    let englishEntryGroups = fallback.groups.filter(\.targets.isEmpty)
+    let entryGroups = selectedEntryGroups.contains { !$0.glosses.isEmpty }
+      ? selectedEntryGroups
+      : englishEntryGroups
+    var nextOrd = (lexicon.senses.map(\.ord).max() ?? -1) + 1
+    for group in entryGroups {
+      senses.append(
+        IchiranDictionarySense(
+          ord: nextOrd,
+          glosses: group.glosses,
+          properties: group.info.map {
+            IchiranDictionaryProperty(tag: .senseInfo, ord: $0.ord, text: $0.text)
+          }.sorted { $0.ord < $1.ord }
+        )
+      )
+      nextOrd += 1
+    }
+    return IchiranDictionaryEntry(seq: lexicon.seq, forms: lexicon.forms, senses: senses)
+  }
+
+  private static func fileSize(at url: URL, expected: Int, label: String) throws -> Int {
+    do {
+      let attributes = try FileManager.default.attributesOfItem(atPath: url.path)
+      guard let value = attributes[.size] as? NSNumber else {
+        throw CocoaError(.fileReadCorruptFile)
+      }
+      let size = value.intValue
+      guard size == expected else {
+        throw IchiranAnalyzerError(
+          code: .invalidPack, message: "Installed \(label) size does not match manifest")
+      }
+      return size
+    } catch let error as IchiranAnalyzerError {
+      throw error
+    } catch {
+      throw IchiranAnalyzerError(
+        code: .invalidPack,
+        message: "Could not inspect installed \(label): \(error.localizedDescription)"
+      )
+    }
+  }
+
+  private static func openFile(at url: URL, label: String) throws -> FileHandle {
+    do {
+      return try FileHandle(forReadingFrom: url)
+    } catch {
+      throw IchiranAnalyzerError(
+        code: .invalidPack,
+        message: "Could not open installed \(label): \(error.localizedDescription)"
+      )
+    }
+  }
+
+  private static func digestBytes(_ hex: String) throws -> [UInt8] {
+    guard hex.count == 64 else {
+      throw IchiranAnalyzerError(code: .invalidPack, message: "Invalid lexicon digest")
+    }
+    return try stride(from: 0, to: hex.count, by: 2).map { offset in
+      let start = hex.index(hex.startIndex, offsetBy: offset)
+      let end = hex.index(start, offsetBy: 2)
+      guard let value = UInt8(hex[start..<end], radix: 16) else {
+        throw IchiranAnalyzerError(code: .invalidPack, message: "Invalid lexicon digest")
+      }
+      return value
+    }
   }
 
   private static func readExact(file: FileHandle, offset: Int, count: Int) throws -> Data {

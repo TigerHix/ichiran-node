@@ -19,9 +19,9 @@
         "components": [],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -50,9 +50,9 @@
             "components": [],
             "conjugations": [],
             "alternatives": [],
-            "suffix": null,
+            "suffixId": null,
             "counter": null,
-            "entity": false
+            "entityKind": null
           },
           {
             "text": "はし",
@@ -63,14 +63,14 @@
             "components": [],
             "conjugations": [],
             "alternatives": [],
-            "suffix": null,
+            "suffixId": null,
             "counter": null,
-            "entity": false
+            "entityKind": null
           }
         ],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -89,9 +89,9 @@
         "components": [],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -109,9 +109,9 @@
         "components": [],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -140,7 +140,7 @@
                 ],
                 "meanings": [
                   { "gloss": "to eat", "pos": ["v1", "vt"], "fields": [], "info": null },
-                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["vt", "v1"], "fields": [], "info": null }
+                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["v1", "vt"], "fields": [], "info": null }
                 ],
                 "via": []
               }
@@ -148,9 +148,9 @@
           }
         ],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -177,15 +177,15 @@
                 ],
                 "meanings": [
                   { "gloss": "to eat", "pos": ["v1", "vt"], "fields": [], "info": null },
-                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["vt", "v1"], "fields": [], "info": null }
+                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["v1", "vt"], "fields": [], "info": null }
                 ],
                 "via": []
               }
             ],
             "alternatives": [],
-            "suffix": null,
+            "suffixId": null,
             "counter": null,
-            "entity": false
+            "entityKind": null
           },
           {
             "text": "そう",
@@ -194,16 +194,16 @@
             "components": [],
             "conjugations": [],
             "alternatives": [],
-            "suffix": "looking like ... / seeming ...",
+            "suffixId": "sou",
             "counter": null,
-            "entity": false
+            "entityKind": null
           }
         ],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -223,9 +223,9 @@
         "components": [],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": { "value": "3", "ordinal": false },
-        "entity": false
+        "entityKind": null
       }
     },
     {
@@ -240,15 +240,13 @@
       "expected": {
         "text": "架空固有名",
         "reading": "架空固有名",
-        "meanings": [
-          { "gloss": "proper noun (named entity)", "pos": ["n-pr"], "fields": [], "info": null }
-        ],
+        "meanings": [],
         "components": [],
         "conjugations": [],
         "alternatives": [],
-        "suffix": null,
+        "suffixId": null,
         "counter": null,
-        "entity": true
+        "entityKind": "proper-noun"
       }
     }
   ]

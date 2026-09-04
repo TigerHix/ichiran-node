@@ -45,7 +45,12 @@ import {
 } from '../src/analyzer.js';
 import { normalize as normalizePortable } from '../src/characters.js';
 import { ANALYZER_SUPPORT_SECTION_ID, openAnalyzerSupport } from '../src/analyzer-support.js';
-import { memoryDetailSource, openDetailStore } from '../src/details.js';
+import {
+  DictionaryReader,
+  LexiconStoreReader,
+  LocaleGlossStoreReader,
+  memoryDictionarySource
+} from '../src/dictionary.js';
 import { MORPHOLOGY_SECTION_ID, openMorphology } from '../src/morphology.js';
 import { openPack } from '../src/pack.js';
 import { ROOT_PAYLOAD_SECTION_ID, openRootPayload } from '../src/root-payload.js';
@@ -199,13 +204,14 @@ interface SuiteRun {
 interface Runtime {
   readonly analyzer: PortableAnalyzer;
   readonly annotations: ReturnType<AnalyzerAnnotationsReader['createPreloaded']>;
-  readonly details: Awaited<ReturnType<typeof openDetailStore>>;
+  readonly dictionary: DictionaryReader;
   readonly release: {
     readonly sourceCommit: string;
     readonly manifestFileSha256: string;
     readonly manifestSha256: string;
     readonly hot: AnalyzerReleaseAsset;
-    readonly details: AnalyzerReleaseAsset;
+    readonly lexicon: AnalyzerReleaseAsset;
+    readonly locales: Readonly<Record<string, AnalyzerReleaseAsset>>;
   };
 }
 
@@ -322,9 +328,10 @@ async function openRuntime(
   if (verifiedManifest.sourcesLockSha256 !== expected.sourcesLockSha256) {
     throw new Error('Release sources-lock digest does not match the verified repository lock');
   }
-  const [hot, detailsBytes] = await Promise.all([
+  const [hot, lexiconBytes, englishBytes] = await Promise.all([
     releaseAsset(directory, verifiedManifest.hot),
-    releaseAsset(directory, verifiedManifest.details)
+    releaseAsset(directory, verifiedManifest.lexicon),
+    releaseAsset(directory, verifiedManifest.locales.en!)
   ]);
   const pack = openPack(hot);
   pack.verifyAll();
@@ -342,17 +349,24 @@ async function openRuntime(
     support: openAnalyzerSupport(pack.getSection(ANALYZER_SUPPORT_SECTION_ID)),
     annotations
   });
-  const details = await openDetailStore(memoryDetailSource(detailsBytes), decodeGzip);
+  const lexicon = await LexiconStoreReader.open(memoryDictionarySource(lexiconBytes), decodeGzip);
+  const english = await LocaleGlossStoreReader.open(memoryDictionarySource(englishBytes), decodeGzip, {
+    locale: 'en',
+    lexiconSha256: verifiedManifest.lexicon.installedSha256,
+    entryCount: lexicon.manifest.entryCount
+  });
+  const dictionary = new DictionaryReader(lexicon, english, english);
   return {
     analyzer,
     annotations,
-    details,
+    dictionary,
     release: {
       sourceCommit: verifiedManifest.sourceCommit,
       manifestFileSha256: sha256(manifestBytes),
       manifestSha256: verifiedManifest.manifestSha256,
       hot: verifiedManifest.hot,
-      details: verifiedManifest.details
+      lexicon: verifiedManifest.lexicon,
+      locales: verifiedManifest.locales
     }
   };
 }
@@ -833,7 +847,7 @@ async function portableAnalysis(
         });
         return {
           result,
-          detailed: await runtime.analyzer.serializeLegacyDetailed(result, runtime.details)
+          detailed: await runtime.analyzer.serializeLegacyDetailed(result, runtime.dictionary)
         };
       } catch (error) {
         if (!(error instanceof AnalyzerAnnotationNotLoadedError)) throw error;

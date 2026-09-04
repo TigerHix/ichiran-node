@@ -1,5 +1,6 @@
 import type {
   DictionaryEntry,
+  DictionaryEntryOptions,
   RomanizeOptions,
   TokenConjugation,
   TokenDetails,
@@ -95,8 +96,8 @@ export class BrowserAnalyzer {
     return this.#client.analyze(text, options);
   }
 
-  entry(entryIndex: number): Promise<DictionaryEntry> {
-    return this.#client.entry(entryIndex);
+  entry(entryIndex: number, options?: DictionaryEntryOptions): Promise<DictionaryEntry> {
+    return this.#client.entry(entryIndex, options);
   }
 
   details(text: string, options: TokenDetailsOptions): Promise<TokenDetails> {

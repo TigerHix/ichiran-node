@@ -1,5 +1,8 @@
 # Integrated source-compiler and Rust-kernel cutover report
 
+> Historical pack-v1 cutover evidence. The current multilingual pack-v2 contract is
+> defined in `docs/MULTILINGUAL-DICTIONARY-ARCHITECTURE.md`.
+
 Date: 2026-09-02
 Branch: `codex/integrated-edge-cutover`
 Qualification revision: the final pushed branch head selected after this report is

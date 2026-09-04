@@ -20,6 +20,10 @@ struct ContentView: View {
         }
 
         Section("Japanese text") {
+          Picker("Definitions", selection: $model.definitionLocale) {
+            Text("English").tag("en")
+            Text("简体中文").tag("zh-Hans")
+          }
           TextEditor(text: $model.text)
             .frame(minHeight: 90)
           Button("Analyze") {
@@ -78,8 +82,8 @@ struct ContentView: View {
             }
             ForEach(Array(details.components.enumerated()), id: \.offset) { _, component in
               LabeledContent("Component", value: "\(component.text)  \(component.reading)")
-              if let suffix = component.suffix {
-                LabeledContent("Suffix", value: suffix)
+              if let suffixId = component.suffixId {
+                LabeledContent("Suffix ID", value: suffixId)
               }
             }
             ForEach(Array(details.alternatives.enumerated()), id: \.offset) { _, alternative in
@@ -94,8 +98,8 @@ struct ContentView: View {
             if let counter = details.counter {
               LabeledContent("Counter", value: counter.value)
             }
-            if details.entity {
-              LabeledContent("Entity", value: "true")
+            if let entityKind = details.entityKind {
+              LabeledContent("Entity kind", value: entityKind.rawValue)
             }
           }
         }

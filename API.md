@@ -24,7 +24,16 @@ curl -X POST http://localhost:3000/v1/analyze \
 returns `{ "romanized": string }`.
 
 `GET /v1/entries/:entryIndex` returns the `DictionaryEntry` identified by an
-`entryIndex` from an analysis token.
+`entryIndex` from an analysis token. Add `?locale=zh-Hans` for Simplified Chinese;
+the default is `en`.
+
+`POST /v1/details` accepts the locale in its options:
+
+```bash
+curl -X POST http://localhost:3000/v1/details \
+  -H 'Content-Type: application/json' \
+  -d '{"text":"猫","options":{"pathIndex":0,"tokenIndex":0,"locale":"zh-Hans"}}'
+```
 
 Offsets in entity hints and result tokens are UTF-16 offsets, with an exclusive end.
 Bodies larger than 1 MiB return 413. Every failure has one envelope:

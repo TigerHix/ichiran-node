@@ -2,7 +2,7 @@
 
 This directory packages the existing Rust analyzer for iOS and exposes it through a
 small Swift API. Rust remains the only implementation of segmentation, morphology,
-scoring, romanization, dictionary presentation, and fallback behavior.
+scoring, romanization, dictionary sense selection, and fallback behavior.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ apple/scripts/build-xcframework.sh
 This creates the device, universal-simulator, and current-host macOS slices at
 `apple/IchiranSwift/Artifacts/IchiranKernel.xcframework`, a distributable zip beside
 it, and `work/apple/xcframework/audit.txt`. These generated files are ignored. The
-audit records the 17 exported `ichiran_*` symbols, runtime ABI version 5,
+audit records the exported `ichiran_*` symbols, runtime ABI version 7,
 architectures, sizes, and SHA-256 values. The script combines only arm64 and x86_64
 simulator archives; it never combines device, simulator, or macOS code with each
 other. Both macOS architecture archives are built and audited, while the XCFramework
@@ -69,9 +69,10 @@ fixtures, and packs must remain outside Git.
 The product API is deliberately limited to `IchiranAnalyzer.analyze`, `details`,
 `romanize`, `entry`, and `dispose`, plus `IchiranPackStore` installation/opening. The
 retained C session API is visible only to `@testable` qualification code and is not
-public Swift API. `details` returns the canonical Rust-produced presentation tree;
-Swift must render it directly rather than reconstruct restrictions, alternatives,
-conjugations, compounds, suffixes, counters, or entity semantics.
+public Swift API. `details` returns the canonical Rust-produced semantic tree.
+Swift must not reconstruct restrictions, alternatives, conjugations, compounds,
+counters, or entity semantics; it maps `suffixId`, `entityKind`, conjugation IDs,
+and coded tags through the host application's independent UI-locale catalog.
 
 ## Installing and opening a pack
 
@@ -86,10 +87,10 @@ let analyzer = try await store.openAnalyzer()
 let result = try await analyzer.analyze("庭には二羽鶏がいる")
 let details = try await analyzer.details(
   "庭には二羽鶏がいる",
-  options: .init(pathIndex: 0, tokenIndex: 0)
+  options: .init(pathIndex: 0, tokenIndex: 0, locale: "zh-Hans")
 )
 let latin = try await analyzer.romanize("日本語", options: .init(method: .kunreiSiki))
-let entry = try await analyzer.entry(entryIndex)
+let entry = try await analyzer.entry(entryIndex, options: .init(locale: "zh-Hans"))
 await analyzer.dispose()
 ```
 
@@ -99,25 +100,25 @@ The active marker is replaced atomically only after the candidate opens successf
 so a failed replacement leaves the previous verified generation active. A later
 process can call `openAnalyzer()` without networking.
 
-`details.bin` stays file-backed. Opening reads its 96-byte header and then exactly the
-resident prefix requested by `ichiran_detail_prefix_length`; lookup reads only the
-compressed range returned by `ichiran_detail_store_range`. Token presentation uses
-the ABI v5 `MISSING_DETAIL` handshake: Swift reads the requested range and supplies it
-to the next Rust step until Rust returns the canonical `TokenDetails` JSON.
+`lexicon.bin` and every `gloss.<locale>.bin` stay file-backed. Opening reads their
+headers and resident indexes; lookup reads only requested compressed ranges. Token
+presentation uses the ABI v7 store-tagged handshake: Swift reads the requested
+lexicon, selected-locale, or English-fallback range and supplies it to the next Rust
+step until Rust returns canonical `TokenDetails` JSON.
 
 ## Ownership and threading
 
-`IchiranAnalyzer` is an actor and the sole owner of the Rust kernel handle, detail-store
-handle, and details file. Its isolation serializes calls and makes `dispose()` wait for
+`IchiranAnalyzer` is an actor and the sole owner of the Rust kernel, lexicon, and
+locale-store handles and files. Its isolation serializes calls and makes `dispose()` wait for
 an in-flight call. Handles are destroyed exactly once, and every Rust-owned result
 buffer is returned exactly once, including empty and error buffers. Opening runs in a
 detached task, and analyzer calls execute on the analyzer actor rather than the main
 actor. String input and result spans use UTF-16 code units.
 
-Each token-details request owns one operation handle. Ready, missing-detail, and error
+Each token-details request owns one operation handle. Ready, missing-store-block, and error
 step buffers all pass through the same exactly-once buffer release path, and the
 operation handle is released by `defer` on every terminal path. A corrupt supplied
-block does not poison the analyzer or detail store; a later request can retry from the
+block does not poison the analyzer stores; a later request can retry from the
 file-backed source.
 
 ## Release artifacts

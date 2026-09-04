@@ -9,7 +9,7 @@ the query.
 
 | # | Location | Projection and observable use | Source-native replacement |
 |---:|---|---|---|
-| 1 | `scripts/browser-alpha-release.ts` | Server/database/schema identity and `pg_dump` schema hash. Qualification only. | Release records source-lock and compiler identities; schema proof remains oracle-only evidence. |
+| 1 | Retired PostgreSQL alpha compiler | Server/database/schema identity and `pg_dump` schema hash. Qualification only. | Release records source-lock and compiler identities; schema proof remains oracle-only evidence. |
 | 2 | `surface-index.ts` | Union of direct root forms and generated morphology surfaces, PostgreSQL C order. | Canonical direct forms plus forward conjugation emissions, sorted by UTF-8 bytes. |
 | 3 | `root-payload-oracle.ts:42` | Root seq, form counts, primary-no-kanji, archived and prefer-kana flags. | `CanonicalEntry` plus final chronological mutations. |
 | 4 | `root-payload-oracle.ts:42` | Active root POS values. | Ordered sense properties after archived-sense filtering. |

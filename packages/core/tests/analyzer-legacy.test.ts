@@ -1,9 +1,8 @@
 import { gunzipSync } from 'node:zlib';
+import { createHash } from 'node:crypto';
 import { describe, expect, test } from 'bun:test';
-import {
-  buildDetailStore,
-  type DetailEntrySource
-} from '../../data/src/browser-pack/details.js';
+import { buildLexiconStore } from '../../data/src/browser-pack/lexicon.js';
+import { buildLocaleGlossStore } from '../../data/src/browser-pack/locale-gloss.js';
 import {
   buildRootPayload,
   compareRootPayloadText,
@@ -16,10 +15,12 @@ import {
 } from '../src/analyzer-legacy.js';
 import type { AnalyzerSupportReader } from '../src/analyzer-support.js';
 import {
-  memoryDetailSource,
-  openDetailStore,
-  type DetailStoreReader
-} from '../src/details.js';
+  DictionaryReader,
+  LexiconStoreReader,
+  LocaleGlossStoreReader,
+  memoryDictionarySource
+} from '../src/dictionary.js';
+import type { DictionaryEntry } from '../src/dictionary-contract.js';
 import { openRootPayload } from '../src/root-payload.js';
 import type {
   PortableAnalysisComponent,
@@ -108,7 +109,7 @@ const roots: RootPayloadSource = {
   ]
 };
 
-const details: readonly DetailEntrySource[] = [
+const details: readonly DictionaryEntry[] = [
   {
     seq: 100,
     forms: roots.forms
@@ -205,12 +206,36 @@ const supportReader = {
   suffixClass: (seq: number) => seq === 200 ? ':tai' : null
 } as unknown as AnalyzerSupportReader;
 
-async function detailReader(): Promise<DetailStoreReader> {
-  const bytes = buildDetailStore(details, { targetBlockBytes: 1024 }).bytes;
-  return openDetailStore(
-    memoryDetailSource(bytes),
-    async compressed => new Uint8Array(gunzipSync(compressed))
-  );
+async function detailReader(): Promise<DictionaryReader> {
+  const lexiconBytes = buildLexiconStore(details.map(entry => ({
+    seq: entry.seq,
+    forms: entry.forms,
+    senses: entry.senses.map(sense => ({
+      ord: sense.ord,
+      properties: sense.properties.filter(property => property.tag !== 's_inf')
+    }))
+  })), { targetBlockBytes: 1024 }).bytes;
+  const sha256 = createHash('sha256').update(lexiconBytes).digest('hex');
+  const localeBytes = buildLocaleGlossStore({
+    locale: 'en',
+    lexiconSha256: sha256,
+    entries: details.map(entry => ({
+      seq: entry.seq,
+      groups: entry.senses.map(sense => ({
+        targets: [sense.ord],
+        glosses: sense.glosses,
+        info: sense.properties.filter(property => property.tag === 's_inf')
+          .map(({ ord, text }) => ({ ord, text }))
+      }))
+    })),
+    targetBlockBytes: 1024
+  }).bytes;
+  const decode = async (compressed: Uint8Array) => new Uint8Array(gunzipSync(compressed));
+  const lexicon = await LexiconStoreReader.open(memoryDictionarySource(lexiconBytes), decode);
+  const locale = await LocaleGlossStoreReader.open(memoryDictionarySource(localeBytes), decode, {
+    locale: 'en', lexiconSha256: sha256, entryCount: details.length
+  });
+  return new DictionaryReader(lexicon, locale, locale);
 }
 
 function token(overrides: Partial<PortableAnalysisToken>): PortableAnalysisToken {

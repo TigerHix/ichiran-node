@@ -4,7 +4,7 @@ export * from './pack.js';
 export * from './characters.js';
 export * from './analyzer-annotations.js';
 export * from './analyzer-support.js';
-export * from './details.js';
+export * from './dictionary.js';
 export * from './morphology.js';
 export * from './release-manifest.js';
 export * from './root-payload.js';

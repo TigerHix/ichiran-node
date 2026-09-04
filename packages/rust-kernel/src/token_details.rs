@@ -14,9 +14,15 @@ pub struct TokenDetails {
     pub components: Vec<TokenDetails>,
     pub conjugations: Vec<TokenConjugation>,
     pub alternatives: Vec<TokenDetails>,
-    pub suffix: Option<String>,
+    pub suffix_id: Option<String>,
     pub counter: Option<TokenCounter>,
-    pub entity: bool,
+    pub entity_kind: Option<TokenEntityKind>,
+}
+
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum TokenEntityKind {
+    ProperNoun,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]
@@ -109,14 +115,19 @@ pub(crate) fn token_details(value: LegacyGloss, entity: bool) -> Result<TokenDet
             .gloss
             .unwrap_or_default()
             .into_iter()
+            .filter(|meaning| {
+                !(entity
+                    && meaning.pos == "[n-pr]"
+                    && meaning.gloss == "proper noun (named entity)")
+            })
             .map(token_meaning)
             .collect(),
         components,
         conjugations,
         alternatives: Vec::new(),
-        suffix: value.suffix,
+        suffix_id: value.suffix_id,
         counter,
-        entity,
+        entity_kind: entity.then_some(TokenEntityKind::ProperNoun),
     })
 }
 
@@ -154,7 +165,7 @@ fn token_conjugation(value: LegacyConjugation) -> TokenConjugation {
 fn token_meaning(value: LegacySense) -> TokenMeaning {
     TokenMeaning {
         gloss: value.gloss,
-        pos: delimited_values(&value.pos, '[', ']'),
+        pos: canonical_delimited_values(&value.pos, '[', ']'),
         fields: value
             .field
             .as_deref()
@@ -162,6 +173,13 @@ fn token_meaning(value: LegacySense) -> TokenMeaning {
             .unwrap_or_default(),
         info: value.info,
     }
+}
+
+fn canonical_delimited_values(value: &str, open: char, close: char) -> Vec<String> {
+    let mut values = delimited_values(value, open, close);
+    values.sort();
+    values.dedup();
+    values
 }
 
 fn delimited_values(value: &str, open: char, close: char) -> Vec<String> {
@@ -178,7 +196,10 @@ fn delimited_values(value: &str, open: char, close: char) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use super::{delimited_values, public_counter_value, public_reading, public_string_reading};
+    use super::{
+        canonical_delimited_values, delimited_values, public_counter_value, public_reading,
+        public_string_reading,
+    };
     use crate::dto::Utf16Text;
 
     #[test]
@@ -186,6 +207,10 @@ mod tests {
         assert_eq!(delimited_values("[n, vt]", '[', ']'), ["n", "vt"]);
         assert_eq!(delimited_values("{comp,math}", '{', '}'), ["comp", "math"]);
         assert!(delimited_values("[]", '[', ']').is_empty());
+        assert_eq!(
+            canonical_delimited_values("[vt,v1,vt]", '[', ']'),
+            ["v1", "vt"]
+        );
     }
 
     #[test]

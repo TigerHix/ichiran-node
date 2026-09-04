@@ -3,7 +3,6 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 
-import { parseAnalyzerReleaseManifest } from '../browser-pack/release-manifest.js';
 import { parseBrowserAlphaSourceLock } from '../browser-pack/release-orchestration.js';
 
 export type ParityAuthority = 'current-lisp' | 'postgresql-fallback';
@@ -590,6 +589,35 @@ export interface VerifyParityAttestationInput {
   readonly oracleLockPath: string;
 }
 
+interface HistoricalAnalyzerReleaseManifest {
+  readonly formatVersion: 1;
+  readonly sourceCommit: string;
+  readonly sourcesLockSha256: string;
+  readonly manifestSha256: string;
+  readonly hot: TestedReleaseAsset;
+  readonly details: TestedReleaseAsset;
+}
+
+function historicalAnalyzerReleaseManifest(value: unknown): HistoricalAnalyzerReleaseManifest {
+  const input = record(value, 'Historical parity release manifest');
+  if (input.formatVersion !== 1) {
+    throw new Error(
+      'The retained parity attestation applies only to the historical format-1 release'
+    );
+  }
+  return {
+    formatVersion: 1,
+    sourceCommit: commit(input.sourceCommit, 'Historical parity release source commit'),
+    sourcesLockSha256: digest(
+      input.sourcesLockSha256,
+      'Historical parity release source-lock digest'
+    ),
+    manifestSha256: digest(input.manifestSha256, 'Historical parity release manifest digest'),
+    hot: testedReleaseAsset(input.hot, 'Historical parity release hot asset'),
+    details: testedReleaseAsset(input.details, 'Historical parity release details asset')
+  };
+}
+
 /** Bind one tracked diagnostic report to its review and exact inputs. */
 export async function verifySourceCompilerParityAttestation(
   input: VerifyParityAttestationInput
@@ -606,10 +634,7 @@ export async function verifySourceCompilerParityAttestation(
     JSON.parse(attestationBytes.toString('utf8'))
   );
   const reportValue: unknown = JSON.parse(reportBytes.toString('utf8'));
-  const manifest = parseAnalyzerReleaseManifest(
-    JSON.parse(manifestBytes.toString('utf8')),
-    value => sha256(value)
-  );
+  const manifest = historicalAnalyzerReleaseManifest(JSON.parse(manifestBytes.toString('utf8')));
   const oracleLock = parseBrowserAlphaSourceLock(oracleLockBytes.toString('utf8'));
   const [hotBytes, detailsBytes] = await Promise.all([
     readFile(resolve(input.releaseDirectory, manifest.hot.file)),
@@ -654,23 +679,12 @@ export async function verifySourceCompilerParityAttestation(
     throw new Error('Parity oracle-lock identity is stale');
   }
 
-  const manifestAsset = (side: 'hot' | 'details'): TestedReleaseAsset => {
-    const value = manifest[side];
-    return {
-      file: value.file,
-      encoding: value.encoding,
-      downloadBytes: value.downloadBytes,
-      downloadSha256: value.downloadSha256,
-      installedBytes: value.installedBytes,
-      installedSha256: value.installedSha256
-    };
-  };
   const currentRelease: TestedReleaseIdentity = {
     sourceCommit: manifest.sourceCommit,
     manifestFileSha256: sha256(manifestBytes),
     manifestSha256: manifest.manifestSha256,
-    hot: manifestAsset('hot'),
-    details: manifestAsset('details')
+    hot: manifest.hot,
+    details: manifest.details
   };
   const report = record(reportValue, 'Source-compiler parity report');
   const testedRelease = testedReleaseIdentity(report.testedRelease);

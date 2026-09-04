@@ -5,7 +5,7 @@ const ARTIFACT_ERROR_NAMES = new Set([
   'RootPayloadFormatError',
   'AnalyzerSupportFormatError',
   'AnalyzerAnnotationsError',
-  'DetailStoreError'
+  'DictionaryStoreError'
 ]);
 
 const ARTIFACT_CORRUPTION_CODES = new Set([

@@ -31,7 +31,6 @@ export async function assertSamePackRelease(
   repository: string,
   release: string,
   hot: Uint8Array,
-  details?: Uint8Array,
   sourceLock?: string
 ): Promise<AnalyzerReleaseManifest> {
   const manifest = parseAnalyzerReleaseManifest(
@@ -50,12 +49,6 @@ export async function assertSamePackRelease(
     || digest(hot) !== manifest.hot.installedSha256
   ) {
     throw new Error('same-pack hot.bin does not match its authenticated installed identity');
-  }
-  if (details !== undefined && (
-    details.byteLength !== manifest.details.installedBytes
-    || digest(details) !== manifest.details.installedSha256
-  )) {
-    throw new Error('same-pack details.bin does not match its authenticated installed identity');
   }
   return manifest;
 }

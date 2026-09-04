@@ -17,7 +17,7 @@ function sha256(text: string): string {
 function release(packVersion = 'test-release'): AnalyzerPackManifest {
   const digest = 'a'.repeat(64);
   const unsigned = {
-    formatVersion: 1 as const,
+    formatVersion: 2 as const,
     packVersion,
     sourceCommit: 'b'.repeat(40),
     sourcesLockSha256: 'c'.repeat(64),
@@ -26,10 +26,22 @@ function release(packVersion = 'test-release'): AnalyzerPackManifest {
       downloadBytes: 1, downloadSha256: digest,
       installedBytes: 1, installedSha256: digest
     },
-    details: {
-      file: 'details.bin', encoding: 'identity' as const,
+    lexicon: {
+      file: 'lexicon.bin', encoding: 'identity' as const,
       downloadBytes: 1, downloadSha256: digest,
       installedBytes: 1, installedSha256: digest
+    },
+    locales: {
+      en: {
+        file: 'gloss.en.bin', encoding: 'identity' as const,
+        downloadBytes: 1, downloadSha256: digest,
+        installedBytes: 1, installedSha256: digest
+      },
+      'zh-Hans': {
+        file: 'gloss.zh-Hans.bin', encoding: 'identity' as const,
+        downloadBytes: 1, downloadSha256: digest,
+        installedBytes: 1, installedSha256: digest
+      }
     }
   };
   return {
@@ -270,20 +282,24 @@ describe('AnalyzerClient Worker lifecycle', () => {
     worker.respond('neko.');
     expect(await romanized).toBe('neko.');
 
-    const details = client.details('猫', { limit: 3, pathIndex: 0, tokenIndex: 0 });
+    const details = client.details('猫', {
+      limit: 3, pathIndex: 0, tokenIndex: 0, locale: 'zh-Hans'
+    });
     expect(worker.requests.at(-1)).toMatchObject({
       op: 'details',
       text: '猫',
-      options: { limit: 3, pathIndex: 0, tokenIndex: 0 }
+      options: { limit: 3, pathIndex: 0, tokenIndex: 0, locale: 'zh-Hans' }
     });
     worker.respond({
       text: '猫', reading: 'ねこ', meanings: [], components: [], conjugations: [],
-      alternatives: [], suffix: null, counter: null, entity: false
+      alternatives: [], suffixId: null, counter: null, entityKind: null
     });
     expect((await details).reading).toBe('ねこ');
 
-    const entry = client.entry(42);
-    expect(worker.requests.at(-1)).toEqual({ id: 4, op: 'entry', entryIndex: 42 });
+    const entry = client.entry(42, { locale: 'zh-Hans' });
+    expect(worker.requests.at(-1)).toEqual({
+      id: 4, op: 'entry', entryIndex: 42, options: { locale: 'zh-Hans' }
+    });
     worker.fail('not-found', 'No dictionary entry at index 42');
     await expect(entry).rejects.toMatchObject({
       name: 'AnalyzerClientError',

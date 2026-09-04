@@ -164,7 +164,7 @@ async function main(): Promise<void> {
   const hot = new Uint8Array(await readFile(join(release, 'hot.bin')));
   const hotSha256 = createHash('sha256').update(hot).digest('hex');
   const samePackManifest = samePack
-    ? await assertSamePackRelease(repository, release, hot, undefined, sourceLock)
+    ? await assertSamePackRelease(repository, release, hot, sourceLock)
     : null;
   if (!samePack && hotSha256 !== QUALIFIED_HOT_SHA256) {
     throw new Error(`hot.bin digest ${hotSha256}; expected ${QUALIFIED_HOT_SHA256}`);

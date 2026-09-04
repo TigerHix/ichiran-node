@@ -31,7 +31,13 @@ ICHIRAN_RELEASE_GENERATION="$ICHIRAN_RELEASE_GENERATION" bun -e '
   import { analyzerReleaseGenerationIdentity } from "./packages/data/src/browser-pack/release-publication.ts";
   const root = "/tmp/analyzer";
   const manifest = JSON.parse(await Bun.file(`${root}/manifest.json`).text());
-  const expected = ["manifest.json", "stats.json", manifest.hot?.file, manifest.details?.file].sort();
+  const expected = [
+    "manifest.json",
+    "stats.json",
+    manifest.hot?.file,
+    manifest.lexicon?.file,
+    ...Object.values(manifest.locales ?? {}).map(asset => asset?.file),
+  ].sort();
   const actual = (await readdir(root)).sort();
   if (manifest.sourceCommit !== process.env.ICHIRAN_SOURCE_COMMIT) {
     throw new Error(`Analyzer sourceCommit ${manifest.sourceCommit} != code ${process.env.ICHIRAN_SOURCE_COMMIT}`);

@@ -3,12 +3,14 @@
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 
-import { buildDetailStore } from '../packages/data/src/browser-pack/details.js';
+import { buildLexiconStore } from '../packages/data/src/browser-pack/lexicon.js';
+import { buildLocaleGlossStore } from '../packages/data/src/browser-pack/locale-gloss.js';
 import { buildRootPayload } from '../packages/data/src/browser-pack/root-payload.js';
 import { canonicalEntryJson } from '../packages/data/src/source-compiler/digest.js';
 import { loadJmdictEntries } from '../packages/data/src/source-compiler/jmdict.js';
 import {
-  canonicalDetailEntries,
+  canonicalEnglishLocaleEntries,
+  canonicalLexiconEntries,
   canonicalRootPayloadSource
 } from '../packages/data/src/source-compiler/pack-input.js';
 import {
@@ -66,12 +68,20 @@ assertWitness(update);
 
 const firstRoot = buildRootPayload(canonicalRootPayloadSource([update]));
 const secondRoot = buildRootPayload(canonicalRootPayloadSource([update]));
-const firstDetails = buildDetailStore(canonicalDetailEntries([update]));
-const secondDetails = buildDetailStore(canonicalDetailEntries([update]));
+const firstLexicon = buildLexiconStore(canonicalLexiconEntries([update]));
+const secondLexicon = buildLexiconStore(canonicalLexiconEntries([update]));
+const lexiconSha256 = sha256(firstLexicon.bytes);
+const firstEnglish = buildLocaleGlossStore({
+  locale: 'en', lexiconSha256, entries: canonicalEnglishLocaleEntries([update])
+});
+const secondEnglish = buildLocaleGlossStore({
+  locale: 'en', lexiconSha256, entries: canonicalEnglishLocaleEntries([update])
+});
 const firstSurface = encodeSurfaceIndexTsv(canonicalSurfaceIndexRows([update], []));
 const secondSurface = encodeSurfaceIndexTsv(canonicalSurfaceIndexRows([update], []));
 if (!Buffer.from(firstRoot.bytes).equals(Buffer.from(secondRoot.bytes))
-  || !Buffer.from(firstDetails.bytes).equals(Buffer.from(secondDetails.bytes))
+  || !Buffer.from(firstLexicon.bytes).equals(Buffer.from(secondLexicon.bytes))
+  || !Buffer.from(firstEnglish.bytes).equals(Buffer.from(secondEnglish.bytes))
   || !Buffer.from(firstSurface).equals(Buffer.from(secondSurface))) {
   throw new Error('Update witness encoders are nondeterministic');
 }
@@ -83,7 +93,7 @@ if (!Buffer.from(firstSurface).equals(Buffer.from(expectedSurface))) {
 }
 
 process.stdout.write(`${JSON.stringify({
-  formatVersion: 1,
+  formatVersion: 2,
   source: {
     id: updateSource.id,
     path: updateSource.path,
@@ -102,6 +112,9 @@ process.stdout.write(`${JSON.stringify({
   output: {
     surfaceTsv: { bytes: firstSurface.byteLength, sha256: sha256(firstSurface) },
     rootPayload: { bytes: firstRoot.bytes.byteLength, sha256: sha256(firstRoot.bytes) },
-    details: { bytes: firstDetails.bytes.byteLength, sha256: sha256(firstDetails.bytes) }
+    lexicon: { bytes: firstLexicon.bytes.byteLength, sha256: lexiconSha256 },
+    locales: {
+      en: { bytes: firstEnglish.bytes.byteLength, sha256: sha256(firstEnglish.bytes) }
+    }
   }
 }, null, 2)}\n`);

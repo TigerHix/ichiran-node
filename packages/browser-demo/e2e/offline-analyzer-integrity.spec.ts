@@ -72,16 +72,16 @@ test('rejects bad manifest, transfer, and installed digests without committing r
   browser
 }) => {
   const hotBytes = Uint8Array.from({ length: 64 }, (_, index) => index);
-  const detailsBytes = Uint8Array.of(9, 8, 7, 6);
+  const definitionBytes = Uint8Array.of(9, 8, 7, 6);
   const hot = identityAsset('hot.bin', hotBytes);
-  const details = identityAsset('details.bin', detailsBytes);
-  const valid = signedManifest(hot.manifest, details.manifest);
+  const definition = identityAsset('lexicon.bin', definitionBytes);
+  const valid = signedManifest(hot.manifest, definition.manifest);
 
   await rejectedInstall(
     browser,
     { ...valid, manifestSha256: '0'.repeat(64) },
     hot,
-    details,
+    definition,
     'Analyzer manifest checksum does not match',
     undefined,
     true
@@ -90,7 +90,7 @@ test('rejects bad manifest, transfer, and installed digests without committing r
     browser,
     valid,
     hot,
-    details,
+    definition,
     'Downloaded 11 bytes; expected 64',
     { hot: hotBytes.slice(0, 11) }
   );
@@ -100,7 +100,7 @@ test('rejects bad manifest, transfer, and installed digests without committing r
     browser,
     valid,
     hot,
-    details,
+    definition,
     'Downloaded asset checksum does not match',
     { hot: corruptTransfer }
   );
@@ -114,16 +114,16 @@ test('rejects bad manifest, transfer, and installed digests without committing r
   };
   await rejectedInstall(
     browser,
-    signedManifest(badInstalledAsset.manifest, details.manifest),
+    signedManifest(badInstalledAsset.manifest, definition.manifest),
     badInstalledAsset,
-    details,
+    definition,
     'Installed asset checksum does not match'
   );
 });
 
-test('interrupted hot and details installs never commit a ready marker', async ({ browser }) => {
+test('interrupted hot and lexicon installs never commit a ready marker', async ({ browser }) => {
   await interruptInstall(browser, 'hot');
-  await interruptInstall(browser, 'details');
+  await interruptInstall(browser, 'lexicon');
 });
 
 test('opens the installed OPFS pack when no usable published manifest is available', async ({ browser }) => {
@@ -190,9 +190,10 @@ test('clears an unverified generation before estimating reinstall capacity', asy
     await readFile(resolve(import.meta.dirname, '../dist/analyzer/manifest.json'), 'utf8')
   ) as AnalyzerPackManifest;
   const requiredBytes = manifest.hot.installedBytes
-    + manifest.details.installedBytes
+    + manifest.lexicon.installedBytes
+    + Object.values(manifest.locales).reduce((total, asset) => total + asset.installedBytes, 0)
     + Math.max(
-      ...[manifest.hot, manifest.details].map(asset =>
+      ...[manifest.hot, manifest.lexicon, ...Object.values(manifest.locales)].map(asset =>
         asset.encoding === 'gzip' ? asset.downloadBytes : 0)
     );
   const context = await openIsolatedContext(browser);
@@ -232,7 +233,10 @@ test('clears an unverified generation before estimating reinstall capacity', asy
     expect(await staleInstallFiles(page)).toEqual([]);
     const installed = await opfsSnapshot(page);
     expect(installed.hotBytes).toBe(manifest.hot.installedBytes);
-    expect(installed.detailsBytes).toBe(manifest.details.installedBytes);
+    expect(installed.definitionBytes).toBe(
+      manifest.lexicon.installedBytes
+        + Object.values(manifest.locales).reduce((total, asset) => total + asset.installedBytes, 0)
+    );
     expect(installed.downloadBytes).toBeNull();
   } finally {
     await context.close();
@@ -267,7 +271,10 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
         await source.stream().pipeTo(await target.createWritable());
       };
       await copy(active.hot, `hot-${inactiveSlot}.bin`);
-      await copy(active.details, `details-${inactiveSlot}.bin`);
+      await copy(active.lexicon, `lexicon-${inactiveSlot}.bin`);
+      for (const [locale, source] of Object.entries(active.locales)) {
+        await copy(source, `gloss-${locale}-${inactiveSlot}.bin`);
+      }
       const activeMarker = JSON.parse(
         await (await directory.getFileHandle(active.marker)).getFile().then(file => file.text())
       ) as Record<string, unknown>;
@@ -282,29 +289,31 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
     }, { directoryName: DIRECTORY_NAME, active, inactiveSlot });
     const doubled = await opfsSnapshot(page);
     expect(doubled.hotBytes).toBe(manifest.hot.installedBytes * 2);
-    expect(doubled.detailsBytes).toBe(manifest.details.installedBytes * 2);
+    const installedDefinitionBytes = manifest.lexicon.installedBytes
+      + Object.values(manifest.locales).reduce((total, asset) => total + asset.installedBytes, 0);
+    expect(doubled.definitionBytes).toBe(installedDefinitionBytes * 2);
     await page.reload();
     await expect(analyzerReady(page)).toBeVisible();
     const recovered = await opfsSnapshot(page);
     expect(recovered.hotBytes).toBe(manifest.hot.installedBytes);
-    expect(recovered.detailsBytes).toBe(manifest.details.installedBytes);
+    expect(recovered.definitionBytes).toBe(installedDefinitionBytes);
     expect(recovered.downloadBytes).toBeNull();
     expect(await committedInstallId(page)).toBe(firstInstallId);
 
     // A failed same-release replacement writes only the inactive slot. The
     // original generation remains selected and usable after a full restart.
-    const rejectDetails = async (route: Route): Promise<void> => {
+    const rejectLexicon = async (route: Route): Promise<void> => {
       await route.fulfill({
         status: 200,
         headers: { 'content-type': 'application/gzip' },
         body: Buffer.from([0x1f])
       });
     };
-    const detailsPattern = `**/analyzer/${manifest.details.file}`;
-    await context.route(detailsPattern, rejectDetails);
+    const lexiconPattern = `**/analyzer/${manifest.lexicon.file}`;
+    await context.route(lexiconPattern, rejectLexicon);
     await queueStandaloneInstall(page);
     expect(await waitForStandaloneInstall(page)).toContain('Downloaded 1 bytes; expected');
-    await context.unroute(detailsPattern, rejectDetails);
+    await context.unroute(lexiconPattern, rejectLexicon);
     expect(await committedInstallId(page)).toBe(firstInstallId);
     await page.reload();
     await expect(analyzerReady(page)).toBeVisible();

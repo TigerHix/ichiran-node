@@ -36,14 +36,15 @@ analyzer already observes them.
 
 ## Runtime architecture
 
-The browser installs one pinned hot image and one pinned detail store into an OPFS
+The browser installs one pinned hot image, one language-neutral lexicon, and every
+manifest-declared locale store into an OPFS
 A/B slot. A 36-byte per-install ID in IndexedDB is the atomic cross-tab commit
 record; the active `install-{a,b}.json` marker mirrors that ID so cold inspection can
 reject mismatched state and stale corruption cannot target a same-release reinstall.
 `hot.bin` contains five deterministic sections: a route-aware surface automaton,
 root payload, reverse morphology, resident analyzer support, and random-access
-annotations/generated facts. Complete forms, senses, glosses, and sense metadata
-live in `details.bin` and are opened lazily.
+annotations/generated facts. Complete forms and sense metadata live in `lexicon.bin`;
+localized text lives in `gloss.<locale>.bin`. Both are opened lazily.
 
 `@ichiran/core` returns the clean lexical model: canonical root identity,
 semantic inflection paths, top-N sentence paths, token alternatives, compounds,
@@ -69,7 +70,7 @@ simple writable-stream install path used here.
 
 | Metric | Required |
 |---|---:|
-| Compressed analyzer manifest + data transfer | no more than 26 MiB |
+| Compressed analyzer manifest + data transfer | no more than 36 MiB |
 | Installed analyzer data + commit metadata | no more than 64 MiB |
 | Resident hot image | no more than 25 MiB |
 | Ordinary top-one p95 at calibrated 6x Worker contention | no more than 75 ms |
@@ -94,8 +95,8 @@ The former PostgreSQL-backed Node analyzer remains frozen at
 `d583720572fbf26ee201166ac47034c50380a571` as a private compiler and migration
 reference. Release and differential commands require the checked-out
 `packages/reference-postgres` source to match that reference. The v2
-`browser-alpha/sources.lock.json` was produced from the qualified database with
-`alpha:release:refresh-lock`. It locks every `ichiran-260118` component count and
+`browser-alpha/sources.lock.json` was produced by the retired PostgreSQL alpha
+compiler. It locks every `ichiran-260118` component count and
 digest, including the 9,173,122-row exhaustive morphology relation and its zero
 alpha-only/duplicate result.
 
@@ -106,18 +107,12 @@ ICHIRAN_DB_URL='postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgr
   bun test --timeout 30000 --max-concurrency 1 packages/reference-postgres/tests
 ```
 
-The supported alpha commands are:
+The supported release and browser commands are:
 
 ```bash
-bun run alpha:release:typecheck
-bun run alpha:release:refresh-lock -- \
-  --database "$ICHIRAN_DB_URL"
-bun run alpha:release:build -- \
-  --database "$ICHIRAN_DB_URL" \
+bun run source:release -- baseline \
   --out dist/browser-alpha \
-  --pack-version ichiran-260118
-bun run alpha:release:verify -- \
-  --out dist/browser-alpha
+  --pack-version <version>
 
 bun run alpha:demo:stage
 bun run alpha:demo:build
@@ -125,12 +120,11 @@ bun run alpha:demo:test
 bun run alpha:demo:e2e
 ```
 
-The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
-12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
-image and 13,555,874-byte lazy detail store. Analyzer transfer and persisted totals
-are derived from the signed release and bound in `stats.json`; qualification requires
-all three analyzer size gates to pass. IndexedDB allocation overhead is browser
-managed and not included in that logical payload total.
+The current v2 layout separates the resident hot image, language-neutral lexicon,
+English definitions, and Simplified Chinese definitions. Analyzer transfer and
+persisted totals are derived from the signed release and bound in `stats.json`;
+qualification requires all three analyzer size gates to pass. IndexedDB allocation
+overhead is browser managed and not included in that logical payload total.
 
 `stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are
 generated qualification evidence and remain outside Git with the release artifacts.

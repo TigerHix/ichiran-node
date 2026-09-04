@@ -30,6 +30,8 @@ import {
   assertSourceCompilerReleaseMode,
   verifySourceCompilerLock
 } from './source-lock.js';
+import { loadTomoshiZhHans } from './tomoshi-zh-hans.js';
+import { loadZhHansSenseInfo } from './zh-hans-sense-info.js';
 
 const execFile = promisify(execFileCallback);
 const RELEASE_TEMP_ROOT = process.platform === 'win32' ? tmpdir() : '/tmp';
@@ -155,6 +157,22 @@ export async function runSourceCompilerRelease(argv: readonly string[]): Promise
       errata: lock.inputs.chronologicalErrata.absolutePath,
       compatibility: lock.inputs.compatibility.absolutePath
     });
+    const tomoshiSource = lock.lock.sources.find(item => item.kind === 'tomoshi-dict');
+    if (!tomoshiSource) throw new Error('Verified source lock has no Tomoshi dictionary source');
+    const tomoshiZhHans = loadTomoshiZhHans(
+      lock.inputs.tomoshiZhHans.absolutePath,
+      roots.entries,
+      {
+        exportVersion: tomoshiSource.exportVersion,
+        sourceSchemaVersion: tomoshiSource.sourceSchemaVersion,
+        exportedAt: tomoshiSource.exportedAt
+      }
+    );
+    const zhHans = await loadZhHansSenseInfo(
+      lock.inputs.zhHansSenseInfo.absolutePath,
+      roots.entries,
+      tomoshiZhHans.entries
+    );
     const fold = foldChronologicalConjugationErrata(
       roots.entries,
       roots.errata.conjugationRows,
@@ -259,6 +277,7 @@ export async function runSourceCompilerRelease(argv: readonly string[]): Promise
         }
       } : {}),
       entries: roots.entries,
+      zhHans: zhHans.entries,
       morphology: morphologySource,
       support: targetPhase.support,
       surfaceTsv: targetPhase.surfaceTsv,
@@ -267,6 +286,18 @@ export async function runSourceCompilerRelease(argv: readonly string[]): Promise
       sourceSummary: {
         mode: options.mode,
         jmdict: { id: jmdictSourceId, path: jmdictRelative },
+        tomoshi: {
+          id: tomoshiSource.id,
+          path: lock.inputs.tomoshiZhHans.path,
+          locale: 'zh-Hans',
+          projection: tomoshiZhHans.stats
+        },
+        zhHansSenseInfo: {
+          id: lock.inputs.zhHansSenseInfo.id,
+          path: lock.inputs.zhHansSenseInfo.path,
+          locale: 'zh-Hans',
+          projection: zhHans.stats
+        },
         canonicalEntries: roots.entries.length,
         jmdictEntries: roots.jmdictEntries,
         customCreatedRoots: roots.custom.createdRoots.length,

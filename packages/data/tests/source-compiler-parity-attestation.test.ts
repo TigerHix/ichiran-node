@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
+import { gzipSync } from 'node:zlib';
 
 import { buildAnalyzerRelease } from '../src/browser-pack/release-manifest.js';
 import { parseBrowserAlphaSourceLock } from '../src/browser-pack/release-orchestration.js';
@@ -23,6 +24,50 @@ function sha256(value: Uint8Array | string): string {
 
 function clone<T>(value: T): T {
   return structuredClone(value);
+}
+
+/** The retained parity evidence predates the format-2 multilingual cutover. */
+function buildHistoricalAnalyzerRelease(options: {
+  readonly packVersion: string;
+  readonly sourceCommit: string;
+  readonly sourcesLockSha256: string;
+  readonly hot: Uint8Array;
+  readonly details: Uint8Array;
+}) {
+  const releaseAsset = (file: string, installed: Uint8Array) => {
+    const download = new Uint8Array(gzipSync(installed, { level: 9 }));
+    return {
+      manifest: {
+        file,
+        encoding: 'gzip' as const,
+        downloadBytes: download.byteLength,
+        downloadSha256: sha256(download),
+        installedBytes: installed.byteLength,
+        installedSha256: sha256(installed)
+      },
+      download
+    };
+  };
+  const hot = releaseAsset('hot.bin.gz', options.hot);
+  const details = releaseAsset('details.bin.gz', options.details);
+  const unsigned = {
+    formatVersion: 1 as const,
+    packVersion: options.packVersion,
+    sourceCommit: options.sourceCommit,
+    sourcesLockSha256: options.sourcesLockSha256,
+    hot: hot.manifest,
+    details: details.manifest
+  };
+  const manifest = {
+    ...unsigned,
+    manifestSha256: sha256(JSON.stringify(unsigned))
+  };
+  return {
+    manifest,
+    manifestBytes: new TextEncoder().encode(`${JSON.stringify(manifest, null, 2)}\n`),
+    hotDownload: hot.download,
+    detailsDownload: details.download
+  };
 }
 
 const syntheticTestedRelease = {
@@ -147,9 +192,10 @@ function diagnosticFixture(sourceLockSha256: string, oracle: {
 
 describe('source-compiler complete-corpus parity attestation', () => {
   test('tracks exactly the 16 chosen-authority and five fallback reviews', async () => {
-    const [attestationText, reportText] = await Promise.all([
+    const [attestationText, reportText, historicalSourceLock] = await Promise.all([
       readFile(resolve(data, 'source-compiler-parity-attestation.json'), 'utf8'),
-      readFile(resolve(data, 'source-compiler-parity-report.json'), 'utf8')
+      readFile(resolve(data, 'source-compiler-parity-report.json'), 'utf8'),
+      readFile(resolve(data, 'source-compiler-historical-v1-sources.lock.json'))
     ]);
     const value = JSON.parse(attestationText);
     const attestation = parseSourceCompilerParityAttestation(value);
@@ -157,6 +203,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
     expect(attestation.rows.filter(row => row.authority === 'current-lisp')).toHaveLength(16);
     expect(attestation.rows.filter(row => row.authority === 'postgresql-fallback')).toHaveLength(5);
     expect(attestation.policy.runtimeAllowlist).toEqual([]);
+    expect(sha256(historicalSourceLock)).toBe(attestation.pack.sourceLockSha256);
     expect(sha256(reportText)).toBe(attestation.report.historicalReportSha256);
     expect(validateSourceCompilerParityReport(
       attestation,
@@ -255,7 +302,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
         database: parsedOracle.database.name,
         upstreamIchiranCommit: parsedOracle.upstreamIchiran.commit
       };
-      const release = buildAnalyzerRelease({
+      const release = buildHistoricalAnalyzerRelease({
         packVersion: 'test',
         sourceCommit: 'b'.repeat(40),
         sourcesLockSha256: sourceLockSha256,
@@ -330,6 +377,23 @@ describe('source-compiler complete-corpus parity attestation', () => {
       };
       expect((await verifySourceCompilerParityAttestation(input)).reviewedRows).toBe(2);
 
+      const currentFormatRelease = buildAnalyzerRelease({
+        packVersion: 'test',
+        sourceCommit: 'b'.repeat(40),
+        sourcesLockSha256: sourceLockSha256,
+        hot: new Uint8Array([1]),
+        lexicon: new Uint8Array([2]),
+        locales: { en: new Uint8Array([3]), 'zh-Hans': new Uint8Array([4]) }
+      });
+      await writeFile(
+        resolve(directory, 'manifest.json'),
+        currentFormatRelease.manifestBytes
+      );
+      await expect(verifySourceCompilerParityAttestation(input)).rejects.toThrow(
+        'retained parity attestation applies only to the historical format-1 release'
+      );
+      await writeFile(resolve(directory, 'manifest.json'), release.manifestBytes);
+
       const timestampOnly = clone(fixture.report);
       timestampOnly.generatedAt = '2099-12-31T23:59:59.999Z';
       expect(parityReportNormalizedSha256(timestampOnly))
@@ -369,7 +433,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
         .toThrow('Parity oracle-lock identity is stale');
       await writeFile(paths.oracleLock, oracleLockBytes);
 
-      const laterManifest = buildAnalyzerRelease({
+      const laterManifest = buildHistoricalAnalyzerRelease({
         packVersion: 'test',
         sourceCommit: 'c'.repeat(40),
         sourcesLockSha256: sourceLockSha256,
@@ -418,7 +482,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
         .toThrow('does not match the historical attestation or supplied release');
       await writeFile(paths.report, JSON.stringify(timestampOnly));
 
-      const changedRelease = buildAnalyzerRelease({
+      const changedRelease = buildHistoricalAnalyzerRelease({
         packVersion: 'test',
         sourceCommit: 'd'.repeat(40),
         sourcesLockSha256: sourceLockSha256,

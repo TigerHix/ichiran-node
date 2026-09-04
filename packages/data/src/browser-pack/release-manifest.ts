@@ -25,13 +25,14 @@ export type {
 } from '@ichiran/core/compiler';
 
 export const ANALYZER_HOT_MAX_BYTES = 25 * 1024 * 1024;
-export const ANALYZER_WIRE_MAX_BYTES = 26 * 1024 * 1024;
+export const ANALYZER_WIRE_MAX_BYTES = 36 * 1024 * 1024;
 
 export interface AnalyzerReleaseBuild {
   readonly manifest: AnalyzerReleaseManifest;
   readonly manifestBytes: Uint8Array;
   readonly hotDownload: Uint8Array;
-  readonly detailsDownload: Uint8Array;
+  readonly lexiconDownload: Uint8Array;
+  readonly localeDownloads: Readonly<Record<string, Uint8Array>>;
 }
 
 export interface AnalyzerReleaseSizeReport {
@@ -82,9 +83,11 @@ export function buildAnalyzerRelease(options: {
   readonly sourceCommit: string;
   readonly sourcesLockSha256: string;
   readonly hot: Uint8Array;
-  readonly details: Uint8Array;
+  readonly lexicon: Uint8Array;
+  readonly locales: Readonly<Record<string, Uint8Array>>;
   readonly hotEncoding?: AnalyzerReleaseEncoding;
-  readonly detailsEncoding?: AnalyzerReleaseEncoding;
+  readonly lexiconEncoding?: AnalyzerReleaseEncoding;
+  readonly localeEncodings?: Readonly<Record<string, AnalyzerReleaseEncoding>>;
 }): AnalyzerReleaseBuild {
   nonEmpty(options.packVersion, 'Pack version');
   if (!/^[0-9a-f]{40}$/.test(options.sourceCommit)) {
@@ -97,10 +100,25 @@ export function buildAnalyzerRelease(options: {
     options.hot,
     options.hotEncoding ?? 'gzip'
   );
-  const details = releaseAsset(
-    options.detailsEncoding === 'identity' ? 'details.bin' : 'details.bin.gz',
-    options.details,
-    options.detailsEncoding ?? 'gzip'
+  const lexicon = releaseAsset(
+    options.lexiconEncoding === 'identity' ? 'lexicon.bin' : 'lexicon.bin.gz',
+    options.lexicon,
+    options.lexiconEncoding ?? 'gzip'
+  );
+  if (options.locales.en === undefined) throw new Error('Release locales must include en');
+  if (options.locales['zh-Hans'] === undefined) {
+    throw new Error('Release locales must include zh-Hans');
+  }
+  const locale = (name: string) => {
+    const encoding = options.localeEncodings?.[name] ?? 'gzip';
+    return releaseAsset(
+      `gloss.${name}.bin${encoding === 'gzip' ? '.gz' : ''}`,
+      options.locales[name],
+      encoding
+    );
+  };
+  const localeBuilds = Object.fromEntries(
+    Object.keys(options.locales).sort().map(name => [name, locale(name)])
   );
   const unsigned = {
     formatVersion: ANALYZER_RELEASE_FORMAT_VERSION,
@@ -108,7 +126,10 @@ export function buildAnalyzerRelease(options: {
     sourceCommit: options.sourceCommit,
     sourcesLockSha256: options.sourcesLockSha256,
     hot: hot.manifest,
-    details: details.manifest
+    lexicon: lexicon.manifest,
+    locales: Object.fromEntries(
+      Object.entries(localeBuilds).map(([name, build]) => [name, build.manifest])
+    )
   } as const;
   const manifest: AnalyzerReleaseManifest = {
     ...unsigned,
@@ -122,7 +143,10 @@ export function buildAnalyzerRelease(options: {
     manifest,
     manifestBytes: new TextEncoder().encode(`${JSON.stringify(manifest, null, 2)}\n`),
     hotDownload: hot.download,
-    detailsDownload: details.download
+    lexiconDownload: lexicon.download,
+    localeDownloads: Object.fromEntries(
+      Object.entries(localeBuilds).map(([name, build]) => [name, build.download])
+    )
   };
 }
 
@@ -138,7 +162,8 @@ export function assertAnalyzerReleaseSize(
     persistedBytes: readyState.persistedBytes,
     wireBytes:
       build.hotDownload.byteLength
-      + build.detailsDownload.byteLength
+      + build.lexiconDownload.byteLength
+      + Object.values(build.localeDownloads).reduce((total, bytes) => total + bytes.byteLength, 0)
       + build.manifestBytes.byteLength,
     installedMarkerBytes: readyState.installedMarkerBytes,
     installedIdentityPayloadBytes: readyState.installedIdentityPayloadBytes

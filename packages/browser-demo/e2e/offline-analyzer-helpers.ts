@@ -12,6 +12,7 @@ import type {
   AnalyzerPackManifest,
   PackAssetManifest
 } from '../src/protocol.js';
+import { analyzerManifestDigestInput } from '@ichiran/core/release';
 import {
   expect,
   watchConsoleHealth
@@ -29,7 +30,7 @@ export interface RoutedAsset {
 export interface OpfsSnapshot {
   readonly markerBytes: number | null;
   readonly hotBytes: number | null;
-  readonly detailsBytes: number | null;
+  readonly definitionBytes: number | null;
   readonly downloadBytes: number | null;
 }
 
@@ -450,10 +451,12 @@ export function gzipAsset(file: string, installed: Uint8Array): RoutedAsset {
 
 export function signedManifest(
   hot: PackAssetManifest,
-  details: PackAssetManifest
+  definition: PackAssetManifest
 ): AnalyzerPackManifest {
+  const asset = (file: string): PackAssetManifest => ({ ...definition, file });
+  const suffix = definition.encoding === 'gzip' ? '.gz' : '';
   const unsigned = {
-    formatVersion: 1 as const,
+    formatVersion: 2 as const,
     packVersion: 'e2e.integrity.1',
     sourceCommit: 'e'.repeat(40),
     sourcesLockSha256: sha256('e2e-sources-lock'),
@@ -465,18 +468,15 @@ export function signedManifest(
       installedBytes: hot.installedBytes,
       installedSha256: hot.installedSha256
     },
-    details: {
-      file: details.file,
-      encoding: details.encoding,
-      downloadBytes: details.downloadBytes,
-      downloadSha256: details.downloadSha256,
-      installedBytes: details.installedBytes,
-      installedSha256: details.installedSha256
+    lexicon: asset(`lexicon.bin${suffix}`),
+    locales: {
+      en: asset(`gloss.en.bin${suffix}`),
+      'zh-Hans': asset(`gloss.zh-Hans.bin${suffix}`)
     }
   };
   return {
     ...unsigned,
-    manifestSha256: sha256(JSON.stringify(unsigned))
+    manifestSha256: sha256(analyzerManifestDigestInput(unsigned))
   };
 }
 
@@ -486,14 +486,17 @@ export function withReleaseIdentity(
   sourceCommit: string
 ): AnalyzerPackManifest {
   const unsigned = {
-    formatVersion: 1 as const,
+    formatVersion: 2 as const,
     packVersion,
     sourceCommit,
     sourcesLockSha256: manifest.sourcesLockSha256,
     hot: { ...manifest.hot },
-    details: { ...manifest.details }
+    lexicon: { ...manifest.lexicon },
+    locales: Object.fromEntries(
+      Object.entries(manifest.locales).map(([locale, asset]) => [locale, { ...asset }])
+    )
   };
-  return { ...unsigned, manifestSha256: sha256(JSON.stringify(unsigned)) };
+  return { ...unsigned, manifestSha256: sha256(analyzerManifestDigestInput(unsigned)) };
 }
 
 export async function denyPersistentStorage(context: BrowserContext): Promise<void> {
@@ -526,8 +529,8 @@ export async function routePack(
   context: BrowserContext,
   manifest: AnalyzerPackManifest,
   hot: RoutedAsset,
-  details: RoutedAsset,
-  bodies: Readonly<Partial<Record<'hot' | 'details', Uint8Array>>> = {}
+  definition: RoutedAsset,
+  bodies: Readonly<Partial<Record<'hot' | 'lexicon' | 'en' | 'zh-Hans', Uint8Array>>> = {}
 ): Promise<void> {
   await context.route('**/analyzer/manifest.json', route => route.fulfill({
     status: 200,
@@ -538,10 +541,16 @@ export async function routePack(
     manifest: hot.manifest,
     body: bodies.hot ?? hot.body
   }));
-  await context.route(`**/analyzer/${details.manifest.file}`, route => fulfillAsset(route, {
-    manifest: details.manifest,
-    body: bodies.details ?? details.body
+  await context.route(`**/analyzer/${manifest.lexicon.file}`, route => fulfillAsset(route, {
+    manifest: manifest.lexicon,
+    body: bodies.lexicon ?? definition.body
   }));
+  for (const [locale, asset] of Object.entries(manifest.locales)) {
+    await context.route(`**/analyzer/${asset.file}`, route => fulfillAsset(route, {
+      manifest: asset,
+      body: bodies[locale as 'en' | 'zh-Hans'] ?? definition.body
+    }));
+  }
 }
 
 export async function mockWorkerStorageEstimateFromAppFiles(
@@ -559,7 +568,9 @@ Object.defineProperty(navigator.storage, 'estimate', {
     const directory = await root.getDirectoryHandle('${DIRECTORY_NAME}', { create: true });
     const names = [
       'install-a.json', 'install-b.json', 'hot-a.bin', 'details-a.bin',
-      'hot-b.bin', 'details-b.bin', 'install.json', 'hot.bin', 'details.bin',
+      'hot-b.bin', 'details-b.bin', 'lexicon-a.bin', 'lexicon-b.bin',
+      'gloss-en-a.bin', 'gloss-en-b.bin', 'gloss-zh-Hans-a.bin', 'gloss-zh-Hans-b.bin',
+      'install.json', 'hot.bin', 'details.bin',
       'asset.download'
     ];
     let usage = 0;
@@ -611,13 +622,17 @@ export async function opfsSnapshot(page: Page): Promise<OpfsSnapshot> {
       const present = sizes.filter((size): size is number => size !== null);
       return present.length === 0 ? null : present.reduce((total, size) => total + size, 0);
     }
-    const [markerBytes, hotBytes, detailsBytes, downloadBytes] = await Promise.all([
+    const [markerBytes, hotBytes, definitionBytes, downloadBytes] = await Promise.all([
       totalBytes(['install-a.json', 'install-b.json']),
       totalBytes(['hot-a.bin', 'hot-b.bin']),
-      totalBytes(['details-a.bin', 'details-b.bin']),
+      totalBytes([
+        'lexicon-a.bin', 'lexicon-b.bin',
+        'gloss-en-a.bin', 'gloss-en-b.bin',
+        'gloss-zh-Hans-a.bin', 'gloss-zh-Hans-b.bin'
+      ]),
       fileBytes('asset.download')
     ]);
-    return { markerBytes, hotBytes, detailsBytes, downloadBytes };
+    return { markerBytes, hotBytes, definitionBytes, downloadBytes };
   }, DIRECTORY_NAME);
 }
 
@@ -696,7 +711,8 @@ export async function staleInstallFiles(page: Page): Promise<readonly string[]> 
 export async function activeOpfsFiles(page: Page): Promise<{
   readonly marker: string;
   readonly hot: string;
-  readonly details: string;
+  readonly lexicon: string;
+  readonly locales: Readonly<Record<string, string>>;
 }> {
   const installId = await committedInstallId(page);
   if (!installId) throw new Error('Analyzer has no committed install ID');
@@ -707,7 +723,11 @@ export async function activeOpfsFiles(page: Page): Promise<{
       try {
         const marker = JSON.parse(
           await (await directory.getFileHandle(markerName)).getFile().then(file => file.text())
-        ) as { readonly installId?: unknown; readonly slot?: unknown };
+        ) as {
+          readonly installId?: unknown;
+          readonly slot?: unknown;
+          readonly manifest?: AnalyzerPackManifest;
+        };
         if (marker.installId !== installId) continue;
         if (marker.slot !== 'a' && marker.slot !== 'b') {
           throw new Error(`Committed OPFS marker ${markerName} has no current data slot`);
@@ -715,7 +735,10 @@ export async function activeOpfsFiles(page: Page): Promise<{
         return {
           marker: markerName,
           hot: `hot-${marker.slot}.bin`,
-          details: `details-${marker.slot}.bin`
+          lexicon: `lexicon-${marker.slot}.bin`,
+          locales: Object.fromEntries(Object.keys(marker.manifest?.locales ?? {}).map(locale => (
+            [locale, `gloss-${locale}-${marker.slot}.bin`]
+          )))
         };
       } catch (error) {
         if (error instanceof DOMException && error.name === 'NotFoundError') continue;
@@ -730,7 +753,7 @@ export function expectNoInstalledFiles(snapshot: OpfsSnapshot): void {
   expect(snapshot).toEqual({
     markerBytes: null,
     hotBytes: null,
-    detailsBytes: null,
+    definitionBytes: null,
     downloadBytes: null
   });
 }
@@ -739,14 +762,14 @@ export async function rejectedInstall(
   browser: Browser,
   manifest: AnalyzerPackManifest,
   hot: RoutedAsset,
-  details: RoutedAsset,
+  definition: RoutedAsset,
   expectedMessage: string,
-  bodies?: Readonly<Partial<Record<'hot' | 'details', Uint8Array>>>,
+  bodies?: Readonly<Partial<Record<'hot' | 'lexicon' | 'en' | 'zh-Hans', Uint8Array>>>,
   manifestRejected = false
 ): Promise<void> {
   const context = await openIsolatedContext(browser);
   try {
-    await routePack(context, manifest, hot, details, bodies);
+    await routePack(context, manifest, hot, definition, bodies);
     const page = await context.newPage();
     await page.goto('/');
     if (!manifestRejected) {
@@ -762,7 +785,7 @@ export async function rejectedInstall(
 
 export async function interruptInstall(
   browser: Browser,
-  artifact: 'hot' | 'details'
+  artifact: 'hot' | 'lexicon'
 ): Promise<void> {
   const context = await openIsolatedContext(browser);
   try {
@@ -772,7 +795,7 @@ export async function interruptInstall(
       .get('/analyzer/manifest.json')
       .then(response => response.json() as Promise<AnalyzerPackManifest>);
     const target = manifest[artifact];
-    const completedBytes = artifact === 'details' ? manifest.hot.downloadBytes : 0;
+    const completedBytes = artifact === 'lexicon' ? manifest.hot.downloadBytes : 0;
     const targetPattern = `**/analyzer/${target.file}`;
     const streamPartial = async (route: Route): Promise<void> => {
       const url = new URL(route.request().url());
@@ -794,7 +817,7 @@ export async function interruptInstall(
     const duringInstall = await opfsSnapshot(installingPage);
     expect(duringInstall.markerBytes).toBeNull();
     expect(await committedInstallId(installingPage)).toBeNull();
-    if (artifact === 'details') {
+    if (artifact === 'lexicon') {
       expect(duringInstall.hotBytes).toBe(manifest.hot.installedBytes);
     }
 
@@ -806,7 +829,7 @@ export async function interruptInstall(
     await reopened.goto('/');
     await expect(analyzerReady(reopened)).toHaveCount(0);
     expect((await opfsSnapshot(reopened)).markerBytes).toBeNull();
-    if (artifact === 'details') {
+    if (artifact === 'lexicon') {
       await expect(reopened.getByText('The saved data is incomplete. Install it again.')).toBeVisible();
       reopened.once('dialog', dialog => dialog.accept());
       await reopened.getByRole('button', { name: 'Remove saved data' }).click();
@@ -820,7 +843,7 @@ export async function interruptInstall(
       expect({ ...afterRecovery, downloadBytes: null }).toEqual({
         markerBytes: null,
         hotBytes: null,
-        detailsBytes: null,
+        definitionBytes: null,
         downloadBytes: null
       });
       expect([null, 0]).toContain(afterRecovery.downloadBytes);

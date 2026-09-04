@@ -153,7 +153,8 @@ export function createApiHandler(analyzer: Analyzer) {
         if (!Number.isSafeInteger(entryIndex) || entryIndex < 0) {
           throw new HttpError('invalid-input', 'entryIndex must be a non-negative integer', 400);
         }
-        sendJson(response, await analyzer.entry(entryIndex));
+        const locale = url.searchParams.get('locale') ?? undefined;
+        sendJson(response, await analyzer.entry(entryIndex, { locale }));
         return;
       }
       throw new HttpError('not-found', 'Route not found', 404);

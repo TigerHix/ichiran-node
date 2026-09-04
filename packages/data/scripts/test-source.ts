@@ -6,7 +6,7 @@ const testDirectory = resolve(packageRoot, 'tests');
 const excluded = new Set([
   'analyzer-support-postgres.test.ts',
   'conjugate.test.ts',
-  'details-postgres.test.ts',
+  'dictionary-postgres.test.ts',
   'load-entry.test.ts',
   'root-payload-postgres.test.ts'
 ]);
@@ -26,7 +26,7 @@ const child = Bun.spawn([process.execPath, 'test', ...files], {
     ...process.env,
     ICHIRAN_RUN_DATABASE_TESTS: 'false',
     RUN_ANALYZER_SUPPORT_POSTGRES: 'false',
-    RUN_DETAILS_POSTGRES: 'false',
+    RUN_DICTIONARY_POSTGRES: 'false',
     RUN_ROOT_PAYLOAD_POSTGRES: 'false'
   },
   stdio: ['inherit', 'inherit', 'inherit']

@@ -1,10 +1,12 @@
 import { describe, expect, test } from 'bun:test';
+import { createHash } from 'node:crypto';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { encodePack, openPack } from '@ichiran/core/compiler';
-import { buildDetailStore } from '../src/browser-pack/details.js';
+import { buildLexiconStore } from '../src/browser-pack/lexicon.js';
+import { buildLocaleGlossStore } from '../src/browser-pack/locale-gloss.js';
 import { buildRootPayload } from '../src/browser-pack/root-payload.js';
 import { deriveBestReadings } from '../src/source-compiler/best-readings.js';
 import {
@@ -18,7 +20,8 @@ import {
 import { CanonicalLexicon } from '../src/source-compiler/lexicon.js';
 import type { CanonicalEntry } from '../src/source-compiler/model.js';
 import {
-  canonicalDetailEntries,
+  canonicalEnglishLocaleEntries,
+  canonicalLexiconEntries,
   canonicalRootPayloadSource
 } from '../src/source-compiler/pack-input.js';
 import {
@@ -112,15 +115,22 @@ describe('source-native JMdict projection', () => {
 test('qualified pack writers accept compiler-owned semantic input', () => {
   const entry = deriveBestReadings(parsed());
   const root = buildRootPayload(canonicalRootPayloadSource([entry]));
-  const details = buildDetailStore(canonicalDetailEntries([entry]));
+  const lexicon = buildLexiconStore(canonicalLexiconEntries([entry]));
+  const lexiconSha256 = createHash('sha256').update(lexicon.bytes).digest('hex');
+  const english = buildLocaleGlossStore({
+    locale: 'en',
+    lexiconSha256,
+    entries: canonicalEnglishLocaleEntries([entry])
+  });
   const pack = encodePack([{ id: 2, bytes: root.bytes }]);
   const reader = openPack(pack);
 
   expect(reader.getSection(2)).toEqual(root.bytes);
   expect(root.stats.counts.entries).toBe(1);
-  expect(details.stats.entryCount).toBe(1);
+  expect(lexicon.stats.entryCount).toBe(1);
+  expect(english.stats.translatedEntryCount).toBe(1);
   expect(buildRootPayload(canonicalRootPayloadSource([entry])).bytes).toEqual(root.bytes);
-  expect(buildDetailStore(canonicalDetailEntries([entry])).bytes).toEqual(details.bytes);
+  expect(buildLexiconStore(canonicalLexiconEntries([entry])).bytes).toEqual(lexicon.bytes);
 });
 
 test('surface-index input is source-owned and UTF-8 ordered', () => {

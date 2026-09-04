@@ -41,6 +41,15 @@ describe.skipIf(!releaseDirectory)('CLI source release', () => {
       meanings: [],
       conjugations: expect.any(Array)
     });
+
+    const chinese = run(
+      'details', '--locale', 'zh-Hans', '--limit', '1', '--path', '0', '--token', '0', '猫'
+    );
+    expect(chinese.exitCode).toBe(0);
+    expect(JSON.stringify(JSON.parse(chinese.stdout.toString()).meanings)).toMatch(/[\u3400-\u9fff]/u);
+
+    const chineseEntry = run('entry', '--locale', 'zh-Hans', String(entryIndex));
+    expect(chineseEntry.exitCode).toBe(0);
   });
 
   test('reports stable analyzer errors and has no implicit compatibility mode', () => {

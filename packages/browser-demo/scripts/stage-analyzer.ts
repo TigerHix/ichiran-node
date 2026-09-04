@@ -24,8 +24,14 @@ const { manifest } = await verifyAnalyzerRelease(
 
 await rm(target, { recursive: true, force: true });
 await mkdir(target, { recursive: true });
-for (const file of ['manifest.json', manifest.hot.file, manifest.details.file]) {
+const files = [
+  'manifest.json',
+  manifest.hot.file,
+  manifest.lexicon.file,
+  ...Object.values(manifest.locales).map(asset => asset.file)
+];
+for (const file of files) {
   await copyFile(join(source, file), join(target, file));
 }
 
-console.log(`Staged ${manifest.hot.file}, ${manifest.details.file}, and manifest.json`);
+console.log(`Staged ${files.join(', ')}`);

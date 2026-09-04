@@ -46,7 +46,7 @@ class DigestMeter extends Transform {
 }
 
 /** Node file source with no descriptor held between exact positional reads. */
-export class FileDetailSource implements RandomAccessSource {
+export class FileRandomAccessSource implements RandomAccessSource {
   readonly byteLength: number;
   readonly path: string;
   readonly #ownedDirectory: string | null;
@@ -69,7 +69,7 @@ export class FileDetailSource implements RandomAccessSource {
       || !Number.isSafeInteger(end)
       || end > this.byteLength
     ) {
-      throw new RangeError('Detail file read is outside the available source');
+      throw new RangeError('Release asset read is outside the available source');
     }
     const handle = await open(this.path, 'r');
     try {
@@ -123,20 +123,20 @@ async function verifyIdentityFile(
   }
 }
 
-/** Verify a release detail asset and expose only its installed random-access bytes. */
-export async function openVerifiedDetailSource(
+/** Verify a release asset and expose only its installed random-access bytes. */
+export async function openVerifiedAssetSource(
   directory: string,
   asset: AnalyzerReleaseAsset,
   temporaryRoot = tmpdir()
-): Promise<FileDetailSource> {
+): Promise<FileRandomAccessSource> {
   const input = resolve(directory, asset.file);
   if (asset.encoding === 'identity') {
     await verifyIdentityFile(input, asset);
-    return new FileDetailSource(input, asset.installedBytes, null);
+    return new FileRandomAccessSource(input, asset.installedBytes, null);
   }
 
-  const ownedDirectory = await mkdtemp(join(temporaryRoot, 'ichiran-node-details-'));
-  const output = join(ownedDirectory, 'details.bin');
+  const ownedDirectory = await mkdtemp(join(temporaryRoot, 'ichiran-node-asset-'));
+  const output = join(ownedDirectory, asset.file.replace(/\.gz$/, ''));
   const downloaded = new DigestMeter(
     asset.downloadBytes,
     `${asset.file} exceeds the analyzer manifest byte length`
@@ -165,7 +165,7 @@ export async function openVerifiedDetailSource(
     ) {
       throw new Error(`${asset.file} decoded bytes do not match the analyzer manifest`);
     }
-    return new FileDetailSource(output, asset.installedBytes, ownedDirectory);
+    return new FileRandomAccessSource(output, asset.installedBytes, ownedDirectory);
   } catch (error) {
     await rm(ownedDirectory, { recursive: true, force: true });
     throw error;

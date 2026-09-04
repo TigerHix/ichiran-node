@@ -3,6 +3,8 @@
 > Historical alpha contract. Its PWA/application-shell requirements are superseded.
 > The current browser package owns only analyzer-pack installation and Worker
 > execution; consumers own Service Workers and offline application launch.
+> Its pack-v1 `details.bin` layout is also superseded by the multilingual pack-v2
+> contract in `docs/MULTILINGUAL-DICTIONARY-ARCHITECTURE.md`.
 
 Status: pinned analyzer implementation complete; release and browser evidence is
 generated locally and kept outside Git, 2026-08-29
@@ -48,7 +50,7 @@ After that identity normalization, compatibility is exact for:
 - path and token scores (integer equality, no tolerance);
 - reading, kana, and romanization strings;
 - ordered inflection properties and conjugation descriptions;
-- compounds, components, suffix descriptions, and alternatives;
+- compounds, components, stable suffix IDs, and alternatives;
 - senses, ordered glosses, POS, field, misc, dialect, and info metadata;
 - entity-hint behavior and top-N behavior.
 
@@ -193,7 +195,7 @@ reading hints, physical-member exceptions, and direct/generated lookup order. It
 stores semantic identities rather than surrogate database IDs, CTIDs, timestamps, or
 machine paths.
 
-`alpha:release:refresh-lock` compiled and verified the qualified database, then wrote
+The retired PostgreSQL alpha compiler verified the qualified database, then wrote
 the deterministic v2 lock. Key packed counts are:
 
 | Component | Locked result |
@@ -274,31 +276,19 @@ counter requests, 54 entity-hint requests, and 47 deterministic probes. Its outp
 diagnostic-only where a current-Lisp snapshot exists. The alpha has no result
 allowlist: any chosen-authority divergence fails the release gate.
 
-Supported release and end-to-end commands:
+Those release commands were retired with pack-v1. The supported pack-v2 release and
+host qualification commands are:
 
 ```bash
-bun run alpha:release:build -- \
-  --database "$ICHIRAN_DB_URL" \
+bun run source:release -- baseline \
   --out dist/browser-alpha \
-  --pack-version ichiran-260118 \
-  --shell-dir packages/browser-demo/dist
-
-bun packages/core/tools/oracle-parity.ts \
-  --repository "$PWD" \
-  --release dist/browser-alpha \
-  --database "$ICHIRAN_DB_URL" \
-  --out work/oracle-full-final.json
-
-bun run alpha:release:verify -- \
-  --out dist/browser-alpha \
-  --shell-dir packages/browser-demo/dist
+  --pack-version <version>
+bun run qualify:source-hosts -- /absolute/path/to/release
 ```
 
-`oracle-parity.ts` runs the full corpus by default and exits non-zero on any current
-difference. `--smoke` is for development only; `--allow-failures` is diagnostic and is
-never an acceptance command. `alpha:release:build` itself performs the exhaustive
-morphology gate in the build's read-only snapshot. The equivalent standalone
-reproduction command is documented in `MORPHOLOGY.md`.
+The alpha oracle ran the full corpus and exited non-zero on any current difference.
+Its smoke and allow-failure modes were diagnostic only. The equivalent historical
+morphology reproduction is documented in `MORPHOLOGY.md`.
 
 ## 6. Morphology relation-attestation format
 

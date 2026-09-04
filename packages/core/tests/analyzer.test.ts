@@ -1,8 +1,10 @@
 import { describe, expect, test } from 'bun:test';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
 import { buildAnalyzerSupport, type AnalyzerSupportSource } from '../../data/src/browser-pack/analyzer-support.js';
-import { buildDetailStore } from '../../data/src/browser-pack/details.js';
+import { buildLexiconStore } from '../../data/src/browser-pack/lexicon.js';
+import { buildLocaleGlossStore } from '../../data/src/browser-pack/locale-gloss.js';
 import { encodeMorphologyArtifact, type CompiledMorphologyArtifact } from '../../data/src/browser-pack/morphology-format.js';
 import { buildRootPayload, type RootPayloadSource } from '../../data/src/browser-pack/root-payload.js';
 import {
@@ -11,9 +13,11 @@ import {
   type PortableLegacyTransformedResult
 } from '../src/legacy-contract.js';
 import {
-  memoryDetailSource,
+  DictionaryReader,
+  LexiconStoreReader,
+  LocaleGlossStoreReader,
+  memoryDictionarySource,
   openAnalyzerSupport,
-  openDetailStore,
   openMorphology,
   openRootPayload,
   SurfaceIndex
@@ -243,17 +247,26 @@ function analyzer(
 }
 
 async function detailReader(source: RootPayloadSource = rootSource) {
-  const bytes = buildDetailStore(source.entries.map(entry => ({
+  const lexicon = buildLexiconStore(source.entries.map(entry => ({
     seq: entry.seq,
     forms: source.forms
       .filter(form => form.seq === entry.seq)
       .map(({ surface, ...form }) => ({ ...form, text: surface })),
     senses: []
   })), { targetBlockBytes: 1024 }).bytes;
-  return openDetailStore(
-    memoryDetailSource(bytes),
-    async compressed => new Uint8Array(gunzipSync(compressed))
-  );
+  const sha256 = createHash('sha256').update(lexicon).digest('hex');
+  const locale = buildLocaleGlossStore({
+    locale: 'en',
+    lexiconSha256: sha256,
+    entries: source.entries.map(entry => ({ seq: entry.seq, groups: [] })),
+    targetBlockBytes: 1024
+  }).bytes;
+  const decode = async (compressed: Uint8Array) => new Uint8Array(gunzipSync(compressed));
+  const lexiconReader = await LexiconStoreReader.open(memoryDictionarySource(lexicon), decode);
+  const localeReader = await LocaleGlossStoreReader.open(memoryDictionarySource(locale), decode, {
+    locale: 'en', lexiconSha256: sha256, entryCount: source.entries.length
+  });
+  return new DictionaryReader(lexiconReader, localeReader, localeReader);
 }
 
 function firstDetailedWord(

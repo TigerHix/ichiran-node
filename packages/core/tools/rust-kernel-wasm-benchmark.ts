@@ -15,6 +15,22 @@ interface BenchmarkCorpus {
   readonly groups: Readonly<Record<string, readonly BenchmarkRequest[]>>;
 }
 
+interface ReleaseManifest {
+  readonly formatVersion: 2;
+  readonly lexicon: { readonly installedSha256: string };
+  readonly locales: Readonly<Record<string, { readonly file: string }>>;
+}
+
+function fileSource(path: string) {
+  const file = Bun.file(path);
+  return {
+    byteLength: file.size,
+    read: async (offset: number, byteLength: number) => new Uint8Array(
+      await file.slice(offset, offset + byteLength).arrayBuffer()
+    )
+  };
+}
+
 function percentile(values: readonly number[], value: number): number {
   const sorted = [...values].sort((left, right) => left - right);
   return sorted[Math.ceil(sorted.length * value) - 1]!;
@@ -30,16 +46,24 @@ const requestedGroups = process.argv.slice(4);
 const corpus = JSON.parse(
   await readFile(join(repository, 'browser-alpha/bench/corpus.json'), 'utf8')
 ) as BenchmarkCorpus;
-const detailFile = Bun.file(join(release, 'details.bin'));
+const manifest = JSON.parse(
+  await readFile(join(release, 'manifest.json'), 'utf8')
+) as ReleaseManifest;
+if (manifest.formatVersion !== 2 || !manifest.locales.en) {
+  throw new Error('Benchmark release must be a multilingual format-v2 pack with English');
+}
+const locales = Object.fromEntries(Object.entries(manifest.locales).map(([locale, asset]) => [
+  locale,
+  fileSource(join(release, asset.file.replace(/\.gz$/, '')))
+]));
 const runtime = await Analyzer.open({
   hot: new Uint8Array(await Bun.file(join(release, 'hot.bin')).arrayBuffer()),
   wasm: new Uint8Array(await Bun.file(wasmPath).arrayBuffer()),
-  details: {
-    byteLength: detailFile.size,
-    read: async (offset, byteLength) => new Uint8Array(
-      await detailFile.slice(offset, offset + byteLength).arrayBuffer()
-    )
-  }
+  lexicon: {
+    source: fileSource(join(release, manifest.lexicon.file.replace(/\.gz$/, ''))),
+    sha256: manifest.lexicon.installedSha256
+  },
+  locales
 });
 
 const names = requestedGroups.length > 0

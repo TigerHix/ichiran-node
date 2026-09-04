@@ -54,7 +54,7 @@ class BenchmarkWorker {
 }
 
 const unsignedRelease = {
-  formatVersion: 1,
+  formatVersion: 2,
   packVersion: 'test',
   sourceCommit: 'b'.repeat(40),
   sourcesLockSha256: 'c'.repeat(64),
@@ -62,9 +62,19 @@ const unsignedRelease = {
     file: 'hot.bin.gz', encoding: 'gzip', downloadBytes: 1,
     downloadSha256: 'd'.repeat(64), installedBytes: 1, installedSha256: 'e'.repeat(64)
   },
-  details: {
-    file: 'details.bin.gz', encoding: 'gzip', downloadBytes: 1,
+  lexicon: {
+    file: 'lexicon.bin.gz', encoding: 'gzip', downloadBytes: 1,
     downloadSha256: 'f'.repeat(64), installedBytes: 1, installedSha256: '0'.repeat(64)
+  },
+  locales: {
+    en: {
+      file: 'gloss.en.bin.gz', encoding: 'gzip', downloadBytes: 1,
+      downloadSha256: '1'.repeat(64), installedBytes: 1, installedSha256: '2'.repeat(64)
+    },
+    'zh-Hans': {
+      file: 'gloss.zh-Hans.bin.gz', encoding: 'gzip', downloadBytes: 1,
+      downloadSha256: '3'.repeat(64), installedBytes: 1, installedSha256: '4'.repeat(64)
+    }
   }
 } as const;
 const release: AnalyzerPackManifest = {

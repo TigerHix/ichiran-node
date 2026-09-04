@@ -13,7 +13,7 @@ import {
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
 } from '@ichiran/core/release';
-import { openVerifiedDetailSource, type FileDetailSource } from './file-details.js';
+import { openVerifiedAssetSource, type FileRandomAccessSource } from './file-source.js';
 
 function sha256(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
@@ -53,8 +53,8 @@ function dataDirectory(directory: string | undefined): string {
 /** Open and verify one complete packed analyzer release from disk. */
 export async function openAnalyzer(directory?: string): Promise<Analyzer> {
   const resolvedDirectory = dataDirectory(directory);
-  let details: FileDetailSource | null = null;
-  let detailsPromise: Promise<FileDetailSource> | null = null;
+  const sources: FileRandomAccessSource[] = [];
+  const pendingSources: Array<Promise<FileRandomAccessSource>> = [];
   try {
     const manifestBytes = await readFile(resolve(resolvedDirectory, 'manifest.json'));
     let parsed: unknown;
@@ -73,25 +73,37 @@ export async function openAnalyzer(directory?: string): Promise<Analyzer> {
         `Analyzer release sourceCommit ${manifest.sourceCommit} does not match runtime ${expectedSourceCommit}`
       );
     }
-    detailsPromise = openVerifiedDetailSource(resolvedDirectory, manifest.details).then(source => {
-      details = source;
-      return source;
-    });
-    const [hot, detailSource, wasm] = await Promise.all([
+    const openSource = (asset: AnalyzerReleaseAsset): Promise<FileRandomAccessSource> => {
+      const promise = openVerifiedAssetSource(resolvedDirectory, asset).then(source => {
+        sources.push(source);
+        return source;
+      });
+      pendingSources.push(promise);
+      return promise;
+    };
+    const lexiconPromise = openSource(manifest.lexicon);
+    const localeEntries = Object.entries(manifest.locales);
+    const localePromises = localeEntries.map(async ([locale, asset]) => (
+      [locale, await openSource(asset)] as const
+    ));
+    const [hot, lexicon, locales, wasm] = await Promise.all([
       loadAsset(resolvedDirectory, manifest.hot),
-      detailsPromise,
+      lexiconPromise,
+      Promise.all(localePromises).then(entries => Object.fromEntries(entries)),
       readFile(ANALYZER_WASM_URL).then(bytes => new Uint8Array(bytes))
     ]);
-    return await Analyzer.open({ hot, details: detailSource, wasm });
+    return await Analyzer.open({
+      hot,
+      lexicon: {
+        source: lexicon,
+        sha256: manifest.lexicon.installedSha256
+      },
+      locales,
+      wasm
+    });
   } catch (error) {
-    if (details === null && detailsPromise !== null) {
-      try {
-        details = await detailsPromise;
-      } catch {
-        // The detail loader closes files when it fails before returning a source.
-      }
-    }
-    details?.dispose();
+    await Promise.allSettled(pendingSources);
+    for (const source of sources) source.dispose();
     if (error instanceof AnalyzerError) throw error;
     throw new AnalyzerError(
       'invalid-pack',

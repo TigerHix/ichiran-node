@@ -7,13 +7,14 @@ use std::sync::Mutex;
 use serde::{Deserialize, Serialize};
 
 use crate::{
-    AnalyzeOptions, DetailRange, DetailStore, EntityHint, ErrorCode, Kernel, KernelError,
-    LegacyDetailSession, LegacyDetailStep, Result, RomanizationName, TokenDetailsSession,
-    TokenDetailsStep, Utf16Text,
+    AnalyzeOptions, DictionaryRange, DictionaryStoreKind, DictionaryStores, EntityHint, ErrorCode,
+    Kernel, KernelError, LegacyDetailSession, LegacyDetailStep, LexiconStore, LocaleStore, Result,
+    RomanizationName, TokenDetailsSession, TokenDetailsStep, Utf16Text,
 };
 
-const ABI_VERSION: u32 = 5;
-const NO_DETAIL: u32 = u32::MAX;
+const ABI_VERSION: u32 = 7;
+const NO_DICTIONARY: u32 = u32::MAX;
+const DICTIONARY_NONE: u32 = 0;
 
 #[repr(C)]
 pub struct IchiranBuffer {
@@ -42,7 +43,7 @@ pub struct IchiranResult {
 
 #[repr(C)]
 #[derive(Clone, Copy, Default)]
-pub struct IchiranDetailRange {
+pub struct IchiranDictionaryRange {
     pub block: u32,
     pub offset: u32,
     pub byte_length: u32,
@@ -50,8 +51,8 @@ pub struct IchiranDetailRange {
     pub checksum: u32,
 }
 
-impl From<DetailRange> for IchiranDetailRange {
-    fn from(value: DetailRange) -> Self {
+impl From<DictionaryRange> for IchiranDictionaryRange {
+    fn from(value: DictionaryRange) -> Self {
         Self {
             block: value.block,
             offset: value.offset,
@@ -66,8 +67,9 @@ impl From<DetailRange> for IchiranDetailRange {
 pub struct IchiranStepResult {
     pub status: u32,
     pub state: u32,
+    pub store: u32,
     pub entry_index: u32,
-    pub range: IchiranDetailRange,
+    pub range: IchiranDictionaryRange,
     pub buffer: IchiranBuffer,
 }
 
@@ -75,15 +77,19 @@ pub struct IchiranKernel {
     inner: Mutex<Kernel>,
 }
 
-pub struct IchiranDetailStore {
-    inner: Mutex<DetailStore>,
+pub struct IchiranLexiconStore {
+    inner: Mutex<LexiconStore>,
+}
+
+pub struct IchiranLocaleStore {
+    inner: Mutex<LocaleStore>,
 }
 
 struct LegacyOperationState {
     analysis: crate::AnalysisResult,
     session: LegacyDetailSession,
     method: Option<RomanizationName>,
-    pending: Option<(u32, DetailRange)>,
+    pending: Option<(DictionaryStoreKind, u32, DictionaryRange)>,
     completed: bool,
 }
 
@@ -96,7 +102,7 @@ struct TokenDetailsOperationState {
     session: TokenDetailsSession,
     path_index: usize,
     token_index: usize,
-    pending: Option<(u32, DetailRange)>,
+    pending: Option<(DictionaryStoreKind, u32, DictionaryRange)>,
     completed: bool,
 }
 
@@ -233,23 +239,17 @@ pub unsafe extern "C" fn ichiran_kernel_romanize_utf16(
 }
 
 #[unsafe(no_mangle)]
-/// Reads the resident prefix length from one detail-store header.
-///
-/// # Safety
-///
-/// `output` must be writable for one `size_t`. The header is borrowed only for
-/// this call and must contain the complete 96-byte format-v2 header.
-pub unsafe extern "C" fn ichiran_detail_prefix_length(
+pub unsafe extern "C" fn ichiran_lexicon_prefix_length(
     header: *const u8,
     header_bytes: usize,
     total_bytes: usize,
     output: *mut usize,
 ) -> IchiranResult {
     boundary(|| {
-        validate_pointer(output, 1, "detail prefix-length output")?;
+        validate_pointer(output, 1, "lexicon prefix-length output")?;
         unsafe { *output = 0 };
-        let length = DetailStore::prefix_length(
-            input_bytes(header, header_bytes, "detail header")?,
+        let length = LexiconStore::prefix_length(
+            input_bytes(header, header_bytes, "lexicon header")?,
             total_bytes,
         )?;
         unsafe { *output = length };
@@ -258,26 +258,39 @@ pub unsafe extern "C" fn ichiran_detail_prefix_length(
 }
 
 #[unsafe(no_mangle)]
-/// Opens a lazy detail store from its complete resident prefix.
-///
-/// # Safety
-///
-/// `output` must be writable for one handle pointer. `prefix` is copied and is
-/// borrowed only for this call. The returned handle must be freed exactly once.
-pub unsafe extern "C" fn ichiran_detail_store_open(
+pub unsafe extern "C" fn ichiran_locale_prefix_length(
+    header: *const u8,
+    header_bytes: usize,
+    total_bytes: usize,
+    output: *mut usize,
+) -> IchiranResult {
+    boundary(|| {
+        validate_pointer(output, 1, "locale prefix-length output")?;
+        unsafe { *output = 0 };
+        let length = LocaleStore::prefix_length(
+            input_bytes(header, header_bytes, "locale header")?,
+            total_bytes,
+        )?;
+        unsafe { *output = length };
+        Ok(Vec::new())
+    })
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_lexicon_store_open(
     prefix: *const u8,
     prefix_bytes: usize,
     total_bytes: usize,
-    output: *mut *mut IchiranDetailStore,
+    output: *mut *mut IchiranLexiconStore,
 ) -> IchiranResult {
     boundary(|| {
-        validate_pointer(output, 1, "detail-store output")?;
+        validate_pointer(output, 1, "lexicon-store output")?;
         unsafe { *output = ptr::null_mut() };
-        let store = DetailStore::open(
-            input_bytes(prefix, prefix_bytes, "detail prefix")?.to_vec(),
+        let store = LexiconStore::open(
+            input_bytes(prefix, prefix_bytes, "lexicon prefix")?.to_vec(),
             total_bytes,
         )?;
-        let store = Box::new(IchiranDetailStore {
+        let store = Box::new(IchiranLexiconStore {
             inner: Mutex::new(store),
         });
         unsafe { *output = Box::into_raw(store) };
@@ -290,38 +303,111 @@ pub unsafe extern "C" fn ichiran_detail_store_open(
 ///
 /// # Safety
 ///
-/// `details` must be live and `output` must be writable for one range.
-pub unsafe extern "C" fn ichiran_detail_store_range(
-    details: *const IchiranDetailStore,
+/// `lexicon` must be live and `output` must be writable for one range.
+pub unsafe extern "C" fn ichiran_lexicon_store_entry_count(
+    lexicon: *const IchiranLexiconStore,
+) -> usize {
+    unsafe { lexicon.as_ref() }.map_or(0, |store| {
+        store.inner.lock().map_or(0, |inner| inner.entry_count())
+    })
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_lexicon_store_range(
+    lexicon: *const IchiranLexiconStore,
     entry_index: u32,
-    output: *mut IchiranDetailRange,
+    output: *mut IchiranDictionaryRange,
 ) -> IchiranResult {
     boundary(|| {
-        validate_pointer(output, 1, "detail-range output")?;
-        unsafe { *output = IchiranDetailRange::default() };
-        let details = unsafe { handle(details, "detail store")? };
-        let store = lock(&details.inner, "detail store")?;
+        validate_pointer(output, 1, "dictionary-range output")?;
+        unsafe { *output = IchiranDictionaryRange::default() };
+        let lexicon = unsafe { handle(lexicon, "lexicon store")? };
+        let store = lock(&lexicon.inner, "lexicon store")?;
         unsafe { *output = store.range(entry_index)?.into() };
         Ok(Vec::new())
     })
 }
 
 #[unsafe(no_mangle)]
-/// Decodes one host-supplied compressed detail block and returns entry JSON.
+/// Decodes one host-supplied compressed lexicon block and returns entry JSON.
 ///
 /// # Safety
 ///
-/// `details` must be live. `compressed` is borrowed only for this call.
-pub unsafe extern "C" fn ichiran_detail_store_decode(
-    details: *const IchiranDetailStore,
+/// `lexicon` must be live. `compressed` is borrowed only for this call.
+pub unsafe extern "C" fn ichiran_lexicon_store_decode(
+    lexicon: *const IchiranLexiconStore,
     entry_index: u32,
     compressed: *const u8,
     compressed_bytes: usize,
 ) -> IchiranResult {
     boundary(|| {
-        let details = unsafe { handle(details, "detail store")? };
-        let compressed = input_bytes(compressed, compressed_bytes, "compressed detail block")?;
-        let store = lock(&details.inner, "detail store")?;
+        let lexicon = unsafe { handle(lexicon, "lexicon store")? };
+        let compressed = input_bytes(compressed, compressed_bytes, "compressed lexicon block")?;
+        let store = lock(&lexicon.inner, "lexicon store")?;
+        serialize(&store.entry_from_compressed(entry_index, compressed)?)
+    })
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_locale_store_open(
+    prefix: *const u8,
+    prefix_bytes: usize,
+    total_bytes: usize,
+    lexicon_sha256: *const u8,
+    locale_utf8: *const u8,
+    locale_bytes: usize,
+    lexicon_entry_count: usize,
+    output: *mut *mut IchiranLocaleStore,
+) -> IchiranResult {
+    boundary(|| {
+        validate_pointer(output, 1, "locale-store output")?;
+        unsafe { *output = ptr::null_mut() };
+        let digest = input_bytes(lexicon_sha256, 32, "lexicon SHA-256")?;
+        let locale = std::str::from_utf8(input_bytes(locale_utf8, locale_bytes, "locale")?)
+            .map_err(|_| KernelError::new(ErrorCode::InvalidInput, "locale is not valid UTF-8"))?;
+        let store = LocaleStore::open(
+            input_bytes(prefix, prefix_bytes, "locale prefix")?.to_vec(),
+            total_bytes,
+            digest,
+            locale,
+            lexicon_entry_count,
+        )?;
+        unsafe {
+            *output = Box::into_raw(Box::new(IchiranLocaleStore {
+                inner: Mutex::new(store),
+            }))
+        };
+        Ok(Vec::new())
+    })
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_locale_store_range(
+    locale: *const IchiranLocaleStore,
+    entry_index: u32,
+    output: *mut IchiranDictionaryRange,
+) -> IchiranResult {
+    boundary(|| {
+        validate_pointer(output, 1, "dictionary-range output")?;
+        unsafe { *output = IchiranDictionaryRange::default() };
+        let locale = unsafe { handle(locale, "locale store")? };
+        let store = lock(&locale.inner, "locale store")?;
+        unsafe { *output = store.range(entry_index)?.into() };
+        Ok(Vec::new())
+    })
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_locale_store_decode(
+    locale: *const IchiranLocaleStore,
+    entry_index: u32,
+    compressed: *const u8,
+    compressed_bytes: usize,
+) -> IchiranResult {
+    boundary(|| {
+        let locale = unsafe { handle(locale, "locale store")? };
+        let compressed = input_bytes(compressed, compressed_bytes, "compressed locale block")?;
+        let store = lock(&locale.inner, "locale store")?;
         serialize(&store.entry_from_compressed(entry_index, compressed)?)
     })
 }
@@ -374,11 +460,11 @@ pub unsafe extern "C" fn ichiran_kernel_legacy_begin_utf16(
 }
 
 #[unsafe(no_mangle)]
-/// Advances one detailed/legacy operation by at most one host detail read.
+/// Advances one detailed/legacy operation by at most one dictionary block read.
 ///
-/// Pass `ICHIRAN_NO_DETAIL`, NULL, and zero on the first call. After a missing
-/// result, pass exactly the returned entry index and compressed range. Decode
-/// and retry are atomic with respect to other calls sharing these handles.
+/// Pass `ICHIRAN_DICTIONARY_NONE`, `ICHIRAN_NO_DICTIONARY`, NULL, and zero on
+/// the first call. After a missing result, pass exactly the returned store,
+/// entry index, and compressed range. Decode and retry are atomic.
 ///
 /// # Safety
 ///
@@ -387,7 +473,10 @@ pub unsafe extern "C" fn ichiran_kernel_legacy_begin_utf16(
 pub unsafe extern "C" fn ichiran_kernel_legacy_step(
     kernel: *const IchiranKernel,
     operation: *const IchiranLegacyOperation,
-    details: *const IchiranDetailStore,
+    lexicon: *const IchiranLexiconStore,
+    locale: *const IchiranLocaleStore,
+    fallback: *const IchiranLocaleStore,
+    supplied_store: u32,
     supplied_entry_index: u32,
     compressed: *const u8,
     compressed_bytes: usize,
@@ -395,7 +484,9 @@ pub unsafe extern "C" fn ichiran_kernel_legacy_step(
     step_boundary(|| {
         let kernel = unsafe { handle(kernel, "kernel")? };
         let operation = unsafe { handle(operation, "legacy operation")? };
-        let details = unsafe { handle(details, "detail store")? };
+        let lexicon = unsafe { handle(lexicon, "lexicon store")? };
+        let locale = unsafe { handle(locale, "locale store")? };
+        let fallback = unsafe { handle(fallback, "fallback locale store")? };
         let mut operation = lock(&operation.inner, "legacy operation")?;
         if operation.completed {
             return Err(KernelError::new(
@@ -404,58 +495,77 @@ pub unsafe extern "C" fn ichiran_kernel_legacy_step(
             ));
         }
         if compressed_bytes == 0 {
-            if supplied_entry_index != NO_DETAIL || !compressed.is_null() {
+            if supplied_store != DICTIONARY_NONE
+                || supplied_entry_index != NO_DICTIONARY
+                || !compressed.is_null()
+            {
                 return Err(KernelError::new(
                     ErrorCode::InvalidInput,
-                    "an empty legacy step must not supply a detail entry",
+                    "an empty legacy step must not supply a dictionary entry",
                 ));
             }
-            if let Some((entry_index, range)) = operation.pending {
-                return Ok(Step::Missing { entry_index, range });
+            if let Some((store, entry_index, range)) = operation.pending {
+                return Ok(Step::Missing {
+                    store,
+                    entry_index,
+                    range,
+                });
             }
         } else {
-            let (entry_index, _) = operation.pending.ok_or_else(|| {
+            let (store, entry_index, _) = operation.pending.ok_or_else(|| {
                 KernelError::new(
                     ErrorCode::InvalidInput,
-                    "legacy step supplied a detail entry before one was requested",
+                    "legacy step supplied a dictionary entry before one was requested",
                 )
             })?;
-            if supplied_entry_index != entry_index || supplied_entry_index == NO_DETAIL {
+            if supplied_store != store_code(store)
+                || supplied_entry_index != entry_index
+                || supplied_entry_index == NO_DICTIONARY
+            {
                 return Err(KernelError::new(
                     ErrorCode::InvalidInput,
-                    "legacy step supplied the wrong detail entry",
+                    "legacy step supplied the wrong dictionary entry",
                 ));
             }
         }
 
-        // This is the only multi-owner lock path. The fixed order is operation
-        // -> kernel -> details, and supplied decode immediately precedes retry.
         let mut analyzer = lock(&kernel.inner, "kernel")?;
-        let detail_store = lock(&details.inner, "detail store")?;
-        if compressed_bytes != 0 {
-            detail_store.entry_from_compressed(
-                supplied_entry_index,
-                input_bytes(compressed, compressed_bytes, "compressed detail block")?,
-            )?;
-            operation.pending = None;
-        }
-        let LegacyOperationState {
-            analysis,
-            session,
-            method,
-            pending,
-            completed,
-        } = &mut *operation;
-        match analyzer.serialize_legacy_detailed_json(session, analysis, &detail_store, *method)? {
-            LegacyDetailStep::Ready(value) => {
-                *completed = true;
-                Ok(Step::Ready(value))
+        with_dictionary_stores(lexicon, locale, fallback, |stores| {
+            if compressed_bytes != 0 {
+                hydrate_store(
+                    stores,
+                    operation.pending.expect("validated pending dictionary").0,
+                    supplied_entry_index,
+                    input_bytes(compressed, compressed_bytes, "compressed dictionary block")?,
+                )?;
+                operation.pending = None;
             }
-            LegacyDetailStep::Missing { entry_index, range } => {
-                *pending = Some((entry_index, range));
-                Ok(Step::Missing { entry_index, range })
+            let LegacyOperationState {
+                analysis,
+                session,
+                method,
+                pending,
+                completed,
+            } = &mut *operation;
+            match analyzer.serialize_legacy_detailed_json(session, analysis, stores, *method)? {
+                LegacyDetailStep::Ready(value) => {
+                    *completed = true;
+                    Ok(Step::Ready(value))
+                }
+                LegacyDetailStep::Missing {
+                    store,
+                    entry_index,
+                    range,
+                } => {
+                    *pending = Some((store, entry_index, range));
+                    Ok(Step::Missing {
+                        store,
+                        entry_index,
+                        range,
+                    })
+                }
             }
-        }
+        })
     })
 }
 
@@ -514,7 +624,7 @@ pub unsafe extern "C" fn ichiran_kernel_token_details_begin_utf16(
 }
 
 #[unsafe(no_mangle)]
-/// Advances one canonical token-details operation by at most one detail read.
+/// Advances one canonical token-details operation by at most one dictionary block read.
 ///
 /// # Safety
 ///
@@ -523,7 +633,10 @@ pub unsafe extern "C" fn ichiran_kernel_token_details_begin_utf16(
 pub unsafe extern "C" fn ichiran_kernel_token_details_step(
     kernel: *const IchiranKernel,
     operation: *const IchiranTokenDetailsOperation,
-    details: *const IchiranDetailStore,
+    lexicon: *const IchiranLexiconStore,
+    locale: *const IchiranLocaleStore,
+    fallback: *const IchiranLocaleStore,
+    supplied_store: u32,
     supplied_entry_index: u32,
     compressed: *const u8,
     compressed_bytes: usize,
@@ -531,7 +644,9 @@ pub unsafe extern "C" fn ichiran_kernel_token_details_step(
     step_boundary(|| {
         let kernel = unsafe { handle(kernel, "kernel")? };
         let operation = unsafe { handle(operation, "token-details operation")? };
-        let details = unsafe { handle(details, "detail store")? };
+        let lexicon = unsafe { handle(lexicon, "lexicon store")? };
+        let locale = unsafe { handle(locale, "locale store")? };
+        let fallback = unsafe { handle(fallback, "fallback locale store")? };
         let mut operation = lock(&operation.inner, "token-details operation")?;
         if operation.completed {
             return Err(KernelError::new(
@@ -540,23 +655,33 @@ pub unsafe extern "C" fn ichiran_kernel_token_details_step(
             ));
         }
         if compressed_bytes == 0 {
-            if supplied_entry_index != NO_DETAIL || !compressed.is_null() {
+            if supplied_store != DICTIONARY_NONE
+                || supplied_entry_index != NO_DICTIONARY
+                || !compressed.is_null()
+            {
                 return Err(KernelError::new(
                     ErrorCode::InvalidInput,
-                    "an empty token-details step must not supply a detail entry",
+                    "an empty token-details step must not supply a dictionary entry",
                 ));
             }
-            if let Some((entry_index, range)) = operation.pending {
-                return Ok(Step::Missing { entry_index, range });
+            if let Some((store, entry_index, range)) = operation.pending {
+                return Ok(Step::Missing {
+                    store,
+                    entry_index,
+                    range,
+                });
             }
         } else {
-            let (entry_index, _) = operation.pending.ok_or_else(|| {
+            let (store, entry_index, _) = operation.pending.ok_or_else(|| {
                 KernelError::new(
                     ErrorCode::InvalidInput,
                     "token-details step supplied an entry before one was requested",
                 )
             })?;
-            if supplied_entry_index != entry_index || supplied_entry_index == NO_DETAIL {
+            if supplied_store != store_code(store)
+                || supplied_entry_index != entry_index
+                || supplied_entry_index == NO_DICTIONARY
+            {
                 return Err(KernelError::new(
                     ErrorCode::InvalidInput,
                     "token-details step supplied the wrong detail entry",
@@ -565,39 +690,105 @@ pub unsafe extern "C" fn ichiran_kernel_token_details_step(
         }
 
         let mut analyzer = lock(&kernel.inner, "kernel")?;
-        let detail_store = lock(&details.inner, "detail store")?;
-        if compressed_bytes != 0 {
-            detail_store.entry_from_compressed(
-                supplied_entry_index,
-                input_bytes(compressed, compressed_bytes, "compressed detail block")?,
-            )?;
-            operation.pending = None;
-        }
-        let TokenDetailsOperationState {
-            analysis,
-            session,
-            path_index,
-            token_index,
-            pending,
-            completed,
-        } = &mut *operation;
-        match analyzer.token_details_json(
-            session,
-            analysis,
-            *path_index,
-            *token_index,
-            &detail_store,
-        )? {
-            TokenDetailsStep::Ready(value) => {
-                *completed = true;
-                Ok(Step::Ready(value))
+        with_dictionary_stores(lexicon, locale, fallback, |stores| {
+            if compressed_bytes != 0 {
+                hydrate_store(
+                    stores,
+                    operation.pending.expect("validated pending dictionary").0,
+                    supplied_entry_index,
+                    input_bytes(compressed, compressed_bytes, "compressed dictionary block")?,
+                )?;
+                operation.pending = None;
             }
-            TokenDetailsStep::Missing { entry_index, range } => {
-                *pending = Some((entry_index, range));
-                Ok(Step::Missing { entry_index, range })
+            let TokenDetailsOperationState {
+                analysis,
+                session,
+                path_index,
+                token_index,
+                pending,
+                completed,
+            } = &mut *operation;
+            match analyzer.token_details_json(
+                session,
+                analysis,
+                *path_index,
+                *token_index,
+                stores,
+            )? {
+                TokenDetailsStep::Ready(value) => {
+                    *completed = true;
+                    Ok(Step::Ready(value))
+                }
+                TokenDetailsStep::Missing {
+                    store,
+                    entry_index,
+                    range,
+                } => {
+                    *pending = Some((store, entry_index, range));
+                    Ok(Step::Missing {
+                        store,
+                        entry_index,
+                        range,
+                    })
+                }
             }
-        }
+        })
     })
+}
+
+fn with_dictionary_stores<T>(
+    lexicon: &IchiranLexiconStore,
+    locale: &IchiranLocaleStore,
+    fallback: &IchiranLocaleStore,
+    operation: impl FnOnce(&DictionaryStores<'_>) -> Result<T>,
+) -> Result<T> {
+    let same_locale = ptr::eq(locale, fallback);
+    let lexicon = lock(&lexicon.inner, "lexicon store")?;
+    let locale = lock(&locale.inner, "locale store")?;
+    if same_locale {
+        operation(&DictionaryStores {
+            lexicon: &lexicon,
+            locale: &locale,
+            fallback: &locale,
+        })
+    } else {
+        let fallback = lock(&fallback.inner, "fallback locale store")?;
+        operation(&DictionaryStores {
+            lexicon: &lexicon,
+            locale: &locale,
+            fallback: &fallback,
+        })
+    }
+}
+
+fn hydrate_store(
+    stores: &DictionaryStores<'_>,
+    store: DictionaryStoreKind,
+    entry_index: u32,
+    compressed: &[u8],
+) -> Result<()> {
+    match store {
+        DictionaryStoreKind::Lexicon => stores
+            .lexicon
+            .entry_from_compressed(entry_index, compressed)
+            .map(|_| ()),
+        DictionaryStoreKind::Locale => stores
+            .locale
+            .entry_from_compressed(entry_index, compressed)
+            .map(|_| ()),
+        DictionaryStoreKind::Fallback => stores
+            .fallback
+            .entry_from_compressed(entry_index, compressed)
+            .map(|_| ()),
+    }
+}
+
+fn store_code(store: DictionaryStoreKind) -> u32 {
+    match store {
+        DictionaryStoreKind::Lexicon => 1,
+        DictionaryStoreKind::Locale => 2,
+        DictionaryStoreKind::Fallback => 3,
+    }
 }
 
 #[unsafe(no_mangle)]
@@ -616,16 +807,23 @@ pub unsafe extern "C" fn ichiran_kernel_free(kernel: *mut IchiranKernel) {
 }
 
 #[unsafe(no_mangle)]
-/// Releases one detail-store handle.
+/// Releases one lexicon-store handle.
 ///
 /// # Safety
 ///
-/// `details` must be null or a live handle returned by
-/// `ichiran_detail_store_open`. A non-null handle must be passed exactly once
+/// `lexicon` must be null or a live handle returned by
+/// `ichiran_lexicon_store_open`. A non-null handle must be passed exactly once
 /// and not used concurrently.
-pub unsafe extern "C" fn ichiran_detail_store_free(details: *mut IchiranDetailStore) {
-    if !details.is_null() {
-        unsafe { drop(Box::from_raw(details)) };
+pub unsafe extern "C" fn ichiran_lexicon_store_free(lexicon: *mut IchiranLexiconStore) {
+    if !lexicon.is_null() {
+        unsafe { drop(Box::from_raw(lexicon)) };
+    }
+}
+
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn ichiran_locale_store_free(locale: *mut IchiranLocaleStore) {
+    if !locale.is_null() {
+        unsafe { drop(Box::from_raw(locale)) };
     }
 }
 
@@ -695,8 +893,9 @@ fn boundary(operation: impl FnOnce() -> Result<Vec<u8>>) -> IchiranResult {
 enum Step {
     Ready(Vec<u8>),
     Missing {
+        store: DictionaryStoreKind,
         entry_index: u32,
-        range: DetailRange,
+        range: DictionaryRange,
     },
 }
 
@@ -705,13 +904,19 @@ fn step_boundary(operation: impl FnOnce() -> Result<Step>) -> IchiranStepResult 
         Ok(Ok(Step::Ready(bytes))) => IchiranStepResult {
             status: 0,
             state: 1,
-            entry_index: NO_DETAIL,
-            range: IchiranDetailRange::default(),
+            store: 0,
+            entry_index: NO_DICTIONARY,
+            range: IchiranDictionaryRange::default(),
             buffer: IchiranBuffer::from_vec(bytes),
         },
-        Ok(Ok(Step::Missing { entry_index, range })) => IchiranStepResult {
+        Ok(Ok(Step::Missing {
+            store,
+            entry_index,
+            range,
+        })) => IchiranStepResult {
             status: 0,
             state: 2,
+            store: store_code(store),
             entry_index,
             range: range.into(),
             buffer: IchiranBuffer::from_vec(Vec::new()),
@@ -729,8 +934,9 @@ fn step_error(error: KernelError) -> IchiranStepResult {
     IchiranStepResult {
         status: result.status,
         state: 0,
-        entry_index: NO_DETAIL,
-        range: IchiranDetailRange::default(),
+        store: 0,
+        entry_index: NO_DICTIONARY,
+        range: IchiranDictionaryRange::default(),
         buffer: result.buffer,
     }
 }

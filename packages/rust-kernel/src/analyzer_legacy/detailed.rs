@@ -11,7 +11,9 @@ use super::{
     LegacyPath, LegacySequence, LegacyToken, LegacyWordFacts, token_romanized,
 };
 use crate::annotations::AnalyzerAnnotations;
-use crate::details::{DetailEntry, DetailRange, DetailStore};
+use crate::dictionary::{
+    DictionaryEntry, DictionaryRange, DictionaryStoreKind, DictionaryStores, localize_entry,
+};
 use crate::dto::{
     AnalysisAlternative, AnalysisChunk, AnalysisComponent, AnalysisResult, AnalysisRoot,
     AnalysisToken, LegacyConjugationSelection, LegacyPresentationFacts, LegacySemanticMember,
@@ -34,8 +36,9 @@ pub(crate) struct LegacyContext<'a> {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub(crate) struct LegacyDetailRequest {
+    pub store: DictionaryStoreKind,
     pub entry_index: u32,
-    pub range: DetailRange,
+    pub range: DictionaryRange,
 }
 
 #[derive(Clone, Debug, PartialEq)]
@@ -52,7 +55,7 @@ pub(crate) enum TokenDetailsResult {
 
 #[derive(Default)]
 pub(crate) struct LegacyDetailedSession {
-    entries: HashMap<usize, DetailEntry>,
+    entries: HashMap<usize, DictionaryEntry>,
 }
 
 pub(super) enum AttemptError {
@@ -72,11 +75,11 @@ impl LegacyDetailedSession {
     pub fn serialize(
         &mut self,
         result: &AnalysisResult,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
         options: &LegacyOptions<'_>,
     ) -> Result<LegacyDetailedResult> {
-        match self.try_serialize(result, details, context, options) {
+        match self.try_serialize(result, stores, context, options) {
             Ok(value) => Ok(LegacyDetailedResult::Ready(value)),
             Err(AttemptError::Missing(request)) => Ok(LegacyDetailedResult::MissingDetail(request)),
             Err(AttemptError::Kernel(error)) => Err(error),
@@ -86,7 +89,7 @@ impl LegacyDetailedSession {
     fn try_serialize(
         &mut self,
         result: &AnalysisResult,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
         options: &LegacyOptions<'_>,
     ) -> Attempt<LegacyDetailedOutput> {
@@ -106,7 +109,7 @@ impl LegacyDetailedSession {
                             );
                             words.push(LegacyToken(
                                 romanized,
-                                self.detailed_token(token, details, context)?,
+                                self.detailed_token(token, stores, context)?,
                                 property,
                             ));
                         }
@@ -124,10 +127,10 @@ impl LegacyDetailedSession {
         result: &AnalysisResult,
         path_index: usize,
         token_index: usize,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Result<TokenDetailsResult> {
-        match self.try_token_details(result, path_index, token_index, details, context) {
+        match self.try_token_details(result, path_index, token_index, stores, context) {
             Ok(value) => Ok(TokenDetailsResult::Ready(value)),
             Err(AttemptError::Missing(request)) => Ok(TokenDetailsResult::MissingDetail(request)),
             Err(AttemptError::Kernel(error)) => Err(error),
@@ -139,7 +142,7 @@ impl LegacyDetailedSession {
         result: &AnalysisResult,
         path_index: usize,
         token_index: usize,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<TokenDetails> {
         let token = result
@@ -152,13 +155,13 @@ impl LegacyDetailedSession {
                     "analysis token was not found",
                 ))
             })?;
-        let primary = self.detailed_primary_token(token, details, context)?;
+        let primary = self.detailed_primary_token(token, stores, context)?;
         let mut output = token_details(primary, token.entity)?;
         for alternative in &token.alternatives {
             if token.candidate_id == Some(alternative.candidate_id) {
                 continue;
             }
-            let value = self.detailed_alternative(alternative, details, context)?;
+            let value = self.detailed_alternative(alternative, stores, context)?;
             output.alternatives.push(token_details(value, false)?);
         }
         Ok(output)
@@ -167,8 +170,8 @@ impl LegacyDetailedSession {
     pub(super) fn entry<'a>(
         &'a mut self,
         entry_index: Option<usize>,
-        details: &DetailStore,
-    ) -> Attempt<Option<&'a DetailEntry>> {
+        stores: &DictionaryStores<'_>,
+    ) -> Attempt<Option<&'a DictionaryEntry>> {
         let Some(index) = entry_index else {
             return Ok(None);
         };
@@ -181,12 +184,28 @@ impl LegacyDetailedSession {
                         "legacy detail entry exceeds the detail format limit",
                     )
                 })?;
-                let Some(entry) = details.entry_cached(wire_index)? else {
+                let Some(lexicon) = stores.lexicon.entry_cached(wire_index)? else {
                     return Err(AttemptError::Missing(LegacyDetailRequest {
+                        store: DictionaryStoreKind::Lexicon,
                         entry_index: wire_index,
-                        range: details.range(wire_index)?,
+                        range: stores.lexicon.range(wire_index)?,
                     }));
                 };
+                let Some(locale) = stores.locale.entry_cached(wire_index)? else {
+                    return Err(AttemptError::Missing(LegacyDetailRequest {
+                        store: DictionaryStoreKind::Locale,
+                        entry_index: wire_index,
+                        range: stores.locale.range(wire_index)?,
+                    }));
+                };
+                let Some(fallback) = stores.fallback.entry_cached(wire_index)? else {
+                    return Err(AttemptError::Missing(LegacyDetailRequest {
+                        store: DictionaryStoreKind::Fallback,
+                        entry_index: wire_index,
+                        range: stores.fallback.range(wire_index)?,
+                    }));
+                };
+                let entry = localize_entry(&lexicon, &locale, Some(&fallback))?;
                 Ok(Some(slot.insert(entry)))
             }
         }
@@ -195,23 +214,23 @@ impl LegacyDetailedSession {
     fn detailed_token(
         &mut self,
         token: &AnalysisToken,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<LegacyGloss> {
         if token.alternatives.len() > 1 {
             let mut alternatives = Vec::new();
             for alternative in &token.alternatives {
-                alternatives.push(self.detailed_alternative(alternative, details, context)?);
+                alternatives.push(self.detailed_alternative(alternative, stores, context)?);
             }
             return Ok(LegacyGloss::alternative(alternatives));
         }
-        self.detailed_primary_token(token, details, context)
+        self.detailed_primary_token(token, stores, context)
     }
 
     fn detailed_primary_token(
         &mut self,
         token: &AnalysisToken,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<LegacyGloss> {
         let route = if token.entity && token.root.is_none() {
@@ -239,7 +258,7 @@ impl LegacyDetailedSession {
                 component: false,
                 facts: token.legacy.as_ref(),
             },
-            details,
+            stores,
             context,
         )
     }
@@ -247,7 +266,7 @@ impl LegacyDetailedSession {
     fn detailed_alternative(
         &mut self,
         alternative: &AnalysisAlternative,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<LegacyGloss> {
         self.detailed_word(
@@ -266,7 +285,7 @@ impl LegacyDetailedSession {
                 component: false,
                 facts: alternative.legacy.as_ref(),
             },
-            details,
+            stores,
             context,
         )
     }
@@ -274,7 +293,7 @@ impl LegacyDetailedSession {
     fn detailed_component(
         &mut self,
         component: &AnalysisComponent,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<LegacyGloss> {
         self.detailed_word(
@@ -293,7 +312,7 @@ impl LegacyDetailedSession {
                 component: true,
                 facts: component.legacy.as_ref(),
             },
-            details,
+            stores,
             context,
         )
     }
@@ -301,7 +320,7 @@ impl LegacyDetailedSession {
     fn detailed_word(
         &mut self,
         word: DetailWord<'_>,
-        details: &DetailStore,
+        stores: &DictionaryStores<'_>,
         context: &mut LegacyContext<'_>,
     ) -> Attempt<LegacyGloss> {
         let root_seq = word.root.map(|root| root.seq);
@@ -327,6 +346,7 @@ impl LegacyDetailedSession {
             components: None,
             seq: None,
             suffix: None,
+            suffix_id: None,
             gloss: None,
             counter: None,
             conj: None,
@@ -356,7 +376,7 @@ impl LegacyDetailedSession {
             );
             let mut components = Vec::new();
             for component in word.components {
-                components.push(self.detailed_component(component, details, context)?);
+                components.push(self.detailed_component(component, stores, context)?);
             }
             output.components = Some(components);
             return Ok(output);
@@ -383,7 +403,7 @@ impl LegacyDetailedSession {
             || std::slice::from_ref(&fallback_member),
             |facts| facts.semantic_members.as_slice(),
         );
-        let entry = self.entry(word.entry_index, details)?.cloned();
+        let entry = self.entry(word.entry_index, stores)?.cloned();
         if let Some(seq) = root_seq {
             let has_direct = members.iter().any(|member| member.inflection.is_empty());
             let mut semantic_seqs = if let Some(facts) = word.facts {
@@ -474,6 +494,16 @@ impl LegacyDetailedSession {
             })
             .flatten();
         output.suffix = suffix.map(str::to_owned);
+        output.suffix_id = word
+            .suffix
+            .then(|| {
+                suffix_class
+                    .as_deref()
+                    .and_then(descriptions::suffix_id)
+                    .or_else(|| root_seq.and_then(|seq| descriptions::suffix_id(&seq.to_string())))
+            })
+            .flatten()
+            .map(str::to_owned);
         if output.suffix.is_none()
             && word.inflection.is_empty()
             && word.facts.is_none_or(|facts| {
@@ -487,7 +517,7 @@ impl LegacyDetailedSession {
             return Ok(output);
         }
         output.conj = Some(conjugation_forest(
-            members, self, details, context, selection, word.route,
+            members, self, stores, context, selection, word.route,
         )?);
         if word.entity
             && output

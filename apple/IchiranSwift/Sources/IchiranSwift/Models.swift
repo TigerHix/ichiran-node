@@ -59,19 +59,30 @@ public struct IchiranTokenDetailsOptions: Codable, Sendable, Equatable {
   public var limit: Int
   public var entities: [IchiranEntityHint]
   public var normalizePunctuation: Bool
+  public var locale: String
 
   public init(
     pathIndex: Int,
     tokenIndex: Int,
     limit: Int = 5,
     entities: [IchiranEntityHint] = [],
-    normalizePunctuation: Bool = false
+    normalizePunctuation: Bool = false,
+    locale: String = "en"
   ) {
     self.pathIndex = pathIndex
     self.tokenIndex = tokenIndex
     self.limit = limit
     self.entities = entities
     self.normalizePunctuation = normalizePunctuation
+    self.locale = locale
+  }
+}
+
+public struct IchiranDictionaryEntryOptions: Codable, Sendable, Equatable {
+  public var locale: String
+
+  public init(locale: String = "en") {
+    self.locale = locale
   }
 }
 
@@ -237,6 +248,7 @@ public struct IchiranAnalysisResult: Codable, Sendable, Equatable {
 
 public struct IchiranTokenMeaning: Codable, Sendable, Equatable {
   public let gloss: String
+  /// Unique POS codes in stable canonical order; source order has no semantic meaning.
   public let pos: [String]
   public let fields: [String]
   public let info: String?
@@ -266,8 +278,13 @@ public struct IchiranTokenCounter: Codable, Sendable, Equatable {
   public let ordinal: Bool
 }
 
+public enum IchiranTokenEntityKind: String, Codable, Sendable, Equatable {
+  case properNoun = "proper-noun"
+}
+
 /// Canonical, context-aware presentation for one selected analysis token.
-/// Every semantic field is produced by Rust and should be rendered directly.
+/// Dictionary glosses are localized by the selected pack. Semantic IDs and flags
+/// must be rendered through the host application's independent UI locale catalog.
 public struct IchiranTokenDetails: Codable, Sendable, Equatable {
   public let text: String
   public let reading: String
@@ -275,9 +292,9 @@ public struct IchiranTokenDetails: Codable, Sendable, Equatable {
   public let components: [IchiranTokenDetails]
   public let conjugations: [IchiranTokenConjugation]
   public let alternatives: [IchiranTokenDetails]
-  public let suffix: String?
+  public let suffixId: String?
   public let counter: IchiranTokenCounter?
-  public let entity: Bool
+  public let entityKind: IchiranTokenEntityKind?
 }
 
 public enum IchiranDictionaryPropertyTag: String, Codable, Sendable {

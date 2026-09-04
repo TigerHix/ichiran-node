@@ -5,6 +5,7 @@ import type {
   AnalysisToken,
   AnalyzerErrorCode,
   DictionaryEntry,
+  DictionaryEntryOptions,
   RomanizeOptions,
   TokenDetails,
   TokenDetailsOptions
@@ -22,6 +23,7 @@ export type {
   AnalysisResult,
   AnalysisToken,
   DictionaryEntry,
+  DictionaryEntryOptions,
   RomanizeOptions,
   TokenDetails,
   TokenDetailsOptions
@@ -97,7 +99,12 @@ export type WorkerRequest =
       readonly text: string;
       readonly options: TokenDetailsOptions;
     }
-  | { readonly id: number; readonly op: 'entry'; readonly entryIndex: number };
+  | {
+      readonly id: number;
+      readonly op: 'entry';
+      readonly entryIndex: number;
+      readonly options?: DictionaryEntryOptions;
+    };
 
 export type WorkerResultByOperation = {
   readonly 'expect-release': PackStatus;

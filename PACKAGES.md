@@ -11,6 +11,7 @@ remain outside the runtime and normal source-compiler dependency graphs. See
 |---|---|
 | `ichiran-kernel` | Canonical packed readers and analyzer semantics for WASM and the native C ABI |
 | `@ichiran/core` | Browser-safe `Analyzer` facade, public result model, and explicit release/compiler/qualification subpaths |
+| `@ichiran/presentation` | Small validated `en`/`zh-Hans` catalogs for analyzer terminology and UI copy, independent of dictionary gloss locale |
 | `@ichiran/node` | The single `openAnalyzer` filesystem loader with manifest verification and gzip decoding |
 | `@ichiran/cli` | Explicit `ichiran analyze`, `romanize`, and `entry` commands |
 | `@ichiran/api` | Analyzer-only Node HTTP server over `@ichiran/node` |
@@ -19,7 +20,8 @@ remain outside the runtime and normal source-compiler dependency graphs. See
 Runtime dependencies are intentionally direct:
 
 ```text
-browser-demo ----------> core facade ----------> Rust WASM
+browser-demo ----------> presentation catalogs
+       |---------------> core facade ----------> Rust WASM
 node ------------------> core facade ----------> Rust WASM
 cli -------------------> node
 api -------------------> node
@@ -33,7 +35,7 @@ the normal entry point and is available only as `@ichiran/core/qualification`.
 
 | Package | Ownership |
 |---|---|
-| `@ichiran/data` | Node-only deterministic source compiler, pack-v1 encoders, and frozen migration-authoring utilities |
+| `@ichiran/data` | Node-only deterministic source compiler, release-format-v2 lexicon/locale encoders, and frozen migration-authoring utilities |
 | `@ichiran/reference-postgres` | Private frozen PostgreSQL analyzer used only by transition qualification and migration maintenance |
 | `@ichiran/testing` | PostgreSQL-reference test setup |
 
@@ -57,16 +59,18 @@ confuse it with analyzer-internal suffix handling, filters, penalties, or synerg
 
 ## Data release
 
-The compiler emits four files:
+The compiler emits six files for the current English and Simplified Chinese release:
 
 ```text
 manifest.json
 hot.bin.gz
-details.bin.gz
+lexicon.bin.gz
+gloss.en.bin.gz
+gloss.zh-Hans.bin.gz
 stats.json
 ```
 
-The two compressed data files are release artifacts, not source-controlled package
+The compressed data files are release artifacts, not source-controlled package
 contents. Browser installation persists their verified decoded forms in OPFS. Node
 loads and verifies the same release through `ICHIRAN_PACK_DIR`.
 
@@ -81,18 +85,14 @@ bun test
 # Direct source release, isolation proof, and cross-kernel qualification
 bun run source:release -- baseline --out /absolute/path/to/release --pack-version <version>
 bun run source:release:isolated -- baseline --out /absolute/path/to/isolated-release --pack-version <version>
-bun run source:attestation -- --report data/source-compiler-parity-report.json --release /absolute/path/to/release
 bun run qualify:rust-same-pack -- /absolute/path/to/release
 bun run qualify:native-same-pack -- /absolute/path/to/release
 bun run qualify:source-hosts -- /absolute/path/to/release
 
-# Frozen compiler/reference maintenance
+# Frozen compiler/reference and format-1 evidence maintenance
 bun run build:compiler
 bun run typecheck:compiler
-
-# Release
-bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version>
-bun run alpha:release:verify -- --out dist/browser-alpha
+bun run source:attestation -- --report data/source-compiler-parity-report.json --release /absolute/path/to/format-1-release
 
 # Browser demo
 bun run alpha:demo:stage

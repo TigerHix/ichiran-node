@@ -4,6 +4,7 @@ import type {
   AnalyzerPackManifest,
   AnalyzerClientErrorCode,
   DictionaryEntry,
+  DictionaryEntryOptions,
   InstallPhase,
   PackStatus,
   RomanizeOptions,
@@ -140,8 +141,10 @@ export class AnalyzerClient {
     return this.#request({ op: 'details', text, options });
   }
 
-  entry(entryIndex: number): Promise<DictionaryEntry> {
-    return this.#request({ op: 'entry', entryIndex });
+  entry(entryIndex: number, options?: DictionaryEntryOptions): Promise<DictionaryEntry> {
+    return options
+      ? this.#request({ op: 'entry', entryIndex, options })
+      : this.#request({ op: 'entry', entryIndex });
   }
 
   romanize(text: string, options?: RomanizeOptions): Promise<string> {

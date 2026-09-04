@@ -1,5 +1,8 @@
 # Edge-native analyzer milestone
 
+> Historical pack-v1 milestone record. The current multilingual pack-v2 contract is
+> defined in `docs/MULTILINGUAL-DICTIONARY-ARCHITECTURE.md`.
+
 Status: TypeScript alpha implementation complete for the pinned `ichiran-260118`
 analyzer. Generated release and browser-benchmark evidence stays outside Git and is
 reproduced by the qualification commands; physical-iPhone measurement remains

@@ -7,7 +7,7 @@ import ts from 'typescript';
 test('source release graph excludes migration-oracle modules', async () => {
   const script = [
     "Bun.plugin({name:'block-oracles',setup(builder){",
-    "builder.onResolve({filter:/(?:browser-pack\\/(?:analyzer-support|analyzer-generated|details|morphology-compiler|root-payload)-oracle|@ichiran\\/reference-postgres|(^|\\/)postgres$)/},",
+    "builder.onResolve({filter:/(?:browser-pack\\/(?:analyzer-support|analyzer-generated|morphology-compiler|root-payload)-oracle|@ichiran\\/reference-postgres|(^|\\/)postgres$)/},",
     "input=>{throw new Error('source release loaded '+input.path)})}});",
     "await import('./packages/data/src/index.ts?oracle-boundary=1');",
     "console.log('source-release-oracle-boundary-ok');"

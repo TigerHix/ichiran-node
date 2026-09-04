@@ -1,7 +1,8 @@
 import type {
-  DetailEntrySource,
-  DetailPropertySource
-} from '../browser-pack/details.js';
+  LexiconEntrySource,
+  LexiconPropertySource
+} from '../browser-pack/lexicon.js';
+import type { LocaleGlossEntrySource } from '../browser-pack/locale-gloss.js';
 import {
   compareRootPayloadText,
   isRootPayloadKanaSurface,
@@ -11,7 +12,8 @@ import {
 } from '../browser-pack/root-payload.js';
 import type {
   CanonicalEntry,
-  CanonicalSense
+  CanonicalSense,
+  CanonicalSenseProperty
 } from './model.js';
 
 const ARCHIVED = new Set(['arch', 'obsc', 'rare']);
@@ -121,18 +123,27 @@ export function canonicalRootPayloadSource(entries: readonly CanonicalEntry[]): 
   };
 }
 
-function detailProperties(sense: CanonicalSense): DetailPropertySource[] {
+function lexiconProperties(sense: CanonicalSense): LexiconPropertySource[] {
   return sense.properties
-    .map(property => ({ tag: property.tag, ord: property.ordinal, text: property.text, sourceOrder: property.sourceOrder }))
+    .filter((property): property is CanonicalSenseProperty & {
+      readonly tag: LexiconPropertySource['tag'];
+    } => property.tag !== 's_inf')
+    .map(property => ({
+      tag: property.tag,
+      ord: property.ordinal,
+      text: property.text,
+      sourceOrder: property.sourceOrder
+    }))
     .sort((left, right) =>
-      compareRootPayloadText(left.tag, right.tag) ||
-      left.ord - right.ord ||
-      left.sourceOrder.event - right.sourceOrder.event ||
-      left.sourceOrder.ordinal - right.sourceOrder.ordinal)
+      compareRootPayloadText(left.tag, right.tag)
+      || left.ord - right.ord
+      || left.sourceOrder.event - right.sourceOrder.event
+      || left.sourceOrder.ordinal - right.sourceOrder.ordinal)
     .map(({ sourceOrder: _sourceOrder, ...property }) => property);
 }
 
-export function canonicalDetailEntries(entries: readonly CanonicalEntry[]): DetailEntrySource[] {
+/** Project canonical Japanese structure without any natural-language definition text. */
+export function canonicalLexiconEntries(entries: readonly CanonicalEntry[]): LexiconEntrySource[] {
   return [...entries]
     .sort((left, right) => left.seq - right.seq)
     .map(entry => ({
@@ -152,8 +163,65 @@ export function canonicalDetailEntries(entries: readonly CanonicalEntry[]): Deta
       })),
       senses: entry.senses.map(sense => ({
         ord: sense.ordinal,
-        glosses: sense.glosses.map((text, ord) => ({ ord, text })),
-        properties: detailProperties(sense)
+        properties: lexiconProperties(sense)
       }))
     }));
+}
+
+/** JMdict_e supplies the English locale layer, including localized sense notes. */
+export function canonicalEnglishLocaleEntries(
+  entries: readonly CanonicalEntry[]
+): LocaleGlossEntrySource[] {
+  return [...entries]
+    .sort((left, right) => left.seq - right.seq)
+    .map(entry => ({
+      seq: entry.seq,
+      groups: entry.senses.map(sense => ({
+        targets: [sense.ordinal],
+        glosses: sense.glosses.map((text, ord) => ({ ord, text })),
+        info: sense.properties
+          .filter(property => property.tag === 's_inf')
+          .sort((left, right) =>
+            left.ordinal - right.ordinal
+            || left.sourceOrder.event - right.sourceOrder.event
+            || left.sourceOrder.ordinal - right.sourceOrder.ordinal)
+          .map(property => ({ ord: property.ordinal, text: property.text }))
+      }))
+    }));
+}
+
+/**
+ * Locale records use the release-local entry index, so require exact structural
+ * correspondence before a locale store is bound to the lexicon digest.
+ */
+export function assertLocaleGlossEntriesMatchLexicon(
+  lexicon: readonly LexiconEntrySource[],
+  locale: readonly LocaleGlossEntrySource[],
+  localeName: string
+): void {
+  if (locale.length !== lexicon.length) {
+    throw new Error(
+      `${localeName} locale has ${locale.length} entries; lexicon has ${lexicon.length}`
+    );
+  }
+  for (let entryIndex = 0; entryIndex < lexicon.length; entryIndex++) {
+    const lexicalEntry = lexicon[entryIndex]!;
+    const localeEntry = locale[entryIndex]!;
+    if (localeEntry.seq !== lexicalEntry.seq) {
+      throw new Error(
+        `${localeName} locale entry ${entryIndex} has sequence ${localeEntry.seq}; `
+        + `lexicon has ${lexicalEntry.seq}`
+      );
+    }
+    const senses = new Set(lexicalEntry.senses.map(sense => sense.ord));
+    for (const group of localeEntry.groups) {
+      for (const target of group.targets) {
+        if (!senses.has(target)) {
+          throw new Error(
+            `${localeName} locale entry ${localeEntry.seq} targets missing sense ${target}`
+          );
+        }
+      }
+    }
+  }
 }

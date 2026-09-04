@@ -178,6 +178,7 @@ function fallbackCases(
 async function rustDetailedBatch(
   repository: string,
   release: string,
+  lexiconSha256: string,
   requests: readonly BatchRequest[]
 ): Promise<unknown[]> {
   const child = spawn('cargo', [
@@ -185,7 +186,10 @@ async function rustDetailedBatch(
     '--manifest-path', join(repository, 'packages/rust-kernel/Cargo.toml'),
     '--bin', 'analyzer_detailed_batch', '--',
     join(release, 'hot.bin'),
-    join(release, 'details.bin')
+    join(release, 'lexicon.bin'),
+    join(release, 'gloss.en.bin'),
+    'en',
+    lexiconSha256
   ], {
     cwd: repository,
     stdio: ['pipe', 'pipe', 'pipe']
@@ -221,31 +225,43 @@ async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
   const release = resolve(process.argv[2] ?? join(repository, 'browser-alpha/release'));
   const fixturePath = join(repository, 'packages/rust-kernel/tests/fixtures/m3-fallback.json');
-  const [corpus, fixtureBytes, manifestBytes, hotStat, detailStat] = await Promise.all([
+  const [corpus, fixtureBytes, manifestBytes, hotStat, lexiconStat, englishStat] = await Promise.all([
     loadAnalyzerParityCorpus(repository),
     readFile(fixturePath),
     readFile(join(release, 'manifest.json')),
     stat(join(release, 'hot.bin')),
-    stat(join(release, 'details.bin'))
+    stat(join(release, 'lexicon.bin')),
+    stat(join(release, 'gloss.en.bin'))
   ]);
   const manifest = JSON.parse(manifestBytes.toString('utf8')) as {
     readonly formatVersion?: number;
     readonly hot?: { readonly installedBytes?: number; readonly installedSha256?: string };
-    readonly details?: { readonly installedBytes?: number; readonly installedSha256?: string };
+    readonly lexicon?: { readonly installedBytes?: number; readonly installedSha256?: string };
+    readonly locales?: Readonly<Record<string, {
+      readonly installedBytes?: number;
+      readonly installedSha256?: string;
+    }>>;
   };
   if (
-    manifest.formatVersion !== 1
+    manifest.formatVersion !== 2
     || manifest.hot?.installedBytes !== hotStat.size
-    || manifest.details?.installedBytes !== detailStat.size
+    || manifest.lexicon?.installedBytes !== lexiconStat.size
+    || manifest.locales?.en?.installedBytes !== englishStat.size
     || !manifest.hot.installedSha256
-    || !manifest.details.installedSha256
+    || !manifest.lexicon.installedSha256
+    || !manifest.locales.en.installedSha256
   ) throw new Error('release manifest does not identify the installed analyzer artifacts');
   const fallback = fallbackSuites(JSON.parse(fixtureBytes.toString('utf8')) as unknown);
   const cases = [...currentLispCases(corpus), ...fallbackCases(corpus, fallback)];
   if (cases.length !== 702) {
     throw new Error(`detailed corpus has ${cases.length} requests; expected 702`);
   }
-  const actual = await rustDetailedBatch(repository, release, cases.map(value => value.request));
+  const actual = await rustDetailedBatch(
+    repository,
+    release,
+    manifest.lexicon.installedSha256,
+    cases.map(value => value.request)
+  );
   const suites: Record<SuiteName, SuiteStats> = {
     cli: emptyStats(),
     hard: emptyStats(),
@@ -289,7 +305,7 @@ async function main(): Promise<void> {
 
   const exact = Object.values(suites).reduce((sum, stats) => sum + stats.exact, 0);
   const report = {
-    formatVersion: 1,
+    formatVersion: 2,
     artifacts: {
       manifest: { path: join(release, 'manifest.json'), sha256: sha256(manifestBytes) },
       hot: {
@@ -297,10 +313,15 @@ async function main(): Promise<void> {
         bytes: hotStat.size,
         manifestSha256: manifest.hot.installedSha256
       },
-      details: {
-        path: join(release, 'details.bin'),
-        bytes: detailStat.size,
-        manifestSha256: manifest.details.installedSha256
+      lexicon: {
+        path: join(release, 'lexicon.bin'),
+        bytes: lexiconStat.size,
+        manifestSha256: manifest.lexicon.installedSha256
+      },
+      english: {
+        path: join(release, 'gloss.en.bin'),
+        bytes: englishStat.size,
+        manifestSha256: manifest.locales.en.installedSha256
       },
       fallback: { path: fixturePath, sha256: sha256(fixtureBytes) }
     },

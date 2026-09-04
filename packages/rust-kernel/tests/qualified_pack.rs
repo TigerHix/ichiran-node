@@ -2,7 +2,7 @@ use std::fs::{self, File};
 use std::io::{Read, Seek, SeekFrom};
 use std::path::{Path, PathBuf};
 
-use ichiran_kernel::{DetailStore, ErrorCode, Kernel, Pack, Route};
+use ichiran_kernel::{ErrorCode, Kernel, LexiconStore, LocaleStore, Pack, Route};
 use serde::Deserialize;
 use serde_json::Value;
 use sha2::{Digest, Sha256};
@@ -189,27 +189,57 @@ fn generated_block_and_utf16_paths_are_real() {
 }
 
 #[test]
-#[ignore = "requires the digest-locked portable-core-260118-baseline release"]
-fn detail_index_is_lazy_and_fetches_one_random_access_block() {
-    let path = release().join("details.bin");
+#[ignore = "requires an installed multilingual source-compiler release"]
+fn dictionary_indices_are_lazy_and_locale_is_bound_to_lexicon() {
+    let directory = release();
+    let manifest: Value =
+        serde_json::from_slice(&fs::read(directory.join("manifest.json")).unwrap()).unwrap();
+    let digest_text = manifest["lexicon"]["installedSha256"].as_str().unwrap();
+    let mut digest = [0_u8; 32];
+    for (index, byte) in digest.iter_mut().enumerate() {
+        *byte = u8::from_str_radix(&digest_text[index * 2..index * 2 + 2], 16).unwrap();
+    }
+    let path = directory.join("lexicon.bin");
     let metadata = fs::metadata(&path).unwrap();
-    assert_eq!(metadata.len(), 13_555_874);
     let mut file = File::open(path).unwrap();
     let mut header = vec![0_u8; 96];
     file.read_exact(&mut header).unwrap();
-    let prefix_length = DetailStore::prefix_length(&header, metadata.len() as usize).unwrap();
+    let prefix_length = LexiconStore::prefix_length(&header, metadata.len() as usize).unwrap();
     let mut prefix = vec![0_u8; prefix_length];
     file.seek(SeekFrom::Start(0)).unwrap();
     file.read_exact(&mut prefix).unwrap();
-    let details = DetailStore::open(prefix, metadata.len() as usize).unwrap();
-    assert_eq!(details.resident_bytes(), 1_755_112);
-    let range = details.range(43_720).unwrap();
-    assert_eq!((range.offset, range.byte_length), (4_017_644, 24_333));
-    assert!(details.entry_cached(43_720).unwrap().is_none());
+    let lexicon = LexiconStore::open(prefix, metadata.len() as usize).unwrap();
+    let range = lexicon.range(0).unwrap();
+    assert!(lexicon.entry_cached(0).unwrap().is_none());
     let mut compressed = vec![0_u8; range.byte_length as usize];
     file.seek(SeekFrom::Start(range.offset as u64)).unwrap();
     file.read_exact(&mut compressed).unwrap();
-    let entry = details.entry_from_compressed(43_720, &compressed).unwrap();
-    assert_eq!(entry.seq, 1_467_640);
-    assert!(details.entry_cached(43_720).unwrap().is_some());
+    let entry = lexicon.entry_from_compressed(0, &compressed).unwrap();
+    assert!(lexicon.entry_cached(0).unwrap().is_some());
+
+    let locale_path = directory.join("gloss.zh-Hans.bin");
+    let mut locale_file = File::open(&locale_path).unwrap();
+    let locale_bytes = fs::metadata(&locale_path).unwrap().len() as usize;
+    let mut locale_prefix = vec![0_u8; 128];
+    locale_file.read_exact(&mut locale_prefix).unwrap();
+    let locale_prefix_length = LocaleStore::prefix_length(&locale_prefix, locale_bytes).unwrap();
+    locale_prefix.resize(locale_prefix_length, 0);
+    locale_file.seek(SeekFrom::Start(0)).unwrap();
+    locale_file.read_exact(&mut locale_prefix).unwrap();
+    let locale = LocaleStore::open(
+        locale_prefix,
+        locale_bytes,
+        &digest,
+        "zh-Hans",
+        lexicon.entry_count(),
+    )
+    .unwrap();
+    let locale_range = locale.range(0).unwrap();
+    let mut locale_compressed = vec![0_u8; locale_range.byte_length as usize];
+    locale_file
+        .seek(SeekFrom::Start(locale_range.offset as u64))
+        .unwrap();
+    locale_file.read_exact(&mut locale_compressed).unwrap();
+    let locale_entry = locale.entry_from_compressed(0, &locale_compressed).unwrap();
+    assert_eq!(locale_entry.seq, entry.seq);
 }

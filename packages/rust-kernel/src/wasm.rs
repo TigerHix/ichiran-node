@@ -4,8 +4,9 @@ use serde::{Deserialize, Serialize};
 
 use crate::analysis::LegacyWireDetailStep;
 use crate::{
-    AnalyzeOptions, DetailRange, DetailStore, EntityHint, ErrorCode, Kernel, KernelError,
-    LegacyDetailSession, RomanizationName, TokenDetailsSession, TokenDetailsStep,
+    AnalyzeOptions, DictionaryRange, DictionaryStoreKind, DictionaryStores, EntityHint, ErrorCode,
+    Kernel, KernelError, LegacyDetailSession, LexiconStore, LocaleStore, RomanizationName,
+    TokenDetailsSession, TokenDetailsStep,
 };
 
 #[wasm_bindgen]
@@ -139,8 +140,15 @@ impl WasmTokenDetailsOperation {
     pub fn token_details_step(
         &mut self,
         kernel: &mut WasmKernel,
-        details: &WasmDetailStore,
+        lexicon: &WasmLexiconStore,
+        locale: &WasmLocaleStore,
+        fallback: &WasmLocaleStore,
     ) -> std::result::Result<Vec<u8>, JsValue> {
+        let stores = DictionaryStores {
+            lexicon: &lexicon.inner,
+            locale: &locale.inner,
+            fallback: &fallback.inner,
+        };
         match kernel
             .inner
             .token_details_json(
@@ -148,7 +156,7 @@ impl WasmTokenDetailsOperation {
                 &self.analysis,
                 self.path_index,
                 self.token_index,
-                &details.inner,
+                &stores,
             )
             .map_err(js_error)?
         {
@@ -159,33 +167,43 @@ impl WasmTokenDetailsOperation {
                 envelope.push(b'}');
                 Ok(envelope)
             }
-            TokenDetailsStep::Missing { entry_index, range } => {
-                serde_json::to_vec(&WasmMissingDetail {
-                    state: "missing-detail",
-                    entry_index,
-                    range,
-                })
-                .map_err(|error| JsValue::from_str(&error.to_string()))
-            }
+            TokenDetailsStep::Missing {
+                store,
+                entry_index,
+                range,
+            } => serde_json::to_vec(&WasmMissingDetail {
+                state: "missing-dictionary",
+                store,
+                entry_index,
+                range,
+            })
+            .map_err(|error| JsValue::from_str(&error.to_string())),
         }
     }
 }
 
 #[wasm_bindgen]
 impl WasmLegacyOperation {
-    /// Returns a JSON envelope. `missing-detail` names the exact compressed
-    /// range the host must feed to `WasmDetailStore.entry_json` before retrying.
+    /// Returns a JSON envelope. `missing-dictionary` names the store and exact
+    /// compressed range the host must decode before retrying.
     pub fn legacy_step(
         &mut self,
         kernel: &mut WasmKernel,
-        details: &WasmDetailStore,
+        lexicon: &WasmLexiconStore,
+        locale: &WasmLocaleStore,
+        fallback: &WasmLocaleStore,
     ) -> std::result::Result<Vec<u8>, JsValue> {
+        let stores = DictionaryStores {
+            lexicon: &lexicon.inner,
+            locale: &locale.inner,
+            fallback: &fallback.inner,
+        };
         match kernel
             .inner
             .serialize_legacy_detailed_wire_json(
                 &mut self.session,
                 &self.analysis,
-                &details.inner,
+                &stores,
                 self.method,
             )
             .map_err(js_error)?
@@ -199,14 +217,17 @@ impl WasmLegacyOperation {
                 envelope.push(b'}');
                 Ok(envelope)
             }
-            LegacyWireDetailStep::Missing { entry_index, range } => {
-                serde_json::to_vec(&WasmMissingDetail {
-                    state: "missing-detail",
-                    entry_index,
-                    range,
-                })
-                .map_err(|error| JsValue::from_str(&error.to_string()))
-            }
+            LegacyWireDetailStep::Missing {
+                store,
+                entry_index,
+                range,
+            } => serde_json::to_vec(&WasmMissingDetail {
+                state: "missing-dictionary",
+                store,
+                entry_index,
+                range,
+            })
+            .map_err(|error| JsValue::from_str(&error.to_string())),
         }
     }
 }
@@ -231,8 +252,9 @@ struct WasmEntityHint {
 #[serde(rename_all = "camelCase")]
 struct WasmMissingDetail {
     state: &'static str,
+    store: DictionaryStoreKind,
     entry_index: u32,
-    range: DetailRange,
+    range: DictionaryRange,
 }
 
 fn parse_options(json: &[u8]) -> crate::Result<AnalyzeOptions> {
@@ -285,28 +307,94 @@ fn js_error(error: KernelError) -> JsValue {
 }
 
 #[wasm_bindgen]
-pub fn detail_prefix_length(header: &[u8], total_bytes: u32) -> std::result::Result<u32, JsValue> {
-    DetailStore::prefix_length(header, total_bytes as usize)
+pub fn lexicon_prefix_length(header: &[u8], total_bytes: u32) -> std::result::Result<u32, JsValue> {
+    LexiconStore::prefix_length(header, total_bytes as usize)
         .and_then(|length| {
             u32::try_from(length).map_err(|_| {
-                KernelError::new(crate::ErrorCode::OutOfRange, "detail prefix exceeds uint32")
+                KernelError::new(
+                    crate::ErrorCode::OutOfRange,
+                    "lexicon prefix exceeds uint32",
+                )
             })
         })
         .map_err(js_error)
 }
 
 #[wasm_bindgen]
-pub struct WasmDetailStore {
-    inner: DetailStore,
+pub fn locale_prefix_length(header: &[u8], total_bytes: u32) -> std::result::Result<u32, JsValue> {
+    LocaleStore::prefix_length(header, total_bytes as usize)
+        .and_then(|length| {
+            u32::try_from(length).map_err(|_| {
+                KernelError::new(crate::ErrorCode::OutOfRange, "locale prefix exceeds uint32")
+            })
+        })
+        .map_err(js_error)
 }
 
 #[wasm_bindgen]
-impl WasmDetailStore {
+pub struct WasmLexiconStore {
+    inner: LexiconStore,
+}
+
+#[wasm_bindgen]
+impl WasmLexiconStore {
     #[wasm_bindgen(constructor)]
-    pub fn open(prefix: &[u8], total_bytes: u32) -> std::result::Result<WasmDetailStore, JsValue> {
-        DetailStore::open(prefix.to_vec(), total_bytes as usize)
+    pub fn open(prefix: &[u8], total_bytes: u32) -> std::result::Result<WasmLexiconStore, JsValue> {
+        LexiconStore::open(prefix.to_vec(), total_bytes as usize)
             .map(|inner| Self { inner })
             .map_err(js_error)
+    }
+
+    pub fn range_json(&self, entry_index: u32) -> std::result::Result<Vec<u8>, JsValue> {
+        let range = self.inner.range(entry_index).map_err(js_error)?;
+        serde_json::to_vec(&range).map_err(|error| JsValue::from_str(&error.to_string()))
+    }
+
+    pub fn entry_json(
+        &self,
+        entry_index: u32,
+        compressed: &[u8],
+    ) -> std::result::Result<Vec<u8>, JsValue> {
+        let entry = self
+            .inner
+            .entry_from_compressed(entry_index, compressed)
+            .map_err(js_error)?;
+        serde_json::to_vec(&entry).map_err(|error| JsValue::from_str(&error.to_string()))
+    }
+
+    pub fn resident_bytes(&self) -> u32 {
+        self.inner.resident_bytes() as u32
+    }
+
+    pub fn entry_count(&self) -> u32 {
+        self.inner.entry_count() as u32
+    }
+}
+
+#[wasm_bindgen]
+pub struct WasmLocaleStore {
+    inner: LocaleStore,
+}
+
+#[wasm_bindgen]
+impl WasmLocaleStore {
+    #[wasm_bindgen(constructor)]
+    pub fn open(
+        prefix: &[u8],
+        total_bytes: u32,
+        expected_lexicon_sha256: &[u8],
+        expected_locale: &str,
+        expected_entry_count: u32,
+    ) -> std::result::Result<WasmLocaleStore, JsValue> {
+        LocaleStore::open(
+            prefix.to_vec(),
+            total_bytes as usize,
+            expected_lexicon_sha256,
+            expected_locale,
+            expected_entry_count as usize,
+        )
+        .map(|inner| Self { inner })
+        .map_err(js_error)
     }
 
     pub fn range_json(&self, entry_index: u32) -> std::result::Result<Vec<u8>, JsValue> {

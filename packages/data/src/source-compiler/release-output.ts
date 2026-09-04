@@ -10,7 +10,7 @@ import type { AnalyzerSupportSource } from '../browser-pack/analyzer-support.js'
 import {
   assertAnalyzerReleaseSize,
   buildAnalyzerRelease,
-  parseAnalyzerReleaseManifest
+  type AnalyzerReleaseAsset
 } from '../browser-pack/release-manifest.js';
 import {
   assertActiveReleaseGeneration,
@@ -52,6 +52,7 @@ import type { SurfaceIndexTsvSpoolSummary } from './surface-index-spool.js';
 import type { VerifiedSourceCompilerLock } from './source-lock.js';
 import type { MorphologySource } from '../browser-pack/morphology-compiler.js';
 import type { CanonicalEntry } from './model.js';
+import type { LocaleGlossEntrySource } from '../browser-pack/locale-gloss.js';
 import type { BoundedAnalyzerSupportSummary } from './analyzer-support-stream.js';
 import type { GeneratedProjectionSpoolSummary } from './generated-projection-spool.js';
 import type { ConjugationRulePaths } from '../data/conj-rules.js';
@@ -59,7 +60,8 @@ import type { ConjugationRulePaths } from '../data/conj-rules.js';
 const ROOT_ORDER_ATTESTATION_SHA256 = '12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf';
 const GENERATED_ORDER_ATTESTATION_SHA256 =
   '4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf';
-const QUALIFIED_ARTIFACT_INDEX_SHA256 = 'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
+const HISTORICAL_QUALIFIED_ARTIFACT_INDEX_SHA256 =
+  'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
 const SOURCE_COMPILER_RUST_TOOLCHAIN = '1.92.0';
 const QUALIFIED_ARTIFACT_NAMES = [
   'manifest.json',
@@ -68,14 +70,16 @@ const QUALIFIED_ARTIFACT_NAMES = [
   'stats.json'
 ] as const;
 
-export interface VerifiedQualifiedArtifactBytes {
+/** Immutable format-1 evidence; never a shape accepted by the format-2 publisher. */
+export interface VerifiedHistoricalQualifiedArtifactBytes {
   readonly manifest: Uint8Array;
   readonly hotDownload: Uint8Array;
-  readonly detailsDownload: Uint8Array;
+  readonly historicalDetailsDownload: Uint8Array;
   readonly stats: Uint8Array;
 }
 
-export interface CapturedQualifiedArtifactBytes extends VerifiedQualifiedArtifactBytes {
+export interface CapturedHistoricalQualifiedArtifactBytes
+  extends VerifiedHistoricalQualifiedArtifactBytes {
   readonly artifactIndex: Uint8Array;
 }
 
@@ -98,6 +102,7 @@ export interface SourceReleaseOutputInput {
     readonly generatedOrderAttestationPath: string;
   };
   readonly entries: readonly CanonicalEntry[];
+  readonly zhHans: readonly LocaleGlossEntrySource[];
   readonly morphology: MorphologySource;
   readonly support: AnalyzerSupportSource;
   readonly surfaceTsv: string;
@@ -110,6 +115,43 @@ export interface SourceReleaseOutputInput {
 export interface SourceReleaseSemanticSummary {
   readonly mode: 'baseline' | 'update';
   readonly jmdict: { readonly id: string; readonly path: string };
+  readonly tomoshi: {
+    readonly id: string;
+    readonly path: string;
+    readonly locale: 'zh-Hans';
+    readonly projection: {
+      readonly baseEntryCount: number;
+      readonly baseSenseCount: number;
+      readonly sourceEntryCount: number;
+      readonly staleSourceEntryCount: number;
+      readonly translatedEntryCount: number;
+      readonly fallbackEntryCount: number;
+      readonly translatedSenseCount: number;
+      readonly fallbackSenseCount: number;
+      readonly mismatchedSenseCount: number;
+      readonly glossCount: number;
+    };
+  };
+  readonly zhHansSenseInfo: {
+    readonly id: string;
+    readonly path: string;
+    readonly locale: 'zh-Hans';
+    readonly projection: {
+      readonly catalogTranslationCount: number;
+      readonly patternPolicy: string;
+      readonly sourceInfoCount: number;
+      readonly translatedInfoCount: number;
+      readonly catalogTranslatedInfoCount: number;
+      readonly patternTranslatedInfoCount: number;
+      readonly fallbackInfoCount: number;
+      readonly uniqueSourceInfoCount: number;
+      readonly translatedUniqueInfoCount: number;
+      readonly catalogTranslatedUniqueInfoCount: number;
+      readonly patternTranslatedUniqueInfoCount: number;
+      readonly unusedTranslationCount: number;
+      readonly patternRuleCounts: Readonly<Record<string, number>>;
+    };
+  };
   readonly canonicalEntries: number;
   readonly jmdictEntries: number;
   readonly customCreatedRoots: number;
@@ -202,9 +244,9 @@ async function compileSurface(
   return parseSurfaceCompilerStats(result.stderr);
 }
 
-export async function captureQualifiedArtifactBytes(
+export async function captureHistoricalQualifiedArtifactBytes(
   directory: string
-): Promise<CapturedQualifiedArtifactBytes> {
+): Promise<CapturedHistoricalQualifiedArtifactBytes> {
   const [artifactIndex, manifest, hotDownload, detailsDownload, stats] = await Promise.all([
     readRegularArtifact(directory, 'artifact-sha256.txt'),
     readRegularArtifact(directory, 'manifest.json'),
@@ -216,17 +258,17 @@ export async function captureQualifiedArtifactBytes(
     artifactIndex: new Uint8Array(artifactIndex),
     manifest: new Uint8Array(manifest),
     hotDownload: new Uint8Array(hotDownload),
-    detailsDownload: new Uint8Array(detailsDownload),
+    historicalDetailsDownload: new Uint8Array(detailsDownload),
     stats: new Uint8Array(stats)
   };
 }
 
-export async function verifyQualifiedArtifactIndex(
+export async function verifyHistoricalQualifiedArtifactIndex(
   directory: string
-): Promise<VerifiedQualifiedArtifactBytes> {
-  const captured = await captureQualifiedArtifactBytes(directory);
+): Promise<VerifiedHistoricalQualifiedArtifactBytes> {
+  const captured = await captureHistoricalQualifiedArtifactBytes(directory);
   const indexBytes = captured.artifactIndex;
-  if (sha256Bytes(indexBytes) !== QUALIFIED_ARTIFACT_INDEX_SHA256) {
+  if (sha256Bytes(indexBytes) !== HISTORICAL_QUALIFIED_ARTIFACT_INDEX_SHA256) {
     throw new Error('Qualified artifact checksum index is not the immutable reviewed release index');
   }
   const identities = new Map<string, string>();
@@ -247,7 +289,7 @@ export async function verifyQualifiedArtifactIndex(
   const artifacts = new Map<string, Uint8Array>([
     ['manifest.json', captured.manifest],
     ['hot.bin.gz', captured.hotDownload],
-    ['details.bin.gz', captured.detailsDownload],
+    ['details.bin.gz', captured.historicalDetailsDownload],
     ['stats.json', captured.stats]
   ]);
   for (const name of QUALIFIED_ARTIFACT_NAMES) {
@@ -259,26 +301,30 @@ export async function verifyQualifiedArtifactIndex(
   return {
     manifest: captured.manifest,
     hotDownload: captured.hotDownload,
-    detailsDownload: captured.detailsDownload,
+    historicalDetailsDownload: captured.historicalDetailsDownload,
     stats: captured.stats
   };
 }
 
-export function qualifiedArtifacts(captured: VerifiedQualifiedArtifactBytes): {
+function historicalQualifiedArtifacts(captured: VerifiedHistoricalQualifiedArtifactBytes): {
   readonly bytes: QualifiedArtifactBytes;
   readonly counts: BrowserAlphaArtifactCounts;
 } {
-  const manifest = parseAnalyzerReleaseManifest(
-    JSON.parse(new TextDecoder().decode(captured.manifest)),
-    value => sha256Bytes(new TextEncoder().encode(value))
-  );
+  const manifest = JSON.parse(new TextDecoder().decode(captured.manifest)) as {
+    readonly formatVersion?: unknown;
+    readonly hot: AnalyzerReleaseAsset;
+    readonly details: AnalyzerReleaseAsset;
+  };
+  if (manifest.formatVersion !== 1) {
+    throw new Error('Qualified baseline manifest must be the retained format-1 release');
+  }
   if (manifest.hot.file !== 'hot.bin.gz' || manifest.details.file !== 'details.bin.gz') {
     throw new Error('Qualified baseline manifest must select the captured release inventory');
   }
   if (manifest.hot.encoding !== 'gzip' || manifest.details.encoding !== 'gzip') {
     throw new Error('Qualified baseline assets must use the reviewed gzip representation');
   }
-  const { hotDownload, detailsDownload } = captured;
+  const { hotDownload, historicalDetailsDownload: detailsDownload } = captured;
   for (const [label, asset, bytes] of [
     ['hot', manifest.hot, hotDownload],
     ['details', manifest.details, detailsDownload]
@@ -308,8 +354,7 @@ export function qualifiedArtifacts(captured: VerifiedQualifiedArtifactBytes): {
       rootPayload: pack.getSection(ROOT_PAYLOAD_SECTION_ID),
       morphology: pack.getSection(MORPHOLOGY_SECTION_ID),
       analyzerSupport: pack.getSection(ANALYZER_SUPPORT_SECTION_ID),
-      analyzerAnnotations: pack.getSection(ANALYZER_ANNOTATIONS_SECTION_ID),
-      details
+      analyzerAnnotations: pack.getSection(ANALYZER_ANNOTATIONS_SECTION_ID)
     },
     counts: stats.artifacts
   };
@@ -326,7 +371,9 @@ async function compareQualifiedBaseline(
   readonly generatedOrderAttestation: ReturnType<typeof parseGeneratedOrderAttestation>;
   readonly generatedOrderAttestationSha256: string;
 }> {
-  const qualified = qualifiedArtifacts(await verifyQualifiedArtifactIndex(baseline.directory));
+  const qualified = historicalQualifiedArtifacts(
+    await verifyHistoricalQualifiedArtifactIndex(baseline.directory)
+  );
   const attestationBytes = new Uint8Array(await readFile(baseline.directOrderAttestationPath));
   if (sha256Bytes(attestationBytes) !== ROOT_ORDER_ATTESTATION_SHA256) {
     throw new Error('Direct-root ordering attestation is not the reviewed baseline proof');
@@ -375,24 +422,36 @@ async function compareQualifiedBaseline(
   };
 }
 
-/** Build, compare, and atomically publish one source-native pack-v1 release. */
+/** Build, compare the language-neutral analyzer, and atomically publish pack v2. */
 export async function writeSourceCompilerRelease(
   input: SourceReleaseOutputInput
 ): Promise<SourceReleaseOutput> {
   const sections = buildSourceCompilerBinarySections({
     entries: input.entries,
+    zhHans: input.zhHans,
     morphology: input.morphology,
     support: input.support,
     conjugationRules: input.conjugationRules
   });
   const rebuiltSections = buildSourceCompilerBinarySections({
     entries: input.entries,
+    zhHans: input.zhHans,
     morphology: input.morphology,
     support: input.support,
     conjugationRules: input.conjugationRules
   });
   assertBytesEqual(sections.root.bytes, rebuiltSections.root.bytes, 'Root payload');
-  assertBytesEqual(sections.details.bytes, rebuiltSections.details.bytes, 'Details');
+  assertBytesEqual(sections.lexicon.bytes, rebuiltSections.lexicon.bytes, 'Lexicon');
+  assertBytesEqual(
+    sections.locales.en.bytes,
+    rebuiltSections.locales.en.bytes,
+    'English locale'
+  );
+  assertBytesEqual(
+    sections.locales['zh-Hans'].bytes,
+    rebuiltSections.locales['zh-Hans'].bytes,
+    'Simplified Chinese locale'
+  );
   assertBytesEqual(sections.morphology.bytes, rebuiltSections.morphology.bytes, 'Morphology');
   assertBytesEqual(sections.support.bytes, rebuiltSections.support.bytes, 'Analyzer support');
   assertBytesEqual(sections.annotations.bytes, rebuiltSections.annotations.bytes, 'Annotations');
@@ -424,8 +483,7 @@ export async function writeSourceCompilerRelease(
     rootPayload: sections.root.bytes,
     morphology: sections.morphology.bytes,
     analyzerSupport: sections.support.bytes,
-    analyzerAnnotations: sections.annotations.bytes,
-    details: sections.details.bytes
+    analyzerAnnotations: sections.annotations.bytes
   };
   const counts = sourceReleaseArtifactCounts(sections, firstStats);
   const qualifiedComparison = input.baseline === undefined
@@ -437,15 +495,27 @@ export async function writeSourceCompilerRelease(
     sourceCommit: input.sourceCommit,
     sourcesLockSha256: input.sourceLock.sha256,
     hot,
-    details: sections.details.bytes,
+    lexicon: sections.lexicon.bytes,
+    locales: {
+      en: sections.locales.en.bytes,
+      'zh-Hans': sections.locales['zh-Hans'].bytes
+    },
     hotEncoding: 'gzip',
-    detailsEncoding: 'gzip'
+    lexiconEncoding: 'gzip',
+    localeEncodings: { en: 'gzip', 'zh-Hans': 'gzip' }
   } as const;
   const release = buildAnalyzerRelease(releaseOptions);
   const releaseSize = assertAnalyzerReleaseSize(release);
   const rebuilt = buildAnalyzerRelease(releaseOptions);
   assertBytesEqual(release.hotDownload, rebuilt.hotDownload, 'Compressed hot asset');
-  assertBytesEqual(release.detailsDownload, rebuilt.detailsDownload, 'Compressed details asset');
+  assertBytesEqual(release.lexiconDownload, rebuilt.lexiconDownload, 'Compressed lexicon asset');
+  for (const locale of ['en', 'zh-Hans'] as const) {
+    assertBytesEqual(
+      release.localeDownloads[locale]!,
+      rebuilt.localeDownloads[locale]!,
+      `Compressed ${locale} locale asset`
+    );
+  }
   assertBytesEqual(release.manifestBytes, rebuilt.manifestBytes, 'Release manifest');
   const reportValue = {
     formatVersion: 2,
@@ -465,7 +535,17 @@ export async function writeSourceCompilerRelease(
     surfaceSpool: input.surfaceSpool,
     projection: input.projectionSummary,
     artifacts: counts,
-    artifactIdentities: artifactIdentities(sourceArtifacts),
+    artifactIdentities: {
+      ...artifactIdentities(sourceArtifacts),
+      lexicon: {
+        bytes: sections.lexicon.bytes.byteLength,
+        sha256: sha256Bytes(sections.lexicon.bytes)
+      },
+      locales: Object.fromEntries(Object.entries(sections.locales).map(([locale, build]) => [
+        locale,
+        { bytes: build.bytes.byteLength, sha256: sha256Bytes(build.bytes) }
+      ]))
+    },
     qualifiedComparison,
     pack: { bytes: hot.byteLength, sha256: sha256Bytes(hot) },
     release: { manifest: release.manifest, size: releaseSize }
@@ -474,7 +554,11 @@ export async function writeSourceCompilerRelease(
   assertBytesEqual(report, deterministicJson(reportValue), 'Release stats');
   const files = new Map<string, Uint8Array>([
     [release.manifest.hot.file, release.hotDownload],
-    [release.manifest.details.file, release.detailsDownload],
+    [release.manifest.lexicon.file, release.lexiconDownload],
+    ...Object.entries(release.manifest.locales).map(([locale, asset]) => [
+      asset.file,
+      release.localeDownloads[locale]!
+    ] as [string, Uint8Array]),
     ['manifest.json', release.manifestBytes],
     ['stats.json', report]
   ]);
@@ -490,12 +574,17 @@ export async function writeSourceCompilerRelease(
       const publishedHot = new Uint8Array(
         gunzipSync(await readFile(join(directory, release.manifest.hot.file)))
       );
-      const publishedDetails = new Uint8Array(
-        gunzipSync(await readFile(join(directory, release.manifest.details.file)))
+      const publishedLexicon = new Uint8Array(
+        gunzipSync(await readFile(join(directory, release.manifest.lexicon.file)))
       );
       openPack(publishedHot).verifyAll();
       assertBytesEqual(publishedHot, hot, 'Published hot pack');
-      assertBytesEqual(publishedDetails, sections.details.bytes, 'Published details');
+      assertBytesEqual(publishedLexicon, sections.lexicon.bytes, 'Published lexicon');
+      for (const locale of ['en', 'zh-Hans'] as const) {
+        const asset = release.manifest.locales[locale]!;
+        const published = new Uint8Array(gunzipSync(await readFile(join(directory, asset.file))));
+        assertBytesEqual(published, sections.locales[locale].bytes, `Published ${locale} locale`);
+      }
     },
     beforeActivate: async () => {
       await assertSourceCheckoutUnchanged(input.repository, input.sourceCommit);

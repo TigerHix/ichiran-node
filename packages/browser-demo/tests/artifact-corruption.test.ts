@@ -21,7 +21,7 @@ describe('Worker artifact corruption classification', () => {
       ['RustKernelError', 'corrupt-index'],
       ['RustKernelError', 'corrupt-block'],
       ['PackFormatError', 'invalid-directory'],
-      ['DetailStoreError', 'corrupt-block']
+      ['DictionaryStoreError', 'corrupt-block']
     ]) {
       expect(isArtifactCorruption(codedError(name, code))).toBe(true);
     }

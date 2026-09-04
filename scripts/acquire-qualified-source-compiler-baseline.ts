@@ -8,6 +8,7 @@ const TAG = 'portable-core-260118-baseline';
 const BASE_URL = `https://github.com/TigerHix/ichiran-node/releases/download/${TAG}`;
 const INDEX_NAME = 'artifact-sha256.txt';
 const INDEX_SHA256 = 'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
+// Historical format-v1 acquisition only; current releases use lexicon + locale artifacts.
 const ARTIFACTS = ['manifest.json', 'hot.bin.gz', 'details.bin.gz', 'stats.json'] as const;
 
 function sha256(bytes: Uint8Array): string {

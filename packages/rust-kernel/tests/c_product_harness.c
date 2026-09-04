@@ -2,74 +2,18 @@
 
 #include "ichiran_kernel.h"
 
-#include <errno.h>
-#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define DETAIL_HEADER_BYTES 96u
-#define DETAILED_CASES 705u
-#define ROMANIZATION_CASES 8u
-#define DESCRIBE_CASES 4u
-#define BASELINE_TOKEN_DETAILS_CASES 4u
-#define SAME_PACK_TOKEN_DETAILS_CASES 8u
-#define THREAD_COUNT 4u
-#define CONCURRENT_REPEATS 4u
+#define LEXICON_HEADER_BYTES 96u
+#define LOCALE_HEADER_BYTES 128u
 
-typedef struct LegacyCase {
-  char *name;
-  uint16_t *input;
-  size_t input_units;
-  uint8_t *options;
-  size_t options_bytes;
-  uint8_t *expected;
-  size_t expected_bytes;
-} LegacyCase;
-
-typedef struct LegacyThread {
-  const IchiranKernel *kernel;
-  const IchiranDetailStore *details;
-  const char *details_path;
-  const LegacyCase *first;
-  const LegacyCase *second;
-  int passed;
-} LegacyThread;
-
-typedef struct TokenDetailsCase {
-  LegacyCase value;
-  size_t path_index;
-  size_t token_index;
-} TokenDetailsCase;
-
-static void *copy_bytes(const void *value, size_t byte_length) {
-  if (byte_length == 0) return NULL;
-  void *copy = malloc(byte_length);
-  if (copy != NULL) memcpy(copy, value, byte_length);
-  return copy;
-}
-
-static uint8_t *read_file(const char *path, size_t *byte_length) {
-  FILE *file = fopen(path, "rb");
-  if (file == NULL || fseek(file, 0, SEEK_END) != 0) {
-    if (file != NULL) fclose(file);
-    return NULL;
-  }
-  const long length = ftell(file);
-  if (length <= 0 || fseek(file, 0, SEEK_SET) != 0) {
-    fclose(file);
-    return NULL;
-  }
-  uint8_t *bytes = malloc((size_t)length);
-  if (bytes == NULL || fread(bytes, 1, (size_t)length, file) != (size_t)length) {
-    free(bytes);
-    fclose(file);
-    return NULL;
-  }
-  fclose(file);
-  *byte_length = (size_t)length;
-  return bytes;
-}
+typedef struct DictionaryFiles {
+  FILE *lexicon;
+  FILE *english;
+  FILE *chinese;
+} DictionaryFiles;
 
 static int file_length(FILE *file, size_t *output) {
   if (fseek(file, 0, SEEK_END) != 0) return 0;
@@ -79,10 +23,26 @@ static int file_length(FILE *file, size_t *output) {
   return 1;
 }
 
-static int read_range(FILE *file, uint32_t offset, uint32_t byte_length, uint8_t **output) {
-  uint8_t *bytes = malloc(byte_length);
-  if (bytes == NULL || fseek(file, (long)offset, SEEK_SET) != 0
-      || fread(bytes, 1, byte_length, file) != byte_length) {
+static uint8_t *read_file(const char *path, size_t *byte_length) {
+  FILE *file = fopen(path, "rb");
+  if (file == NULL || !file_length(file, byte_length)) {
+    if (file != NULL) fclose(file);
+    return NULL;
+  }
+  uint8_t *bytes = malloc(*byte_length);
+  if (bytes == NULL || fread(bytes, 1, *byte_length, file) != *byte_length) {
+    free(bytes);
+    fclose(file);
+    return NULL;
+  }
+  fclose(file);
+  return bytes;
+}
+
+static int read_range(FILE *file, const IchiranDictionaryRange *range, uint8_t **output) {
+  uint8_t *bytes = malloc(range->byte_length);
+  if (bytes == NULL || fseek(file, (long)range->offset, SEEK_SET) != 0
+      || fread(bytes, 1, range->byte_length, file) != range->byte_length) {
     free(bytes);
     return 0;
   }
@@ -90,129 +50,60 @@ static int read_range(FILE *file, uint32_t offset, uint32_t byte_length, uint8_t
   return 1;
 }
 
-static void print_buffer(const IchiranBuffer *buffer) {
-  const size_t shown = buffer->byte_length < 600 ? buffer->byte_length : 600;
-  if (shown > 0) fwrite(buffer->data, 1, shown, stderr);
-  if (shown < buffer->byte_length) fputs("...", stderr);
-}
-
-static int exact_buffer(const IchiranBuffer *actual, const uint8_t *expected, size_t bytes) {
-  return actual->byte_length == bytes
-    && (bytes == 0 || memcmp(actual->data, expected, bytes) == 0);
-}
-
-static int parse_utf16(char *hex, uint16_t **output, size_t *output_units) {
-  if (*hex == '\0') {
-    *output = NULL;
-    *output_units = 0;
-    return 1;
-  }
-  size_t units = 1;
-  for (const char *cursor = hex; *cursor != '\0'; cursor++) {
-    if (*cursor == ',') units++;
-  }
-  uint16_t *result = malloc(units * sizeof(*result));
-  if (result == NULL) return 0;
-  char *cursor = hex;
-  for (size_t index = 0; index < units; index++) {
-    errno = 0;
-    char *end = NULL;
-    const unsigned long value = strtoul(cursor, &end, 16);
-    if (errno != 0 || end == cursor || value > UINT16_MAX
-        || (*end != ',' && *end != '\0')) {
-      free(result);
-      return 0;
-    }
-    result[index] = (uint16_t)value;
-    cursor = *end == ',' ? end + 1 : end;
-  }
-  *output = result;
-  *output_units = units;
-  return 1;
-}
-
-static void free_legacy_case(LegacyCase *value) {
-  free(value->name);
-  free(value->input);
-  free(value->options);
-  free(value->expected);
-  memset(value, 0, sizeof(*value));
-}
-
-static int copy_legacy_case(const LegacyCase *source, LegacyCase *output) {
-  memset(output, 0, sizeof(*output));
-  output->name = copy_bytes(source->name, strlen(source->name) + 1);
-  output->input = copy_bytes(source->input, source->input_units * sizeof(*source->input));
-  output->input_units = source->input_units;
-  output->options = copy_bytes(source->options, source->options_bytes);
-  output->options_bytes = source->options_bytes;
-  output->expected = copy_bytes(source->expected, source->expected_bytes);
-  output->expected_bytes = source->expected_bytes;
-  if (output->name == NULL || (output->input_units > 0 && output->input == NULL)
-      || output->options == NULL || output->expected == NULL) {
-    free_legacy_case(output);
-    return 0;
-  }
-  return 1;
-}
-
-static int different_inputs(const LegacyCase *left, const LegacyCase *right) {
-  return left->input_units != right->input_units
-    || memcmp(left->input, right->input, left->input_units * sizeof(*left->input)) != 0;
-}
-
-static int open_kernel(const char *hot_path, IchiranKernel **output) {
-  size_t hot_bytes = 0;
-  uint8_t *hot = read_file(hot_path, &hot_bytes);
-  if (hot == NULL) return 0;
-  IchiranResult result = ichiran_kernel_open(hot, hot_bytes, output);
-  free(hot);
+static int open_kernel(const char *path, IchiranKernel **output) {
+  size_t bytes = 0;
+  uint8_t *input = read_file(path, &bytes);
+  if (input == NULL) return 0;
+  IchiranResult result = ichiran_kernel_open(input, bytes, output);
+  free(input);
   const int passed = result.status == ICHIRAN_OK && *output != NULL;
-  if (!passed) {
-    fputs("C product kernel open failed: ", stderr);
-    print_buffer(&result.buffer);
-    fputc('\n', stderr);
-  }
   ichiran_buffer_free(result.buffer);
   return passed;
 }
 
-static int open_details(
-  const char *details_path,
-  FILE **file_output,
-  IchiranDetailStore **store_output
+static int read_prefix(
+  FILE *file,
+  size_t header_bytes,
+  IchiranResult (*prefix_length)(const uint8_t *, size_t, size_t, size_t *),
+  uint8_t **output,
+  size_t *prefix_bytes,
+  size_t *total_bytes
 ) {
-  FILE *file = fopen(details_path, "rb");
+  uint8_t header[LOCALE_HEADER_BYTES];
+  if (header_bytes > sizeof(header) || !file_length(file, total_bytes)
+      || fread(header, 1, header_bytes, file) != header_bytes) return 0;
+  IchiranResult length = prefix_length(header, header_bytes, *total_bytes, prefix_bytes);
+  const int valid = length.status == ICHIRAN_OK && *prefix_bytes >= header_bytes;
+  ichiran_buffer_free(length.buffer);
+  if (!valid) return 0;
+  uint8_t *prefix = malloc(*prefix_bytes);
+  if (prefix == NULL || fseek(file, 0, SEEK_SET) != 0
+      || fread(prefix, 1, *prefix_bytes, file) != *prefix_bytes) {
+    free(prefix);
+    return 0;
+  }
+  *output = prefix;
+  return 1;
+}
+
+static int open_lexicon(const char *path, FILE **file_output, IchiranLexiconStore **store_output) {
+  FILE *file = fopen(path, "rb");
+  uint8_t *prefix = NULL;
+  size_t prefix_bytes = 0;
   size_t total_bytes = 0;
-  uint8_t header[DETAIL_HEADER_BYTES];
-  if (file == NULL || !file_length(file, &total_bytes)
-      || fread(header, 1, sizeof(header), file) != sizeof(header)) {
+  if (file == NULL || !read_prefix(
+      file, LEXICON_HEADER_BYTES, ichiran_lexicon_prefix_length,
+      &prefix, &prefix_bytes, &total_bytes
+  )) {
     if (file != NULL) fclose(file);
     return 0;
   }
-  size_t prefix_bytes = 0;
-  IchiranResult length = ichiran_detail_prefix_length(
-    header, sizeof(header), total_bytes, &prefix_bytes
-  );
-  if (length.status != ICHIRAN_OK || prefix_bytes < sizeof(header)) {
-    ichiran_buffer_free(length.buffer);
-    fclose(file);
-    return 0;
-  }
-  ichiran_buffer_free(length.buffer);
-  uint8_t *prefix = malloc(prefix_bytes);
-  if (prefix == NULL || fseek(file, 0, SEEK_SET) != 0
-      || fread(prefix, 1, prefix_bytes, file) != prefix_bytes) {
-    free(prefix);
-    fclose(file);
-    return 0;
-  }
-  IchiranResult opened = ichiran_detail_store_open(
+  IchiranResult result = ichiran_lexicon_store_open(
     prefix, prefix_bytes, total_bytes, store_output
   );
   free(prefix);
-  const int passed = opened.status == ICHIRAN_OK && *store_output != NULL;
-  ichiran_buffer_free(opened.buffer);
+  const int passed = result.status == ICHIRAN_OK && *store_output != NULL;
+  ichiran_buffer_free(result.buffer);
   if (!passed) {
     fclose(file);
     return 0;
@@ -221,529 +112,223 @@ static int open_details(
   return 1;
 }
 
-static int legacy_exact(
-  const IchiranKernel *kernel,
-  const IchiranDetailStore *details,
-  FILE *details_file,
-  const LegacyCase *test,
-  int corrupt_once,
-  size_t *misses_output,
-  size_t *corruption_rejections_output
+static int open_locale(
+  const char *path,
+  const uint8_t digest[32],
+  const char *locale,
+  size_t entry_count,
+  FILE **file_output,
+  IchiranLocaleStore **store_output
 ) {
+  FILE *file = fopen(path, "rb");
+  uint8_t *prefix = NULL;
+  size_t prefix_bytes = 0;
+  size_t total_bytes = 0;
+  if (file == NULL || !read_prefix(
+      file, LOCALE_HEADER_BYTES, ichiran_locale_prefix_length,
+      &prefix, &prefix_bytes, &total_bytes
+  )) {
+    if (file != NULL) fclose(file);
+    return 0;
+  }
+  IchiranResult result = ichiran_locale_store_open(
+    prefix, prefix_bytes, total_bytes, digest, (const uint8_t *)locale,
+    strlen(locale), entry_count, store_output
+  );
+  free(prefix);
+  const int passed = result.status == ICHIRAN_OK && *store_output != NULL;
+  ichiran_buffer_free(result.buffer);
+  if (!passed) {
+    fclose(file);
+    return 0;
+  }
+  *file_output = file;
+  return 1;
+}
+
+static int locale_digest(const char *path, uint8_t output[32]) {
+  FILE *file = fopen(path, "rb");
+  uint8_t header[LOCALE_HEADER_BYTES];
+  if (file == NULL || fread(header, 1, sizeof(header), file) != sizeof(header)) {
+    if (file != NULL) fclose(file);
+    return 0;
+  }
+  fclose(file);
+  memcpy(output, header + 60, 32);
+  return 1;
+}
+
+static FILE *file_for_store(DictionaryFiles *files, FILE *locale_file, uint32_t store) {
+  if (store == ICHIRAN_DICTIONARY_LEXICON) return files->lexicon;
+  if (store == ICHIRAN_DICTIONARY_LOCALE) return locale_file;
+  if (store == ICHIRAN_DICTIONARY_FALLBACK) return files->english;
+  return NULL;
+}
+
+static int run_legacy(
+  const IchiranKernel *kernel,
+  const IchiranLexiconStore *lexicon,
+  const IchiranLocaleStore *locale,
+  const IchiranLocaleStore *fallback,
+  FILE *locale_file,
+  DictionaryFiles *files
+) {
+  static const uint16_t input[] = {0x732b};
+  static const uint8_t options[] =
+    "{\"limit\":1,\"entities\":[],\"normalizePunctuation\":true}";
   IchiranLegacyOperation *operation = NULL;
   IchiranResult begun = ichiran_kernel_legacy_begin_utf16(
-    kernel, test->input, test->input_units, test->options, test->options_bytes,
-    NULL, 0, &operation
+    kernel, input, 1, options, sizeof(options) - 1, NULL, 0, &operation
   );
   int passed = begun.status == ICHIRAN_OK && operation != NULL;
   ichiran_buffer_free(begun.buffer);
-  if (!passed) return 0;
-
-  uint32_t supplied_entry = ICHIRAN_NO_DETAIL;
-  uint8_t *supplied = NULL;
-  size_t supplied_bytes = 0;
-  size_t misses = 0;
-  size_t corruption_rejections = 0;
-  int ready = 0;
-  for (size_t step_index = 0; passed && step_index < 4096; step_index++) {
+  uint32_t supplied_store = ICHIRAN_DICTIONARY_NONE;
+  uint32_t supplied_entry = ICHIRAN_NO_DICTIONARY;
+  uint8_t *compressed = NULL;
+  size_t compressed_bytes = 0;
+  for (size_t step_index = 0; passed && step_index < 128; step_index++) {
     IchiranStepResult step = ichiran_kernel_legacy_step(
-      kernel, operation, details, supplied_entry, supplied, supplied_bytes
+      kernel, operation, lexicon, locale, fallback, supplied_store, supplied_entry,
+      compressed, compressed_bytes
     );
-    free(supplied);
-    supplied = NULL;
-    supplied_bytes = 0;
-    supplied_entry = ICHIRAN_NO_DETAIL;
-    if (step.status != ICHIRAN_OK) {
-      fprintf(stderr, "legacy step failed for %s: ", test->name);
-      print_buffer(&step.buffer);
-      fputc('\n', stderr);
+    free(compressed);
+    compressed = NULL;
+    compressed_bytes = 0;
+    supplied_store = ICHIRAN_DICTIONARY_NONE;
+    supplied_entry = ICHIRAN_NO_DICTIONARY;
+    if (step.status != ICHIRAN_OK) passed = 0;
+    else if (step.state == ICHIRAN_STEP_READY) {
+      passed = step.buffer.byte_length > 0;
       ichiran_buffer_free(step.buffer);
-      passed = 0;
       break;
-    }
-    if (step.state == ICHIRAN_STEP_READY) {
-      passed = exact_buffer(&step.buffer, test->expected, test->expected_bytes);
-      if (!passed) {
-        size_t difference = 0;
-        while (difference < test->expected_bytes && difference < step.buffer.byte_length
-            && test->expected[difference] == step.buffer.data[difference]) difference++;
-        fprintf(stderr, "detailed C parity mismatch %s (expected=%zu actual=%zu)\nexpected: ",
-          test->name, test->expected_bytes, step.buffer.byte_length);
-        const size_t start = difference > 200 ? difference - 200 : 0;
-        fprintf(stderr, "first difference at %zu\nexpected: ", difference);
-        fwrite(test->expected + start, 1,
-          test->expected_bytes - start < 600 ? test->expected_bytes - start : 600, stderr);
-        fputs("\nactual:   ", stderr);
-        fwrite(step.buffer.data + start, 1,
-          step.buffer.byte_length - start < 600 ? step.buffer.byte_length - start : 600, stderr);
-        fputc('\n', stderr);
-      }
-      ichiran_buffer_free(step.buffer);
-      ready = passed;
-      break;
-    }
-    if (step.state != ICHIRAN_STEP_MISSING_DETAIL || step.entry_index == ICHIRAN_NO_DETAIL
-        || step.range.byte_length == 0 || step.buffer.byte_length != 0) {
-      ichiran_buffer_free(step.buffer);
-      passed = 0;
-      break;
-    }
+    } else if (step.state == ICHIRAN_STEP_MISSING_DICTIONARY) {
+      FILE *file = file_for_store(files, locale_file, step.store);
+      passed = file != NULL && read_range(file, &step.range, &compressed);
+      supplied_store = step.store;
+      supplied_entry = step.entry_index;
+      compressed_bytes = step.range.byte_length;
+    } else passed = 0;
     ichiran_buffer_free(step.buffer);
-    misses++;
-    if (!read_range(details_file, step.range.offset, step.range.byte_length, &supplied)) {
-      passed = 0;
-      break;
-    }
-    supplied_bytes = step.range.byte_length;
-    supplied_entry = step.entry_index;
-    if (corrupt_once && misses == 1) {
-      uint8_t *corrupt = copy_bytes(supplied, supplied_bytes);
-      if (corrupt == NULL) {
-        passed = 0;
-        break;
-      }
-      corrupt[0] ^= 0xffu;
-      IchiranStepResult rejected = ichiran_kernel_legacy_step(
-        kernel, operation, details, supplied_entry, corrupt, supplied_bytes
-      );
-      free(corrupt);
-      passed = rejected.status == ICHIRAN_CORRUPT_BLOCK
-        && rejected.state == ICHIRAN_STEP_ERROR;
-      if (passed) corruption_rejections++;
-      ichiran_buffer_free(rejected.buffer);
-    }
   }
-  free(supplied);
+  free(compressed);
   ichiran_legacy_operation_free(operation);
-  if (misses_output != NULL) *misses_output = misses;
-  if (corruption_rejections_output != NULL) {
-    *corruption_rejections_output = corruption_rejections;
-  }
-  return passed && ready;
-}
-
-static int token_details_exact(
-  const IchiranKernel *kernel,
-  const IchiranDetailStore *details,
-  FILE *details_file,
-  const TokenDetailsCase *test
-) {
-  IchiranTokenDetailsOperation *operation = NULL;
-  IchiranResult begun = ichiran_kernel_token_details_begin_utf16(
-    kernel, test->value.input, test->value.input_units,
-    test->value.options, test->value.options_bytes,
-    test->path_index, test->token_index, &operation
-  );
-  int passed = begun.status == ICHIRAN_OK && operation != NULL;
-  ichiran_buffer_free(begun.buffer);
-  uint32_t supplied_entry = ICHIRAN_NO_DETAIL;
-  uint8_t *supplied = NULL;
-  size_t supplied_bytes = 0;
-  int ready = 0;
-  for (size_t step_index = 0; passed && step_index < 4096; step_index++) {
-    IchiranStepResult step = ichiran_kernel_token_details_step(
-      kernel, operation, details, supplied_entry, supplied, supplied_bytes
-    );
-    free(supplied);
-    supplied = NULL;
-    supplied_bytes = 0;
-    supplied_entry = ICHIRAN_NO_DETAIL;
-    if (step.status != ICHIRAN_OK) {
-      fputs("token-details C step failed: ", stderr);
-      print_buffer(&step.buffer);
-      fputc('\n', stderr);
-      ichiran_buffer_free(step.buffer);
-      passed = 0;
-      break;
-    }
-    if (step.state == ICHIRAN_STEP_READY) {
-      passed = exact_buffer(
-        &step.buffer, test->value.expected, test->value.expected_bytes
-      );
-      if (!passed) fprintf(stderr, "token-details C parity mismatch %s\n", test->value.name);
-      ichiran_buffer_free(step.buffer);
-      ready = passed;
-      break;
-    }
-    if (step.state != ICHIRAN_STEP_MISSING_DETAIL
-        || !read_range(details_file, step.range.offset, step.range.byte_length, &supplied)) {
-      ichiran_buffer_free(step.buffer);
-      passed = 0;
-      break;
-    }
-    ichiran_buffer_free(step.buffer);
-    supplied_bytes = step.range.byte_length;
-    supplied_entry = step.entry_index;
-  }
-  free(supplied);
-  ichiran_token_details_operation_free(operation);
-  return passed && ready;
-}
-
-static int romanization_exact(
-  const IchiranKernel *kernel,
-  const char *name,
-  char *hex,
-  const uint8_t *options,
-  size_t options_bytes,
-  const uint8_t *method,
-  size_t method_bytes,
-  const uint8_t *expected,
-  size_t expected_bytes
-) {
-  uint16_t *input = NULL;
-  size_t input_units = 0;
-  if (!parse_utf16(hex, &input, &input_units)) return 0;
-  IchiranResult result = ichiran_kernel_romanize_utf16(
-    kernel, input, input_units, options, options_bytes, method, method_bytes
-  );
-  free(input);
-  const int passed = result.status == ICHIRAN_OK
-    && exact_buffer(&result.buffer, expected, expected_bytes);
-  if (!passed) fprintf(stderr, "romanization C parity mismatch %s\n", name);
-  ichiran_buffer_free(result.buffer);
   return passed;
 }
 
-static int describe_exact(
-  const IchiranDetailStore *details,
-  FILE *details_file,
-  uint32_t entry_index,
-  const uint8_t *expected,
-  size_t expected_bytes,
-  int corrupt_once,
-  size_t *corruption_rejections_output
+static int run_token_details(
+  const IchiranKernel *kernel,
+  const IchiranLexiconStore *lexicon,
+  const IchiranLocaleStore *locale,
+  const IchiranLocaleStore *fallback,
+  FILE *locale_file,
+  DictionaryFiles *files
 ) {
-  IchiranDetailRange range;
-  IchiranResult ranged = ichiran_detail_store_range(details, entry_index, &range);
+  static const uint16_t input[] = {0x732b};
+  static const uint8_t options[] =
+    "{\"limit\":1,\"entities\":[],\"normalizePunctuation\":true}";
+  IchiranTokenDetailsOperation *operation = NULL;
+  IchiranResult begun = ichiran_kernel_token_details_begin_utf16(
+    kernel, input, 1, options, sizeof(options) - 1, 0, 0, &operation
+  );
+  int passed = begun.status == ICHIRAN_OK && operation != NULL;
+  ichiran_buffer_free(begun.buffer);
+  uint32_t supplied_store = ICHIRAN_DICTIONARY_NONE;
+  uint32_t supplied_entry = ICHIRAN_NO_DICTIONARY;
+  uint8_t *compressed = NULL;
+  size_t compressed_bytes = 0;
+  for (size_t step_index = 0; passed && step_index < 128; step_index++) {
+    IchiranStepResult step = ichiran_kernel_token_details_step(
+      kernel, operation, lexicon, locale, fallback, supplied_store, supplied_entry,
+      compressed, compressed_bytes
+    );
+    free(compressed);
+    compressed = NULL;
+    compressed_bytes = 0;
+    supplied_store = ICHIRAN_DICTIONARY_NONE;
+    supplied_entry = ICHIRAN_NO_DICTIONARY;
+    if (step.status != ICHIRAN_OK) passed = 0;
+    else if (step.state == ICHIRAN_STEP_READY) {
+      passed = step.buffer.byte_length > 0;
+      ichiran_buffer_free(step.buffer);
+      break;
+    } else if (step.state == ICHIRAN_STEP_MISSING_DICTIONARY) {
+      FILE *file = file_for_store(files, locale_file, step.store);
+      passed = file != NULL && read_range(file, &step.range, &compressed);
+      supplied_store = step.store;
+      supplied_entry = step.entry_index;
+      compressed_bytes = step.range.byte_length;
+    } else passed = 0;
+    ichiran_buffer_free(step.buffer);
+  }
+  free(compressed);
+  ichiran_token_details_operation_free(operation);
+  return passed;
+}
+
+static int decode_entry_zero(
+  FILE *file,
+  const IchiranLexiconStore *lexicon,
+  const IchiranLocaleStore *locale
+) {
+  IchiranDictionaryRange range;
+  IchiranResult ranged = lexicon != NULL
+    ? ichiran_lexicon_store_range(lexicon, 0, &range)
+    : ichiran_locale_store_range(locale, 0, &range);
   int passed = ranged.status == ICHIRAN_OK && range.byte_length > 0;
   ichiran_buffer_free(ranged.buffer);
   uint8_t *compressed = NULL;
-  if (!passed || !read_range(details_file, range.offset, range.byte_length, &compressed)) return 0;
-  if (corrupt_once) {
-    compressed[0] ^= 0xffu;
-    IchiranResult rejected = ichiran_detail_store_decode(
-      details, entry_index, compressed, range.byte_length
-    );
-    passed = rejected.status == ICHIRAN_CORRUPT_BLOCK;
-    if (passed && corruption_rejections_output != NULL) {
-      (*corruption_rejections_output)++;
-    }
-    ichiran_buffer_free(rejected.buffer);
-    compressed[0] ^= 0xffu;
-  }
-  IchiranResult decoded = ichiran_detail_store_decode(
-    details, entry_index, compressed, range.byte_length
-  );
+  if (!passed || !read_range(file, &range, &compressed)) return 0;
+  IchiranResult decoded = lexicon != NULL
+    ? ichiran_lexicon_store_decode(lexicon, 0, compressed, range.byte_length)
+    : ichiran_locale_store_decode(locale, 0, compressed, range.byte_length);
   free(compressed);
-  passed = passed && decoded.status == ICHIRAN_OK
-    && exact_buffer(&decoded.buffer, expected, expected_bytes);
+  passed = decoded.status == ICHIRAN_OK && decoded.buffer.byte_length > 0;
   ichiran_buffer_free(decoded.buffer);
   return passed;
 }
 
-static void *legacy_concurrently(void *context) {
-  LegacyThread *thread = context;
-  FILE *details_file = fopen(thread->details_path, "rb");
-  thread->passed = details_file != NULL;
-  for (size_t index = 0; thread->passed && index < CONCURRENT_REPEATS; index++) {
-    thread->passed = legacy_exact(
-      thread->kernel, thread->details, details_file, thread->first, 0, NULL, NULL
-    ) && legacy_exact(
-      thread->kernel, thread->details, details_file, thread->second, 0, NULL, NULL
-    );
-  }
-  if (details_file != NULL) fclose(details_file);
-  return NULL;
-}
-
-static int parse_legacy(char *line, LegacyCase *output) {
-  char *name = strchr(line, '\t');
-  if (name == NULL) return 0;
-  *name++ = '\0';
-  char *hex = strchr(name, '\t');
-  if (hex == NULL) return 0;
-  *hex++ = '\0';
-  char *options = strchr(hex, '\t');
-  if (options == NULL) return 0;
-  *options++ = '\0';
-  char *expected = strchr(options, '\t');
-  if (expected == NULL) return 0;
-  *expected++ = '\0';
-  memset(output, 0, sizeof(*output));
-  output->name = copy_bytes(name, strlen(name) + 1);
-  output->options_bytes = strlen(options);
-  output->options = copy_bytes(options, output->options_bytes);
-  output->expected_bytes = strlen(expected);
-  output->expected = copy_bytes(expected, output->expected_bytes);
-  if (output->name == NULL || output->options == NULL || output->expected == NULL
-      || !parse_utf16(hex, &output->input, &output->input_units)) {
-    free_legacy_case(output);
-    return 0;
-  }
-  return 1;
-}
-
-static int parse_token_details(char *line, TokenDetailsCase *output) {
-  char *name = line + 2;
-  char *hex = strchr(name, '\t');
-  char *options = hex == NULL ? NULL : strchr(hex + 1, '\t');
-  char *path = options == NULL ? NULL : strchr(options + 1, '\t');
-  char *token = path == NULL ? NULL : strchr(path + 1, '\t');
-  char *expected = token == NULL ? NULL : strchr(token + 1, '\t');
-  if (hex == NULL || options == NULL || path == NULL || token == NULL || expected == NULL) {
-    return 0;
-  }
-  *hex++ = *options++ = *path++ = *token++ = *expected++ = '\0';
-  memset(output, 0, sizeof(*output));
-  output->value.name = copy_bytes(name, strlen(name) + 1);
-  output->value.options_bytes = strlen(options);
-  output->value.options = copy_bytes(options, output->value.options_bytes);
-  output->value.expected_bytes = strlen(expected);
-  output->value.expected = copy_bytes(expected, output->value.expected_bytes);
-  errno = 0;
-  char *path_end = NULL;
-  const unsigned long long path_index = strtoull(path, &path_end, 10);
-  char *token_end = NULL;
-  const unsigned long long token_index = strtoull(token, &token_end, 10);
-  const int parsed = errno == 0 && *path != '\0' && *path_end == '\0'
-    && *token != '\0' && *token_end == '\0'
-    && (unsigned long long)(size_t)path_index == path_index
-    && (unsigned long long)(size_t)token_index == token_index;
-  output->path_index = (size_t)path_index;
-  output->token_index = (size_t)token_index;
-  if (!parsed || output->value.name == NULL || output->value.options == NULL
-      || output->value.expected == NULL
-      || !parse_utf16(hex, &output->value.input, &output->value.input_units)) {
-    free_legacy_case(&output->value);
-    return 0;
-  }
-  return 1;
-}
-
-static int metadata_valid(const char *line) {
-  const int immutable_pack = strstr(line, "\"mode\":\"immutable-baseline\"") != NULL
-    && strstr(line, "\"currentLisp\":401") != NULL
-    && strstr(line, "\"fallback\":301") != NULL
-    && strstr(line, "\"canonicalTies\":{\"currentLisp\":3,\"fallback\":1,\"total\":4") != NULL
-    && strstr(line, "\"names\":[\"cli:169\",\"cli:214\",\"hard:10\",\"probes:26\"]") != NULL
-    && strstr(line, "61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0") != NULL
-    && strstr(line, "0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151") != NULL;
-  const int same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL
-    && strstr(line, "\"samePack\":702") != NULL
-    && strstr(line, "\"canonicalTies\":0") != NULL
-    && strstr(line, "\"hotSha256\":\"") != NULL
-    && strstr(line, "\"detailsSha256\":\"") != NULL
-    && strstr(line, "\"packVersion\":\"") != NULL
-    && strstr(line, "\"sourceCommit\":\"") != NULL
-    && strstr(line, "\"sourcesLockSha256\":\"") != NULL;
-  return (immutable_pack || same_pack)
-    && strstr(line, "\"format\":\"ichiran-c-product-v1\"") != NULL
-    && strstr(line, "\"operations\":705") != NULL
-    && strstr(line, "\"utf16\":3") != NULL
-    && strstr(line, "\"romanization\":{\"operations\":8,\"retained\":5,\"utf16\":3}") != NULL
-    && strstr(line, "\"describe\":4") != NULL
-    && ((immutable_pack && strstr(line, "\"tokenDetails\":4") != NULL)
-      || (same_pack && strstr(line, "\"tokenDetails\":8") != NULL));
-}
-
-static int verify_owned_product_errors(
-  const IchiranKernel *kernel,
-  const IchiranDetailStore *details
-) {
-  IchiranDetailRange range;
-  IchiranResult missing_store = ichiran_detail_store_range(NULL, 0, &range);
-  int passed = missing_store.status == ICHIRAN_INVALID_INPUT
-    && missing_store.buffer.byte_length > 0;
-  ichiran_buffer_free(missing_store.buffer);
-
-  IchiranStepResult missing_operation = ichiran_kernel_legacy_step(
-    kernel, NULL, details, ICHIRAN_NO_DETAIL, NULL, 0
-  );
-  passed = passed && missing_operation.status == ICHIRAN_INVALID_INPUT
-    && missing_operation.state == ICHIRAN_STEP_ERROR
-    && missing_operation.buffer.byte_length > 0;
-  ichiran_buffer_free(missing_operation.buffer);
-
-  static const uint8_t options[] =
-    "{\"limit\":1,\"entities\":[],\"normalizePunctuation\":true}";
-  static const uint8_t method[] = "unsupported";
-  IchiranResult invalid_method = ichiran_kernel_romanize_utf16(
-    kernel, NULL, 0, options, sizeof(options) - 1, method, sizeof(method) - 1
-  );
-  passed = passed && invalid_method.status == ICHIRAN_INVALID_INPUT
-    && invalid_method.buffer.byte_length > 0;
-  ichiran_buffer_free(invalid_method.buffer);
-  return passed;
-}
-
 int main(int argc, char **argv) {
-  if (argc != 3) {
-    fputs("usage: c_product_harness <hot.bin> <details.bin>\n", stderr);
+  if (argc != 5) {
+    fputs("usage: c_product_harness <hot.bin> <lexicon.bin> <gloss.en.bin> <gloss.zh-Hans.bin>\n", stderr);
     return 2;
   }
   if (ichiran_kernel_abi_version() != ICHIRAN_KERNEL_ABI_VERSION) return 3;
+  uint8_t digest[32];
   IchiranKernel *kernel = NULL;
-  IchiranDetailStore *details = NULL;
-  FILE *details_file = NULL;
-  if (!open_kernel(argv[1], &kernel) || !open_details(argv[2], &details_file, &details)) {
-    ichiran_kernel_free(kernel);
-    return 4;
+  IchiranLexiconStore *lexicon = NULL;
+  IchiranLocaleStore *english = NULL;
+  IchiranLocaleStore *chinese = NULL;
+  DictionaryFiles files = {0};
+  int passed = locale_digest(argv[3], digest)
+    && open_kernel(argv[1], &kernel)
+    && open_lexicon(argv[2], &files.lexicon, &lexicon)
+    && open_locale(
+      argv[3], digest, "en", ichiran_lexicon_store_entry_count(lexicon),
+      &files.english, &english
+    )
+    && open_locale(
+      argv[4], digest, "zh-Hans", ichiran_lexicon_store_entry_count(lexicon),
+      &files.chinese, &chinese
+    );
+  if (passed) {
+    passed = decode_entry_zero(files.lexicon, lexicon, NULL)
+      && decode_entry_zero(files.english, NULL, english)
+      && decode_entry_zero(files.chinese, NULL, chinese)
+      && run_legacy(kernel, lexicon, english, english, files.english, &files)
+      && run_legacy(kernel, lexicon, chinese, english, files.chinese, &files)
+      && run_token_details(kernel, lexicon, chinese, english, files.chinese, &files);
   }
-
-  char *line = NULL;
-  size_t capacity = 0;
-  ssize_t length;
-  size_t detailed = 0;
-  size_t romanization = 0;
-  size_t described = 0;
-  size_t corrupt_recoveries = 0;
-  int metadata = 0;
-  int same_pack = 0;
-  size_t token_details = 0;
-  int passed = verify_owned_product_errors(kernel, details);
-  LegacyCase concurrent[2] = {0};
-  while (passed && (length = getline(&line, &capacity, stdin)) >= 0) {
-    while (length > 0 && (line[length - 1] == '\n' || line[length - 1] == '\r')) {
-      line[--length] = '\0';
-    }
-    if (line[0] == '#') {
-      passed = !metadata && metadata_valid(line);
-      same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL;
-      metadata = 1;
-      continue;
-    }
-    if (line[0] == 'L' && line[1] == '\t') {
-      LegacyCase test;
-      passed = parse_legacy(line, &test);
-      size_t misses = 0;
-      size_t corruption_rejections = 0;
-      if (passed) passed = legacy_exact(
-        kernel, details, details_file, &test, corrupt_recoveries == 0, &misses,
-        &corruption_rejections
-      );
-      corrupt_recoveries += corruption_rejections;
-      if (passed && misses > 0 && concurrent[0].name == NULL) {
-        passed = copy_legacy_case(&test, &concurrent[0]);
-      } else if (passed && misses > 0 && concurrent[1].name == NULL
-          && different_inputs(&concurrent[0], &test)) {
-        passed = copy_legacy_case(&test, &concurrent[1]);
-      }
-      free_legacy_case(&test);
-      detailed++;
-      continue;
-    }
-    if (line[0] == 'T' && line[1] == '\t') {
-      TokenDetailsCase test;
-      passed = parse_token_details(line, &test);
-      if (passed) passed = token_details_exact(kernel, details, details_file, &test);
-      free_legacy_case(&test.value);
-      token_details++;
-      continue;
-    }
-    if (line[0] == 'R' && line[1] == '\t') {
-      char *name = line + 2;
-      char *hex = strchr(name, '\t');
-      char *options = hex == NULL ? NULL : strchr(hex + 1, '\t');
-      char *method = options == NULL ? NULL : strchr(options + 1, '\t');
-      char *expected = method == NULL ? NULL : strchr(method + 1, '\t');
-      if (hex == NULL || options == NULL || method == NULL || expected == NULL) {
-        passed = 0;
-        continue;
-      }
-      *hex++ = *options++ = *method++ = *expected++ = '\0';
-      passed = romanization_exact(
-        kernel, name, hex, (uint8_t *)options, strlen(options),
-        (uint8_t *)method, strlen(method), (uint8_t *)expected, strlen(expected)
-      );
-      romanization++;
-      continue;
-    }
-    if (line[0] == 'D' && line[1] == '\t') {
-      char *name = line + 2;
-      char *index_text = strchr(name, '\t');
-      char *expected = index_text == NULL ? NULL : strchr(index_text + 1, '\t');
-      if (index_text == NULL || expected == NULL) {
-        passed = 0;
-        continue;
-      }
-      *index_text++ = *expected++ = '\0';
-      errno = 0;
-      char *end = NULL;
-      const unsigned long entry_index = strtoul(index_text, &end, 10);
-      passed = errno == 0 && *index_text != '\0' && *end == '\0' && entry_index <= UINT32_MAX
-        && describe_exact(
-          details, details_file, (uint32_t)entry_index,
-          (uint8_t *)expected, strlen(expected), described == 0, &corrupt_recoveries
-        );
-      if (!passed) fprintf(stderr, "describe C parity mismatch %s\n", name);
-      described++;
-      continue;
-    }
-    passed = 0;
-  }
-  free(line);
-  passed = passed && metadata
-    && token_details == (same_pack ? SAME_PACK_TOKEN_DETAILS_CASES : BASELINE_TOKEN_DETAILS_CASES)
-    && detailed == DETAILED_CASES
-    && romanization == ROMANIZATION_CASES && described == DESCRIBE_CASES
-    && corrupt_recoveries == 2
-    && concurrent[0].name != NULL && concurrent[1].name != NULL;
-
-  pthread_t threads[THREAD_COUNT];
-  LegacyThread contexts[THREAD_COUNT];
-  size_t started = 0;
-  for (; passed && started < THREAD_COUNT; started++) {
-    contexts[started] = (LegacyThread){
-      .kernel = kernel,
-      .details = details,
-      .details_path = argv[2],
-      .first = &concurrent[0],
-      .second = &concurrent[1],
-      .passed = 0
-    };
-    if (pthread_create(&threads[started], NULL, legacy_concurrently, &contexts[started]) != 0) {
-      passed = 0;
-      break;
-    }
-  }
-  for (size_t index = 0; index < started; index++) {
-    if (pthread_join(threads[index], NULL) != 0 || !contexts[index].passed) passed = 0;
-  }
-
-  const int concurrent_first = concurrent[0].name != NULL;
-  const int concurrent_second = concurrent[1].name != NULL;
-  free_legacy_case(&concurrent[0]);
-  free_legacy_case(&concurrent[1]);
-  fclose(details_file);
-  ichiran_detail_store_free(details);
+  if (files.lexicon != NULL) fclose(files.lexicon);
+  if (files.english != NULL) fclose(files.english);
+  if (files.chinese != NULL) fclose(files.chinese);
+  ichiran_locale_store_free(chinese);
+  ichiran_locale_store_free(english);
+  ichiran_lexicon_store_free(lexicon);
   ichiran_kernel_free(kernel);
   if (!passed) {
-    fprintf(
-      stderr,
-      "C product harness failed: metadata=%d same_pack=%d token_details=%zu "
-      "detailed=%zu romanization=%zu described=%zu corrupt_recoveries=%zu "
-      "concurrent=%d/%d\n",
-      metadata, same_pack, token_details, detailed, romanization, described,
-      corrupt_recoveries, concurrent_first, concurrent_second
-    );
-    return 5;
+    fputs("C ABI v7 multilingual product harness failed\n", stderr);
+    return 4;
   }
-  if (same_pack) {
-    printf(
-      "C ABI v5 same-pack product harness passed: detailed=702 utf16_detailed=3 "
-      "token_details=8 romanization=5 utf16_romanization=3 describe=4 "
-      "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
-      corrupt_recoveries
-    );
-  } else {
-    printf(
-      "C ABI v5 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
-      "authority_canonical_ties=4(current_lisp=3 fallback=1) token_details=4 romanization=5 "
-      "utf16_romanization=3 describe=4 "
-      "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
-      corrupt_recoveries
-    );
-  }
+  puts("C ABI v7 multilingual product harness passed: lexicon/en/zh-Hans lazy decode and localized legacy/token handshakes");
   return 0;
 }

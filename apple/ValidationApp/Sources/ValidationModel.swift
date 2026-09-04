@@ -5,6 +5,7 @@ import IchiranSwift
 final class ValidationModel: ObservableObject {
   @Published var text = "庭には二羽鶏がいる。"
   @Published var remoteManifest = ""
+  @Published var definitionLocale = "en"
   @Published var analysis: IchiranAnalysisResult?
   @Published var tokenDetails: IchiranTokenDetails?
   @Published var romanized = ""
@@ -75,7 +76,10 @@ final class ValidationModel: ObservableObject {
       guard let analyzer else {
         throw IchiranAnalyzerError(code: .internal, message: "Analyzer is not open")
       }
-      entry = try await analyzer.entry(entryIndex)
+      entry = try await analyzer.entry(
+        entryIndex,
+        options: .init(locale: definitionLocale)
+      )
       status = "Loaded JMdict sequence \(entry?.seq ?? 0)"
     }
   }
@@ -87,10 +91,18 @@ final class ValidationModel: ObservableObject {
       }
       tokenDetails = try await analyzer.details(
         text,
-        options: .init(pathIndex: pathIndex, tokenIndex: tokenIndex, limit: 3)
+        options: .init(
+          pathIndex: pathIndex,
+          tokenIndex: tokenIndex,
+          limit: 3,
+          locale: definitionLocale
+        )
       )
       if let entryIndex {
-        entry = try await analyzer.entry(entryIndex)
+        entry = try await analyzer.entry(
+          entryIndex,
+          options: .init(locale: definitionLocale)
+        )
       } else {
         entry = nil
       }

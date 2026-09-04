@@ -26,6 +26,7 @@ public struct IchiranInstalledPack: Sendable, Equatable {
   public let packVersion: String
   public let sourceCommit: String
   public let manifestSHA256: String
+  public let availableLocales: [String]
 
   let generationID: UUID
   let directory: URL
@@ -35,13 +36,17 @@ public struct IchiranInstalledPack: Sendable, Equatable {
     self.packVersion = manifest.packVersion
     self.sourceCommit = manifest.sourceCommit
     self.manifestSHA256 = manifest.manifestSHA256
+    self.availableLocales = manifest.locales.keys.sorted()
     self.generationID = generationID
     self.directory = directory
     self.manifest = manifest
   }
 
   var hotURL: URL { directory.appendingPathComponent("hot.bin", isDirectory: false) }
-  var detailsURL: URL { directory.appendingPathComponent("details.bin", isDirectory: false) }
+  var lexiconURL: URL { directory.appendingPathComponent("lexicon.bin", isDirectory: false) }
+  func localeURL(_ locale: String) -> URL {
+    directory.appendingPathComponent("gloss.\(locale).bin", isDirectory: false)
+  }
 }
 
 struct AuthenticatedManifest: Codable, Sendable, Equatable {
@@ -71,10 +76,11 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
   let sourcesLockSHA256: String
   let manifestSHA256: String
   let hot: Asset
-  let details: Asset
+  let lexicon: Asset
+  let locales: [String: Asset]
 
   enum CodingKeys: String, CodingKey {
-    case formatVersion, packVersion, sourceCommit, hot, details
+    case formatVersion, packVersion, sourceCommit, hot, lexicon, locales
     case sourcesLockSHA256 = "sourcesLockSha256"
     case manifestSHA256 = "manifestSha256"
   }
@@ -96,12 +102,12 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
       object,
       [
         "formatVersion", "packVersion", "sourceCommit", "sourcesLockSha256", "manifestSha256",
-        "hot", "details",
+        "hot", "lexicon", "locales",
       ],
       label: "manifest"
     )
-    guard try integer(object["formatVersion"], label: "formatVersion") == 1 else {
-      throw invalid("manifest formatVersion must be 1")
+    guard try integer(object["formatVersion"], label: "formatVersion") == 2 else {
+      throw invalid("manifest formatVersion must be 2")
     }
     let packVersion = try string(object["packVersion"], label: "packVersion")
     guard !packVersion.isEmpty, packVersion.utf8.count <= 128 else {
@@ -117,15 +123,31 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
       throw invalid("manifest digests must be lowercase SHA-256 values")
     }
     let hot = try asset(object["hot"], name: "hot")
-    let details = try asset(object["details"], name: "details")
+    let lexicon = try asset(object["lexicon"], name: "lexicon")
+    guard let localeObjects = object["locales"] as? [String: Any],
+      localeObjects["en"] != nil, localeObjects["zh-Hans"] != nil
+    else {
+      throw invalid("manifest locales must include en and zh-Hans")
+    }
+    var locales: [String: Asset] = [:]
+    for locale in localeObjects.keys.sorted() {
+      guard locale.range(
+        of: #"^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"#,
+        options: .regularExpression
+      ) != nil else {
+        throw invalid("manifest has an invalid locale \(locale)")
+      }
+      locales[locale] = try asset(localeObjects[locale], name: locale, locale: true)
+    }
     let manifest = AuthenticatedManifest(
-      formatVersion: 1,
+      formatVersion: 2,
       packVersion: packVersion,
       sourceCommit: sourceCommit,
       sourcesLockSHA256: sourcesLock,
       manifestSHA256: manifestSHA,
       hot: hot,
-      details: details
+      lexicon: lexicon,
+      locales: locales
     )
     let digest = SHA256.hash(data: Data(manifest.digestInput.utf8)).hex
     guard digest == manifestSHA else {
@@ -134,7 +156,7 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
     return manifest
   }
 
-  private static func asset(_ value: Any?, name: String) throws -> Asset {
+  private static func asset(_ value: Any?, name: String, locale: Bool = false) throws -> Asset {
     guard let object = value as? [String: Any] else {
       throw invalid("manifest is missing \(name)")
     }
@@ -148,7 +170,7 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
       throw invalid("manifest \(name).encoding must be identity or gzip")
     }
     let file = try string(object["file"], label: "\(name).file")
-    let expectedFile = "\(name).bin\(encoding == .gzip ? ".gz" : "")"
+    let expectedFile = "\(locale ? "gloss." : "")\(name).bin\(encoding == .gzip ? ".gz" : "")"
     guard file == expectedFile else {
       throw invalid("manifest \(name).file must be \(expectedFile)")
     }
@@ -219,10 +241,15 @@ struct AuthenticatedManifest: Codable, Sendable, Equatable {
   }
 
   private var digestInput: String {
-    "{" + "\"formatVersion\":1," + "\"packVersion\":\(Self.quote(packVersion)),"
+    let localeJSON = locales.keys.sorted().map { locale in
+      "\(Self.quote(locale)):\(Self.assetJSON(locales[locale]!))"
+    }.joined(separator: ",")
+    return "{" + "\"formatVersion\":2," + "\"packVersion\":\(Self.quote(packVersion)),"
       + "\"sourceCommit\":\(Self.quote(sourceCommit)),"
       + "\"sourcesLockSha256\":\(Self.quote(sourcesLockSHA256)),"
-      + "\"hot\":\(Self.assetJSON(hot))," + "\"details\":\(Self.assetJSON(details))" + "}"
+      + "\"hot\":\(Self.assetJSON(hot)),"
+      + "\"lexicon\":\(Self.assetJSON(lexicon)),"
+      + "\"locales\":{\(localeJSON)}" + "}"
   }
 
   private static func assetJSON(_ asset: Asset) -> String {

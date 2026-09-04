@@ -10,11 +10,12 @@ import {
   AnalyzerSupportReader
 } from './analyzer-support.js';
 import {
-  DetailStoreReader,
-  openDetailStore,
-  type DetailGzipDecoder,
-  type DetailRandomAccessSource
-} from './details.js';
+  DictionaryReader,
+  LexiconStoreReader,
+  LocaleGlossStoreReader,
+  type DictionaryGzipDecoder,
+  type DictionaryRandomAccessSource
+} from './dictionary.js';
 import { MORPHOLOGY_SECTION_ID, MorphologyReader } from './morphology.js';
 import { openPack } from './pack.js';
 import { ROOT_PAYLOAD_SECTION_ID, RootPayloadReader } from './root-payload.js';
@@ -28,8 +29,16 @@ import { projectProductAnalysis } from './public-analysis.js';
 
 export interface TypeScriptRuntimeSource {
   readonly hot: Uint8Array;
-  readonly details: DetailRandomAccessSource;
-  readonly decodeGzip: AnalyzerAnnotationsGzipDecoder & DetailGzipDecoder;
+  readonly lexicon: {
+    readonly source: DictionaryRandomAccessSource;
+    readonly sha256: string;
+  };
+  readonly locales: Readonly<Record<string, DictionaryRandomAccessSource>>;
+  readonly decodeGzip: AnalyzerAnnotationsGzipDecoder & DictionaryGzipDecoder;
+}
+
+export interface TypeScriptDictionaryOptions {
+  readonly locale?: string;
 }
 
 /** Frozen TypeScript analyzer retained only as a differential oracle. */
@@ -39,9 +48,11 @@ export class TypeScriptOracleRuntime {
   readonly morphology;
   readonly support;
   readonly annotations;
-  readonly #detailSource: DetailRandomAccessSource;
-  readonly #decodeGzip: DetailGzipDecoder;
-  #detailsPromise: Promise<DetailStoreReader> | null = null;
+  readonly #lexiconSource: TypeScriptRuntimeSource['lexicon'];
+  readonly #localeSources: TypeScriptRuntimeSource['locales'];
+  readonly #decodeGzip: DictionaryGzipDecoder;
+  #lexiconPromise: Promise<LexiconStoreReader> | null = null;
+  readonly #localePromises = new Map<string, Promise<LocaleGlossStoreReader>>();
 
   private constructor(
     surface: ReturnType<typeof openSurfaceIndex>,
@@ -49,15 +60,17 @@ export class TypeScriptOracleRuntime {
     morphology: MorphologyReader,
     support: AnalyzerSupportReader,
     annotations: AnalyzerAnnotationsReader,
-    detailSource: DetailRandomAccessSource,
-    decodeGzip: DetailGzipDecoder
+    lexiconSource: TypeScriptRuntimeSource['lexicon'],
+    localeSources: TypeScriptRuntimeSource['locales'],
+    decodeGzip: DictionaryGzipDecoder
   ) {
     this.surface = surface;
     this.roots = roots;
     this.morphology = morphology;
     this.support = support;
     this.annotations = annotations;
-    this.#detailSource = detailSource;
+    this.#lexiconSource = lexiconSource;
+    this.#localeSources = localeSources;
     this.#decodeGzip = decodeGzip;
   }
 
@@ -78,7 +91,8 @@ export class TypeScriptOracleRuntime {
       morphology,
       support,
       annotations,
-      source.details,
+      source.lexicon,
+      source.locales,
       source.decodeGzip
     );
   }
@@ -99,20 +113,51 @@ export class TypeScriptOracleRuntime {
     return this.#run(analyzer => analyzer.romanize(text, options));
   }
 
-  legacy(text: string, options: PortableAnalyzeOptions = {}): Promise<unknown> {
+  legacy(
+    text: string,
+    options: PortableAnalyzeOptions & TypeScriptDictionaryOptions = {}
+  ): Promise<unknown> {
     return this.#run(async analyzer => {
-      const result = analyzer.analyze(text, options);
-      return analyzer.serializeLegacyDetailed(result, await this.#details());
+      const { locale = 'en', ...analyzeOptions } = options;
+      const result = analyzer.analyze(text, analyzeOptions);
+      return analyzer.serializeLegacyDetailed(result, await this.#dictionary(locale));
     });
   }
 
-  async describe(entryIndex: number): Promise<Awaited<ReturnType<DetailStoreReader['entry']>>> {
-    return (await this.#details()).entry(entryIndex);
+  async describe(entryIndex: number, options: TypeScriptDictionaryOptions = {}) {
+    return (await this.#dictionary(options.locale ?? 'en')).entry(entryIndex);
   }
 
-  #details(): Promise<DetailStoreReader> {
-    this.#detailsPromise ??= openDetailStore(this.#detailSource, this.#decodeGzip);
-    return this.#detailsPromise;
+  async #dictionary(locale: string): Promise<DictionaryReader> {
+    const [lexicon, selected, english] = await Promise.all([
+      this.#lexicon(),
+      this.#locale(locale),
+      this.#locale('en')
+    ]);
+    return new DictionaryReader(lexicon, selected, english);
+  }
+
+  #lexicon(): Promise<LexiconStoreReader> {
+    this.#lexiconPromise ??= LexiconStoreReader.open(
+      this.#lexiconSource.source,
+      this.#decodeGzip
+    );
+    return this.#lexiconPromise;
+  }
+
+  #locale(locale: string): Promise<LocaleGlossStoreReader> {
+    const source = this.#localeSources[locale];
+    if (!source) return Promise.reject(new Error(`Dictionary locale is not installed: ${locale}`));
+    let promise = this.#localePromises.get(locale);
+    if (!promise) {
+      promise = this.#lexicon().then(lexicon => LocaleGlossStoreReader.open(
+        source,
+        this.#decodeGzip,
+        { locale, lexiconSha256: this.#lexiconSource.sha256, entryCount: lexicon.manifest.entryCount }
+      ));
+      this.#localePromises.set(locale, promise);
+    }
+    return promise;
   }
 
   async #run<T>(operation: (analyzer: PortableAnalyzer) => T | Promise<T>): Promise<T> {

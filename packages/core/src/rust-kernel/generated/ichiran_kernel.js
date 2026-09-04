@@ -1,96 +1,5 @@
 /* @ts-self-types="./ichiran_kernel.d.ts" */
 
-export class WasmDetailStore {
-    __destroy_into_raw() {
-        const ptr = this.__wbg_ptr;
-        this.__wbg_ptr = 0;
-        WasmDetailStoreFinalization.unregister(this);
-        return ptr;
-    }
-    free() {
-        const ptr = this.__destroy_into_raw();
-        wasm.__wbg_wasmdetailstore_free(ptr, 0);
-    }
-    /**
-     * @param {number} entry_index
-     * @param {Uint8Array} compressed
-     * @returns {Uint8Array}
-     */
-    entry_json(entry_index, compressed) {
-        try {
-            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-            const ptr0 = passArray8ToWasm0(compressed, wasm.__wbindgen_export2);
-            const len0 = WASM_VECTOR_LEN;
-            wasm.wasmdetailstore_entry_json(retptr, this.__wbg_ptr, entry_index, ptr0, len0);
-            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
-            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
-            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
-            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
-            if (r3) {
-                throw takeObject(r2);
-            }
-            var v2 = getArrayU8FromWasm0(r0, r1).slice();
-            wasm.__wbindgen_export3(r0, r1 * 1, 1);
-            return v2;
-        } finally {
-            wasm.__wbindgen_add_to_stack_pointer(16);
-        }
-    }
-    /**
-     * @param {Uint8Array} prefix
-     * @param {number} total_bytes
-     */
-    constructor(prefix, total_bytes) {
-        try {
-            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-            const ptr0 = passArray8ToWasm0(prefix, wasm.__wbindgen_export2);
-            const len0 = WASM_VECTOR_LEN;
-            wasm.wasmdetailstore_open(retptr, ptr0, len0, total_bytes);
-            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
-            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
-            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
-            if (r2) {
-                throw takeObject(r1);
-            }
-            this.__wbg_ptr = r0;
-            WasmDetailStoreFinalization.register(this, this.__wbg_ptr, this);
-            return this;
-        } finally {
-            wasm.__wbindgen_add_to_stack_pointer(16);
-        }
-    }
-    /**
-     * @param {number} entry_index
-     * @returns {Uint8Array}
-     */
-    range_json(entry_index) {
-        try {
-            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-            wasm.wasmdetailstore_range_json(retptr, this.__wbg_ptr, entry_index);
-            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
-            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
-            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
-            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
-            if (r3) {
-                throw takeObject(r2);
-            }
-            var v1 = getArrayU8FromWasm0(r0, r1).slice();
-            wasm.__wbindgen_export3(r0, r1 * 1, 1);
-            return v1;
-        } finally {
-            wasm.__wbindgen_add_to_stack_pointer(16);
-        }
-    }
-    /**
-     * @returns {number}
-     */
-    resident_bytes() {
-        const ret = wasm.wasmdetailstore_resident_bytes(this.__wbg_ptr);
-        return ret >>> 0;
-    }
-}
-if (Symbol.dispose) WasmDetailStore.prototype[Symbol.dispose] = WasmDetailStore.prototype.free;
-
 export class WasmKernel {
     __destroy_into_raw() {
         const ptr = this.__wbg_ptr;
@@ -283,18 +192,22 @@ export class WasmLegacyOperation {
         wasm.__wbg_wasmlegacyoperation_free(ptr, 0);
     }
     /**
-     * Returns a JSON envelope. `missing-detail` names the exact compressed
-     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
+     * Returns a JSON envelope. `missing-dictionary` names the store and exact
+     * compressed range the host must decode before retrying.
      * @param {WasmKernel} kernel
-     * @param {WasmDetailStore} details
+     * @param {WasmLexiconStore} lexicon
+     * @param {WasmLocaleStore} locale
+     * @param {WasmLocaleStore} fallback
      * @returns {Uint8Array}
      */
-    legacy_step(kernel, details) {
+    legacy_step(kernel, lexicon, locale, fallback) {
         try {
             const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
             _assertClass(kernel, WasmKernel);
-            _assertClass(details, WasmDetailStore);
-            wasm.wasmlegacyoperation_legacy_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, details.__wbg_ptr);
+            _assertClass(lexicon, WasmLexiconStore);
+            _assertClass(locale, WasmLocaleStore);
+            _assertClass(fallback, WasmLocaleStore);
+            wasm.wasmlegacyoperation_legacy_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, lexicon.__wbg_ptr, locale.__wbg_ptr, fallback.__wbg_ptr);
             var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
             var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
             var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
@@ -311,6 +224,202 @@ export class WasmLegacyOperation {
     }
 }
 if (Symbol.dispose) WasmLegacyOperation.prototype[Symbol.dispose] = WasmLegacyOperation.prototype.free;
+
+export class WasmLexiconStore {
+    __destroy_into_raw() {
+        const ptr = this.__wbg_ptr;
+        this.__wbg_ptr = 0;
+        WasmLexiconStoreFinalization.unregister(this);
+        return ptr;
+    }
+    free() {
+        const ptr = this.__destroy_into_raw();
+        wasm.__wbg_wasmlexiconstore_free(ptr, 0);
+    }
+    /**
+     * @returns {number}
+     */
+    entry_count() {
+        const ret = wasm.wasmlexiconstore_entry_count(this.__wbg_ptr);
+        return ret >>> 0;
+    }
+    /**
+     * @param {number} entry_index
+     * @param {Uint8Array} compressed
+     * @returns {Uint8Array}
+     */
+    entry_json(entry_index, compressed) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray8ToWasm0(compressed, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            wasm.wasmlexiconstore_entry_json(retptr, this.__wbg_ptr, entry_index, ptr0, len0);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v2 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v2;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @param {Uint8Array} prefix
+     * @param {number} total_bytes
+     */
+    constructor(prefix, total_bytes) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray8ToWasm0(prefix, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            wasm.wasmlexiconstore_open(retptr, ptr0, len0, total_bytes);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            this.__wbg_ptr = r0;
+            WasmLexiconStoreFinalization.register(this, this.__wbg_ptr, this);
+            return this;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @param {number} entry_index
+     * @returns {Uint8Array}
+     */
+    range_json(entry_index) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.wasmlexiconstore_range_json(retptr, this.__wbg_ptr, entry_index);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v1 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v1;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @returns {number}
+     */
+    resident_bytes() {
+        const ret = wasm.wasmlexiconstore_resident_bytes(this.__wbg_ptr);
+        return ret >>> 0;
+    }
+}
+if (Symbol.dispose) WasmLexiconStore.prototype[Symbol.dispose] = WasmLexiconStore.prototype.free;
+
+export class WasmLocaleStore {
+    __destroy_into_raw() {
+        const ptr = this.__wbg_ptr;
+        this.__wbg_ptr = 0;
+        WasmLocaleStoreFinalization.unregister(this);
+        return ptr;
+    }
+    free() {
+        const ptr = this.__destroy_into_raw();
+        wasm.__wbg_wasmlocalestore_free(ptr, 0);
+    }
+    /**
+     * @param {number} entry_index
+     * @param {Uint8Array} compressed
+     * @returns {Uint8Array}
+     */
+    entry_json(entry_index, compressed) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray8ToWasm0(compressed, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            wasm.wasmlocalestore_entry_json(retptr, this.__wbg_ptr, entry_index, ptr0, len0);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v2 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v2;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @param {Uint8Array} prefix
+     * @param {number} total_bytes
+     * @param {Uint8Array} expected_lexicon_sha256
+     * @param {string} expected_locale
+     * @param {number} expected_entry_count
+     */
+    constructor(prefix, total_bytes, expected_lexicon_sha256, expected_locale, expected_entry_count) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray8ToWasm0(prefix, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            const ptr1 = passArray8ToWasm0(expected_lexicon_sha256, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            const ptr2 = passStringToWasm0(expected_locale, wasm.__wbindgen_export2, wasm.__wbindgen_export4);
+            const len2 = WASM_VECTOR_LEN;
+            wasm.wasmlocalestore_open(retptr, ptr0, len0, total_bytes, ptr1, len1, ptr2, len2, expected_entry_count);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            this.__wbg_ptr = r0;
+            WasmLocaleStoreFinalization.register(this, this.__wbg_ptr, this);
+            return this;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @param {number} entry_index
+     * @returns {Uint8Array}
+     */
+    range_json(entry_index) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.wasmlocalestore_range_json(retptr, this.__wbg_ptr, entry_index);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v1 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v1;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @returns {number}
+     */
+    resident_bytes() {
+        const ret = wasm.wasmlocalestore_resident_bytes(this.__wbg_ptr);
+        return ret >>> 0;
+    }
+}
+if (Symbol.dispose) WasmLocaleStore.prototype[Symbol.dispose] = WasmLocaleStore.prototype.free;
 
 export class WasmTokenDetailsOperation {
     static __wrap(ptr) {
@@ -332,15 +441,19 @@ export class WasmTokenDetailsOperation {
     /**
      * Resolves one presentation tree, requesting only the dictionary blocks it uses.
      * @param {WasmKernel} kernel
-     * @param {WasmDetailStore} details
+     * @param {WasmLexiconStore} lexicon
+     * @param {WasmLocaleStore} locale
+     * @param {WasmLocaleStore} fallback
      * @returns {Uint8Array}
      */
-    token_details_step(kernel, details) {
+    token_details_step(kernel, lexicon, locale, fallback) {
         try {
             const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
             _assertClass(kernel, WasmKernel);
-            _assertClass(details, WasmDetailStore);
-            wasm.wasmtokendetailsoperation_token_details_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, details.__wbg_ptr);
+            _assertClass(lexicon, WasmLexiconStore);
+            _assertClass(locale, WasmLocaleStore);
+            _assertClass(fallback, WasmLocaleStore);
+            wasm.wasmtokendetailsoperation_token_details_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, lexicon.__wbg_ptr, locale.__wbg_ptr, fallback.__wbg_ptr);
             var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
             var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
             var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
@@ -363,12 +476,35 @@ if (Symbol.dispose) WasmTokenDetailsOperation.prototype[Symbol.dispose] = WasmTo
  * @param {number} total_bytes
  * @returns {number}
  */
-export function detail_prefix_length(header, total_bytes) {
+export function lexicon_prefix_length(header, total_bytes) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passArray8ToWasm0(header, wasm.__wbindgen_export2);
         const len0 = WASM_VECTOR_LEN;
-        wasm.detail_prefix_length(retptr, ptr0, len0, total_bytes);
+        wasm.lexicon_prefix_length(retptr, ptr0, len0, total_bytes);
+        var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+        var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+        var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+        if (r2) {
+            throw takeObject(r1);
+        }
+        return r0 >>> 0;
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+    }
+}
+
+/**
+ * @param {Uint8Array} header
+ * @param {number} total_bytes
+ * @returns {number}
+ */
+export function locale_prefix_length(header, total_bytes) {
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        const ptr0 = passArray8ToWasm0(header, wasm.__wbindgen_export2);
+        const len0 = WASM_VECTOR_LEN;
+        wasm.locale_prefix_length(retptr, ptr0, len0, total_bytes);
         var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
         var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
         var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
@@ -412,15 +548,18 @@ function __wbg_get_imports() {
     };
 }
 
-const WasmDetailStoreFinalization = (typeof FinalizationRegistry === 'undefined')
-    ? { register: () => {}, unregister: () => {} }
-    : new FinalizationRegistry(ptr => wasm.__wbg_wasmdetailstore_free(ptr, 1));
 const WasmKernelFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_wasmkernel_free(ptr, 1));
 const WasmLegacyOperationFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_wasmlegacyoperation_free(ptr, 1));
+const WasmLexiconStoreFinalization = (typeof FinalizationRegistry === 'undefined')
+    ? { register: () => {}, unregister: () => {} }
+    : new FinalizationRegistry(ptr => wasm.__wbg_wasmlexiconstore_free(ptr, 1));
+const WasmLocaleStoreFinalization = (typeof FinalizationRegistry === 'undefined')
+    ? { register: () => {}, unregister: () => {} }
+    : new FinalizationRegistry(ptr => wasm.__wbg_wasmlocalestore_free(ptr, 1));
 const WasmTokenDetailsOperationFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_wasmtokendetailsoperation_free(ptr, 1));

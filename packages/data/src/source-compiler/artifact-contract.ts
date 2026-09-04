@@ -65,13 +65,20 @@ export interface BrowserAlphaArtifactCounts {
     readonly largestGeneratedBlock: number;
     readonly largestGeneratedCompressedBlock: number;
   };
-  readonly details: {
+  readonly lexicon: {
     readonly entries: number;
     readonly forms: number;
     readonly senses: number;
-    readonly glosses: number;
     readonly properties: number;
   };
+  readonly locales: Readonly<Record<string, {
+    readonly entries: number;
+    readonly translatedEntries: number;
+    readonly groups: number;
+    readonly targets: number;
+    readonly glosses: number;
+    readonly info: number;
+  }>>;
 }
 
 export function sha256Bytes(bytes: Uint8Array): string {

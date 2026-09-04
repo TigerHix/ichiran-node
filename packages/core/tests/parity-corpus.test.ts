@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+import { resolve } from 'node:path';
 
 import {
   fixtureKey,
@@ -7,7 +8,7 @@ import {
 
 describe('oracle parity corpus', () => {
   test('locks broad fixtures and deterministic analyzer probes', async () => {
-    const corpus = await loadAnalyzerParityCorpus(process.cwd());
+    const corpus = await loadAnalyzerParityCorpus(resolve(import.meta.dir, '../../..'));
     expect(corpus.segmentation).toHaveLength(534);
     expect(corpus.cli).toHaveLength(252);
     expect(corpus.hard).toHaveLength(149);

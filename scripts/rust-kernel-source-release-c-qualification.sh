@@ -29,7 +29,9 @@ else
 fi
 cp "$release/manifest.json" "$installed/manifest.json"
 gzip -dc "$release/hot.bin.gz" > "$installed/hot.bin"
-gzip -dc "$release/details.bin.gz" > "$installed/details.bin"
+gzip -dc "$release/lexicon.bin.gz" > "$installed/lexicon.bin"
+gzip -dc "$release/gloss.en.bin.gz" > "$installed/gloss.en.bin"
+gzip -dc "$release/gloss.zh-Hans.bin.gz" > "$installed/gloss.zh-Hans.bin"
 if [ -n "$source_lock" ]; then
   bash packages/rust-kernel/tests/run_c_harness.sh --same-pack "$installed" \
     --source-lock "$source_lock"

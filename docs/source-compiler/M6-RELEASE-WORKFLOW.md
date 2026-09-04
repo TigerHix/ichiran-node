@@ -2,7 +2,9 @@
 
 The release command has two concrete modes. Both compile the same TypeScript
 semantic model, stream generated conjugations through bounded binary spools,
-invoke the existing Rust surface-index compiler, and write pack format v1.
+invoke the existing Rust surface-index compiler, and write the analyzer hot pack.
+The hot analyzer pack remains format 1; the published multilingual release manifest
+is format 2 and binds the hot pack, language-neutral lexicon, and locale stores.
 Neither mode resolves or loads the PostgreSQL reference package or configures a
 database. Separate browser-pack `*-oracle.ts` modules retain the migration
 loaders, while the release imports only compiler-owned semantic-input builders.
@@ -23,8 +25,10 @@ Baseline mode always uses that tracked lock and rejects `--source-lock`; only up
 mode accepts—and requires—an explicit transition lock.
 
 A fresh clone acquires that comparison pack directly from the immutable GitHub
-release. The acquisition command pins the checksum-index identity, then verifies
-the manifest, hot pack, details pack and producer statistics named by that index:
+release. This is deliberately historical format-1 comparison evidence, not an input
+shape accepted by the current publisher. The acquisition command pins the
+checksum-index identity, then verifies the old manifest, hot pack, combined details
+pack, and producer statistics named by that index:
 
 ```sh
 bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
@@ -37,9 +41,10 @@ than an undeclared prerequisite. Release comparison reads each of the four named
 artifacts once, verifies those captured buffers, and parses only those same buffers;
 replacing the ignored cache after capture cannot change the comparison authority.
 
-The source lock assigns exactly one verified file to each of nine compiler roles:
+The active format-2 source lock assigns exactly one verified file to each of eleven compiler roles:
 JMdict, Kanjidic2, extra entries, municipalities, wards, chronological errata,
-compatibility, `kwpos.csv`, and `conjo.csv`. Release code receives those verified
+compatibility, `kwpos.csv`, `conjo.csv`, Tomoshi Simplified Chinese data, and the
+Komi zh-Hans sense-info catalog. Release code receives those verified
 paths directly. Missing, duplicate, ambiguous and unknown role assignments fail,
 and `stats.json` records the exact byte count and SHA-256 of every consumed file.
 Lock verification also checks the expanded JMdict and Kanjidic2 byte identities
@@ -47,6 +52,18 @@ and embedded upstream version markers, and loads both semantic ledgers through
 their canonical parsers to verify the declared row counts. Archive-patch hashes
 are acquisition provenance: the named acquisition command verifies them before
 creating the pinned compiler input, while releases consume only that pinned file.
+
+Acquire and verify the Tomoshi archive selected by a lock before running either
+release mode (the command never overwrites an existing pinned database):
+
+```sh
+bun scripts/acquire-source-compiler-tomoshi.ts \
+  data/source-compiler-sources.lock.json
+```
+
+This acquisition requires `curl` and `zstd`; release compilation itself reads only
+the verified decompressed SQLite file named by the lock. For update mode, pass the
+selected update lock to the same acquisition command.
 
 Baseline mode also reads and validates
 `data/source-compiler-generated-order-attestation.json`. That compact input
@@ -230,10 +247,11 @@ SHA-256, so copying or renaming the January bytes cannot turn off comparison.
 A later September 1 snapshot was also tested as a transition candidate. Its
 source semantics compiled, but its installed hot pack was 25,273,024 bytes,
 107,200 bytes above the former 24 MiB product gate. Publication correctly stopped.
-The September 2 product decision raised the hot limit by one MiB, from 24 to 25 MiB,
-and the complete first-install limit by one MiB, from 25 to 26 MiB. The 64 MiB
-ready-state persisted limit is unchanged. These are explicit capacity decisions for
-the current dictionary, not a weakening or removal of the release gates.
+The September 2 product decision raised the hot limit by one MiB, from 24 to 25 MiB.
+The multilingual format-2 cutover later set the complete wire limit to 36 MiB for the
+hot pack, lexicon, English definitions, Simplified Chinese definitions, and manifest.
+The 64 MiB ready-state persisted limit is unchanged. These are explicit capacity
+decisions for the current dictionary, not a weakening or removal of the release gates.
 
 Before the full build, run the bounded semantic witness:
 
@@ -243,8 +261,8 @@ bun scripts/source-compiler-update-witness.ts
 
 It verifies the complete transition lock, proves that seq 2868547 is absent
 from the January 1 JMdict and present in the January 2 source as `パオーン`, and
-passes that canonical entry through the real surface, root-payload and detail
-encoders twice. The command is a low-memory source/encoder check; it is not a
+passes that canonical entry through the real surface, root-payload, lexicon, and
+locale encoders twice. The command is a low-memory source/encoder check; it is not a
 substitute for the complete release.
 
 The final update gate builds the same clean commit twice into independent
@@ -270,7 +288,7 @@ the output pack version, so use the same `--pack-version` in both commands as sh
 set -eu
 release_a=work/m6-update-release-a
 release_b=work/m6-update-release-b
-for artifact in manifest.json hot.bin.gz details.bin.gz stats.json; do
+for artifact in manifest.json hot.bin.gz lexicon.bin.gz gloss.en.bin.gz gloss.zh-Hans.bin.gz stats.json; do
   cmp "$release_a/$artifact" "$release_b/$artifact"
 done
 ```

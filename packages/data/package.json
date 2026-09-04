@@ -16,10 +16,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "typecheck:migration": "tsc --noEmit -p tsconfig.migration.json",
     "test": "bun test tests/",
-    "test:source": "bun scripts/test-source.ts",
-    "alpha:release:build": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts build",
-    "alpha:release:refresh-lock": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts refresh-lock",
-    "alpha:release:verify": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts verify"
+    "test:source": "bun scripts/test-source.ts"
   },
   "dependencies": {
     "@ichiran/core": "workspace:*",

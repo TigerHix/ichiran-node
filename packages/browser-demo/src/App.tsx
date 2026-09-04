@@ -30,6 +30,12 @@ import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Textarea } from '@/components/ui/textarea';
 import {
+  createPresentation,
+  partOfSpeechCategory,
+  type Presentation,
+  type PresentationLocale
+} from '@ichiran/presentation';
+import {
   BrowserAnalyzer,
   MAX_ANALYZER_TEXT_LENGTH,
   isInvalidInstallError,
@@ -44,10 +50,6 @@ import {
 } from './analyzer-service.js';
 import { AnalyzerClient } from './client.js';
 import { analysisPathChoices } from './analysis-path-choices.js';
-import {
-  partOfSpeechCategory,
-  partOfSpeechLabel
-} from './dictionary-labels.js';
 import { ANALYZER_SAMPLES } from './samples.js';
 import { useTokenSelection, type TokenSelection } from './use-token-selection.js';
 import { WordDetails } from './WordDetails.js';
@@ -71,6 +73,12 @@ function formatBytes(bytes: number): string {
     unit++;
   }
   return `${value >= 10 ? value.toFixed(1) : value.toFixed(2)} ${units[unit]}`;
+}
+
+function releaseBytes(release: AnalyzerRelease, kind: 'downloadBytes' | 'installedBytes'): number {
+  return release.hot[kind]
+    + release.lexicon[kind]
+    + Object.values(release.locales).reduce((total, asset) => total + asset[kind], 0);
 }
 
 function posTone(pos: readonly string[]): string {
@@ -104,39 +112,50 @@ function useMobileLayout(): boolean {
   return mobile;
 }
 
-function Header({ status, onClear }: {
+function Header({ status, presentation, uiLocale, onUiLocale, onClear }: {
   status: AnalyzerStatus | null;
+  presentation: Presentation;
+  uiLocale: PresentationLocale;
+  onUiLocale(locale: PresentationLocale): void;
   onClear(): void;
 }): ReactElement {
   const ready = status?.state === 'ready';
   return (
     <header className="app-header">
-      <a className="wordmark" href="/" aria-label="Ichiran home">
+      <a className="wordmark" href="/" aria-label={presentation.message('home')}>
         <span lang="ja">一覧</span>
         <strong>Ichiran</strong>
       </a>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Analyzer settings">
+          <Button variant="ghost" size="icon" aria-label={presentation.message('settings')}>
             <GearSixIcon weight="regular" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="settings-menu" align="end" sideOffset={8}>
-          <DropdownMenuLabel>Analyzer data</DropdownMenuLabel>
+          <DropdownMenuLabel>{presentation.message('analyzerData')}</DropdownMenuLabel>
+          <label className="interface-locale">
+            <span>{presentation.message('interfaceLanguage')}</span>
+            <select value={uiLocale} onChange={event => onUiLocale(event.target.value as PresentationLocale)}>
+              <option value="en">English</option>
+              <option value="zh-Hans">简体中文</option>
+            </select>
+          </label>
+          <DropdownMenuSeparator />
           {ready && (
             <DropdownMenuItem disabled>
               <DatabaseIcon />
-              {formatBytes(status.installedBytes)} on this device
+              {presentation.message('onThisDevice', { size: formatBytes(status.installedBytes) })}
             </DropdownMenuItem>
           )}
           <DropdownMenuSeparator />
           {ready && (
             <DropdownMenuItem variant="destructive" onSelect={onClear}>
               <TrashIcon />
-              Remove data
+              {presentation.message('removeData')}
             </DropdownMenuItem>
           )}
-          <DropdownMenuItem asChild><a href="/licenses.html">Licenses</a></DropdownMenuItem>
+          <DropdownMenuItem asChild><a href="/licenses.html">{presentation.message('licenses')}</a></DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </header>
@@ -144,55 +163,56 @@ function Header({ status, onClear }: {
 }
 
 function InstallView({
-  release, releaseError, status, progress, error, onInstall, onClear
+  release, releaseError, status, progress, error, presentation, onInstall, onClear
 }: {
   release: AnalyzerRelease | null;
   releaseError: string | null;
   status: AnalyzerStatus | null;
   progress: AnalyzerProgress | null;
   error: AppError | null;
+  presentation: Presentation;
   onInstall(): void;
   onClear(): void;
 }): ReactElement {
-  const downloadBytes = release ? release.hot.downloadBytes + release.details.downloadBytes : 0;
-  const installedBytes = release ? release.hot.installedBytes + release.details.installedBytes : 0;
+  const downloadBytes = release ? releaseBytes(release, 'downloadBytes') : 0;
+  const installedBytes = release ? releaseBytes(release, 'installedBytes') : 0;
   const broken = status?.state === 'incomplete' || status?.state === 'corrupt' || status?.state === 'stale';
   const busy = progress !== null;
   const percent = progress && progress.totalBytes > 0
     ? Math.min(100, Math.round(progress.receivedBytes / progress.totalBytes * 100))
     : 0;
   const phase = progress?.phase === 'downloading'
-    ? 'Downloading'
+    ? presentation.message('downloading')
     : progress?.phase === 'verifying'
-      ? 'Checking files'
+      ? presentation.message('checkingFiles')
       : progress?.phase === 'installing'
-        ? 'Saving to this device'
-        : 'Opening analyzer';
+        ? presentation.message('savingDevice')
+        : presentation.message('openingAnalyzer');
 
   return (
     <main className="install-layout">
       <section className="install-panel" aria-labelledby="install-title">
         <div className="install-icon" aria-hidden="true"><DatabaseIcon weight="duotone" /></div>
-        <h1 id="install-title">Install Japanese data</h1>
-        <p className="install-intro">Download once. Analysis reads this data directly from your device.</p>
+        <h1 id="install-title">{presentation.message('installTitle')}</h1>
+        <p className="install-intro">{presentation.message('installIntro')}</p>
 
         {status === null && !releaseError && (
-          <div className="install-loading" aria-label="Preparing analyzer">
+          <div className="install-loading" aria-label={presentation.message('preparing')}>
             <Skeleton className="h-10 w-full" />
             <Skeleton className="h-4 w-48" />
           </div>
         )}
-        {status?.state === 'stale' && <p className="message error" role="alert">Your local data needs an update.</p>}
+        {status?.state === 'stale' && <p className="message error" role="alert">{presentation.message('staleData')}</p>}
         {(status?.state === 'incomplete' || status?.state === 'corrupt') && (
-          <p className="message error" role="alert">The saved data is incomplete. Install it again.</p>
+          <p className="message error" role="alert">{presentation.message('incompleteData')}</p>
         )}
         {error && (
           <p className="message error" role="alert">
             {error.code === 'insufficient-storage'
-              ? 'There is not enough free storage for the analyzer.'
+              ? presentation.message('insufficientStorage')
               : error.code === 'clear-error'
-                ? 'The saved data could not be removed.'
-                : 'The download did not finish.'}
+                ? presentation.message('clearFailed')
+                : presentation.message('downloadFailed')}
             <small>{error.message}</small>
           </p>
         )}
@@ -201,40 +221,46 @@ function InstallView({
           <div className="install-progress" aria-live="polite">
             <div><span>{phase}</span><strong>{percent}%</strong></div>
             <progress max={progress.totalBytes} value={progress.receivedBytes} />
-            <small>{formatBytes(progress.receivedBytes)} of {formatBytes(progress.totalBytes)}</small>
+            <small>{presentation.message('byteProgress', {
+              received: formatBytes(progress.receivedBytes),
+              total: formatBytes(progress.totalBytes)
+            })}</small>
           </div>
         ) : release && (
           <Button className="install-action" size="lg" type="button" onClick={onInstall}>
             <DownloadSimpleIcon data-icon="inline-start" />
-            {broken ? 'Reinstall analyzer data' : error ? 'Retry' : 'Install analyzer data'}
+            {presentation.message(broken ? 'reinstall' : error ? 'retry' : 'install')}
           </Button>
         )}
 
         {release && (
           <dl className="install-size">
-            <div><dt>Download</dt><dd>{formatBytes(downloadBytes)}</dd></div>
-            <div><dt>Stored</dt><dd>{formatBytes(installedBytes)}</dd></div>
+            <div><dt>{presentation.message('download')}</dt><dd>{formatBytes(downloadBytes)}</dd></div>
+            <div><dt>{presentation.message('stored')}</dt><dd>{formatBytes(installedBytes)}</dd></div>
           </dl>
         )}
-        <p className="privacy">Your text stays on this device.</p>
-        {broken && !busy && <Button variant="ghost" className="remove-data" onClick={onClear}>Remove saved data</Button>}
+        <p className="privacy">{presentation.message('privacy')}</p>
+        {broken && !busy && <Button variant="ghost" className="remove-data" onClick={onClear}>{presentation.message('removeData')}</Button>}
       </section>
     </main>
   );
 }
 
-function ExamplesMenu({ onChoose }: { onChoose(text: string): void }): ReactElement {
+function ExamplesMenu({ presentation, onChoose }: {
+  presentation: Presentation;
+  onChoose(text: string): void;
+}): ReactElement {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm">Examples <CaretDownIcon data-icon="inline-end" /></Button>
+        <Button variant="ghost" size="sm">{presentation.message('examples')} <CaretDownIcon data-icon="inline-end" /></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="examples-menu" align="end" sideOffset={6}>
-        <DropdownMenuLabel>Try a sentence</DropdownMenuLabel>
+        <DropdownMenuLabel>{presentation.message('trySentence')}</DropdownMenuLabel>
         <DropdownMenuGroup>
           {ANALYZER_SAMPLES.map(sample => (
             <DropdownMenuItem className="example-item" key={sample.text} onSelect={() => onChoose(sample.text)}>
-              <span>{sample.label}</span>
+              <span>{presentation.sampleLabel(sample.id)}</span>
               <strong lang="ja">{sample.text}</strong>
             </DropdownMenuItem>
           ))}
@@ -244,10 +270,11 @@ function ExamplesMenu({ onChoose }: { onChoose(text: string): void }): ReactElem
   );
 }
 
-function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, onKeyboardSelect }: {
+function TokenButton({ token, index, selected, presentation, onPointerDown, onPointerEnter, onKeyboardSelect }: {
   token: AnalysisToken;
   index: number;
   selected: boolean;
+  presentation: Presentation;
   onPointerDown(): void;
   onPointerEnter(): void;
   onKeyboardSelect(): void;
@@ -255,8 +282,8 @@ function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, on
   if (token.entryIndex === null && token.pos.length === 0) return <span className="punctuation">{token.text}</span>;
   const reading = token.reading && token.reading !== token.text ? token.reading : null;
   const accessible = reading
-    ? `${token.text}, reading ${reading}, ${token.pos.map(partOfSpeechLabel).join(', ') || 'word'}`
-    : `${token.text}, ${token.pos.map(partOfSpeechLabel).join(', ') || 'word'}`;
+    ? `${token.text}, ${presentation.message('reading', { reading })}, ${token.pos.map(presentation.partOfSpeechLabel).join(', ') || presentation.message('word')}`
+    : `${token.text}, ${token.pos.map(presentation.partOfSpeechLabel).join(', ') || presentation.message('word')}`;
   return (
     <button
       className={`token token-${posTone(token.pos)}`}
@@ -274,9 +301,10 @@ function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, on
   );
 }
 
-function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp, onKeyboardSelect }: {
+function Sentence({ path, selection, presentation, onPointerDown, onPointerEnter, onPointerUp, onKeyboardSelect }: {
   path: AnalysisPath;
   selection: TokenSelection | null;
+  presentation: Presentation;
   onPointerDown(index: number): void;
   onPointerEnter(index: number): void;
   onPointerUp(): void;
@@ -306,6 +334,7 @@ function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp,
           token={token}
           index={index}
           selected={selection !== null && index >= selection.start && index <= selection.end}
+          presentation={presentation}
           onPointerDown={() => onPointerDown(index)}
           onPointerEnter={() => onPointerEnter(index)}
           onKeyboardSelect={() => onKeyboardSelect(index)}
@@ -315,9 +344,10 @@ function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp,
   );
 }
 
-function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
+function AnalysisWorkspace({ analyzer, operationError, presentation, onPackInvalid }: {
   analyzer: BrowserAnalyzer;
   operationError: AppError | null;
+  presentation: Presentation;
   onPackInvalid(): void;
 }): ReactElement {
   const [text, setText] = useState(DEFAULT_SAMPLE);
@@ -331,6 +361,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   const [detailsError, setDetailsError] = useState<string | null>(null);
   const [romanization, setRomanization] = useState<string | null>(null);
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>('idle');
+  const [definitionLocale, setDefinitionLocale] = useState<'en' | 'zh-Hans'>('en');
   const mobileLayout = useMobileLayout();
   const activeIntent = useRef<string | null>(null);
   const request = useRef(0);
@@ -338,8 +369,8 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   const selectionState = useTokenSelection();
   const path = result?.paths[pathIndex] ?? null;
   const parseChoices = useMemo(
-    () => result ? analysisPathChoices(result.paths, pathIndex) : [],
-    [pathIndex, result]
+    () => result ? analysisPathChoices(result.paths, pathIndex, presentation) : [],
+    [pathIndex, presentation, result]
   );
   const otherParseChoices = parseChoices.filter(choice => choice.index !== pathIndex);
   const selection = selectionState.selection;
@@ -362,7 +393,8 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
     void analyzer.details(result.input, {
       limit: 3,
       pathIndex,
-      tokenIndex: selection.start
+      tokenIndex: selection.start,
+      locale: definitionLocale
     }).then(value => {
       if (!current) return;
       setDetails(value);
@@ -370,11 +402,11 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
     }, reason => {
       if (!current) return;
       setDetailsLoading(false);
-      setDetailsError('Word details could not be opened.');
+      setDetailsError(presentation.message('detailsFailed'));
       if (isInvalidInstallError(reason)) onPackInvalid();
     });
     return () => { current = false; };
-  }, [analyzer, onPackInvalid, pathIndex, result, selectedToken, selection]);
+  }, [analyzer, definitionLocale, onPackInvalid, pathIndex, presentation, result, selectedToken, selection]);
 
   const changeText = useCallback((value: string): void => {
     latestText.current = value;
@@ -440,71 +472,84 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
     try { setRomanization(await analyzer.romanize(result.input)); }
     catch (reason) {
       if (isInvalidInstallError(reason)) onPackInvalid();
-      setError('Romanization could not be generated.');
+      setError(presentation.message('romanizationFailed'));
     }
   }
 
   const detailProps = {
     token: selectedToken, selectionText, details, loading: detailsLoading, error: detailsError,
-    copied: copyState === 'copied', onCopy: () => void copySelection(), onClose: closeDetails
+    copied: copyState === 'copied', presentation,
+    onCopy: () => void copySelection(), onClose: closeDetails
   };
 
   return (
     <main className="workspace">
       {operationError && (
         <p className="message error operation-error" role="alert">
-          {operationError.code === 'clear-error' ? 'The saved data could not be removed.' : 'The new data could not replace the current copy.'}
+          {presentation.message(operationError.code === 'clear-error' ? 'clearFailed' : 'replaceFailed')}
           <small>{operationError.message}</small>
         </p>
       )}
       <section className="composer" aria-labelledby="composer-title">
         <div className="composer-heading">
-          <div><h1 id="composer-title"><label htmlFor="japanese-input">Japanese text</label></h1><p>Paste a sentence or choose an example.</p></div>
-          <ExamplesMenu onChoose={chooseSample} />
+          <div><h1 id="composer-title"><label htmlFor="japanese-input">{presentation.message('japaneseText')}</label></h1><p>{presentation.message('composerIntro')}</p></div>
+          <ExamplesMenu presentation={presentation} onChoose={chooseSample} />
         </div>
         <div className="textarea-wrap">
           <Textarea
             id="japanese-input" className="japanese-input" value={text}
             onChange={event => changeText(event.target.value)} onKeyDown={inputKeyDown}
             lang="ja" rows={3} maxLength={MAX_ANALYZER_TEXT_LENGTH}
-            aria-label="Japanese text" placeholder="日本語を入力してください"
+            aria-label={presentation.message('japaneseText')} placeholder="日本語を入力してください"
           />
           {text && (
-            <Button className="clear-input" variant="ghost" size="icon-sm" type="button" onClick={() => changeText('')} aria-label="Clear Japanese text"><XIcon /></Button>
+            <Button className="clear-input" variant="ghost" size="icon-sm" type="button" onClick={() => changeText('')} aria-label={presentation.message('clearJapanese')}><XIcon /></Button>
           )}
         </div>
         <div className="composer-footer">
           <span>{text.length.toLocaleString()} / {MAX_ANALYZER_TEXT_LENGTH.toLocaleString()}</span>
-          <Button type="button" size="lg" onClick={() => void analyze()} disabled={!text.trim() || running}>{running ? 'Analyzing' : 'Analyze'}</Button>
+          <Button type="button" size="lg" onClick={() => void analyze()} disabled={!text.trim() || running}>{presentation.message(running ? 'analyzing' : 'analyze')}</Button>
         </div>
         {error && (
           <p className="message error analysis-error" role="alert">
-            Analysis failed.<small>{error}</small><Button variant="link" size="sm" onClick={() => void analyze()}>Try again</Button>
+            {presentation.message('analysisFailed')}<small>{error}</small><Button variant="link" size="sm" onClick={() => void analyze()}>{presentation.message('tryAgain')}</Button>
           </p>
         )}
       </section>
       <Separator />
-      <section className="analysis" aria-label="Analysis result" aria-busy={running}>
+      <section className="analysis" aria-label={presentation.message('analysisResult')} aria-busy={running}>
         <div className="analysis-main">
           <div className="analysis-toolbar">
-            <h2>Analysis</h2>
-            {result && (
-              <Button variant="ghost" size="sm" onClick={() => void toggleRomanization()}>
-                <TextAaIcon />{romanization === null ? 'Romanize' : 'Hide romaji'}
-              </Button>
-            )}
+            <h2>{presentation.message('analysis')}</h2>
+            <div className="analysis-actions">
+              <label className="definition-locale">
+                <span>{presentation.message('definitions')}</span>
+                <select
+                  value={definitionLocale}
+                  onChange={event => setDefinitionLocale(event.target.value as 'en' | 'zh-Hans')}
+                >
+                  <option value="en">{presentation.message('english')}</option>
+                  <option value="zh-Hans">{presentation.message('simplifiedChinese')}</option>
+                </select>
+              </label>
+              {result && (
+                <Button variant="ghost" size="sm" onClick={() => void toggleRomanization()}>
+                  <TextAaIcon />{presentation.message(romanization === null ? 'romanize' : 'hideRomaji')}
+                </Button>
+              )}
+            </div>
           </div>
           {showBusy && !path ? (
-            <div className="analysis-skeleton" aria-label="Analyzing Japanese text">
+            <div className="analysis-skeleton" aria-label={presentation.message('analyzing')}>
               <Skeleton className="h-8 w-28" /><Skeleton className="h-8 w-20" /><Skeleton className="h-8 w-32" />
             </div>
           ) : path ? (
             <>
-              <Sentence path={path} selection={selection} onPointerDown={selectionState.pointerDown} onPointerEnter={selectionState.pointerEnter} onPointerUp={selectionState.pointerUp} onKeyboardSelect={selectionState.toggle} />
+              <Sentence path={path} selection={selection} presentation={presentation} onPointerDown={selectionState.pointerDown} onPointerEnter={selectionState.pointerEnter} onPointerUp={selectionState.pointerUp} onKeyboardSelect={selectionState.toggle} />
               {romanization && <p className="romanization">{romanization}</p>}
               {otherParseChoices.length > 0 && (
                 <details className="parse-alternatives">
-                  <summary>Other parses <span>{otherParseChoices.length}</span></summary>
+                  <summary>{presentation.message('otherParses')} <span>{otherParseChoices.length}</span></summary>
                   <div>
                     {otherParseChoices.map(choice => (
                         <button type="button" key={choice.index} onClick={() => choosePath(choice.index)}>
@@ -516,29 +561,31 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
               )}
             </>
           ) : (
-            <div className="analysis-empty"><p>{text.trim() ? 'Analyze the text to see each word.' : 'Enter Japanese text to begin.'}</p></div>
+            <div className="analysis-empty"><p>{presentation.message(text.trim() ? 'analyzeHint' : 'enterHint')}</p></div>
           )}
         </div>
         {!mobileLayout && (
-          <aside className="detail-desktop" aria-label="Word details" aria-live="polite">
+          <aside className="detail-desktop" aria-label={presentation.message('wordDetails')} aria-live="polite">
             <WordDetails {...detailProps} />
           </aside>
         )}
       </section>
       {mobileLayout && !selectionState.selecting && selectionText.length > 0 && (
-        <aside className="detail-mobile" aria-label="Word details" aria-live="polite">
-          <Button className="detail-mobile-close" variant="ghost" size="icon-sm" type="button" onClick={closeDetails} aria-label="Close">
+        <aside className="detail-mobile" aria-label={presentation.message('wordDetails')} aria-live="polite">
+          <Button className="detail-mobile-close" variant="ghost" size="icon-sm" type="button" onClick={closeDetails} aria-label={presentation.message('close')}>
             <XIcon />
           </Button>
           <WordDetails {...detailProps} compact />
         </aside>
       )}
-      {copyState === 'error' && <p className="message error" role="alert">The selection could not be copied.</p>}
+      {copyState === 'error' && <p className="message error" role="alert">{presentation.message('copyFailed')}</p>}
     </main>
   );
 }
 
 export function App(): ReactElement {
+  const [uiLocale, setUiLocale] = useState<PresentationLocale>('en');
+  const presentation = useMemo(() => createPresentation(uiLocale), [uiLocale]);
   const supported = supportsRequiredFeatures();
   const client = useMemo(() => supported ? new AnalyzerClient() : null, [supported]);
   const analyzer = useMemo(() => client ? new BrowserAnalyzer(client) : null, [client]);
@@ -583,7 +630,11 @@ export function App(): ReactElement {
   async function install(): Promise<void> {
     if (!analyzer) return;
     setOperationError(null);
-    setProgress({ phase: 'downloading', receivedBytes: 0, totalBytes: release ? release.hot.downloadBytes + release.details.downloadBytes : 1 });
+    setProgress({
+      phase: 'downloading',
+      receivedBytes: 0,
+      totalBytes: release ? releaseBytes(release, 'downloadBytes') : 1
+    });
     try {
       if (typeof navigator.storage.persist === 'function') try { await navigator.storage.persist(); } catch { /* Best effort. */ }
       setStatus(await analyzer.install(setProgress));
@@ -593,46 +644,46 @@ export function App(): ReactElement {
         : { code: 'install-error', message: String(reason) });
       if (!isTerminalAnalyzerError(reason)) {
         try { setStatus(await analyzer.status()); }
-        catch { setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' }); }
+        catch { setStatus({ state: 'incomplete', message: presentation.message('reloadStatus') }); }
       }
     } finally { setProgress(null); }
   }
 
   async function clear(): Promise<void> {
-    if (!analyzer || !window.confirm('Remove the downloaded Japanese data from this device?')) return;
+    if (!analyzer || !window.confirm(presentation.message('confirmRemove'))) return;
     setOperationError(null);
     try { setStatus(await analyzer.clear()); }
     catch (reason) {
       setOperationError({ code: 'clear-error', message: reason instanceof Error ? reason.message : String(reason) });
-      if (isTerminalAnalyzerError(reason)) setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' });
+      if (isTerminalAnalyzerError(reason)) setStatus({ state: 'incomplete', message: presentation.message('reloadStatus') });
       else {
         try { setStatus(await analyzer.status()); }
-        catch { setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' }); }
+        catch { setStatus({ state: 'incomplete', message: presentation.message('reloadStatus') }); }
       }
     }
   }
 
   const refreshStatus = useCallback((): void => {
     if (!analyzer) return;
-    void analyzer.status().then(setStatus, () => setStatus({ state: 'corrupt', message: 'The saved data is corrupted.' }));
-  }, [analyzer]);
+    void analyzer.status().then(setStatus, () => setStatus({ state: 'corrupt', message: presentation.message('corruptData') }));
+  }, [analyzer, presentation]);
 
   if (!supported || !analyzer) {
     return (
       <div className="app-shell">
-        <Header status={null} onClear={() => undefined} />
-        <main className="unsupported"><DatabaseIcon weight="light" /><h1>This browser cannot store the analyzer locally.</h1><p>Open Ichiran in a current browser with private browsing turned off.</p></main>
+        <Header status={null} presentation={presentation} uiLocale={uiLocale} onUiLocale={setUiLocale} onClear={() => undefined} />
+        <main className="unsupported"><DatabaseIcon weight="light" /><h1>{presentation.message('unsupportedTitle')}</h1><p>{presentation.message('unsupportedIntro')}</p></main>
       </div>
     );
   }
 
   return (
     <div className="app-shell">
-      <Header status={status} onClear={() => void clear()} />
+      <Header status={status} presentation={presentation} uiLocale={uiLocale} onUiLocale={setUiLocale} onClear={() => void clear()} />
       {status?.state === 'ready'
-        ? <AnalysisWorkspace analyzer={analyzer} operationError={operationError} onPackInvalid={refreshStatus} />
-        : <InstallView release={release} releaseError={releaseError} status={status} progress={progress} error={operationError} onInstall={() => void install()} onClear={() => void clear()} />}
-      <footer><span>Runs on this device</span><a href="/licenses.html">Licenses</a></footer>
+        ? <AnalysisWorkspace analyzer={analyzer} operationError={operationError} presentation={presentation} onPackInvalid={refreshStatus} />
+        : <InstallView release={release} releaseError={releaseError} status={status} progress={progress} error={operationError} presentation={presentation} onInstall={() => void install()} onClear={() => void clear()} />}
+      <footer><span>{presentation.message('runsOnDevice')}</span><a href="/licenses.html">{presentation.message('licenses')}</a></footer>
     </div>
   );
 }

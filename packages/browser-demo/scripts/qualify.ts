@@ -93,16 +93,29 @@ const installed = (bytes: Uint8Array, encoding: 'identity' | 'gzip'): Uint8Array
   encoding === 'gzip' ? new Uint8Array(gunzipSync(bytes)) : bytes.slice();
 
 const hot = installed(verifiedRelease.hotBytes, verifiedRelease.manifest.hot.encoding);
-const details = installed(
-  verifiedRelease.detailsBytes,
-  verifiedRelease.manifest.details.encoding
+const lexicon = installed(
+  verifiedRelease.lexiconBytes,
+  verifiedRelease.manifest.lexicon.encoding
 );
+const locales = Object.fromEntries(Object.entries(verifiedRelease.localeBytes).map(
+  ([locale, bytes]) => {
+    const decoded = installed(bytes, verifiedRelease.manifest.locales[locale]!.encoding);
+    return [locale, {
+      byteLength: decoded.byteLength,
+      read: async (offset: number, byteLength: number) => decoded.slice(offset, offset + byteLength)
+    }] as const;
+  }
+));
 const oracle = await TypeScriptOracleRuntime.open({
   hot,
-  details: {
-    byteLength: details.byteLength,
-    read: async (offset, byteLength) => details.slice(offset, offset + byteLength)
+  lexicon: {
+    sha256: verifiedRelease.manifest.lexicon.installedSha256,
+    source: {
+      byteLength: lexicon.byteLength,
+      read: async (offset, byteLength) => lexicon.slice(offset, offset + byteLength)
+    }
   },
+  locales,
   decodeGzip: async (compressed, expectedByteLength) => {
     const decoded = new Uint8Array(gunzipSync(compressed));
     if (decoded.byteLength !== expectedByteLength) {
@@ -136,8 +149,12 @@ await run('bun', [
 ], packageRoot, false, productionEnvironment);
 const releaseDownloadBytes = verifiedRelease.manifestBytes.byteLength
   + verifiedRelease.hotBytes.byteLength
-  + verifiedRelease.detailsBytes.byteLength;
-const firstInstallLimit = 26 * 1024 * 1024;
+  + verifiedRelease.lexiconBytes.byteLength
+  + Object.values(verifiedRelease.localeBytes).reduce(
+    (total, bytes) => total + bytes.byteLength,
+    0
+  );
+const firstInstallLimit = 36 * 1024 * 1024;
 if (releaseDownloadBytes > firstInstallLimit) {
   throw new Error(
     `Analyzer download bytes ${releaseDownloadBytes} exceed the ${firstInstallLimit}-byte limit`

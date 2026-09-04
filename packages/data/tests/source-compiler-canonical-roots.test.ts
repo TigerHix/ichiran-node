@@ -2,7 +2,8 @@ import { beforeAll, describe, expect, test } from 'bun:test';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { buildDetailStore } from '../src/browser-pack/details.js';
+import { buildLexiconStore } from '../src/browser-pack/lexicon.js';
+import { buildLocaleGlossStore } from '../src/browser-pack/locale-gloss.js';
 import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
 import { buildRootPayload } from '../src/browser-pack/root-payload.js';
 import { compileCanonicalRoots, type CanonicalRootCompilation } from '../src/source-compiler/canonical-roots.js';
@@ -16,7 +17,11 @@ import { emitConfiguredConjugations } from '../src/source-compiler/conjugation-e
 import { conjugationSourceKey } from '../src/source-compiler/conjugation-emissions.js';
 import { canonicalEntriesDigest } from '../src/source-compiler/digest.js';
 import { canonicalMorphologySource } from '../src/source-compiler/morphology-input.js';
-import { canonicalDetailEntries, canonicalRootPayloadSource } from '../src/source-compiler/pack-input.js';
+import {
+  canonicalEnglishLocaleEntries,
+  canonicalLexiconEntries,
+  canonicalRootPayloadSource
+} from '../src/source-compiler/pack-input.js';
 
 const paths = {
   jmdict: fileURLToPath(new URL('../JMdict_e.gz', import.meta.url)),
@@ -103,18 +108,35 @@ describe('complete canonical roots', () => {
     expect(omitted).toHaveLength(54);
   });
 
-  test('emits the qualified detail bytes exactly', () => {
-    const details = buildDetailStore(canonicalDetailEntries(compilation.entries));
-    expect(details.stats).toMatchObject({
+  test('emits deterministic language-neutral lexicon and English locale bytes', () => {
+    const lexicon = buildLexiconStore(canonicalLexiconEntries(compilation.entries));
+    expect(lexicon.stats).toMatchObject({
       entryCount: 217_967,
       formCount: 492_913,
       senseCount: 251_648,
-      glossCount: 434_112,
-      propertyCount: 407_620,
-      totalBytes: 13_555_874
+      propertyCount: 401_254,
+      totalBytes: 8_159_535
     });
-    expect(sha256(details.bytes)).toBe(
-      '0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151'
+    const lexiconSha256 = sha256(lexicon.bytes);
+    expect(lexiconSha256).toBe(
+      '74bb932decb2e24b8faa861cc015e4dd87e5d1ca6d549465c5276c5f297ed42d'
+    );
+    const english = buildLocaleGlossStore({
+      locale: 'en',
+      lexiconSha256,
+      entries: canonicalEnglishLocaleEntries(compilation.entries)
+    });
+    expect(english.stats).toMatchObject({
+      entryCount: 217_967,
+      translatedEntryCount: 217_967,
+      groupCount: 251_648,
+      targetCount: 251_648,
+      glossCount: 434_112,
+      infoCount: 6_366,
+      totalBytes: 7_108_607
+    });
+    expect(sha256(english.bytes)).toBe(
+      '56812d5033e88ed386b2520eb8f90cc35b7840937a8e916a2326d156d1586a7c'
     );
   });
 

@@ -92,10 +92,18 @@ public actor IchiranPackStore {
       label: "hot.bin"
     )
     try requireSize(
-      directory.appendingPathComponent("details.bin", isDirectory: false),
-      manifest.details.installedBytes,
-      label: "details.bin"
+      directory.appendingPathComponent("lexicon.bin", isDirectory: false),
+      manifest.lexicon.installedBytes,
+      label: "lexicon.bin"
     )
+    for locale in manifest.locales.keys.sorted() {
+      let asset = manifest.locales[locale]!
+      try requireSize(
+        directory.appendingPathComponent("gloss.\(locale).bin", isDirectory: false),
+        asset.installedBytes,
+        label: "gloss.\(locale).bin"
+      )
+    }
     return IchiranInstalledPack(
       generationID: generationID,
       directory: directory,
@@ -149,25 +157,24 @@ public actor IchiranPackStore {
     do {
       let manifestData = try await fetchManifest(location)
       let manifest = try AuthenticatedManifest.authenticate(manifestData)
-      let total = Int64(manifest.hot.downloadBytes + manifest.details.downloadBytes)
-      try await install(
-        asset: manifest.hot,
-        named: "hot.bin",
-        location: location,
-        staging: staging,
-        completedBefore: 0,
-        total: total,
-        progress: progress
-      )
-      try await install(
-        asset: manifest.details,
-        named: "details.bin",
-        location: location,
-        staging: staging,
-        completedBefore: Int64(manifest.hot.downloadBytes),
-        total: total,
-        progress: progress
-      )
+      let assets = [(manifest.hot, "hot.bin"), (manifest.lexicon, "lexicon.bin")]
+        + manifest.locales.keys.sorted().map { locale in
+          (manifest.locales[locale]!, "gloss.\(locale).bin")
+        }
+      let total = Int64(assets.reduce(0) { $0 + $1.0.downloadBytes })
+      var completed: Int64 = 0
+      for (asset, name) in assets {
+        try await install(
+          asset: asset,
+          named: name,
+          location: location,
+          staging: staging,
+          completedBefore: completed,
+          total: total,
+          progress: progress
+        )
+        completed += Int64(asset.downloadBytes)
+      }
       try manifestData.write(
         to: staging.appendingPathComponent("manifest.json", isDirectory: false),
         options: [.atomic]

@@ -18,8 +18,8 @@ import {
 } from '../src/source-compiler/release-comparison.js';
 import { resolveSourceReleaseOutput } from '../src/source-compiler/release.js';
 import {
-  captureQualifiedArtifactBytes,
-  verifyQualifiedArtifactIndex
+  captureHistoricalQualifiedArtifactBytes,
+  verifyHistoricalQualifiedArtifactIndex
 } from '../src/source-compiler/release-output.js';
 import { assertSourceCompilerReleaseMode } from '../src/source-compiler/source-lock.js';
 
@@ -31,8 +31,7 @@ function artifacts(root: string): QualifiedArtifactBytes {
     rootPayload: new TextEncoder().encode(root),
     morphology: new TextEncoder().encode('morphology'),
     analyzerSupport: new TextEncoder().encode('support'),
-    analyzerAnnotations: new TextEncoder().encode('annotations'),
-    details: new TextEncoder().encode('details')
+    analyzerAnnotations: new TextEncoder().encode('annotations')
   };
 }
 
@@ -67,7 +66,13 @@ function counts(
       largestUncompressedBlock: 0, largestGeneratedBlock: 0,
       largestGeneratedCompressedBlock: 0
     },
-    details: { entries: 3, forms: 0, senses: 0, glosses: 0, properties: 0 }
+    lexicon: { entries: 3, forms: 0, senses: 0, properties: 0 },
+    locales: {
+      en: { entries: 3, translatedEntries: 3, groups: 0, targets: 0, glosses: 0, info: 0 },
+      'zh-Hans': {
+        entries: 3, translatedEntries: 0, groups: 0, targets: 0, glosses: 0, info: 0
+      }
+    }
   };
 }
 
@@ -138,7 +143,7 @@ describe('source release evidence', () => {
         writeFile(join(fixture, 'details.bin.gz'), originals.detailsDownload),
         writeFile(join(fixture, 'stats.json'), originals.stats)
       ]);
-      const captured = await captureQualifiedArtifactBytes(fixture);
+      const captured = await captureHistoricalQualifiedArtifactBytes(fixture);
       await Promise.all([
         writeFile(join(fixture, 'artifact-sha256.txt'), 'replaced'),
         writeFile(join(fixture, 'manifest.json'), 'replaced'),
@@ -151,7 +156,7 @@ describe('source release evidence', () => {
         artifactIndex: decode(captured.artifactIndex),
         manifest: decode(captured.manifest),
         hotDownload: decode(captured.hotDownload),
-        detailsDownload: decode(captured.detailsDownload),
+        detailsDownload: decode(captured.historicalDetailsDownload),
         stats: decode(captured.stats)
       }).toEqual(originals);
     } finally {
@@ -176,7 +181,8 @@ describe('source release evidence', () => {
         });
         expect(fifo.exitCode).toBe(0);
         const started = performance.now();
-        await expect(verifyQualifiedArtifactIndex(fixture)).rejects.toThrow('not a regular file');
+        await expect(verifyHistoricalQualifiedArtifactIndex(fixture)).rejects
+          .toThrow('not a regular file');
         expect(performance.now() - started).toBeLessThan(1_000);
       } finally {
         await rm(fixture, { recursive: true, force: true });
@@ -197,7 +203,7 @@ describe('source release evidence', () => {
           writeFile(join(fixture, 'stats.json'), 'fixture')
         ]);
         await symlink('outside-index.txt', join(fixture, 'artifact-sha256.txt'));
-        await expect(verifyQualifiedArtifactIndex(fixture)).rejects.toThrow(
+        await expect(verifyHistoricalQualifiedArtifactIndex(fixture)).rejects.toThrow(
           'not a regular file'
         );
       } finally {
@@ -366,8 +372,7 @@ describe('source release evidence', () => {
       rootPayload: { bytes: 4, sha256: '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2' },
       morphology: { bytes: 10, sha256: 'be3be3a7ea1e9c43a444b0336b8b929dc19e69495673afc700af02c44d00918e' },
       analyzerSupport: { bytes: 7, sha256: 'a18603086e5bdf9df88ccc9f5a083fed093e819976e87456b74dafcbd7011114' },
-      analyzerAnnotations: { bytes: 11, sha256: '295df243c6a33994c30b6e16aea7ce6155a24b44514ec956d7a09ae0a4cb0411' },
-      details: { bytes: 7, sha256: '41ffd8b76afc92a65758fd9a080ae80421c196f251263b87cbfb6e567dda0879' }
+      analyzerAnnotations: { bytes: 11, sha256: '295df243c6a33994c30b6e16aea7ce6155a24b44514ec956d7a09ae0a4cb0411' }
     });
   });
 
@@ -412,12 +417,12 @@ describe('source release evidence', () => {
       byteEqual: false,
       decision: 'reviewed-root-order-delta'
     });
-    expect(result.filter(value => value.decision === 'exact')).toHaveLength(5);
+    expect(result.filter(value => value.decision === 'exact')).toHaveLength(4);
   });
 
   test('rejects an unreviewed representation delta', () => {
     const source = artifacts('same-root');
-    const qualified = { ...artifacts('same-root'), details: new TextEncoder().encode('changed') };
+    const qualified = { ...artifacts('same-root'), morphology: new TextEncoder().encode('changed') };
     expect(() => compareQualifiedArtifactBytes(source, qualified, {
       sourceSha256: '32de7d5e7593fa4f8e752523816f44850e4c2298cb7289645fc2a3d906130ac1',
       qualifiedSha256: '32de7d5e7593fa4f8e752523816f44850e4c2298cb7289645fc2a3d906130ac1',
@@ -431,7 +436,7 @@ describe('source release evidence', () => {
       provenance: 'none',
       policy: 'none',
       preservedBehavior: 'none'
-    })).toThrow('details differs from the qualified baseline');
+    })).toThrow('morphology differs from the qualified baseline');
   });
 
   test('reports count differences by exact field', () => {
@@ -443,7 +448,7 @@ describe('source release evidence', () => {
     ]);
   });
 
-  test('imports the source release path while reference modules are blocked', async () => {
+  test('imports the source release path while reference modules are blocked', () => {
     const script = [
       "Bun.plugin({name:'block-reference',setup(builder){",
       "builder.onResolve({filter:/(@ichiran\\/reference-postgres|packages\\/reference-postgres|(^|\\/)postgres$)/},",
@@ -452,23 +457,19 @@ describe('source release evidence', () => {
       "import('./packages/data/src/source-compiler/canonical-roots.ts?release-smoke=1'),",
       "import('./packages/data/src/source-compiler/generated-projection-stream.ts?release-smoke=1'),",
       "import('./packages/data/src/source-compiler/analyzer-support-stream.ts?release-smoke=1'),",
-      "import('./packages/data/src/source-compiler/release-output.ts?release-smoke=1')]);",
-      "console.log('source-release-import-ok');"
+      "import('./packages/data/src/source-compiler/release-output.ts?release-smoke=1')]);"
     ].join('');
-    const child = Bun.spawn([process.execPath, '-e', script], {
+    const bun = Bun.which('bun');
+    if (!bun) throw new Error('Bun executable is unavailable');
+    const child = Bun.spawnSync([bun, '-e', script], {
       cwd: resolve(import.meta.dir, '../../..'),
-      stdout: 'pipe',
+      stdout: 'ignore',
       stderr: 'pipe',
       env: { ...process.env, ICHIRAN_DB_URL: 'definitely-not-a-valid-url' }
     });
-    const [status, stdout, stderr] = await Promise.all([
-      child.exited,
-      new Response(child.stdout).text(),
-      new Response(child.stderr).text()
-    ]);
+    const stderr = new TextDecoder().decode(child.stderr);
     expect(stderr).toBe('');
-    expect(status).toBe(0);
-    expect(stdout.trim()).toBe('source-release-import-ok');
+    expect(child.exitCode).toBe(0);
   });
 
   test('does not let update mode disable comparison for renamed baseline bytes', () => {

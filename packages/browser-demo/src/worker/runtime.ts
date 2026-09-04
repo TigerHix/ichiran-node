@@ -43,7 +43,7 @@ async function rustKernelWasm(): Promise<Uint8Array> {
   throw new Error(`Rust kernel shell asset returned HTTP ${compressed.status}`);
 }
 
-export async function detailSource(
+export async function randomAccessSource(
   handle: FileSystemFileHandle
 ): Promise<RandomAccessSource> {
   const byteLength = (await handle.getFile()).size;
@@ -58,14 +58,21 @@ export async function detailSource(
 
 /** Open the shared analyzer runtime over the browser's verified OPFS files. */
 export async function openAnalyzerRuntime(files: InstalledFiles): Promise<Analyzer> {
-  const [hot, details, wasm] = await Promise.all([
+  const [hot, lexicon, locales, wasm] = await Promise.all([
     files.hot.getFile().then(file => file.arrayBuffer()).then(bytes => new Uint8Array(bytes)),
-    detailSource(files.details),
+    randomAccessSource(files.lexicon),
+    Promise.all(Object.entries(files.locales).map(async ([locale, handle]) => (
+      [locale, await randomAccessSource(handle)] as const
+    ))).then(entries => Object.fromEntries(entries)),
     rustKernelWasm()
   ]);
   return Analyzer.open({
     hot,
-    details,
+    lexicon: {
+      source: lexicon,
+      sha256: files.manifest.lexicon.installedSha256
+    },
+    locales,
     wasm
   });
 }

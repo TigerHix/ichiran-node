@@ -37,7 +37,7 @@ import {
   type PortableLegacySerializeOptions,
   type PortableLegacyTransformedResult
 } from './analyzer-legacy.js';
-import type { DetailStoreReader } from './details.js';
+import type { DictionaryReader } from './dictionary.js';
 import {
   validatePortableAnalyzeRequest,
   type PortableAnalyzeOptions
@@ -299,10 +299,10 @@ export class PortableAnalyzer {
   /** Cold detail hydration for transformed romanize* output. */
   serializeLegacyDetailed(
     result: PortableAnalysisResult,
-    details: DetailStoreReader,
+    dictionary: DictionaryReader,
     options: PortableLegacySerializeOptions = {}
   ): Promise<PortableLegacyTransformedResult> {
-    return this.#result.serializeLegacyDetailed(result, details, options);
+    return this.#result.serializeLegacyDetailed(result, dictionary, options);
   }
 
   #analyzeWord(

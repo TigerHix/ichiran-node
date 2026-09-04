@@ -1,4 +1,4 @@
-export const ANALYZER_RELEASE_FORMAT_VERSION = 1;
+export const ANALYZER_RELEASE_FORMAT_VERSION = 2;
 export const ANALYZER_PACK_VERSION_MAX_UTF8_BYTES = 128;
 export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;
 const ANALYZER_INSTALL_ID_BYTES = 36;
@@ -15,13 +15,14 @@ export interface AnalyzerReleaseAsset {
 }
 
 export interface AnalyzerReleaseManifest {
-  readonly formatVersion: 1;
+  readonly formatVersion: 2;
   readonly packVersion: string;
   readonly sourceCommit: string;
   readonly sourcesLockSha256: string;
   readonly manifestSha256: string;
   readonly hot: AnalyzerReleaseAsset;
-  readonly details: AnalyzerReleaseAsset;
+  readonly lexicon: AnalyzerReleaseAsset;
+  readonly locales: Readonly<Record<string, AnalyzerReleaseAsset>>;
 }
 
 export interface AnalyzerReadyStateSize {
@@ -80,7 +81,11 @@ export function analyzerReadyStateSize(
     slot: 'a'
   }));
   const persistedBytes = manifest.hot.installedBytes
-    + manifest.details.installedBytes
+    + manifest.lexicon.installedBytes
+    + Object.values(manifest.locales).reduce(
+      (total, asset) => total + asset.installedBytes,
+      0
+    )
     + installedMarkerBytes
     + ANALYZER_INSTALL_ID_BYTES;
   if (!Number.isSafeInteger(persistedBytes)) {
@@ -105,14 +110,15 @@ function expectExactKeys(
   }
 }
 
-function expectedAssetFile(
-  name: 'hot' | 'details',
-  encoding: AnalyzerReleaseEncoding
-): string {
-  return `${name}.bin${encoding === 'gzip' ? '.gz' : ''}`;
+function expectedAssetFile(name: 'hot' | 'lexicon' | string): string {
+  if (name !== 'hot' && name !== 'lexicon') return `gloss.${name}.bin`;
+  return `${name}.bin`;
 }
 
-function parseAsset(value: unknown, name: 'hot' | 'details'): AnalyzerReleaseAsset {
+function parseAsset(
+  value: unknown,
+  name: 'hot' | 'lexicon' | string
+): AnalyzerReleaseAsset {
   if (!isObject(value)) throw new Error(`Analyzer manifest is missing ${name}`);
   expectExactKeys(value, [
     'file',
@@ -125,7 +131,7 @@ function parseAsset(value: unknown, name: 'hot' | 'details'): AnalyzerReleaseAss
   if (value.encoding !== 'identity' && value.encoding !== 'gzip') {
     throw new Error(`Analyzer manifest has an invalid ${name} encoding`);
   }
-  const expectedFile = expectedAssetFile(name, value.encoding);
+  const expectedFile = `${expectedAssetFile(name)}${value.encoding === 'gzip' ? '.gz' : ''}`;
   if (value.file !== expectedFile) {
     throw new Error(`Analyzer manifest ${name}.file must be ${expectedFile}`);
   }
@@ -159,6 +165,18 @@ function parseAsset(value: unknown, name: 'hot' | 'details'): AnalyzerReleaseAss
 export function analyzerManifestDigestInput(
   manifest: AnalyzerReleaseManifestWithoutDigest
 ): string {
+  const locales: Record<string, AnalyzerReleaseAsset> = {};
+  for (const locale of Object.keys(manifest.locales).sort()) {
+    const asset = manifest.locales[locale]!;
+    locales[locale] = {
+      file: asset.file,
+      encoding: asset.encoding,
+      downloadBytes: asset.downloadBytes,
+      downloadSha256: asset.downloadSha256,
+      installedBytes: asset.installedBytes,
+      installedSha256: asset.installedSha256
+    };
+  }
   return JSON.stringify({
     formatVersion: manifest.formatVersion,
     packVersion: manifest.packVersion,
@@ -172,14 +190,15 @@ export function analyzerManifestDigestInput(
       installedBytes: manifest.hot.installedBytes,
       installedSha256: manifest.hot.installedSha256
     },
-    details: {
-      file: manifest.details.file,
-      encoding: manifest.details.encoding,
-      downloadBytes: manifest.details.downloadBytes,
-      downloadSha256: manifest.details.downloadSha256,
-      installedBytes: manifest.details.installedBytes,
-      installedSha256: manifest.details.installedSha256
-    }
+    lexicon: {
+      file: manifest.lexicon.file,
+      encoding: manifest.lexicon.encoding,
+      downloadBytes: manifest.lexicon.downloadBytes,
+      downloadSha256: manifest.lexicon.downloadSha256,
+      installedBytes: manifest.lexicon.installedBytes,
+      installedSha256: manifest.lexicon.installedSha256
+    },
+    locales
   });
 }
 
@@ -196,7 +215,8 @@ export function parseAnalyzerReleaseManifest(
     'sourcesLockSha256',
     'manifestSha256',
     'hot',
-    'details'
+    'lexicon',
+    'locales'
   ], 'Analyzer manifest');
   if (value.formatVersion !== ANALYZER_RELEASE_FORMAT_VERSION) {
     throw new Error('Analyzer manifest has an unsupported format');
@@ -214,6 +234,18 @@ export function parseAnalyzerReleaseManifest(
   }
   expectSha256(value.sourcesLockSha256, 'Analyzer manifest sourcesLockSha256');
   expectSha256(value.manifestSha256, 'Analyzer manifest manifestSha256');
+  if (!isObject(value.locales)) throw new Error('Analyzer manifest is missing locales');
+  if (value.locales.en === undefined) throw new Error('Analyzer manifest locales must include en');
+  if (value.locales['zh-Hans'] === undefined) {
+    throw new Error('Analyzer manifest locales must include zh-Hans');
+  }
+  const locales: Record<string, AnalyzerReleaseAsset> = {};
+  for (const locale of Object.keys(value.locales).sort()) {
+    if (!/^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(locale)) {
+      throw new Error(`Analyzer manifest has an invalid locale ${locale}`);
+    }
+    locales[locale] = parseAsset(value.locales[locale], locale);
+  }
   const manifest: AnalyzerReleaseManifest = {
     formatVersion: ANALYZER_RELEASE_FORMAT_VERSION,
     packVersion: value.packVersion,
@@ -221,7 +253,8 @@ export function parseAnalyzerReleaseManifest(
     sourcesLockSha256: value.sourcesLockSha256,
     manifestSha256: value.manifestSha256,
     hot: parseAsset(value.hot, 'hot'),
-    details: parseAsset(value.details, 'details')
+    lexicon: parseAsset(value.lexicon, 'lexicon'),
+    locales
   };
   const { manifestSha256: _manifestSha256, ...unsigned } = manifest;
   const digest = sha256(analyzerManifestDigestInput(unsigned));

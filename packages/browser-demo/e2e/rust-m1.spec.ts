@@ -39,8 +39,10 @@ interface RustKernelMeasurement {
   readonly transientBytes: number;
   readonly wasmLinearMemoryBytes: number;
   readonly kernelPayloadBytes: number;
-  readonly detailResidentBytesBefore: number;
-  readonly detailResidentBytesAfter: number;
+  readonly lexiconResidentBytesBefore: number;
+  readonly lexiconResidentBytesAfter: number;
+  readonly localeResidentBytesBefore: Readonly<Record<string, number>>;
+  readonly localeResidentBytesAfter: Readonly<Record<string, number>>;
   readonly workerHeapBytes: number | null;
   readonly workerJsHeapUsedBytes: number;
   readonly workerEmbedderHeapUsedBytes: number;
@@ -175,8 +177,10 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
           transientBytes: before.transientBytes,
           wasmLinearMemoryBytes: after.wasmLinearMemoryBytes,
           kernelPayloadBytes: after.kernelPayloadBytes,
-          detailResidentBytesBefore: before.detailResidentBytes,
-          detailResidentBytesAfter: after.detailResidentBytes,
+          lexiconResidentBytesBefore: before.lexiconResidentBytes,
+          lexiconResidentBytesAfter: after.lexiconResidentBytes,
+          localeResidentBytesBefore: before.localeResidentBytes,
+          localeResidentBytesAfter: after.localeResidentBytes,
           workerHeapBytes: after.workerHeapBytes,
           generatedScore: generated.paths[0]!.score,
           invalidInputCode,
@@ -218,10 +222,19 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
     expect(measurement.detailMs).toBeLessThan(65.7);
     expect(measurement.transientBytes).toBeLessThanOrEqual(128 * 1024 * 1024);
     expect(measurement.wasmLinearMemoryBytes).toBeLessThanOrEqual(96 * 1024 * 1024);
-    expect(measurement.detailResidentBytesBefore).toBe(1_787_296);
-    expect(measurement.detailResidentBytesAfter).toBeGreaterThan(
-      measurement.detailResidentBytesBefore
+    expect(measurement.lexiconResidentBytesBefore).toBeGreaterThan(0);
+    expect(measurement.localeResidentBytesBefore.en).toBeGreaterThan(0);
+    expect(measurement.localeResidentBytesBefore['zh-Hans']).toBeGreaterThan(0);
+    expect(measurement.lexiconResidentBytesAfter).toBeGreaterThanOrEqual(
+      measurement.lexiconResidentBytesBefore
     );
+    expect(measurement.localeResidentBytesAfter.en).toBeGreaterThanOrEqual(
+      measurement.localeResidentBytesBefore.en!
+    );
+    expect(
+      measurement.lexiconResidentBytesAfter > measurement.lexiconResidentBytesBefore
+      || measurement.localeResidentBytesAfter.en! > measurement.localeResidentBytesBefore.en!
+    ).toBe(true);
     expect(measurement.generatedScore).toBe(216);
 
     const input = page.getByRole('textbox', { name: 'Japanese text', exact: true });

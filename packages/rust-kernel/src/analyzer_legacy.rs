@@ -198,6 +198,8 @@ pub(crate) struct LegacyGloss {
     pub seq: Option<LegacySequence>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub suffix: Option<String>,
+    #[serde(skip)]
+    pub suffix_id: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub gloss: Option<Vec<LegacySense>>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -275,6 +277,7 @@ impl LegacyGloss {
             components: None,
             seq: None,
             suffix: None,
+            suffix_id: None,
             gloss: None,
             counter: None,
             conj: None,
