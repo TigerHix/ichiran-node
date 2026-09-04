@@ -18,6 +18,7 @@ import {
 import { ANALYZER_SUPPORT_SECTION_ID, openAnalyzerSupport } from '../../core/src/analyzer-support.js';
 import { MORPHOLOGY_SECTION_ID, openMorphology } from '../../core/src/morphology.js';
 import { openPack } from '../../core/src/pack.js';
+import { projectProductAnalysis } from '../../core/src/public-analysis.js';
 import { ROOT_PAYLOAD_SECTION_ID, openRootPayload } from '../../core/src/root-payload.js';
 import { SURFACE_INDEX_SECTION_ID, openSurfaceIndex } from '../../core/src/surface-index.js';
 import {
@@ -122,11 +123,11 @@ async function frozenAnalyzer(hot: Uint8Array): Promise<{
       try {
         for (;;) {
           try {
-            return analyzer.analyze(value.text, {
+            return projectProductAnalysis(analyzer.analyze(value.text, {
               limit: value.limit,
               entities: value.entities,
               normalizePunctuation: value.normalizePunctuation
-            });
+            }));
           } catch (error) {
             if (!(error instanceof AnalyzerAnnotationNotLoadedError)) throw error;
             const key = `${error.kind}:${error.definitionSeq}`;
@@ -189,7 +190,7 @@ async function main(): Promise<void> {
     cleanOperations: 1_236,
     utf16: 3,
     suites: { segmentation: 534, cli: 252, hard: 149, counters: 200, entities: 54, probes: 47 },
-    oracle: 'frozen TypeScript packages/core/src/analyzer.ts',
+    oracle: 'frozen TypeScript analyzer with the clean product projection',
     sourceRevision: sourceRevision(repository),
     pack: {
       ...(samePackManifest ? {

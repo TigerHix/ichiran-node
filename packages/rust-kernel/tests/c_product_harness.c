@@ -711,12 +711,24 @@ int main(int argc, char **argv) {
     if (pthread_join(threads[index], NULL) != 0 || !contexts[index].passed) passed = 0;
   }
 
+  const int concurrent_first = concurrent[0].name != NULL;
+  const int concurrent_second = concurrent[1].name != NULL;
   free_legacy_case(&concurrent[0]);
   free_legacy_case(&concurrent[1]);
   fclose(details_file);
   ichiran_detail_store_free(details);
   ichiran_kernel_free(kernel);
-  if (!passed) return 5;
+  if (!passed) {
+    fprintf(
+      stderr,
+      "C product harness failed: metadata=%d same_pack=%d token_details=%zu "
+      "detailed=%zu romanization=%zu described=%zu corrupt_recoveries=%zu "
+      "concurrent=%d/%d\n",
+      metadata, same_pack, token_details, detailed, romanization, described,
+      corrupt_recoveries, concurrent_first, concurrent_second
+    );
+    return 5;
+  }
   if (same_pack) {
     printf(
       "C ABI v5 same-pack product harness passed: detailed=702 utf16_detailed=3 "

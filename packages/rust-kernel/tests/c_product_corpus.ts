@@ -309,8 +309,13 @@ async function main(): Promise<void> {
       expected: null
     }));
     for (const [index, value] of cases.entries()) {
+      const options = {
+        limit: value.options.limit,
+        entities: value.options.entities ?? [],
+        normalizePunctuation: value.options.normalizePunctuation ?? false
+      };
       const actual = await analyzer.details(value.text, {
-        ...value.options,
+        ...options,
         pathIndex: value.pathIndex,
         tokenIndex: value.tokenIndex
       });
@@ -319,7 +324,7 @@ async function main(): Promise<void> {
         throw new Error(`TokenDetails oracle mismatch for ${value.name}`);
       }
       process.stdout.write(
-        `T\ttoken-details:${index}\t${utf16Hex(value.text)}\t${JSON.stringify(value.options)}`
+        `T\ttoken-details:${index}\t${utf16Hex(value.text)}\t${JSON.stringify(options)}`
         + `\t${value.pathIndex}\t${value.tokenIndex}\t${JSON.stringify(expected)}\n`
       );
     }
