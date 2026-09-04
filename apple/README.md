@@ -27,12 +27,14 @@ Build and audit the complete XCFramework with one command:
 apple/scripts/build-xcframework.sh
 ```
 
-This creates the device and universal-simulator slices at
+This creates the device, universal-simulator, and current-host macOS slices at
 `apple/IchiranSwift/Artifacts/IchiranKernel.xcframework`, a distributable zip beside
 it, and `work/apple/xcframework/audit.txt`. These generated files are ignored. The
 audit records the 17 exported `ichiran_*` symbols, runtime ABI version 5,
 architectures, sizes, and SHA-256 values. The script combines only arm64 and x86_64
-simulator archives; it never combines device and simulator code.
+simulator archives; it never combines device, simulator, or macOS code with each
+other. Both macOS architecture archives are built and audited, while the XCFramework
+uses the archive matching the build host.
 
 Run the Swift package, app, exact repository parity corpora, all eight reviewed
 `TokenDetails` oracle cases, pack failure tests, and lifetime tests on a simulator

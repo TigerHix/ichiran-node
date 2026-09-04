@@ -50,7 +50,7 @@ case "$(uname -m)" in
   arm64|x86_64) host_arch="$(uname -m)" ;;
   *) fail "unsupported host architecture: $(uname -m)" ;;
 esac
-for command in rustup xcodebuild xcrun lipo shasum zip; do
+for command in rustup xcodebuild xcrun jq lipo plutil shasum zip; do
   command -v "$command" >/dev/null || fail "missing required tool: $command"
 done
 rustup run "$toolchain" rustc --version >/dev/null 2>&1 \
@@ -61,10 +61,15 @@ for target in "${targets[@]}"; do
     || fail "Rust target $target is not installed for $toolchain"
 done
 
-mkdir -p "$artifacts" "$work/headers/device" "$work/headers/simulator"
+mkdir -p \
+  "$artifacts" \
+  "$work/headers/device" \
+  "$work/headers/simulator" \
+  "$work/headers/macos"
 rm -rf "$output" "$zip_output"
 cp "$crate/include/ichiran_kernel.h" "$crate/include/module.modulemap" "$work/headers/device/"
 cp "$crate/include/ichiran_kernel.h" "$crate/include/module.modulemap" "$work/headers/simulator/"
+cp "$crate/include/ichiran_kernel.h" "$crate/include/module.modulemap" "$work/headers/macos/"
 
 for target in "${targets[@]}"; do
   rustup run "$toolchain" cargo build \
@@ -136,13 +141,22 @@ xcrun clang -std=c11 -Wall -Wextra -Werror \
 xcodebuild -create-xcframework \
   -library "$device" -headers "$work/headers/device" \
   -library "$simulator" -headers "$work/headers/simulator" \
+  -library "$host_archive" -headers "$work/headers/macos" \
   -output "$output"
 
 [ -f "$output/Info.plist" ] || fail "XCFramework creation produced no Info.plist"
+# xcodebuild does not keep AvailableLibraries in a stable order when an
+# XCFramework has three slices. Canonicalize the array and dictionary keys so
+# repeated builds of identical archives also produce an identical plist/zip.
+canonical_info="$work/Info.canonical.json"
+plutil -convert json -o - "$output/Info.plist" \
+  | jq -S '.AvailableLibraries |= sort_by(.LibraryIdentifier)' > "$canonical_info"
+plutil -convert xml1 -o "$output/Info.plist" "$canonical_info"
 plutil -lint "$output/Info.plist" >/dev/null
 xc_device="$output/ios-arm64/libichiran_kernel.a"
 xc_simulator="$output/ios-arm64_x86_64-simulator/libichiran_kernel-simulator.a"
-for slice in "$xc_device" "$xc_simulator"; do
+xc_macos="$output/macos-$host_arch/libichiran_kernel.a"
+for slice in "$xc_device" "$xc_simulator" "$xc_macos"; do
   [ -s "$slice" ] || fail "XCFramework is missing slice: $slice"
   [ -f "$(dirname "$slice")/Headers/ichiran_kernel.h" ] \
     || fail "XCFramework slice is missing ichiran_kernel.h: $slice"
@@ -152,6 +166,7 @@ for slice in "$xc_device" "$xc_simulator"; do
 done
 audit_arches "$xc_device" arm64
 audit_arches "$xc_simulator" "x86_64 arm64"
+audit_arches "$xc_macos" "$host_arch"
 # Normalize archive entry timestamps and ordering so the distributable zip is
 # byte-reproducible when its XCFramework contents are unchanged.
 find "$output" -type f -exec touch -t 200001010000 {} +
