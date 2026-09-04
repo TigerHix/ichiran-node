@@ -12,7 +12,7 @@ use crate::{
     TokenDetailsStep, Utf16Text,
 };
 
-const ABI_VERSION: u32 = 4;
+const ABI_VERSION: u32 = 5;
 const NO_DETAIL: u32 = u32::MAX;
 
 #[repr(C)]

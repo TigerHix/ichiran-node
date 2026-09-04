@@ -3,6 +3,7 @@ use serde::Serialize;
 use crate::analyzer_legacy::{LegacyConjugation, LegacyGloss, LegacyOrdinal, LegacySense};
 use crate::dto::Utf16Text;
 use crate::error::{ErrorCode, KernelError, Result};
+use crate::romanization::strip_hints;
 
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -60,6 +61,21 @@ pub struct TokenCounter {
     pub ordinal: bool,
 }
 
+fn public_reading(value: Utf16Text) -> Utf16Text {
+    Utf16Text::from_units(&strip_hints(value.units()))
+}
+
+fn public_string_reading(mut value: String) -> String {
+    value.retain(|character| !matches!(character, '\u{200b}' | '\u{200c}'));
+    value
+}
+
+fn public_counter_value(value: String) -> String {
+    value
+        .strip_prefix("Value: ")
+        .map_or_else(|| value.clone(), str::to_owned)
+}
+
 pub(crate) fn token_details(value: LegacyGloss, entity: bool) -> Result<TokenDetails> {
     let text = value.text.ok_or_else(|| {
         KernelError::new(
@@ -67,9 +83,9 @@ pub(crate) fn token_details(value: LegacyGloss, entity: bool) -> Result<TokenDet
             "token details are missing display text",
         )
     })?;
-    let reading = value.kana.ok_or_else(|| {
+    let reading = public_reading(value.kana.ok_or_else(|| {
         KernelError::new(ErrorCode::Internal, "token details are missing a reading")
-    })?;
+    })?);
     let components = value
         .components
         .unwrap_or_default()
@@ -83,7 +99,7 @@ pub(crate) fn token_details(value: LegacyGloss, entity: bool) -> Result<TokenDet
         .map(token_conjugation)
         .collect();
     let counter = value.counter.map(|counter| TokenCounter {
-        value: counter.value,
+        value: public_counter_value(counter.value),
         ordinal: matches!(counter.ordinal, LegacyOrdinal::Yes(true)),
     });
     Ok(TokenDetails {
@@ -108,7 +124,7 @@ fn token_conjugation(value: LegacyConjugation) -> TokenConjugation {
     TokenConjugation {
         root: value.root.map(|root| TokenDetailForm {
             text: root.form,
-            reading: root.reading,
+            reading: public_string_reading(root.reading),
         }),
         properties: value
             .prop
@@ -162,12 +178,24 @@ fn delimited_values(value: &str, open: char, close: char) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use super::delimited_values;
+    use super::{delimited_values, public_counter_value, public_reading, public_string_reading};
+    use crate::dto::Utf16Text;
 
     #[test]
     fn parses_legacy_tag_lists_without_exposing_punctuation() {
         assert_eq!(delimited_values("[n, vt]", '[', ']'), ["n", "vt"]);
         assert_eq!(delimited_values("{comp,math}", '{', '}'), ["comp", "math"]);
         assert!(delimited_values("[]", '[', ']').is_empty());
+    }
+
+    #[test]
+    fn removes_internal_reading_hints_and_counter_labels() {
+        assert_eq!(
+            public_reading(Utf16Text::from("\u{200c}は")).units(),
+            "は".encode_utf16().collect::<Vec<_>>()
+        );
+        assert_eq!(public_string_reading("か\u{200b}く".to_owned()), "かく");
+        assert_eq!(public_counter_value("Value: 3".to_owned()), "3");
+        assert_eq!(public_counter_value("three".to_owned()), "three");
     }
 }

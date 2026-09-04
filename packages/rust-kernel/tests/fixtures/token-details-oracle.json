@@ -1,0 +1,255 @@
+{
+  "formatVersion": 1,
+  "sourcesLockSha256": "73293bfa6253812d60dbb5f604743abad896ddf3351aed9560667dec7ba13f45",
+  "cases": [
+    {
+      "name": "reading-hint",
+      "text": "はし",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "は",
+        "reading": "は",
+        "meanings": [
+          { "gloss": "indicates sentence topic", "pos": ["prt"], "fields": [], "info": "pronounced わ in modern Japanese" },
+          { "gloss": "indicates contrast with another option (stated or unstated)", "pos": ["prt"], "fields": [], "info": null },
+          { "gloss": "adds emphasis", "pos": ["prt"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "true-alternatives-nonzero-path",
+      "text": "はし",
+      "options": { "limit": 3 },
+      "pathIndex": 1,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "はし",
+        "reading": "はし",
+        "meanings": [
+          { "gloss": "end (e.g. of street); tip; point; edge; margin", "pos": ["n"], "fields": [], "info": null },
+          { "gloss": "beginning; start; first", "pos": ["n"], "fields": [], "info": null },
+          { "gloss": "odds and ends; scrap; odd bit; least", "pos": ["n"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [
+          {
+            "text": "はし",
+            "reading": "はし",
+            "meanings": [
+              { "gloss": "bridge", "pos": ["n"], "fields": [], "info": null }
+            ],
+            "components": [],
+            "conjugations": [],
+            "alternatives": [],
+            "suffix": null,
+            "counter": null,
+            "entity": false
+          },
+          {
+            "text": "はし",
+            "reading": "はし",
+            "meanings": [
+              { "gloss": "chopsticks", "pos": ["n"], "fields": [], "info": null }
+            ],
+            "components": [],
+            "conjugations": [],
+            "alternatives": [],
+            "suffix": null,
+            "counter": null,
+            "entity": false
+          }
+        ],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "restricted-hiragana",
+      "text": "あほだら",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "あほだら",
+        "reading": "あほだら",
+        "meanings": [
+          { "gloss": "fool; oaf; airhead", "pos": ["n"], "fields": [], "info": null },
+          { "gloss": "mock Buddhist sutra; type of fast-paced humorous singing mimicking the chanting of a Buddhist sutra, usually with lyrics satirizing current events", "pos": ["n"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "restricted-katakana",
+      "text": "アホンダラ",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "アホンダラ",
+        "reading": "アホンダラ",
+        "meanings": [
+          { "gloss": "fool; oaf; airhead", "pos": ["n"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "nested-via",
+      "text": "食べさせられました",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "食べさせられました",
+        "reading": "たべさせられました",
+        "meanings": [],
+        "components": [],
+        "conjugations": [
+          {
+            "root": null,
+            "properties": [
+              { "pos": "v1", "type": 2, "negative": false, "formal": true }
+            ],
+            "meanings": [],
+            "via": [
+              {
+                "root": { "text": "食べる", "reading": "たべる" },
+                "properties": [
+                  { "pos": "v1", "type": 8, "negative": false, "formal": false }
+                ],
+                "meanings": [
+                  { "gloss": "to eat", "pos": ["v1", "vt"], "fields": [], "info": null },
+                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["vt", "v1"], "fields": [], "info": null }
+                ],
+                "via": []
+              }
+            ]
+          }
+        ],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "compound-suffix",
+      "text": "食べそう",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "食べそう",
+        "reading": "たべそう",
+        "meanings": [],
+        "components": [
+          {
+            "text": "食べ",
+            "reading": "たべ",
+            "meanings": [],
+            "components": [],
+            "conjugations": [
+              {
+                "root": { "text": "食べる", "reading": "たべる" },
+                "properties": [
+                  { "pos": "v1", "type": 13, "negative": false, "formal": false }
+                ],
+                "meanings": [
+                  { "gloss": "to eat", "pos": ["v1", "vt"], "fields": [], "info": null },
+                  { "gloss": "to live on (e.g. a salary); to live off; to subsist on", "pos": ["vt", "v1"], "fields": [], "info": null }
+                ],
+                "via": []
+              }
+            ],
+            "alternatives": [],
+            "suffix": null,
+            "counter": null,
+            "entity": false
+          },
+          {
+            "text": "そう",
+            "reading": "そう",
+            "meanings": [],
+            "components": [],
+            "conjugations": [],
+            "alternatives": [],
+            "suffix": "looking like ... / seeming ...",
+            "counter": null,
+            "entity": false
+          }
+        ],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": false
+      }
+    },
+    {
+      "name": "counter",
+      "text": "三個",
+      "options": { "limit": 3 },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "三個",
+        "reading": "さんこ",
+        "meanings": [
+          { "gloss": "counter for (small) things or pieces", "pos": ["ctr"], "fields": [], "info": "also written as ヶ" },
+          { "gloss": "counter for military units", "pos": ["ctr"], "fields": [], "info": null },
+          { "gloss": "counter for years (of age difference); counter for school-years", "pos": ["ctr"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": { "value": "3", "ordinal": false },
+        "entity": false
+      }
+    },
+    {
+      "name": "entity",
+      "text": "架空固有名",
+      "options": {
+        "limit": 1,
+        "entities": [{ "start": 0, "end": 5, "boost": 10000 }]
+      },
+      "pathIndex": 0,
+      "tokenIndex": 0,
+      "expected": {
+        "text": "架空固有名",
+        "reading": "架空固有名",
+        "meanings": [
+          { "gloss": "proper noun (named entity)", "pos": ["n-pr"], "fields": [], "info": null }
+        ],
+        "components": [],
+        "conjugations": [],
+        "alternatives": [],
+        "suffix": null,
+        "counter": null,
+        "entity": true
+      }
+    }
+  ]
+}

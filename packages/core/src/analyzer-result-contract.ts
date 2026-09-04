@@ -58,6 +58,7 @@ export interface PortableAnalysisToken {
   readonly root: PortableAnalysisRoot | null;
   readonly inflection: readonly PortableAnalysisInflection[];
   readonly components: readonly PortableAnalysisComponent[];
+  /** Ranked retained candidates other than this selected candidate. */
   readonly alternatives: readonly PortableAnalysisAlternative[];
   readonly skipped: number;
   readonly entity: boolean;

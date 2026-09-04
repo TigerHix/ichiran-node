@@ -121,7 +121,7 @@ const witnessInputs = JSON.parse(await readFile(resolve(
 const samePackWitnesses = [];
 for (const witness of witnessInputs) {
   const text = String.fromCharCode(...witness.codeUnits);
-  const result = { ...await oracle.analyze(text, { limit: 1 }), computeMs: 0 };
+  const result = { ...await oracle.analyzeProduct(text, { limit: 1 }), computeMs: 0 };
   samePackWitnesses.push({ ...witness, serialized: JSON.stringify(result) });
 }
 

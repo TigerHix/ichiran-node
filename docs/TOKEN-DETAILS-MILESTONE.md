@@ -30,6 +30,14 @@ Ichiran's presentation rules from a raw dictionary entry. Grammar is unchanged.
 9. The existing analyzer, romanization, pack-size, reproducibility, and PostgreSQL-
    free runtime gates remain green.
 
+The semantic acceptance oracle is
+`packages/rust-kernel/tests/fixtures/token-details-oracle.json`. It is committed,
+human-reviewable, and bound to the tracked source lock rather than generated from the
+WASM or C implementation under test. Its eight exact trees cover a contextual
+reading hint, real alternatives on a nonzero path, hiragana and katakana
+restrictions, recursive conjugation lineage, a compound suffix, a counter, and a
+synthetic entity. The full differential corpus remains responsible for breadth.
+
 ## Product API
 
 The stateless operation is conceptually:

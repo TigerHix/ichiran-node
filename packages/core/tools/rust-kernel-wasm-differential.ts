@@ -517,7 +517,7 @@ async function main(): Promise<void> {
       const operationOptions = options(fixture.request);
       const [actual, expected] = await Promise.all([
         wasm.analyze(fixture.request.text, operationOptions),
-        oracle.analyze(fixture.request.text, operationOptions)
+        oracle.analyzeProduct(fixture.request.text, operationOptions)
       ]);
       const actualClean = projectPortableCleanAnalysis(actual);
       const expectedClean = projectPortableCleanAnalysis(expected);

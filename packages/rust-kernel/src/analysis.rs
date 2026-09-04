@@ -13,11 +13,14 @@ use crate::analyzer_romanize::romanize_analysis;
 use crate::annotations::{AnalyzerAnnotations, GeneratedFacts};
 use crate::characters::{BasicSplitType, basic_split, normalize};
 use crate::details::{DetailRange, DetailStore};
-use crate::dto::{AnalysisChunk, AnalysisPath, AnalysisResult, AnalysisToken, Utf16Text};
+use crate::dto::{
+    AnalysisAlternative, AnalysisChunk, AnalysisComponent, AnalysisPath, AnalysisResult,
+    AnalysisRoot, AnalysisToken, Utf16Text,
+};
 use crate::error::{ErrorCode, KernelError, Result};
 use crate::morphology::{Morphology, MorphologyCandidate, Route};
 use crate::pack::{Pack, PackManifest};
-use crate::romanization::RomanizationName;
+use crate::romanization::{RomanizationName, strip_hints};
 use crate::roots::RootPayload;
 use crate::support::AnalyzerSupport;
 use crate::surface::SurfaceIndex;
@@ -90,6 +93,88 @@ enum DocumentChunk {
         text: Vec<u16>,
         paths: Vec<AnalysisPath>,
     },
+}
+
+fn public_reading(reading: &Utf16Text) -> Utf16Text {
+    Utf16Text::from_units(&strip_hints(reading.units()))
+}
+
+fn clean_root(root: &mut AnalysisRoot) {
+    root.reading
+        .retain(|character| !matches!(character, '\u{200b}' | '\u{200c}'));
+}
+
+fn clean_counter(counter: &mut Option<(String, bool)>) {
+    if let Some((value, _)) = counter
+        && let Some(number) = value.strip_prefix("Value: ")
+    {
+        *value = number.to_owned();
+    }
+}
+
+fn clean_component(component: &mut AnalysisComponent) {
+    component.reading = public_reading(&component.reading);
+    if let Some(root) = &mut component.root {
+        clean_root(root);
+    }
+}
+
+fn clean_alternative(alternative: &mut AnalysisAlternative) {
+    alternative.reading = public_reading(&alternative.reading);
+    for position in &mut alternative.pos {
+        if position == "proper-noun" {
+            *position = "n-pr".to_owned();
+        }
+    }
+    if let Some(root) = &mut alternative.root {
+        clean_root(root);
+    }
+    for component in &mut alternative.components {
+        clean_component(component);
+    }
+    clean_counter(&mut alternative.counter);
+}
+
+fn clean_token(token: &mut AnalysisToken) {
+    token
+        .alternatives
+        .retain(|alternative| Some(alternative.candidate_id) != token.candidate_id);
+    token.reading = public_reading(&token.reading);
+    for position in &mut token.pos {
+        if position == "proper-noun" {
+            *position = "n-pr".to_owned();
+        }
+    }
+    if let Some(root) = &mut token.root {
+        clean_root(root);
+    }
+    for component in &mut token.components {
+        clean_component(component);
+    }
+    for alternative in &mut token.alternatives {
+        clean_alternative(alternative);
+    }
+    clean_counter(&mut token.counter);
+}
+
+fn clean_path(path: &mut AnalysisPath) {
+    for token in &mut path.tokens {
+        clean_token(token);
+    }
+}
+
+fn public_analysis(mut result: AnalysisResult) -> AnalysisResult {
+    for chunk in &mut result.chunks {
+        if let AnalysisChunk::Word { paths, .. } = chunk {
+            for path in paths {
+                clean_path(path);
+            }
+        }
+    }
+    for path in &mut result.paths {
+        clean_path(path);
+    }
+    result
 }
 
 /// The host-neutral owner of all resident analyzer state.
@@ -282,7 +367,7 @@ impl Kernel {
     }
 
     pub fn analyze_json(&mut self, input: &[u16], limit: usize) -> Result<Vec<u8>> {
-        serde_json::to_vec(&self.analyze(input, limit)?)
+        serde_json::to_vec(&public_analysis(self.analyze(input, limit)?))
             .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))
     }
 
@@ -291,7 +376,7 @@ impl Kernel {
         input: &[u16],
         options: &AnalyzeOptions,
     ) -> Result<Vec<u8>> {
-        serde_json::to_vec(&self.analyze_with_options(input, options)?)
+        serde_json::to_vec(&public_analysis(self.analyze_with_options(input, options)?))
             .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))
     }
 

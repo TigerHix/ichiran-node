@@ -12,7 +12,8 @@
 #define DETAILED_CASES 705u
 #define ROMANIZATION_CASES 8u
 #define DESCRIBE_CASES 4u
-#define TOKEN_DETAILS_CASES 4u
+#define BASELINE_TOKEN_DETAILS_CASES 4u
+#define SAME_PACK_TOKEN_DETAILS_CASES 8u
 #define THREAD_COUNT 4u
 #define CONCURRENT_REPEATS 4u
 
@@ -542,7 +543,8 @@ static int metadata_valid(const char *line) {
     && strstr(line, "\"utf16\":3") != NULL
     && strstr(line, "\"romanization\":{\"operations\":8,\"retained\":5,\"utf16\":3}") != NULL
     && strstr(line, "\"describe\":4") != NULL
-    && strstr(line, "\"tokenDetails\":4") != NULL;
+    && ((immutable_pack && strstr(line, "\"tokenDetails\":4") != NULL)
+      || (same_pack && strstr(line, "\"tokenDetails\":8") != NULL));
 }
 
 static int verify_owned_product_errors(
@@ -681,7 +683,8 @@ int main(int argc, char **argv) {
     passed = 0;
   }
   free(line);
-  passed = passed && metadata && token_details == TOKEN_DETAILS_CASES
+  passed = passed && metadata
+    && token_details == (same_pack ? SAME_PACK_TOKEN_DETAILS_CASES : BASELINE_TOKEN_DETAILS_CASES)
     && detailed == DETAILED_CASES
     && romanization == ROMANIZATION_CASES && described == DESCRIBE_CASES
     && corrupt_recoveries == 2
@@ -716,14 +719,14 @@ int main(int argc, char **argv) {
   if (!passed) return 5;
   if (same_pack) {
     printf(
-      "C ABI v4 same-pack product harness passed: detailed=702 utf16_detailed=3 "
-      "token_details=4 romanization=5 utf16_romanization=3 describe=4 "
+      "C ABI v5 same-pack product harness passed: detailed=702 utf16_detailed=3 "
+      "token_details=8 romanization=5 utf16_romanization=3 describe=4 "
       "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
       corrupt_recoveries
     );
   } else {
     printf(
-      "C ABI v4 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
+      "C ABI v5 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
       "authority_canonical_ties=4(current_lisp=3 fallback=1) token_details=4 romanization=5 "
       "utf16_romanization=3 describe=4 "
       "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",

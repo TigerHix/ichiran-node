@@ -95,6 +95,19 @@ components, conjugation lineage, entities, and alternative selection. UI code ow
 only labels and layout. `entry()` remains available for raw dictionary tooling; it
 must not be used to reconstruct analyzer presentation semantics.
 
+The clean product contract also removes internal presentation artifacts:
+
+- A token's `alternatives` excludes the selected candidate. Repeated gloss text is
+  retained when it belongs to distinct JMdict senses or candidates.
+- Public `reading` fields never contain the analyzer's internal U+200B/U+200C
+  romanization hints. `romanize()` still applies those hints before returning text.
+- Synthetic named entities use the JMdict-compatible `n-pr` part-of-speech code.
+- Counter values are plain values such as `"3"`, not legacy labels such as
+  `"Value: 3"`.
+
+These rules are shared by WASM and the native C boundary; consumers should not add
+host-specific cleanup.
+
 ## CLI
 
 | Old invocation | New invocation |

@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#define ICHIRAN_KERNEL_ABI_VERSION 4u
+#define ICHIRAN_KERNEL_ABI_VERSION 5u
 #define ICHIRAN_NO_DETAIL UINT32_MAX
 
 typedef struct IchiranKernel IchiranKernel;
@@ -82,7 +82,8 @@ IchiranResult ichiran_kernel_open(
 /*
  * Executes one clean analysis. Input lengths, entity offsets, and result spans
  * are UTF-16 code units, including unpaired surrogates. options_json is exactly
- * {limit, entities, normalizePunctuation}.
+ * {limit, entities, normalizePunctuation}. Selected candidates are absent from
+ * alternatives; reading hints and legacy counter labels are not exposed.
  */
 IchiranResult ichiran_kernel_analyze_utf16(
   const IchiranKernel *kernel,
@@ -174,7 +175,11 @@ IchiranResult ichiran_kernel_token_details_begin_utf16(
   IchiranTokenDetailsOperation **output
 );
 
-/* Same lazy range handshake as ichiran_kernel_legacy_step. */
+/*
+ * Same lazy range handshake as ichiran_kernel_legacy_step. READY carries canonical
+ * TokenDetails JSON with the same clean reading, alternative, entity, and counter
+ * semantics as analysis JSON.
+ */
 IchiranStepResult ichiran_kernel_token_details_step(
   const IchiranKernel *kernel,
   const IchiranTokenDetailsOperation *operation,

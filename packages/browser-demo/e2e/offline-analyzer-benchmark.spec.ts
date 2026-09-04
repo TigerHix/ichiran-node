@@ -2,7 +2,7 @@ import type { ChildProcess } from 'node:child_process';
 import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { cpus, platform, release, tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import type { BrowserContext, Page } from 'playwright/test';
+import type { BrowserContext, Locator, Page } from 'playwright/test';
 import type {
   AnalysisResult,
   AnalyzerPackManifest
@@ -86,6 +86,44 @@ async function closePersistentContext(context: BrowserContext): Promise<void> {
   if (browser?.isConnected()) {
     throw new Error('Persistent Chromium did not close before profile reuse');
   }
+}
+
+async function locatorCenter(locator: Locator): Promise<{ readonly x: number; readonly y: number }> {
+  const box = await locator.boundingBox();
+  if (!box) throw new Error('Measured UI control has no bounding box');
+  return { x: box.x + box.width / 2, y: box.y + box.height / 2 };
+}
+
+async function measureClick(
+  page: Page,
+  point: { readonly x: number; readonly y: number }
+): Promise<readonly number[]> {
+  await page.evaluate(() => {
+    const durations: number[] = [];
+    const observer = new PerformanceObserver(list => {
+      durations.push(...list.getEntries().map(entry => entry.duration));
+    });
+    observer.observe({ type: 'longtask' });
+    const target = window as typeof window & {
+      __ichiranLongTasks?: number[];
+      __ichiranLongTaskObserver?: PerformanceObserver;
+    };
+    target.__ichiranLongTasks = durations;
+    target.__ichiranLongTaskObserver = observer;
+  });
+  await page.mouse.click(point.x, point.y);
+  await new Promise(resolve => setTimeout(resolve, 1_000));
+  return page.evaluate(() => {
+    const target = window as typeof window & {
+      __ichiranLongTasks?: number[];
+      __ichiranLongTaskObserver?: PerformanceObserver;
+    };
+    target.__ichiranLongTaskObserver?.disconnect();
+    const durations = target.__ichiranLongTasks ?? [];
+    delete target.__ichiranLongTasks;
+    delete target.__ichiranLongTaskObserver;
+    return durations;
+  });
 }
 
 test('installs once, reopens, analyzes after network cutoff, and meets the 6x proxy', async ({
@@ -196,26 +234,31 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
     // in the product build. Finish loading that test-only module before measuring
     // the ordinary analyzer UI so its module parsing cannot count as app work.
     await expectQualificationReady(page);
-    await page.evaluate(() => {
-      const durations: number[] = [];
-      const observer = new PerformanceObserver(list => {
-        durations.push(...list.getEntries().map(entry => entry.duration));
-      });
-      observer.observe({ type: 'longtask' });
-      const state = window as typeof window & {
-        __ichiranLongTasks?: number[];
-        __ichiranLongTaskObserver?: PerformanceObserver;
-      };
-      state.__ichiranLongTasks = durations;
-      state.__ichiranLongTaskObserver = observer;
-    });
     await page.getByRole('textbox', { name: 'Japanese text', exact: true })
       .fill('日本語を勉強しています。');
-    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
-    await expect(page.getByRole('button', { name: /日本語/ }).first()).toBeVisible();
+    const longTasks: number[] = [];
+    longTasks.push(...await measureClick(
+      page,
+      await locatorCenter(page.getByRole('button', { name: 'Analyze', exact: true }))
+    ));
+    const japanese = page.getByRole('button', { name: /日本語/ }).first();
+    await expect(japanese).toBeVisible();
     await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
-    await page.getByRole('button', { name: /日本語/ }).first().click();
+
+    longTasks.push(...await measureClick(page, await locatorCenter(japanese)));
     await expect(page.locator('.word-details:visible').getByText('Noun', { exact: true }).first()).toBeVisible();
+
+    longTasks.push(...await measureClick(
+      page,
+      await locatorCenter(page.getByRole('button', { name: 'Close', exact: true }))
+    ));
+    longTasks.push(...await measureClick(
+      page,
+      await locatorCenter(page.getByRole('button', { name: 'Romanize' }))
+    ));
+    await expect(page.locator('.romanization')).toHaveText('nihongo wo benkyō shiteimasu。');
+    expect(longTasks.filter(duration => duration > 50)).toEqual([]);
+
     const clean = await qualificationAnalyze(page);
     expect(clean).toMatchObject({
       input: '日本語を勉強しています。',
@@ -233,22 +276,7 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
       entity: true,
       root: { seq: 1464530, form: '日本語', reading: 'にほんご' }
     });
-
-    await page.getByRole('button', { name: 'Close', exact: true }).click();
-    await page.getByRole('button', { name: 'Romanize' }).click();
-    await expect(page.locator('.romanization')).toHaveText('nihongo wo benkyō shiteimasu。');
     await expectNoHorizontalOverflow(page, 390);
-    const longTasks = await page.evaluate(
-      () => {
-        const state = window as typeof window & {
-          __ichiranLongTasks?: number[];
-          __ichiranLongTaskObserver?: PerformanceObserver;
-        };
-        state.__ichiranLongTaskObserver?.disconnect();
-        return state.__ichiranLongTasks ?? [];
-      }
-    );
-    expect(longTasks.filter(duration => duration > 50)).toEqual([]);
 
     const affinityCpu = await singleCpuAffinity();
     const analyzerBrowser = context.browser();
@@ -343,6 +371,7 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
       // WSL Chromium can finish every assertion and still leave an offline
       // persistent-context close unresolved. The outer E2E process group owns
       // the final browser reap, so teardown must not consume the test watchdog.
+      await context.setOffline(false).catch(() => undefined);
       await Promise.race([
         context.close().catch(() => undefined),
         new Promise(resolve => setTimeout(resolve, 5_000))

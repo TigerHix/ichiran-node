@@ -43,6 +43,7 @@ import {
   type TokenDetails
 } from './analyzer-service.js';
 import { AnalyzerClient } from './client.js';
+import { analysisPathChoices } from './analysis-path-choices.js';
 import {
   partOfSpeechCategory,
   partOfSpeechLabel
@@ -79,71 +80,6 @@ function posTone(pos: readonly string[]): string {
   if (categories.includes('particle')) return 'particle';
   if (categories.includes('adverb')) return 'adverb';
   return 'noun';
-}
-
-interface AnalysisPathChoice {
-  readonly index: number;
-  readonly label: string;
-}
-
-function tokenPartOfSpeech(token: AnalysisToken): readonly string[] {
-  const labels = [...new Set(token.pos.map(partOfSpeechLabel))];
-  if (token.entity) labels.push('Named Entity');
-  return labels;
-}
-
-function pathSurfaceKey(path: AnalysisPath): string {
-  return JSON.stringify(path.tokens.map(token => token.text));
-}
-
-function pathReadingKey(path: AnalysisPath): string {
-  return JSON.stringify(path.tokens.map(token => token.reading));
-}
-
-function pathConsumerKey(path: AnalysisPath): string {
-  return JSON.stringify(path.tokens.map(token => [
-    token.text,
-    token.reading,
-    [...tokenPartOfSpeech(token)].sort(),
-    token.entity
-  ]));
-}
-
-function pathChoiceLabel(path: AnalysisPath, paths: readonly AnalysisPath[]): string {
-  const surfacePeers = paths.filter(candidate => pathSurfaceKey(candidate) === pathSurfaceKey(path));
-  if (surfacePeers.length === 1) return path.tokens.map(token => token.text).join(' / ');
-
-  const readingPeers = surfacePeers.filter(candidate => pathReadingKey(candidate) === pathReadingKey(path));
-  return path.tokens.map((token, tokenIndex) => {
-    const readings = new Set(surfacePeers.map(candidate => candidate.tokens[tokenIndex]!.reading));
-    const partsOfSpeech = new Set(readingPeers.map(candidate => JSON.stringify([
-      [...tokenPartOfSpeech(candidate.tokens[tokenIndex]!)].sort(),
-      candidate.tokens[tokenIndex]!.entity
-    ])));
-    const details: string[] = [];
-    if (readings.size > 1) details.push(token.reading || 'No reading');
-    if (partsOfSpeech.size > 1) {
-      const labels = tokenPartOfSpeech(token);
-      details.push(labels.length > 0 ? labels.join(', ') : 'Unclassified');
-    }
-    return details.length > 0 ? `${token.text}（${details.join(' · ')}）` : token.text;
-  }).join(' / ');
-}
-
-export function analysisPathChoices(
-  paths: readonly AnalysisPath[],
-  selectedPathIndex: number
-): readonly AnalysisPathChoice[] {
-  const representatives = new Map<string, number>();
-  paths.forEach((path, index) => {
-    const key = pathConsumerKey(path);
-    if (!representatives.has(key) || index === selectedPathIndex) representatives.set(key, index);
-  });
-  const visiblePaths = [...representatives.values()].map(index => paths[index]!);
-  return [...representatives.values()].map((index, visibleIndex) => ({
-    index,
-    label: pathChoiceLabel(visiblePaths[visibleIndex]!, visiblePaths)
-  }));
 }
 
 function supportsRequiredFeatures(): boolean {

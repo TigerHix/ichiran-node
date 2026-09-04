@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import type { AnalysisPath, AnalysisToken } from '../src/analyzer-service.js';
-import { analysisPathChoices } from '../src/App.js';
+import { analysisPathChoices } from '../src/analysis-path-choices.js';
 
 function token(
   text: string,
@@ -51,7 +51,7 @@ describe('alternative analysis path choices', () => {
 
     expect(choices).toEqual([
       { index: 0, label: 'はし（はし · Noun）' },
-      { index: 1, label: 'はし（はし · Proper Noun, Named Entity）' },
+      { index: 1, label: 'はし（はし · Named Entity）' },
       { index: 2, label: 'はし（ばし）' }
     ]);
   });

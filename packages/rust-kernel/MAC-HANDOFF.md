@@ -45,11 +45,15 @@ write the thin Swift ownership/file adapter, and run simulator plus physical-dev
 memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a separate
 remaining M4 gate.
 
-This crate is the sole analyzer implementation for native and browser builds. ABI v4
+This crate is the sole analyzer implementation for native and browser builds. ABI v5
 exposes clean analysis, canonical lazy token details, analyzer-backed romanization,
 and raw dictionary lookup. Its legacy session symbols remain for qualification only
 and must not become public Swift API. Swift owns pack installation and file reads; it
 must not recreate analyzer, detail, or presentation semantics.
+
+The clean boundary excludes the selected token from `alternatives`, removes internal
+U+200B/U+200C reading hints, emits synthetic entity POS as `n-pr`, and returns plain
+counter values such as `"3"`. Do not recreate any of this cleanup in Swift.
 
 ## Build targets
 
@@ -86,7 +90,7 @@ xcodebuild -create-xcframework \
 Never combine device and simulator archives with `lipo`. The XCFramework owns those
 separate platform slices.
 
-## ABI v4 audit
+## ABI v5 audit
 
 Import `include/ichiran_kernel.h` through a module map. Confirm the universal archive
 exports these 17 symbols:

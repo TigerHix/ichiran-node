@@ -28,6 +28,33 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
       expect(await analyzer.romanize('猫🙂。', { normalizePunctuation: true })).toContain('🙂');
       const analysis = await analyzer.analyze('今日は良い天気です', { limit: 2 });
       expect(analysis.paths.length).toBeGreaterThan(0);
+      for (const path of analysis.paths) {
+        for (const token of path.tokens) {
+          expect(token.alternatives.every(
+            alternative => alternative.candidateId !== token.candidateId
+          )).toBeTrue();
+        }
+      }
+      for (const chunk of analysis.chunks) {
+        if (chunk.type !== 'word') continue;
+        for (const path of chunk.paths) {
+          for (const token of path.tokens) {
+            expect(token.alternatives.every(
+              alternative => alternative.candidateId !== token.candidateId
+            )).toBeTrue();
+          }
+        }
+      }
+      const ambiguous = await analyzer.analyze('何他', { limit: 3 });
+      expect(ambiguous.paths[0]!.tokens[1]!.alternatives.map(value => value.reading))
+        .toContain('ほか');
+      const hinted = await analyzer.analyze('はし', { limit: 3 });
+      expect(JSON.stringify(hinted)).not.toMatch(/[\u200b\u200c]/u);
+      const synthetic = await analyzer.analyze('架空固有名', {
+        limit: 1,
+        entities: [{ start: 0, end: 5, boost: 10_000 }]
+      });
+      expect(synthetic.paths[0]!.tokens[0]!.pos).toEqual(['n-pr']);
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
       expect(entryIndex).toBeNumber();
       expect((await analyzer.entry(entryIndex!)).seq).toBeGreaterThan(0);
@@ -68,8 +95,27 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
         tokenIndex: 0
       });
       expect(counter.counter).not.toBeNull();
+      expect(counter.counter?.value).toBe('3');
       expect(counter.meanings.length).toBeGreaterThan(0);
       expect(counter.meanings.every(meaning => meaning.pos.includes('ctr'))).toBeTrue();
+
+      const hinted = await analyzer.details('はし', {
+        limit: 3,
+        pathIndex: 0,
+        tokenIndex: 0
+      });
+      expect(JSON.stringify(hinted)).not.toMatch(/[\u200b\u200c]/u);
+
+      const entity = await analyzer.details('架空固有名', {
+        limit: 1,
+        pathIndex: 0,
+        tokenIndex: 0,
+        entities: [{ start: 0, end: 5, boost: 10_000 }]
+      });
+      expect(entity).toMatchObject({
+        entity: true,
+        meanings: [{ gloss: 'proper noun (named entity)', pos: ['n-pr'] }]
+      });
 
       try {
         await analyzer.details('猫', { limit: 1, pathIndex: 99, tokenIndex: 0 });

@@ -24,6 +24,7 @@ import {
   type PortableAnalyzeOptions,
   type PortableAnalysisResult
 } from './analyzer.js';
+import { projectProductAnalysis } from './public-analysis.js';
 
 export interface TypeScriptRuntimeSource {
   readonly hot: Uint8Array;
@@ -84,6 +85,14 @@ export class TypeScriptOracleRuntime {
 
   analyze(text: string, options: PortableAnalyzeOptions = {}): Promise<PortableAnalysisResult> {
     return this.#run(analyzer => analyzer.analyze(text, options));
+  }
+
+  /** Public Rust wire contract projected from the frozen TypeScript oracle. */
+  analyzeProduct(
+    text: string,
+    options: PortableAnalyzeOptions = {}
+  ): Promise<PortableAnalysisResult> {
+    return this.#run(analyzer => projectProductAnalysis(analyzer.analyze(text, options)));
   }
 
   romanize(text: string, options: PortableAnalyzeOptions = {}): Promise<string> {

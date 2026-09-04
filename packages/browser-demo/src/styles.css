@@ -54,7 +54,6 @@
   color-scheme: light dark;
   font-family: var(--font-ui);
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
   --font-ui: "Geist Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-jp: "Hiragino Sans", "Yu Gothic UI", YuGothic, "Noto Sans CJK JP", sans-serif;
   --background: oklch(0.985 0.002 255);
@@ -271,7 +270,7 @@ a { color: inherit; }
   margin-top: 0;
 }
 
-.analysis-main { min-width: 0; padding: 30px 36px 30px 0; }
+.analysis-main { min-width: 0; contain: layout paint; padding: 30px 36px 30px 0; }
 .analysis-toolbar { min-height: 32px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .analysis-toolbar h2 { margin: 0; font-size: 0.8rem; font-weight: 620; }
 
@@ -407,7 +406,7 @@ footer a { min-height: 40px; display: inline-flex; align-items: center; text-und
   .token { min-height: 62px; padding-inline: 3px; }
   .token-surface { font-size: clamp(1.5rem, 7.2vw, 1.9rem); }
   .detail-desktop { display: none; }
-  .detail-mobile { position: fixed; z-index: 50; inset-inline: 0; bottom: 0; display: flex !important; max-height: min(78dvh, 680px); gap: 0; overflow: hidden; border: 1px solid var(--border); border-bottom: 0; border-radius: calc(var(--radius) * 2) calc(var(--radius) * 2) 0 0; padding: 0; color: var(--popover-foreground); background: var(--popover); box-shadow: 0 -12px 36px color-mix(in oklch, var(--foreground) 14%, transparent); }
+  .detail-mobile { position: fixed; z-index: 50; inset-inline: 0; bottom: 0; display: flex !important; max-height: min(78dvh, 680px); contain: layout paint; gap: 0; overflow: hidden; border: 1px solid var(--border); border-bottom: 0; border-radius: calc(var(--radius) * 2) calc(var(--radius) * 2) 0 0; padding: 0; color: var(--popover-foreground); background: var(--popover); box-shadow: 0 -6px 18px color-mix(in oklch, var(--foreground) 12%, transparent); }
   .detail-mobile .word-details, .detail-mobile .selection-details { width: 100%; }
   .detail-mobile .selection-details { padding: 26px 22px max(32px, env(safe-area-inset-bottom)); }
   .detail-mobile .word-details { max-height: min(78dvh, 680px); }

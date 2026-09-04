@@ -326,7 +326,7 @@ int main(int argc, char **argv) {
   free_cases(cases, case_count);
   if (!passed) return 7;
   printf(
-    "C ABI v4 clean harness passed: exact=%u utf16=%u total=%zu "
+    "C ABI v5 clean harness passed: exact=%u utf16=%u total=%zu "
     "segmentation=534 cli=252 hard=149 counters=200 entities=54 probes=47 "
     "owned_errors=1 concurrent_exact=128\n",
     EXPECTED_CLEAN_CASES, EXPECTED_UTF16_CASES, exact
